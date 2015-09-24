@@ -1,0 +1,20 @@
+{
+  "name": "gurbani",
+  "version": "1.0.0",
+  "description": "Multiplatform application for Gurbani",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "fs-promise": "^0.3.1",
+    "jquery": "^2.1.4",
+    "markdown-it": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bogas04",
+  "license": "MIT"
+}

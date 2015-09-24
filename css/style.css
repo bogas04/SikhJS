@@ -1,0 +1,63 @@
+@font-face { font-family: gurmukhi_thick; src: url('../fonts/gurmukhi_thick.ttf'); }
+@font-face { font-family: gurmukhi_heavy; src: url('../fonts/gurmukhi_heavy.ttf'); }
+@font-face { font-family: gurmukhi_light; src: url('../fonts/gurmukhi_light.ttf'); }
+
+@keyframes SplashIn {
+  from { transform: scale(3); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.greeting {
+  animation: SplashIn 0.25s ease-in;
+  font-size: 350%;
+  padding: 20vh 10vw;
+}
+
+.gurbani-text {
+  text-align: center;
+  font-size: 130%;
+  padding-top: 20px;
+  box-shadow: 0px 21px 32px -23px black inset;
+  overflow: auto;
+  max-height: 100vh;
+}
+.gurbani-text * {
+  font-family: gurmukhi_heavy;
+  transition: all 0.25s;
+}
+
+#menuWrapper { margin: 15px 0 0 0; }
+
+.menu-item-wrapper {
+  margin: 0 auto;
+}
+
+.menu-item::before {
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  background-color: #333333;
+  color: white;
+  padding: 7px 40px;
+  margin: -5px;
+  transition: all 0.15s;
+}
+
+.menu-item-wrapper:hover .menu-item::before {
+  margin-top: -35px;
+  padding: 0px 40px;
+}
+
+#baaniPicker::before { content: 'Nitnem'; }
+#about::before { content: 'About'; }
+#fontChanger::before { content: 'Font Size'; }
+#sggs::before { content: 'SGGS'; }
+
+#fontChanger input[type=range] {
+  padding: 10px;
+  width: 170px;
+}
+
+#baaniPicker select {
+  width: 155px;
+  text-overflow: ellipsis;
+}
