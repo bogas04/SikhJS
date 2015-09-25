@@ -35,26 +35,26 @@
   margin: 0 auto;
 }
 
-.menu-item::before {
-  position: absolute;
-  text-align: center;
-  font-size: 24px;
-  background-color: #333333;
-  color: white;
-  padding: 7px 40px;
-  margin: -5px;
-  transition: all 0.15s;
-}
+/*.menu-item::before {*/
+  /*position: absolute;*/
+  /*text-align: center;*/
+  /*font-size: 24px;*/
+  /*background-color: #333333;*/
+  /*color: white;*/
+  /*padding: 7px 40px;*/
+  /*margin: -5px;*/
+  /*transition: all 0.15s;*/
+/*}*/
 
-.menu-item-wrapper:hover .menu-item::before {
-  margin-top: -35px;
-  padding: 0px 40px;
-}
+/*.menu-item-wrapper:hover .menu-item::before {*/
+  /*margin-top: -35px;*/
+  /*padding: 0px 40px;*/
+/*}*/
 
 #baaniPicker::before { content: 'Nitnem'; }
-#about::before { content: 'About'; }
+/*#about::before { content: 'About'; }*/
 #fontChanger::before { content: 'Font Size'; }
-#sggs::before { content: 'SGGS'; }
+/*#sggs::before { content: 'SGGS'; }*/
 
 #fontChanger input[type=range] {
   padding: 10px;
