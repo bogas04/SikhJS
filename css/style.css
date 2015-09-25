@@ -24,6 +24,11 @@
   transition: all 0.25s;
 }
 
+.darkmode {
+  background-color: black;
+  color: white;  
+}
+
 #menuWrapper { margin: 15px 0 0 0; }
 
 .menu-item-wrapper {
