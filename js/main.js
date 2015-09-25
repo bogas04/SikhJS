@@ -5,6 +5,7 @@ const dom = require('./js/dom');
 const mdLoad = require('./js/mdLoad');
 const baanies = require('./js/baanies');
 const WKWF = 'vwihgurU jI kw Kwlsw vwihgurU jI kI Pqih';
+//require('./js/sidenav.jsx')(dom.$menuWrapper);
 
 baanies.forEach(n => dom.$selectBaani.appendChild(dom.createElement('option', ['innerHTML', n.name])));
 

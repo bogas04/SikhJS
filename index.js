@@ -19,7 +19,7 @@ function getMainWindow() {
     'center': true,
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
-  mainWindow.openDevTools();
+  //mainWindow.openDevTools();
   mainWindow.on('closed', () => mainWindow = null);
   return mainWindow;
 }

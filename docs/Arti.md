@@ -1,6 +1,5 @@
-Aartee (Worship)
+# Aartee (Worship)
 
-(SGGS Page 13)
 rwgu DnwsrI mhlw 1 ]
 ggn mY Qwlu riv cMdu dIpk bny qwirkw mMfl jnk moqI ]
 DUpu mlAwnlo pvxu cvro kry sgl bnrwie PUlµq joqI ]1]
@@ -15,7 +14,6 @@ jo iqsu BwvY su AwrqI hoie ]3]
 hir crx kvl mkrMd loiBq mno Anidnuo moih AwhI ipAwsw ]
 ik®pw jlu dyih nwnk swirMg kau hoie jw qy qyrY nwie vwsw ]4]3]
 
-(Dhanasri Bhagat Ravi Das Page. 694)
 nwmu qyro AwrqI mjnu murwry ]
 hir ky nwm ibnu JUTy sgl pwswry ]1] rhwau ]
 nwmu qyro Awsno nwmu qyro aursw nwmu qyrw kysro ly iCtkwry ]
@@ -27,7 +25,6 @@ qyro kIAw quJih ikAw Arpau nwmu qyrw quhI cvr Folwry ]3]
 ds ATw ATsTy cwry KwxI iehY vrqix hY sgl sMswry ]
 khY rivdwsu nwmu qyro AwrqI siq nwmu hY hir Bog quhwry ]4]3]
 
-(Dhanasri Bhagat Sain Page.695)
 DUp dIp iGRq swij AwrqI ]
 vwrny jwau kmlw pqI ]1]
 mMglw hir mMglw ] inq mMglu rwjw rwm rwie ko ]1] rhwau ]
@@ -38,7 +35,6 @@ pUrn prmwnµdu bKwnY ]3]
 mdn mUriq BY qwir goibMdy ]
 sYnu BxY Bju prmwnµdy ]4]2]
 
-(Prabhati Bhagat Kabeer Page 1350)
 suMn sMiDAw qyrI dyv dyvwkr ADpiq Awid smweI ]
 isD smwiD AMqu nhI pwieAw lwig rhy srnweI ]1]
 lyhu AwrqI ho purK inrMjn siqgur pUjhu BweI ]
@@ -48,7 +44,6 @@ joiq lwie jgdIs jgwieAw bUJY bUJnhwrw ]2]
 pMcy sbd Anwhd bwjy sMgy swirMgpwnI ]
 kbIr dws qyrI AwrqI kInI inrMkwr inrbwnI ]3]5]
 
-(Dhanasri Bhagat Dhana Page. 695)
 gopwl qyrw Awrqw ]
 jo jn qumrI Bgiq krMqy iqn ky kwj svwrqw ]1] rhwau ]
 dwil sIDw mwgau GIau ]
@@ -59,7 +54,6 @@ iek qwjin qurI cMgyrI ]
 Gr kI gIhin cMgI ]
 jnu DMnw lyvY mMgI ]2]4]
 
-(Siri Dasam Granth Page. 189)
 sYUuXw ] 
  Xw qy pRsMn Bey hY mhW muin dyvn ky qp mY suK pwvYN ] 
  j~gX krY iek byd rrY Bv qwp hrY imil iDAwnih lwvYN ] 
@@ -70,19 +64,16 @@ ikMnr gMDRb gwn krY gin j~C Ap~Cr inrq idKwvYN ] 54]
  dwniq d~Cn dY kY pRd~Cn Bwl mY kMukm A~Cq lwvYN ] 
 hoq kulwhl dyv purI imil dyvn ky kuil mMgl gwvYN ] 55] 
 
-(Siri Dasam Granth Page. 1015)
 hy riv hy sis hy krunwinD myrI AbY ibnqI suin lIjY ] 
 Aaur n mWgq hauy qum qy kCu cwhq hau icq mY soeI kIjY ] 
 S~qRn isau Aiq hI rn BIqr jUJ mro kih swc pqIjY ] 
 sMq shwie sdw jg mwie ikRpw kir sXwm iehY bru dIjY ] 1900] 
 
-(Siri Dasam Granth Page. 642)
 pWie ghyy jb qy qumry qb qy koaU AWK qry nhI AwnXo ] 
 rwm rhIm purwn kurwn Anyk khYN mq eyk n mwnXo ] 
 isMimRiq swsqR byd sBY bhu Byd khY hm eyk n jwnXo ] 
 sRI Aispwn ikRpw qumrI kir mY n khXo sB qoih bKwnXo ]863] 
 
-(Siri Dasam Granth Page. 189)
 dohrw ] 
 AYsy cMf pRqwp qy dyvn biFE pRqwp ] 
 qIn lok jY jY krY rrY nwm siq jwp ] 56] 
@@ -90,14 +81,10 @@ qIn lok jY jY krY rrY nwm siq jwp ] 56]
 dohrw ] 
 sgl duAwr kau Cwif kY ghXo quhwro duAwr ] bWih ghy kI lwj Ais goibMd dws quhwr ]864] 
 
-(Siri Dasam Granth Page. 190)
 AYsy cMf pRqwp qy dyvn biFE pRqwp ] 
 qIn lok jY jY krY rrY nwm siq jwp ] 56] 
 
- (Siri Dasam Granth Page. 32)
 c~qR c~kR vrqI c~qR c~kR Bugqy ] 
 suXMBv suBM srbdw srb jugqy ] 
 dukwlM pRxwsI idAwlM srUpy ] 
 sdw AMg sMgy ABMgM ibBUqy ] 199] 
-
-

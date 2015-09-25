@@ -1,4 +1,5 @@
-bsMq kI vwr mhlu 5 (1193-6)
+# bsMq kI vwr mhlu 5 (1193-6)
+
 <> siqgur pRswid ] (1193-6)
 hir kw nwmu iDAwie kY hohu hirAw BweI ] (1193-7, bsMqu, mÚ 5)
 krim ilKMqY pweIAY ieh ruiq suhweI ] (1193-7, bsMqu, mÚ 5)

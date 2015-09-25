@@ -1,4 +1,4 @@
-sUhI mhlw 4 ] (773-16)
+# sUhI mhlw 4 ] (773-16)
 hir pihlVI lwv privrqI krm idRVwieAw bil rwm jIau ] (773-16, sUhI, mÚ 4)
 bwxI bRhmw vydu Drmu idRVhu pwp qjwieAw bil rwm jIau ] (773-17, sUhI, mÚ 4)
 Drmu idRVhu hir nwmu iDAwvhu isimRiq nwmu idRVwieAw ] (773-17, sUhI, mÚ 4)

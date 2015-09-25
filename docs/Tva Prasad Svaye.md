@@ -1,9 +1,9 @@
-		<> vwihgurU jI kI Pqh ]
- 
-	pwiqSwhI 10]
- 
-	qÍ pRswid sv`Xy
- 
+# <> vwihgurU jI kI Pqh ]
+
+pwiqSwhI 10]
+
+qÍ pRswid sv`Xy
+
 sRwvg su`D smUh isDwn ky dyiK iPirE Gr jog jqI ky ]
 sUr surwrdn su`D suDwidk sMq smUh Anyk mqI ky ]
 swry hI dys ko dyiK rihE mq koaU n dyKIAq pRwnpqI ky ]

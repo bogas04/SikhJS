@@ -21,9 +21,19 @@ A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/fonts/) for 
 
 Changelog
 ==
-# v1.0.0
+## v1.0.0
+  - [ ] Definition of words. Select a word and `CMD-D` to get it's meaning.
+  - [ ] Clean UI
+  - [ ] Sri Guru Granth Sahib
+  - [ ] English and Romanized Nitnem
+  - [ ] /r/Sikh column for discussion
+  - [ ] SoundCloud integration for Shabads
+  - [ ] YouTube integration for Shabads
+  - [ ] Saakhis 
+  - [ ] Picture Gallery
+  - [ ] Gurudwara finder
+  - Complete Gurmukhi Nitnem
   - Baanis stored as markdown files for easier parsing
-  - Complete Nitnem
 
 Credits
 ==
