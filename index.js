@@ -17,6 +17,7 @@ function getMainWindow() {
     'min-width': 400,
     'min-height': 400,
     'center': true,
+    'title-bar-style': 'hidden-inset'
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
   //mainWindow.openDevTools();

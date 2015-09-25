@@ -2,6 +2,8 @@ Gurbani
 ==
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 
+![Screencast on OSX](/docs/OSX.gif)
+
 Why ?
 ==
 Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and Sisters.

@@ -6,15 +6,24 @@
   from { transform: scale(3); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+#main-menu {
+  padding-left: 60px;
+}
+.navbar-form label {
+  color: white;
+  vertical-align: middle;
+  display: inline;
+}
 .greeting {
   animation: SplashIn 0.25s ease-in;
   font-size: 350%;
   padding: 20vh 10vw;
 }
 .gurbani-text {
+  margin-top: 0px;
   font-size: 175%;
-  padding-top: 20px;
-  box-shadow: 21px 21px 32px -23px black inset;
+  padding-top: 100px;
+  box-shadow: 0px 65px 32px -23px black inset;
   overflow: auto;
   height: 100vh;
   cursor: default;
@@ -42,18 +51,19 @@
   background-color: black;
   color: white;  
 }
-#menuWrapper {
-  padding: 0 0 0 5px; 
-}
-#fontChanger input[type=range] {
-  padding: 10px;
+#fontChanger {
+  display: inline;
   width: 100%;
 }
-#baaniPicker select {
-  width: 100%;
+#fontChanger::before {
+  content: "Change Font Size";
+  margin: 14px;
+  color: white;
+  position: absolute;
 }
-#textWrapper {
-  padding: 0 0 0 5px;
+#selectBaani {
+  margin-top: 2px;
+  width: 100%;
 }
 #nightModer:hover * {
   background-color: black;
