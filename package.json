@@ -11,6 +11,8 @@
     "fs-promise": "^0.3.1",
     "jquery": "^2.1.4",
     "markdown-it": "^4.4.0",
+    "markdown-it-checkbox": "^1.1.0",
+    "markdown-it-classy": "^0.2.0",
     "react": "^0.13.3",
     "react-sidenav": "0.0.14"
   },

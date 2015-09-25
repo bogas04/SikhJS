@@ -69,3 +69,6 @@
   background-color: black;
   color: #FFF;
 }
+.modal-body img {
+  width: 100%;
+}

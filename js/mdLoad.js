@@ -1,8 +1,11 @@
 'use strict';
 
 const fs = require('fs-promise');
-const md = require('markdown-it')();
 const baanies = require('./baanies');
+const md = require('markdown-it')({
+  linkify: true
+})
+.use(require('markdown-it-checkbox'));
 
 // Generates the location of baani based on its name
 const baaniLocation = function(b) { return __dirname + '/../docs/' + b + '.md' };

@@ -2,7 +2,7 @@ Gurbani
 ==
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 
-![Screencast on OSX](/docs/OSX.gif)
+![Screencast on OSX](docs/OSX.gif)
 
 Why ?
 ==
@@ -13,13 +13,13 @@ learn more about Baani and Sikhism.
 
 How ?
 ==
-The application is very simple as of now. I've manually taken docs from [SikhNet] (http://www.sikhnet.com/DownloadBanis) 
+The application is very simple as of now. I've manually taken docs from [SikhNet](http://www.sikhnet.com/DownloadBanis) 
 and converted them to markdown files. The reason why I chose them is because they are 
   * very lightweight
   * can be parsed to HTML very easily
   * is pretty widely supported
 
-A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/fonts/) for text having Gurbani.
+A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts](/fonts/) for text having Gurbani.
 
 Changelog
 ==
@@ -39,7 +39,7 @@ Changelog
 
 Credits
 ==
-Thanks to SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis)
+Thanks to SikhNet for the actual [Baanies](http://www.sikhnet.com/DownloadBanis)
 
 Contribute
 ==
