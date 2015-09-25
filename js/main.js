@@ -13,6 +13,8 @@ dom.$baaniWrapper.appendChild(dom.createElement('h1', [['innerHTML', WKWF], ['cl
 
 dom.$about.addEventListener('click', e => mdLoad.file('README.md').then(dom.setAndCallModal).catch(console.log));
 
+dom.$nightModer.addEventListener('click', e => [e.currentTarget, dom.$baaniWrapper].forEach($t => $t.classList.contains('dark-mode') ? $t.classList.remove('dark-mode') : $t.classList.add('dark-mode')));
+
 dom.$fontSizeChanger.addEventListener('input', e => dom.$baaniWrapper.style.fontSize = (65 * e.target.value) + '%');
 
 dom.$selectBaani.addEventListener('input', e => mdLoad.baani(e.target.value).then(b => dom.$baaniWrapper.innerHTML = b).catch(console.log));

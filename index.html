@@ -7,45 +7,24 @@
     <link href="css/style.css" rel="stylesheet"/>
   </head>
   <body>
-    <!-- NAVBAR -->
-    <!--<nav class="navbar navbar-default navbar-fixed-top">-->
-    <!--<div class="container-fluid">-->
-    <!--<div class="navbar-header">-->
-    <!--<a class="navbar-brand" href="#">Gurbani</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</nav>-->
-
-    <!-- MENU -->
-    <div id="menuWrapper" class="container-fluid">
-
-      <div class="col-xs-3 menu-item-wrapper">
-        <div id="baaniPicker" class="menu-item form-group form-inline">
-          <select class="form-control" id="selectBaani"></select>
+    <div class="container-fluid" id="mainWrapper">
+      <div class="row">
+        <div id="menuWrapper" class="col-md-1">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="active">Select Baani <select class="form-control" id="selectBaani"></select></li>
+            <li role="presentation" id="fontChanger">Font Size<input type="range" name="font-size" min="1" max="4" step="0.1"/></li>
+            <li role="presentation" id="nightModer"><a href="#">Night Mode</a></li>
+            <li role="presentation"><a href="#">SGGS</a></li>
+            <li role="presentation"><a id="about" href="#">About</a></li>
+          </ul>
         </div>
-      </div>
-
-      <div class="col-xs-3 menu-item-wrapper">
-        <div id="sggs" class="menu-item form-group form-inline">
-          Guru Granth Sahib 
-        </div>
-      </div>
-
-      <div class="col-xs-3 menu-item-wrapper">
-        <div id="about" class="menu-item form-group form-inline">
-          README 
-        </div>
-      </div>
-
-      <div class="col-xs-3 menu-item-wrapper">
-        <div id="fontChanger" class="menu-item form-group form-inline">
-          <input type="range" name="font-size" min="1" max="4" step="0.1"/> 
+        <div class="col-md-11" id="textWrapper">
+          <div class="gurbani-text text-center" id="baaniWrapper"></div>
         </div>
       </div>
     </div>
 
-    <div class="gurbani-text text-center" id="baaniWrapper"></div>
-
+    <!-- MODALS -->
     <div class="modal fade" id="modalRoot">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">

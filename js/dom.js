@@ -4,6 +4,7 @@ let dom = {};
 
 dom.$about = document.getElementById('about');
 dom.$modalRoot = document.getElementById('modalRoot');
+dom.$nightModer = document.getElementById('nightModer');
 dom.$menuWrapper = document.getElementById('menuWrapper');
 dom.$selectBaani = document.getElementById('selectBaani');
 dom.$baaniWrapper = document.getElementById('baaniWrapper');
