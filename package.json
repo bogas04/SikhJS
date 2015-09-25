@@ -17,7 +17,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-packager . Gurubani --platform=all --arch=all --version=0.33.1"
   },
   "author": "bogas04",
   "license": "MIT"

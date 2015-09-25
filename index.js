@@ -1,7 +1,7 @@
 'use strict';
 
-var BrowserWindow = require('browser-window');
-var app = require('app');
+const BrowserWindow = require('browser-window');
+const app = require('app');
 var mainWindow = null;
 
 require('crash-reporter').start();
@@ -12,8 +12,8 @@ app.on('ready', getMainWindow);
 
 function getMainWindow() {
   mainWindow = new BrowserWindow({
-    'width': 800, 
-    'height': 600,
+    'width': 1280, 
+    'height': 768,
     'min-width': 400,
     'min-height': 400,
     'center': true,

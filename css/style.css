@@ -12,15 +12,31 @@
   padding: 20vh 10vw;
 }
 .gurbani-text {
-  font-size: 130%;
+  font-size: 175%;
   padding-top: 20px;
   box-shadow: 21px 21px 32px -23px black inset;
   overflow: auto;
   height: 100vh;
+  cursor: default;
+  transition: all 0.25s;
 }
 .gurbani-text * {
   font-family: gurmukhi_heavy;
-  transition: all 0.25s;
+}
+.gurbani-text p, .gurbani-text pre{
+  display: table;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+.gurbani-text pre {
+  font-size: 100%;
+  color: #1E43D4;
+  padding: 10px 20vw 0px 20vw;
+}
+.gurbani-text p:hover {
+  background-color: #efefef;
+  color: #c7254e;
 }
 .dark-mode {
   background-color: black;

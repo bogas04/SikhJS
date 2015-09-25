@@ -1,399 +1,788 @@
 # cMfI dI vwr
 
 <> vwihgurU jI kI Pqh ]
+
 sRI BgauqI jI shwie ]
+
 vwr sRI BgauqI jI kI ] pwqswhI 10 ]
+
 ipRQm BgyMqI ismir kY guru nwnk leIN iDAwie ]
+
 iPr AMgd gur qy Amrdwsu rwmdwsY hoeIN shwie ]
+
 Arjn hirgoibMd no ismryM sRI hirrwie ]
+
 sRI hir ikRSn iDAweIAY ijs if~Ty siB duiK jwie ]
+
 qyg bhwdr ismirAY Gr nau iniD AwvY Dwie ]
+
 sB QweIN hoie shwie ] 1]
-pauVI ]
+
+## pauVI ]
+
 KMfw ipRQmY swj kY ijn sB sYswru aupwieAw ]
+
 bRhmw ibsnu mhys swij kudriq dw Kylu rcwie bxwieAw ]
+
 isMD prbq mydnI ibnu QMmHw ggin rhwieAw ]
+
 isrjy dwno dyvqy iqn AMdir bwdu rcwieAw ]
+
 qY hI durgw swij kY dYqw dw nwsu krwieAw ]
+
 qYQoN hI blu rwm lY nwl bwxw dhisru GwieAw ]
+
 qYQoN hI blu ikRsn lY kMsu kysI pkiV igrwieAw ]
+
 bfy bfy muin dyvqy keI jug iqnI qnu qwieAw ]
+
 iknI qyrw AMqu n pwieAw ] 2]
+
 swDU sqjugu bIiqAw AD sIlI qyRqw AwieAw ]
+
 n~cI kl srosrI kl nwrd faurU vwieAw ]
+
 AiBmwnu auqwrn dyviqAW mihKwsur sMuB aupwieAw ]
+
 jIiq ley iqn dyvqy iqh lokI rwju kmwieAw ]
+
 v~fw bIru AKwie kY isr aupr CqRu iPrwieAw ]
+
 id~qw ieMdRu inkwl kY iqn igr kYlwsu qkwieAw ]
+
 fir kY h\`Qy dwnvI idl AMdir qRwsu vDwieAw ]
+
 pws durgw dy ieMdRu AwieAw ] 3]
-pauVI ]
+
+## pauVI ]
+
 iek idhwVy nwvx AweI durgswh ]
+
 ieMdR ibrQw suxweI Apxy hwl dI ]
+
 CIn leI TkurweI swqy dwnvI ]
+
 lokI iqhI iPrweI dohI AwpxI ]
+
 bYTy vwie vDweI qy AmrwvqI ]
+
 id\`qy dyv BjweI sBnw rwksW ]
+
 iknY n ij~qw jweI mh\`Ky dYq nUM ]
+
 qyrI swm qkweI dyvI durgswh ] 4]
-pauVI ]
+
+## pauVI ]
+
 durgw bYx suxMdI h~sI hVhVwie ]
+
 EhI sIhu mMgwieAw rwks B~Kxw ]
+
 icMqw krhu n kweI dyvw nUM AwiKAw ]
+
 roh hoeI mhw mweI rwkis mwrxy ] 5]
-dohrw ]
+
+## dohrw ]
+
 rwkis Awey rohly Kyq iBVn ky cwie ]
+
 lskn qygW brCIAW sUrju ndir n pwie ] 6]
 
-pauVI ]
+
+## pauVI ]
+
 duhW kMDwrw muih juVy Fol sMK ngwry b~jy ]
+
 rwkis Awey rohly qrvwrI bKqr s~jy ]
+
 ju\`ty sauhy ju~D nUM iek jwq n jwxn B\`jy ]
+
 Kyq AMdir joDy g\`jy ] 7]
-pauVI ]
+
+## pauVI ]
+
 jMg muswPw b~ijAw rx Gury ngwry cwvly ]
+
 JUlx nyjy bYrkw nIswx lsin ilswvly ]
+
 Fol ngwry paux dy aUNGn jwx jtwvly ]
+
 durgw dwno fhy rx nwd v~jn Kyqu BIhwvly ]
+
 bIr proqy brCIeyN jx fwl cmu~ty Awvly ]
+
 iek v~Fy qygI qVPIAn md pIqy lotin bwvly ]
+
 iek cux cux JwVau kFIAn ryq iv~coN suienw fwvly ]
+
 gdw iqRsUlW brCIAW qIr v~gn Kry auqwvly ]
+
 jx fsy BujMgm swvly ] mr jwvn bIr ruhwvly ] 8]
-pauVI ]
+
+## pauVI ]
+
 dyKn cMf pRcMf nUM rx Gury ngwry ]
+
 Dwey rwkis rohly cauigrdo Bwry ]
+
 h~QIN qygW pkiV kY rx iBVy krwry ]
+
 kdy n n\`Ty ju~D qy joDy juJwry ]
+
 idl ivc roh bFwie kY mwir mwir pukwry ]
+
 mwry cMf pRcMf nY bIr Kyq auqwry ]
+
 mwry jwpn ibjulI isr Bwr munwry ] 9]
-pauVI ]
+
+## pauVI ]
+
 cot peI dmwmy dlW mukwblw ]
+
 dyvI dsq ncweI sIhx swr dI ]
+
 pyt mlMdy lweI mhKy dYq nUM ]
+
 gurdy AWdw KweI nwly r~ukVy ]
+
 jyhI idl ivc AweI khI suxwie kY ]
+
 cotI jwx idKweI qwry DUmkyq ] 10]
-pauVI ]
+
+## pauVI ]
+
 cotW pvn ngwry AxIAW ju~tIAW ]
+
 DUh leIAW qrvwrI dyvW dwnvI ]
+
 vwhn vwro vwrI sUry sMGry ]
+
 vgY r~qu JulwrI ijau gyrU bwbqRw ]
+
 dyKn bYT AtwrI nwrI rwksW ]
+
 pweI DUm svwrI durgw dwnvI ] 11]
 
-pauVI ]
+
+## pauVI ]
+
 l~K ngwry v~jn AwmoH swmHxy ]
+
 rwks rxo n B~jn rohy rohly ]
+
 sIhW vWgU g~jn s~By sUrmy ]
+
 qix qix kYbr C~fn durgw swmxy ] 12]
-pauVI ]
+
+## pauVI ]
+
 Gury ngwry dohry rx sMglIAwly ]
+
 DUiV lpyty DUhry isrdwr jtwly ]
+
 auKlIAW nwsw ijnw muih jwpn Awly ]
+
 Dwey dyvI swmHxy bIr mu~ClIAwly ]
+
 surpq jyhy lV hty bIr tly n twly ]
+
 g~jy durgw Gyir kY jxu GxIAr kwly ] 13]
-pauVI ]
+
+## pauVI ]
+
 cot peI KrcwmI dlW mukwblw ]
+
 Gyr leI virAwmI durgw Awie kY ]
+
 rwks vfy AlwmI B~j n jwxdy ]
+
 AMq hoey surgwmI mwry dyvqw ] 14]
-pauVI ]
+
+## pauVI ]
+
 Agxq Gury ngwry dlW iBVMidAW ]
+
 pwey mhKl Bwry dyvW dwnvW ]
+
 vwhn P~t krwry rwkis rohly ]
+
 jwpn qygI Awry imAwno DUhIAW ]
+
 joDy vfy munwry jwpn Kyq ivic ]
+
 dyvI Awp svwry p~bw jvyhxy ]
+
 kdy n AwKn hwry Dwvn swhmxy ]
+
 durgw sB sMGwry rwkis KVg lY ] 15]
-pauyVI ]
+
+## pauyVI ]
+
 auml l\`Qy joDy mwrU b~ijAw ]
+
 b~dl ijau mihKwsur rx ivic g~ijAW ]
+
 ieMdRw jyhw joDw mYQau B\`ijAw ]
+
 kauxu ivcwrI durgw ijn rxu s~ijAw ] 16]
-pauVI ]
+
+## pauVI ]
+
 v~jy Fol ngwry dlW mukwblw ]
 
+
 qIr iPrY rYbwry AwmoH swmHxy ]
+
 Agxq bIr sMGwry lgdI kYbrI ]
+
 if~gy jwix munwry mwry ib~ju dy ]
+
 Ku~lI vwlIN dYq AhwVy sBy sUrmy ]
+
 su\`qy jwix jtwly BMgW Kwie kY ] 17]
-pauVI ]
+
+## pauVI ]
+
 duhW kMDwrW muih juVy nwil Dausw BwrI ]
+
 kVk au~iTAw Pauj qy vfw AhMkwrI ]
+
 lY kY cilAw sUrmy nwil vfy hjwrI ]
+
 imAwno KMfw DUihAw mhKwsur BwrI ]
+
 au~ml l\`Qy sUrmy mwr mcI krwrI ]
+
 jwpy c~ly r~q dy slly jtDwrI ] 18]
-pauVI ]
+
+## pauVI ]
+
 s~t peI jmDwxI dlW mukwblw ]
+
 DUih leI ikRpwxI durgw imAwn qy ]
+
 cMfI rwkis KwxI vwhI dYq nUM ]
+
 kopr cUr cvwxI l~QI krg lY ]
+
 pwKr qurw plwxI rVkI Drq jwie ]
+
 lYdI AGw isDwxI isMgW Daul idAW ]
+
 kUrm isr lihlwxI dusmn mwir kY ]
+
 v\`Fy gn iqKwxI mUey Kyq ivc ]
+
 rx ivc G~qI GwxI lohU im~J dI ]
+
 cwry jug khwxI c~lg qyg dI ]
+
 ibDx Kyq ivhwxI mhKy dYq nUM ] 19]
+
 ieqI mhKwsur dYq mwry durgw AwieAw ]
+
 caudh lokW rwxI isMG ncwieAw ]
+
 mwry bIr jtwxI dl ivc Agly ]
+
 mMgn nwhI pwxI dlI hMkwr kY ]
+
 jx krI smwie pTwxI suix kY rwg nUM ]
+
 r~qU dy hVvwxI cly bIr Kyq ]
+
 pIqw Pu~lu ieAwxI Gu~mn sUrmy ] 20]
+
 hoeI Alop BvwnI dyvW nUM rwju dy ]
+
 eIsr dI brdwnI hoeI ij~q idn ]
+
 sMuB insMuB gumwnI jnmy sUrmy ]
+
 ieMdR dI rjDwnI q~kI ij~qnI ] 21]
+
 ieMdRprI qy Dwvxw vf joDI mqw pkwieAw ]
+
 sMj ptylw pwKrw ByV sMdw swju bxwieAw ]
+
 jMmy ktk ACUhxI Asmwnu grdI CwieAw ]
+
 roh sMuB insMuB isDwieAw ] 22]
-pauVI ]
+
+## pauVI ]
+
 sMuB insMuB AlwieAw vf joDI sMGru vwey ]
+
 roh idKwlI id~qIAw virAwmI qury ncwey ]
+
 Gury dmwmy dohry jm bwhx ijau ArVwey ]
+
 dyau dwno lu~Jx Awey ] 23]
-pauVI ]
+
+## pauVI ]
+
 dwno dyau AnwgI sMGru ricAw ]
+
 Pu~l iKVy jx bwgIN bwxy joiDAW ]
+
 BUqW ie~lW kwgIN gosq BiKAw ]
+
 hMumV DMumV jwgI G~qI sUirAW ] 24]
+
 s~t peI ngwry dlW mukwblw ]
+
 idqy dyau BjweI imil kY rwksIN ]
+
 lokI iqhI iPrweI dohI AwpxI ]
+
 durgw dI swm qkweI dyvW fridAW ]
+
 AWdI cMif cVweI auqy rwksW ] 25]
-pauVI ]
+
+## pauVI ]
+
 AweI Pyr BvwnI KbrI pweIAW ]
+
 dYq vfy AiBmwnI hoey eykTy ]
+
 locn DUm gumwnI rwie bulwieAw ]
+
 jg ivc vfw dwno Awp khwieAw ]
+
 s~t peI KrcwmI durgw ilAwvxI ] 26]
-pauVI ]
+
+## pauVI ]
+
 kVk auTI rx cMfI PaujW dyK kY ]
+
 DUih imAwno KMfw hoeI swhmxy ]
+
 sBy bIr sMGwry DUmrnYx dy ]
+
 jx lY kty Awry drKq bwFIAW ] 27]
-pauVI ]
+
+## pauVI ]
+
 cobIN DauNs bjweI dlW mukwblw ]
+
 roh BvwnI AweI auqy rwksW ]
+
 K~bY dsq ncweI sIhx swr dI ]
+
 bhuiqAW dy qn lweI kIqI rMgulI ]
+
 BweIAW mwrn BweI durgw jwix kY ]
+
 roh hoie clweI rwkis rwie nUM ]
+
 jm pur dIAw pTweI locn DUm nUM ]
+
 jwpy id~qI sweI mwrn sMuB dI ] 28]
-pauVI ]
+
+## pauVI ]
+
 BMny dYq pukwry rwjy sMuB QY ]
+
 locn DUm sMGwry sxy ispwhIAW ]
+
 cuix cuix joDy mwry AMdr Kyq dY ]
+
 jwpn AMbir qwry if~gin sUrmy ]
+
 igry prbq Bwry mwry ib~ju dy ]
+
 dYqW dy dl hwry dhsq Kwie kY ]
+
 bcy su mwry mwry rhdy rwie QY ] 29]
-pauVI ]
+
+## pauVI ]
+
 roh hoie bulwey rwkis rwie ny ]
+
 bYTy mqw pkweI durgw ilAwvxI ]
+
 cMf Ar muMf pTwey bhuqw ktku dY ]
+
 jwpy C~pr Cwey bxIAw kyjmw ]
+
 jyqy rwie bulwey c~ly ju~D no ]
+
 jx jm pur prV clwey sBy mwrny ] 30]
-pauVI ]
+
+## pauVI ]
+
 Fol ngwry vwey dlW mukwblw ]
+
 roh ruhyly Awey auqy rwksW ]
+
 sBnI qury ncwey brCy pkiV kY ]
+
 bhuqy mwr igrwey AMdr Kyq dY ]
+
 qIrI Chbr lweI bu~TI dyvqw ] 31]
+
 ByrI sMK vjwey sMGir r~icAw ]
+
 qix qix qIr clwey durgw DnK lY ]
+
 ijnI dsq auTwey rhy n jIvdy ]
+
 cMf Ar mMuf Kpwey dono dyvqw ] 32]
+
 sMuB insMuB irswey mwry dYq sux ]
+
 joDy sB bulwey Awpxy mjlsI ]
+
 ijnI dyau Bjwey ieMdR jyhvy ]
+
 qyeI mwr igrwey pl ivc dyvqw ]
+
 EnI dsqI dsiq vjwey iqnw icq kir ]
+
 iPr sRxvq bIj clwey bIVy rwie dy ]
+
 sMj ptolw pwey iclkq topIAW ]
+
 lu~Jx no ArVwey rwks rohly ]
+
 kdy n ikny htwey ju~D mcwie kY ]
+
 iml qyeI dwno Awey hux sMGir dyKxw ] 33]
-pauVI ]
+
+## pauVI ]
+
 dYqI fMf auBwrI nyVY Awie kY ]
+
 isMG krI AsvwrI durgw sor sux ]
+
 K~bY dsq auBwrI gdw iPrwie kY ]
+
 sYnw sB sMGwrI sRxvq bIj dI ]
+
 jx md Kwie mdwrI GUmn sUrmy ]
+
 Agxq pwau pswrI ruly AhwV ivic ]
+
 jwpy Kyf iKfwrI su~qy Pwg nUM ] 34]
-pauVI ]
+
+## pauVI ]
+
 sRxvq_bIj hkwry rhdy sUrmy ]
+
 joDy jyfu munwry id~sn Kyq ivic ]
+
 sBnI dsq auBwry qygW DUih kY ]
+
 mwro mwr pukwry Awey swmHxy]
+
 sMjw qy Tixkwry qygIN au~bry ]
+
 Gwt GVin TiTAwry jwix bxwie kY ] 35]
+
 s~t peI jmDwxI dlW mukwblw ]
+
 GUmr brg sqwxI dl ivic G~qIE ]
+
 sxy qurw plwxI if~gx sUrmy ]
+
 auiT auiT mMgix pwxI Gwiel GUmdy ]
+
 eyvfu mwir ivhwxI aupr rwksW ]
+
 ib~jl ijau JrlwxI au~TI dyvqw ] 36]
-pauVI ]
+
+## pauVI ]
+
 cobI Daus auBwrI dlW mukwblw ]
+
 sBo sYnw mwrI pl ivic dwnvI ]
+
 durgw dwno mwry roh bFwie kY ]
+
 isr ivc qyg vgweI sRxvq_bIj dy ] 37]
+
 Agxq dwno Bwry hoey lohUAw ]
+
 joDy jyf munwry AMdir Kyq dY ]
+
 durgw no llkwry Awvx swmxy] 
 durgw sB sMGwry rwks AWvdy ]
+
 rqU dy prnwly iqn qy Buie pey ]
+
 au~Ty kwrixAwry rwks hVhVwie ] 38]
+
 Dgw sMglIAwlI sMGr vwieAw ]
 
+
 brCI bMblIAwlI sUry sMGry ]
+
 ByiV micAw bIrwlI durgw dwnvIN ]
+
 mwr mcI muhrwlI AMdir Kyq dY ]
+
 jx nt l~Qy CwlI Foil bjwie kY ]
+
 lohU PwQI jwlI loQI jmDVI ]
+
 Gx ivic ijau CMCwlI qygW h~sIAW ]
+
 Gu~mrAwir isAwlI bxIAW kyjmW ] 39]
+
 Dgw sUlI bjweIAW dlW mukwblw ]
+
 DUih imAwno leIAW juAwnI sUrmI ]
+
 sRxvq_bIj bDweIAW Agxq sUrqW ]
+
 durgw sauhyN AweIAW roh bFwie kY ]
+
 sBnI Awx vgweIAW qygW DUih kY ]
+
 durgw sB bcweIAW Fwl sMBwl kY ]
+
 dyvI Awp clweIAW qik qik dwnvI ]
+
 lohU nwil fubweIAW qygW nMgIAW ]
+
 swrsuqI jxu nweIAW iml kY dyvIAW ]
+
 sBy mwr igrweIAW AMdir Kyq dY ]
+
 iq~dMU Pyir svweIAW hoeIAW sUrqW ] 40]
-pauVI ]
+
+## pauVI ]
+
 sUrI sMGir ricAw Fol sMK ngwry vwie kY ]
+
 cMf icqwrI kwlkw mn bwhlw ros bFwie kY ]
+
 inklI m~Qw PoiV kY jxu Pqy nIswx bjwie kY ]
+
 jwg su jMmI ju~D nUM jrvwxw jx mrVwie kY ]
+
 dl ivic Gyrw G~iqAw jx sINh quirAw gixxwie kY ]
+
 Awp ivsUlw hoieAw iqhu lokW qy Kunswie kY ]
+
 roh isDweIAW ckR_pwn kr inMdw KVg auTwie kY ]
 
+
 AgY rwks bYTy rohly qIrI qygI Chbir lwie kY ]
+
 pkV pCwVy rwksW dl dYqW AMdir jwie kY ]
+
 bhu kysI pkiV pCwiVAin iqn AMdir DUm rcwie kY ]
 
+
 bfy bfy cux sUrmy gih kotI dey clwie kY ]
+
 rx kwlI gu~sw Kwie kY ] 41]
-pauVI ]
+
+## pauVI ]
+
 duhw kMDwrw muih juVy AxIAw rwcoeIAW ]
+
 DUih ikrpwxW iq~KIAW nwl lohU DoeIAW ]
+
 hUrW sRxvq_bIj nUUM Giq Gyir KloeIAW ]
+
 lwVw dyKn lwVIAW cauigrdy hoeIAW ] 42]
+
 cobI Dausw pweIAW dlW mukwblw ]
+
 dsqI DUh ncweIAW qygW nMgIAW ]
+
 sUirAW dy qn lweIAW gosq ig\`DIAW]
+
 ib\`Dx rwqI AweIAW mrdW GoiVAW ]
+
 jogxIAW imil DweIAW lohU B~Kxw ]
+
 PaujW mwr htweIAW dyvW dwnvW ]
+
 BjdI kQw suxweIAW rwjy sMuB QY ]
+
 BueIN n pauxY pweIAW bMUdw rkq dIAW ]
 
+
 kwlI Kyq KpweIAW sBy sUrqW ]
+
 bhuqI isrI ibhweIAW GVIAW kwl kIAW ]
+
 jwix n jwey mweIAW jUJy sUrmy ] 43]
+
 sMuB suxI krhwlI sRxvq bIj dI ]
+
 rx ivic iknY n JwlI durgw AWvdI ]
+
 bhuqy bIr jtwlI auTy AwK kY ]
+
 cotw pwn qbwlI jwsn ju~D nUM ]
+
 Qir Qir ipRQmI cwlI dlW cVMidAW ]
+
 nwau ijvy hY hwlI shu drIAwau ivic ]
+
 DUiV auqwhW GwlI CVI qurMgmW ]
+
 jwix pukwrU cwlI DrqI ieMdR QY ] 44]
-pauVI ]
+
+## pauVI ]
+
 Awhir imilAw AwhrIAW sYx sUirAW swjI ]
+
 c~ly sauhy durgswh jx kwbY hwjI ]
+
 qIrI qygI jmDVI rx vMfI BwjI ]
+
 iek Gwiel GUmn sUrmy jx mkqb kwjI ]
+
 iek bIr proqy brCIey ijau Juk paun invwjI ]
+
 iek durgw sauhy Kuns kY Kunswien qwjI ]
+
 iek Dwvn durgw swmHxy ijau BuiKAwey pwjI ]
+
 kdy n r~jy juJ qy rj hoey rwjI ] 45]
+
 b~jy sMglIAwly sMGr fohry ]
+
 fhy ju Kyq jtwly hwTW joiV kY ]
+
 nyjy bMblIAwly id~sn ErVy ]
+
 c~ly jwx jtwly nwvn gMg nUM ] 46]
-pauVI ]
+
+## pauVI ]
+
 durgw AqY dwnvI sUl hoeIAW kMgW ]
+
 vwCV G~qI sUirAW ivc Kyq KqMgW ]
+
 DUih ikRpwxw iqKIAW bF lwhin AMgW ]
+
 phlw dlW imlMidAW ByV pieAw inhMgW ] 47]
-pauVI ]
+
+## pauVI ]
+
 ErV PaujW AweIAW bIr cVy kMDwrI ]
+
 sVk imAwno kFIAW iq~KIAW qrvwrI ]
+
 kVk auTy rx m~icAw v~fy hMkwrI ]
+
 isr DV bwhW gnly Pul jyhY bwVI ]
+
 jwpy kty bwFIAW ruK cMdn AwrI ] 48]
+
 duhW kMDwrW muih juVy jw s~t peI Krvwr kau ]
+
 qk qk kYbir durgswh qk mwry Bly juJwr kau ]
+
 pYdl mwry hwQIAW sMig rQ igry Asvwr kau ]
+
 sohn sMjw bwgVw jxu l~gy Pu~l Anwr kau ]
+
 gu~sy AweI kwlkw hiQ s~jy lY qlvwr kau ]
+
 eydU pwrau Eq pwr hrnwkis keI hjwr kau ]
+
 ijx ie~kw rhI kMDwr kau ]
+
 sd rhmq qyry vwr kau ] 49]
-pauVI ]
+
+## pauVI ]
+
 duhW kMDwrW muih juVy s~t peI jmDwx kau ]
+
 qd iKMg nsMuB ncwieAw fwl aupir brgsqwx kau ]
+
 PVI iblMd mgwieaus Purmwies kir mulqwn kau ]
+
 gu~sy AweI swmHxy rx AMdir G~qx Gwx kau ]
+
 AgY qyg vgweI durgswh bF sMuBn bhI plwx kau ]
+
 rVkI jwie kY Drq kau b~F pwKr b~F ikkwx kau ]
+
 bIr plwxo if~igAw kir isjdw sMuB sujwx kau ]
+
 swbws sloxy Kwx kau ]
+
 sdw swbws qyry qwx kau ]
+
 qwrIPW pwn cbwn kau ]
+
 sd rhmq kYPW Kwn kau ]
+
 sd rhmq qury ncwx_k~au ] 50]
-pauVI ]
+
+## pauVI ]
+
 durgw AqY dwnvI gh sMGir k~Qy ]
+
 ErV au~Ty sUrmy Aw fwhy m~Qy ]
+
 k~t quPMgI kYbrI dl gwih ink~Qy ]
+
 dyKin jMg Prysqy Asmwno l~Qy ] 51]
-pauVI ]
+
+## pauVI ]
+
 duhW kMDwrW muh juVy dl Gury ngwry ]
+
 ErV Awey sUrmy isrdwr rixAwry ]
+
 lY ky qygW brCIAW hiQAwr auBwry ]
+
 top ptylw pwKrW gil sMj svwry ]
+
 lY ky brCI durgswh bhu dwnv mwry ]
+
 cVy rQI gj GoiVeI mwr Buie qy fwry ]
+
 jwx hlvweI sIK nwl ivMnH vVy auqwry ] 52]
-pauVI ]
+
+## pauVI ]
+
 duhW kMDwrW muih juVy nwl Dausw BwrI ]
+
 leI BgauqI durgswh vr jwgn BwrI ]
+
 lweI rwjy sMuB no rqu pIAY ipAwrI ]
+
 sMuB plwxo if~igAw aupmw bIcwrI ]
+
 fub rqU nwlhu inklI brCI duDwrI ]
+
 jwx rjwdI auqrI pYn sUhI swrI ] 53]
-pauVI ]
+
+## pauVI ]
+
 durgw AqY dwnvI ByV pieAw sbwhIN ]
+
 ssqR pjUqy durgswh gh sBnIN bwhIN ]
+
 sMuB insMuB sMGwirAw vQ jyhy swhIN ]
+
 PaujW rwkisAwrIAW dyiK rovin DwhIN ]
+
 muih kuVUcy Gwh dy C~f GoVy rwhIN ]
+
 Bjdy hoey mwrIAn muV Jwkn nwhIN ] 54]
-pauVI ]
+
+## pauVI ]
+
 sMuB insMuB pTwieAw jm dy Dwm no ]
+
 ieMdR s~d bulwieAw rwj AiBKyK_no ]
+
 isr pr CqR iPrwieAw rwjy ieMdR dY ]
+
 caudh lokW CwieAw jsu jg_mwq dw ]
+
 durgw pwT bxwieAw sBy pauVIAW ]
+
 Pyr n jUnI AwieAw ijn ieh gwieAw ] 55]
+
