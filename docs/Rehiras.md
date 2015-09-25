@@ -5,8 +5,11 @@
 ## siqgur pRswid ]
 
 hir jugu jugu Bgq aupwieAw pYj rKdw AwieAw rwm rwjy ]
+
 hrxwKsu dustu hir mwirAw pRhlwdu qrwieAw ]
+
 AhMkwrIAw inMdkw ipiT dyie nwmdyau muiK lwieAw ]
+
 jn nwnk AYsw hir syivAw AMiq ley CfwieAw ]4]13]20]
 
 
@@ -518,7 +521,7 @@ srb TOr mo hohu shweI ]
 
 dust doK qy lyh bcweI ]25]
 
----
+--- 
 
 ikRpw krI hm pr jg mwqw ]
 
@@ -542,6 +545,7 @@ SunY guMg jo Xwih su rsnw pwveI ]
 sunY mUV icq lwie cqurqw AwveI ]
 
 dUK drd BO inkt n iqn nr ky rhY ]
+
 ho jo XwkI eyk bwr cOpeI ko khY ]28]
 
 ## cOpeI ]
@@ -553,7 +557,7 @@ BwdRv sudI AstmI riv vwrw ]
 
 qIr squ\`dRv gRMQ suDwrw ]29]
 
---- 
+---
 
 ## svYXw
 
