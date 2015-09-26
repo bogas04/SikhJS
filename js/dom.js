@@ -18,7 +18,7 @@ dom.setAndCallModal = (content, options) => (dom.$modalBody.innerHTML = content)
 // Toggles dark-mode by adding or removing .dark-mode on given object
 dom.toggleDarkMode = $t => $t.classList.contains('dark-mode') ? $t.classList.remove('dark-mode') : $t.classList.add('dark-mode');
 
-// Returns a function which accepts a value and returns a Promise to set it to passed the object's given property
+// Returns a function which accepts a value and set it to the passed object's given property
 dom.set = (obj, prop) => {
   return val => {
     dom[obj][prop] = val;
