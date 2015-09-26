@@ -12,8 +12,8 @@ dom.$baaniWrapper.appendChild(dom.createElement('h1', { innerHTML: WKWF, classNa
 dom.addEventListener({
   $fontSizeChanger: { input:  e => dom.$baaniWrapper.style.fontSize = (35 * e.target.value) + '%'}
   ,$nightModer:     { click: e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)}
-  ,$about:          { click: e => mdLoad.file('README.md').then(dom.setAndCallModal).catch(console.log)}
-  ,$SGGS:           { click: e => mdLoad.file('docs/SGGS.md').then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
+  ,$about:          { click: e => mdLoad.file(__dirname + '/README.md').then(dom.setAndCallModal).catch(console.log)}
+  ,$SGGS:           { click: e => mdLoad.file(__dirname + '/docs/SGGS.md').then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
   ,$selectBaani:    { input: e => mdLoad.baani(e.target.value).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
 });
 
