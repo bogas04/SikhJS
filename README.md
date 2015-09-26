@@ -18,7 +18,7 @@ Build
 
 ## Instructions
 ```bash
-git clone https://github.com/SikhJS.git
+git clone https://github.com/bogas04/SikhJS.git
 cd SikhJS
 npm i
 npm i electron-packager -g
