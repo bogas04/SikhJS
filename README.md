@@ -20,6 +20,7 @@ Build
 ```bash
 git clone https://github.com/SikhJS.git
 cd SikhJS
+npm i
 npm i electron-packager -g
 # For Windows 32 bit
 electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.33.1
