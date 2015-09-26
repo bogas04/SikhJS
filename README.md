@@ -1,6 +1,7 @@
-SikhJS
+SikhJS v0.0.1b
 ==
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
+**NOTE**: The application is still in active development and is not fit for public release just yet.
 
 ![Screencast on OSX](assets/OSX.gif)
 
@@ -13,7 +14,7 @@ Goal
 Build
 ==
 ## Prerequisites
-  [NodeJS] (https://nodejs.org)
+  * [NodeJS v4.0.0 or higher] (https://nodejs.org)
 
 ## Instructions
 ```bash

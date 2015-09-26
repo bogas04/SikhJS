@@ -8,7 +8,7 @@ const md = require('markdown-it')({
 
 // Generates the location of baani based on its name
 //const baaniLocation = function(b) { return __dirname + '/../docs/unicode/' + b + '.md' };
-const baaniLocation = function(b) { return __dirname + '/../docs/' + b + '.md' };
+const baaniLocation = b => __dirname + '/../docs/' + b + '.md';
 
 var mdLoad = {
   // Returns a promise which itself returns the promise give by readFile

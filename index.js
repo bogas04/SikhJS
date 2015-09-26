@@ -21,7 +21,6 @@ function getMainWindow() {
     'title-bar-style': 'hidden-inset'
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
-  //mainWindow.openDevTools();
   mainWindow.on('closed', () => mainWindow = null);
   return mainWindow;
 }
