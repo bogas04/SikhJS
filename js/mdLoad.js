@@ -3,11 +3,11 @@
 const fs = require('fs-promise');
 const baanies = require('./baanies');
 const md = require('markdown-it')({
-  linkify: true
-})
-.use(require('markdown-it-checkbox'));
+  linkify: false 
+});
 
 // Generates the location of baani based on its name
+//const baaniLocation = function(b) { return __dirname + '/../docs/unicode/' + b + '.md' };
 const baaniLocation = function(b) { return __dirname + '/../docs/' + b + '.md' };
 
 var mdLoad = {

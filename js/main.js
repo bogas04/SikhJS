@@ -6,14 +6,15 @@ const mdLoad = require('./js/mdLoad');
 const baanies = require('./js/baanies');
 const WKWF = 'vwihgurU jI kw Kwlsw <br> vwihgurU jI kI Pqih';
 
-baanies.forEach(n => dom.$selectBaani.appendChild(dom.createElement('option', ['innerHTML', n])));
-dom.$baaniWrapper.appendChild(dom.createElement('h1', [['innerHTML', WKWF], ['className', 'greeting']]));
+baanies.forEach(n => dom.$selectBaani.appendChild(dom.createElement('option', { innerHTML: n})));
+dom.$baaniWrapper.appendChild(dom.createElement('h1', { innerHTML: WKWF, className: 'greeting'}));
 
 dom.addEventListener({
-  $about: ['click', e => mdLoad.file('README.md').then(dom.setAndCallModal).catch(console.log)]
-  ,$nightModer: ['click', e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)]
-  ,$fontSizeChanger: ['input', e => dom.$baaniWrapper.style.fontSize = (35 * e.target.value) + '%']
-  ,$selectBaani: ['input',  e => mdLoad.baani(e.target.value).then(dom.setInnerHTML('$baaniWrapper')).catch(console.log)]
+  $fontSizeChanger: { input:  e => dom.$baaniWrapper.style.fontSize = (35 * e.target.value) + '%'}
+  ,$nightModer:     { click: e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)}
+  ,$about:          { click: e => mdLoad.file('README.md').then(dom.setAndCallModal).catch(console.log)}
+  ,$SGGS:           { click: e => mdLoad.file('docs/SGGS.md').then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
+  ,$selectBaani:    { input: e => mdLoad.baani(e.target.value).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
 });
 
 // Some ES6 shit

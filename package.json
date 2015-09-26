@@ -1,26 +1,18 @@
 {
-  "name": "gurbani",
-  "version": "1.0.0",
+  "name": "sikhjs",
+  "version": "0.0.1",
   "description": "Multiplatform application for Gurbani",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "fs-promise": "^0.3.1",
     "jquery": "^2.1.4",
-    "markdown-it": "^4.4.0",
-    "markdown-it-checkbox": "^1.1.0",
-    "markdown-it-classy": "^0.2.0",
-    "react": "^0.13.3",
-    "react-sidenav": "0.0.14"
+    "markdown-it": "^4.4.0"
   },
   "devDependencies": {},
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "electron-packager . Gurubani --platform=all --arch=all --version=0.33.1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bogas04",
   "license": "MIT"
