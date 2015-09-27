@@ -65,10 +65,17 @@
   color: white;
   position: absolute;
 }
+
 #selectBaani {
-  margin-top: 3px;
-  margin-left: -20px;
-  width: 100%;
+  width: 75%;
+  display: inline;
+  height: 24px;
+  margin: -4px 0px -4px 11px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+#nitnem:hover #selectBaani {
+  opacity: 1;
 }
 #nightModer:hover * {
   background-color: black;
