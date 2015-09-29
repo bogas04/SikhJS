@@ -13,6 +13,8 @@ Goal
 
 Build
 ==
+The project is based on Electron. You can build it as follows:
+
 ## Prerequisites
   * [NodeJS v4.0.0 or higher] (https://nodejs.org)
 
@@ -50,15 +52,17 @@ A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/fonts/) for 
 Changelog
 ==
 ## v1.0.0
-  - [ ] Definition of words. Select a word and `CMD-D`\`CTRL-D` to get its meaning
-  - [ ] English and Romanized Nitnem
   - [ ] /r/Sikh column for discussion
   - [ ] SoundCloud integration for Shabads
   - [ ] YouTube integration for Shabads
-  - [ ] Saakhis 
-  - [ ] Picture Gallery
   - [ ] Gurudwara finder
+  - [ ] Picture Gallery
+  - [ ] Definition of words. Select a word and `CMD-D`\`CTRL-D` to get its meaning
+  - [ ] Pronunciation of the words.
+  - [ ] Saakhis 
   - [ ] Experiment with Unicode Font (It has some perf issues)
+  - [ ] English and Romanized Nitnem
+  - [ ] Indexed SGGS with quick search
   - [x] Sri Guru Granth Sahib
   - [x] Complete Gurmukhi Nitnem
   - [x] Baanis stored as markdown files for easier parsing
