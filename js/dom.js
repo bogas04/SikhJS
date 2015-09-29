@@ -21,8 +21,9 @@ dom.toggleDarkMode = $t => $t.classList.contains('dark-mode') ? $t.classList.rem
 // Returns a function which accepts a value and set it to the passed object's given property
 dom.set = (obj, prop) => {
   return val => {
-    dom[obj][prop] = val;
-    setTimeout(arguments.callee, 0);
+    let props = prop.split('.');
+    // TODO: Consider cases where prop can have more than one dots 
+    props.length > 1 ? dom[obj][props[0]][props[1]] = val : dom[obj][prop] = val;
   }
 };
 
