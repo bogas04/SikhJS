@@ -12,6 +12,21 @@ AhMkwrIAw inMdkw ipiT dyie nwmdyau muiK lwieAw ]
 
 jn nwnk AYsw hir syivAw AMiq ley CfwieAw ]4]13]20]
 
+## sloku m: 1 ]
+
+duKu dwrU suKu rogu BieAw jw suKu qwim n hoeI ]
+
+qUM krqw krxw mY nwhI jw hau krI n hoeI ]1]
+
+bilhwrI kudriq visAw ]
+
+qyrw AMqu n jweI liKAw ]1] rhwau ] 
+
+jwiq mih joiq joiq mih jwqw Akl klw BrpUir rihAw ]
+
+qUM scw swihbu isPiq suAwil@au ijin kIqI so pwir pieAw ]
+
+khu nwnk krqy kIAw bwqw jo ikCu krxw su kir rihAw ]2]
 
 ## so dru rwgu Awsw mhlw 1
 ### siqgur pRswid ]
@@ -631,6 +646,17 @@ Duir krim pwieAw quDu ijn kau is nwim hir kY lwgy ]
 
 khY nwnku qh suKu hoAw iqqu Gir Anhd vwjy ]5]
 
+Andu suxhu vfBwgIho sgl mnorQ pUry ]
+
+pwrbRhmu pRBu pwieAw auqry sgl ivsUry ]
+
+dUK rog sMqwp auqry suxI scI bwxI ]
+
+sMq swjn Bey srsy pUry gur qy jwxI ]
+
+suxqy punIq khqy pivqu siqguru rihAw BrpUry ]
+
+ibnvMiq nwnku gur crx lwgy vwjy Anhd qUry ]40]1]
 
 ## muMdwvxI mhlw 5 ]
 
