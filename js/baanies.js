@@ -1,20 +1,21 @@
 module.exports = [
-  'Anand Sahib',
-  'Ardas',
-  'Arti',
-  'Asa Di Var',
-  'Baareh Maahaa',
-  'Basant Ki Var',
-  'Chandi Di Var',
-  'Jaap Sahib',
-  'Japji',
-  'Kabyo Bach Baynti Chaupai',
-  'Kirtan Sohila',
-  'Lawa',
-  'Raag Mala',
-  'Rehiras',
-  'Shabad Hazarai Patsahi 10',
-  'Shabad Hazarey',
-  'Slok Mahala 9',
-  'Sukhmani Sahib',
-  'Tva Prasad Svaye'];
+  'Japji'
+  ,'Jaap Sahib'
+  ,'Anand Sahib'
+  ,'Tva Prasad Svaye'
+  ,'Kabyo Bach Baynti Chaupai'
+  ,'Rehiras'
+  ,'Kirtan Sohila'
+  ,'Ardas'
+  ,'Arti'
+  ,'Asa Di Var'
+  ,'Baareh Maahaa'
+  ,'Basant Ki Var'
+  ,'Chandi Di Var'
+  ,'Lawa'
+  ,'Raag Mala'
+  ,'Shabad Hazarai Patsahi 10'
+  ,'Shabad Hazarey'
+  ,'Slok Mahala 9'
+  ,'Sukhmani Sahib'
+];

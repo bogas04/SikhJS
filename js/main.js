@@ -13,7 +13,12 @@ const locs = { README: __dirname + '/README.md', SGGS: __dirname + '/docs/SGGS.m
 dom.$baaniWrapper.appendChild(dom.createElement('h1', { innerHTML: WKWF, className: 'greeting'}));
 
 /* Initializing the baanies */
-baanies.forEach(n => dom.$selectBaani.appendChild(dom.createElement('option', { innerHTML: n})));
+baanies.forEach((n, i) => {
+  if(i === 0 || i === 7) {
+    dom.$selectBaani.appendChild(dom.createElement('hr'));
+  }
+  dom.$selectBaani.appendChild(dom.createElement('option', { innerHTML: n, value: n }))
+});
 
 /* Event listeners */
 dom.addEventListener({
