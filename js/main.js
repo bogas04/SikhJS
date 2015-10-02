@@ -22,9 +22,19 @@ baanies.forEach((n, i) => {
 
 /* Event listeners */
 dom.addEventListener({
-  $nightModer:       { click: e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)}
-  ,$fontSizeChanger: { input: e => dom.$baaniWrapper.style.fontSize = ((35 * e.target.value) + '%')}
-  ,$about:           { click: e => mdLoad.file(locs.README).then(dom.setAndCallModal('About SikhJS')).catch(console.log)}
-  ,$SGGS:            { click: e => mdLoad.file(locs.SGGS).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
-  ,$selectBaani:     { input: e => mdLoad.baani(e.target.value).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)}
+  $nightModer: {
+    click: e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)
+  },
+  $fontSizeChanger: { 
+    input: e => dom.$baaniWrapper.style.fontSize = ((35 * e.target.value) + '%')
+  },
+  $about: { 
+    click: e => mdLoad.file(locs.README).then(dom.setAndCallModal('About SikhJS')).catch(console.log)
+  },
+  $SGGS: {
+    click: e => mdLoad.file(locs.SGGS).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)
+  },
+  $selectBaani: {
+    input: e => mdLoad.baani(e.target.value).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)
+  }
 });

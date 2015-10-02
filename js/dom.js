@@ -14,10 +14,12 @@ dom.$fontSizeChanger = document.getElementById('fontChanger');
 dom.$modalTitle = dom.$modalRoot.querySelector('.modal-title');
 
 // Sets the body of the modal and calls .modal on it
-dom.setAndCallModal = title => (content, options) => {
-  dom.$modalBody.innerHTML = content;
+dom.setAndCallModal = title => {
   dom.$modalTitle.innerHTML = title;
-  $(dom.$modalRoot).modal(options);
+  return (content, options) => {
+    dom.$modalBody.innerHTML = content;
+    $(dom.$modalRoot).modal(options);
+  }
 };
 
 // Toggles dark-mode by adding or removing .dark-mode on given object
