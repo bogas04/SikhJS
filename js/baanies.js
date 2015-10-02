@@ -1,9 +1,9 @@
 module.exports = [
   'Japji'
   ,'Jaap Sahib'
-  ,'Anand Sahib'
   ,'Tva Prasad Svaye'
   ,'Kabyo Bach Baynti Chaupai'
+  ,'Anand Sahib'
   ,'Rehiras'
   ,'Kirtan Sohila'
   ,'Ardas'
