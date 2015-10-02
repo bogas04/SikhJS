@@ -29,17 +29,19 @@ module.exports = {
       let hoveredElement = dom.$baaniWrapper.querySelector('.hovered') || dom.$baaniWrapper.firstChild;
       // Capturing the strokes
       switch(e.keyCode) {
-        case 38: case 74: // arrowUp & j
+        case 40: case 74: // arrowDown & j
           hoveredElement.classList.remove('hovered');
           hoveredElement.nextElementSibling.className = 'hovered';
+          e.preventDefault(true);
           break;
-        case 40: case 75: // arrowDown & k
+        case 38: case 75: // arrowUp & k
           hoveredElement.classList.remove('hovered');
           hoveredElement.previousElementSibling.className = 'hovered';
+          e.preventDefault(true);
           break;
       }
       // Proper scrolling
-      dom.$baaniWrapper.scrollTop = (hoveredElement.offsetTop - dom.$baaniWrapper.offsetHeight/2);
+      dom.$baaniWrapper.scrollTop = Math.max((hoveredElement.offsetTop - dom.$baaniWrapper.offsetHeight/2), 0);
     }
   }
 };
