@@ -35,6 +35,10 @@ dom.addEventListener({
     click: e => mdLoad.file(locs.SGGS).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)
   },
   $selectBaani: {
-    input: e => mdLoad.baani(e.target.value).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)
+    input: e => mdLoad.baani(e.target.value).then(t => {
+      dom.$baaniWrapper.innerHTML = t;
+      dom.$baaniWrapper.focus();
+      dom.$baaniWrapper.scrollTop = 0;
+    }).catch(console.log)
   }
 });
