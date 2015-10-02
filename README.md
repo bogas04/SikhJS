@@ -63,7 +63,7 @@ Changelog
   - [ ] Experiment with Unicode Font (It has some perf issues)
   - [ ] English and Romanized Nitnem
   - [ ] Indexed SGGS with quick search
-  - [ ] Keyboard shortcuts to hover through lines
+  - [x] Keyboard shortcuts to hover through lines
   - [x] Sri Guru Granth Sahib
   - [x] Complete Gurmukhi Nitnem
   - [x] Baanis stored as markdown files for easier parsing

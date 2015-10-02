@@ -47,6 +47,10 @@
   color: #1E43D4;
   padding: 10px 20vw 0px 20vw;
 }
+.hovered {
+  background-color: #efefef;
+  color: #c7254e;
+}
 .gurbani-text p:hover {
   background-color: #efefef;
   color: #c7254e;
@@ -65,7 +69,6 @@
   color: white;
   position: absolute;
 }
-
 #selectBaani {
   width: 75%;
   display: inline;
@@ -76,10 +79,6 @@
 }
 #nitnem:hover #selectBaani {
   opacity: 1;
-}
-#nightModer:hover * {
-  background-color: black;
-  color: #FFF;
 }
 .modal-body img {
   width: 100%;
