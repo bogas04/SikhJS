@@ -11,9 +11,14 @@ dom.$selectBaani = document.getElementById('selectBaani');
 dom.$baaniWrapper = document.getElementById('baaniWrapper');
 dom.$modalBody = dom.$modalRoot.querySelector('.modal-body');
 dom.$fontSizeChanger = document.getElementById('fontChanger');
+dom.$modalTitle = dom.$modalRoot.querySelector('.modal-title');
 
 // Sets the body of the modal and calls .modal on it
-dom.setAndCallModal = (content, options) => (dom.$modalBody.innerHTML = content) && $(dom.$modalRoot).modal(options);
+dom.setAndCallModal = title => (content, options) => {
+  dom.$modalBody.innerHTML = content;
+  dom.$modalTitle.innerHTML = title;
+  $(dom.$modalRoot).modal(options);
+};
 
 // Toggles dark-mode by adding or removing .dark-mode on given object
 dom.toggleDarkMode = $t => $t.classList.contains('dark-mode') ? $t.classList.remove('dark-mode') : $t.classList.add('dark-mode');
