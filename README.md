@@ -57,13 +57,15 @@ Changelog
   - [ ] YouTube integration for Shabads
   - [ ] Gurudwara finder
   - [ ] Picture Gallery
-  - [ ] Definition of words. Select a word and `CMD-D` \ `CTRL-D` to get its meaning
   - [ ] Pronunciation of the words.
+  - [ ] Definition of words. Select a word and `CMD-D` \ `CTRL-D` to get its meaning
   - [ ] Saakhis 
   - [ ] Experiment with Unicode Font (It has some perf issues)
+  - [ ] Notifications about Breaking Sikh News
+  - [ ] Daily notifications about random Baani and its meaning
   - [ ] English and Romanized Nitnem
   - [ ] Indexed SGGS with quick search
-  - [x] Keyboard shortcuts to hover through lines
+  - [x] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
   - [x] Complete Gurmukhi Nitnem
   - [x] Baanis stored as markdown files for easier parsing
