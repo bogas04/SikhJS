@@ -2,7 +2,7 @@
 
 # rhrwis swihb
 
-## siqgur pRswid ]
+## <> siqgur pRswid ]
 
 hir jugu jugu Bgq aupwieAw pYj rKdw AwieAw rwm rwjy ]
 
@@ -29,7 +29,7 @@ qUM scw swihbu isPiq suAwil@au ijin kIqI so pwir pieAw ]
 khu nwnk krqy kIAw bwqw jo ikCu krxw su kir rihAw ]2]
 
 ## so dru rwgu Awsw mhlw 1
-### siqgur pRswid ]
+### <> siqgur pRswid ]
 
 so dru qyrw kyhw so Gru kyhw ijqu bih srb smwly ]
 
@@ -201,7 +201,7 @@ jn nwnk bil bil sd bil jweIAY qyrw AMqu n pwrwvirAw ]4]5]
 
 
 ## rwgu Awsw mhlw 4 so purKu
-### siqgur pRswid ]
+### <> siqgur pRswid ]
 
 so purKu inrMjnu hir purKu inrMjnu hir Agmw Agm Apwrw ]
 
@@ -592,7 +592,7 @@ bWih ghy kI lwj As goibMd dws quhwr ]
 
 
 ## rwmklI mhlw 3 Anµdu
-### siqgur pRswid ]
+### <> siqgur pRswid ]
 
 Anµdu BieAw myrI mwey siqgurU mY pwieAw ]
 
