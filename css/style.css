@@ -47,7 +47,7 @@
   color: #1E43D4;
   padding: 10px 20vw 0px 20vw;
 }
-.hovered {
+.gurbani-text p:hover,.hovered {
   background-color: #efefef;
   color: #c7254e;
 }
