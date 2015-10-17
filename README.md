@@ -25,11 +25,11 @@ cd SikhJS
 npm i
 npm i electron-packager -g
 # For Windows 32 bit
-electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.33.1
+electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.34.0
 # For OSX 
-electron-packager . SikhJS --platform=darwin --arch=all --version=0.33.1
+electron-packager . SikhJS --platform=darwin --arch=all --version=0.34.0
 # For Linux 32 bit
-electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.33.1
+electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.34.0
 ```
 
 Why ?
