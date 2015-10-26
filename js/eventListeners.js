@@ -14,11 +14,17 @@ module.exports = {
     click: e => mdLoad.file(locs.README).then(dom.setAndCallModal('About SikhJS')).catch(console.log)
   },
   $SGGS: {
-    click: e => mdLoad.file(locs.SGGS).then(e => { 
-      dom.$baaniWrapper.innerHTML = e;
-      dom.$baaniWrapper.classList.add('gurbani-text');
-      dom.$baaniWrapper.classList.add('text-center');
-    }).catch(console.log)
+    click: e => {
+      dom.$SGGS.innerHTML = 'Loading...';
+      setTimeout(() => {
+        mdLoad.file(locs.SGGS).then(d => { 
+          dom.$baaniWrapper.innerHTML = d;
+          dom.$baaniWrapper.classList.add('gurbani-text');
+          dom.$baaniWrapper.classList.add('text-center');
+          dom.$SGGS.innerHTML = 'Sri Guru Granth Sahib';
+        }).catch(console.log);
+      }, 100);
+    }
   },
   $calendar: {
     click: e => mdLoad.file(locs.CALENDAR).then(d => {
