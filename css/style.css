@@ -11,7 +11,7 @@
   to { transform: scale(1); opacity: 1; }
 }
 #main-menu {
-  padding-left: 60px;
+  /*padding-left: 60px;*/
 }
 .navbar-form label {
   color: white;
