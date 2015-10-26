@@ -19,8 +19,9 @@ Fagun      |  Feburary 12
 
 # Events and Celebrations
 ## Definition of Terms
-Parkash - birth
-Gurgadi - ascension to Guruship
+
+Parkash - birth  
+Gurgadi - ascension to Guruship  
 Jotijot - death
 
 Common Era|Nanak Shahi|Event/Celebration
