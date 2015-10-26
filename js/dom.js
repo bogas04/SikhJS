@@ -4,6 +4,7 @@ let dom = {};
 
 dom.$SGGS = document.getElementById('SGGS');
 dom.$about = document.getElementById('about');
+dom.$calendar = document.getElementById('calendar');
 dom.$modalRoot = document.getElementById('modalRoot');
 dom.$autoScroll = document.getElementById('autoScroll');
 dom.$nightModer = document.getElementById('nightModer');

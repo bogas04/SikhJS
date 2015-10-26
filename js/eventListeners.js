@@ -1,7 +1,7 @@
 'use strict';
 
 const mdLoad = require('./mdLoad');
-const locs = { README: '../README.md', SGGS: '../docs/SGGS.md' };
+const locs = { README: 'README.md', SGGS: 'docs/SGGS.md', CALENDAR: 'docs/calendar.md' };
 
 module.exports = {
   $nightModer: {
@@ -15,6 +15,12 @@ module.exports = {
   },
   $SGGS: {
     click: e => mdLoad.file(locs.SGGS).then(dom.set('$baaniWrapper', 'innerHTML')).catch(console.log)
+  },
+  $calendar: {
+    click: e => mdLoad.file(locs.CALENDAR).then(d => {
+      dom.$baaniWrapper.innerHTML = d;
+      dom.$baaniWrapper.classList.remove('gurbani-text');
+    }).catch(console.log)
   },
   $selectBaani: {
     input: e => mdLoad.baani(e.target.value).then(t => {

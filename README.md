@@ -65,6 +65,7 @@ Changelog
   - [ ] Daily notifications about random Baani and its meaning
   - [ ] English and Romanized Nitnem
   - [ ] Indexed SGGS with quick search
+  - [x] Sikh calendar
   - [x] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
   - [x] Complete Gurmukhi Nitnem
