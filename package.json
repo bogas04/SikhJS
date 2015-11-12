@@ -12,6 +12,9 @@
   "devDependencies": {},
   "scripts": {
     "start": "electron .",
+    "package-darwin": "rm -rf SikhJS* && electron-packager . SikhJS --platform=darwin --arch=all --version=0.34.0",
+    "package-win32": "rm -rf SikhJS* && electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.34.0",
+    "package-linux": "rm -rf SikhJS* && electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.34.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "bogas04",

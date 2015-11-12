@@ -4,8 +4,10 @@
 window.jQuery = window.$ = require('jQuery');
 
 const dom = require('./js/dom');
+const mdLoad = require('./js/mdLoad');
 const baanies = require('./js/baanies');
 const WKWF = 'vwihgurU jI kw Kwlsw <br> vwihgurU jI kI Pqih';
+const locs = { README: __dirname + '/README.md', SGGS: __dirname + '/docs/SGGS.md', CALENDAR: __dirname + '/docs/calendar.md' };
 
 /* Initial greeting */
 dom.$baaniWrapper.appendChild(dom.createElement('h1', { innerHTML: WKWF, className: 'greeting'}));
@@ -19,4 +21,43 @@ baanies.forEach((n, i) => {
 });
 
 /* Event listeners */
-dom.addEventListener(require('./js/eventListeners'));
+dom.addEventListener({
+  $nightModer: {
+    click: e => [e.currentTarget, dom.$baaniWrapper].forEach(dom.toggleDarkMode)
+  },
+  $fontSizeChanger: { 
+    input: e => dom.$baaniWrapper.style.fontSize = ((35 * e.target.value) + '%')
+  },
+  $about: { 
+    click: e => mdLoad.file(locs.README).then(dom.setAndCallModal('About SikhJS')).catch(console.log)
+  },
+  $SGGS: {
+    click: e => {
+      dom.$SGGS.innerHTML = 'Loading...';
+      setTimeout(() => {
+        mdLoad.file(locs.SGGS).then(d => { 
+          dom.$baaniWrapper.innerHTML = d;
+          dom.$baaniWrapper.classList.add('gurbani-text');
+          dom.$baaniWrapper.classList.add('text-center');
+          dom.$SGGS.innerHTML = 'Sri Guru Granth Sahib';
+        }).catch(console.log);
+      }, 100);
+    }
+  },
+  $calendar: {
+    click: e => mdLoad.file(locs.CALENDAR).then(d => {
+      dom.$baaniWrapper.innerHTML = d;
+      dom.$baaniWrapper.classList.remove('gurbani-text');
+      dom.$baaniWrapper.classList.remove('text-center');
+    }).catch(console.log)
+  },
+  $selectBaani: {
+    input: e => mdLoad.baani(e.target.value).then(t => {
+      dom.$baaniWrapper.innerHTML = t;
+      dom.$baaniWrapper.classList.add('gurbani-text');
+      dom.$baaniWrapper.classList.add('text-center');
+      dom.$baaniWrapper.focus();
+      dom.$baaniWrapper.scrollTop = 0;
+    }).catch(console.log)
+  }
+});
