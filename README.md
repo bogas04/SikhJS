@@ -59,6 +59,7 @@ Changelog
     - [ ] Twitter? GooglePlus? WhatsApp? Telegram?
   - [ ] Gurudwara finder
     - [ ] Curated by availability of langar, rooms, etc
+
 ## v2.0.0
   - [ ] Gurmukhi
     - [ ] Pronunciation of the words.
@@ -68,6 +69,7 @@ Changelog
     - [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
     - [ ] Calendar Alert
     - [ ] Breaking Sikh News
+
 ## v1.5.0
   - [ ] Saakhis
     - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus
@@ -77,14 +79,17 @@ Changelog
     - [ ] Introduction to all forms and styles
     - [ ] SoundCloud integration for Shabads
     - [ ] YouTube integration for Shabads
+
 ## v1.0.0
-  - [ ] Go react
+  - [x] Go react
+    - [ ] Optimize Components
     - [ ] Go react-native android
     - [ ] Go react-native iOS
   - [ ] Experiment with Unicode Font (It has some perf issues)
+
 ## v0.5.0
   - [x] Sikh calendar
-    - [ ] Beautify
+    - [x] Beautify
   - [ ] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
     - [ ] Indexed SGGS with quick search

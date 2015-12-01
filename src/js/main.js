@@ -3,9 +3,9 @@
 /* For jQuery to work on CommonJS */
 window.jQuery = window.$ = require('jQuery');
 
-const dom = require('./js/dom');
-const mdLoad = require('./js/mdLoad');
-const baanies = require('./js/baanies');
+const dom = require(__dirname + '/dist/js/dom');
+const mdLoad = require(__dirname + '/dist/js/mdLoad');
+const baanies = require(__dirname + '/dist/js/baanies');
 const WKWF = 'vwihgurU jI kw Kwlsw <br> vwihgurU jI kI Pqih';
 const locs = { README: __dirname + '/README.md', SGGS: __dirname + '/docs/SGGS.md', CALENDAR: __dirname + '/docs/calendar.md' };
 
@@ -58,6 +58,6 @@ dom.addEventListener({
       dom.$baaniWrapper.classList.add('text-center');
       dom.$baaniWrapper.focus();
       dom.$baaniWrapper.scrollTop = 0;
-    }).catch(console.log)
+    }).catch(e => console.log("error", e))
   }
 });

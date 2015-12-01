@@ -2,16 +2,28 @@
   "name": "sikhjs",
   "version": "0.0.1",
   "description": "Multiplatform application for Gurbani",
+  "private": true,
   "main": "index.js",
   "dependencies": {
+    "babel-plugin-array-includes": "^1.1.1",
     "bootstrap": "^3.3.5",
     "fs-promise": "^0.3.1",
+    "history": "^1.13.1",
     "jquery": "^2.1.4",
-    "markdown-it": "^4.4.0"
+    "markdown-it": "^4.4.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-markdown": "^1.1.1",
+    "react-router": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18"
+  },
   "scripts": {
-    "start": "electron .",
+    "build": "babel src/js -d dist/js",
+    "buildw": "babel -w src/js -d dist/js",
+    "start": "npm run build && electron .",
     "package-darwin": "rm -rf SikhJS* && electron-packager . SikhJS --platform=darwin --arch=all --version=0.34.0",
     "package-win32": "rm -rf SikhJS* && electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.34.0",
     "package-linux": "rm -rf SikhJS* && electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.34.0",

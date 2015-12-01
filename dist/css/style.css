@@ -10,18 +10,43 @@
   from { transform: scale(3); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
-#main-menu {
-  /*padding-left: 60px;*/
-}
 .navbar-form label {
   color: white;
   vertical-align: middle;
   display: inline;
 }
+.navbar-nav li.btn-link {
+  text-decoration: none;
+  padding: 13px 15px;
+  cursor: pointer;
+  line-height: 21px;
+  font-weight: 100;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.navbar-nav li.btn-link:hover {
+  color: #ffffff;
+  background-color: #272727;
+}
 .greeting {
   animation: SplashIn 0.25s ease-in;
   font-size: 350%;
   padding: 20vh 10vw;
+}
+#sggs {
+  font-size: 175%;
+  padding-top: 100px;
+  box-shadow: 0px 65px 32px -23px black inset;
+  overflow: auto;
+  height: 100vh;
+  display: none;
+  cursor: default;
+  transition: all 0.25s;
+  text-align: center;
 }
 #baaniWrapper {
   margin-top: 0px;
@@ -51,7 +76,7 @@
   background-color: #efefef;
   color: #c7254e;
 }
-.dark-mode {
+.night-mode {
   background-color: black;
   color: white;  
 }
@@ -64,19 +89,4 @@
   margin: 14px;
   color: white;
   position: absolute;
-}
-#selectBaani {
-  width: 75%;
-  display: none;
-  height: 24px;
-  margin: -4px 0px -4px 11px;
-  opacity: 0;
-  transition: all 0.25s;
-}
-#nitnem:hover #selectBaani {
-  display: inline;
-  opacity: 1;
-}
-.modal-body img {
-  width: 100%;
 }
