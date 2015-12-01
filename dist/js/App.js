@@ -26,6 +26,8 @@ var Baani = require(__dirname + '/dist/js/components/Baani');
 var SGGS = require(__dirname + '/dist/js/components/SGGS');
 var Nitnem = require(__dirname + '/dist/js/components/Nitnem');
 var Calendar = require(__dirname + '/dist/js/components/Calendar');
+var Shabad = require(__dirname + '/dist/js/components/Shabad');
+var Shabads = require(__dirname + '/dist/js/components/Shabads');
 
 var App = (function (_Component) {
   _inherits(App, _Component);
@@ -64,6 +66,8 @@ require('react-dom').render(React.createElement(
     React.createElement(Route, { path: 'about', component: About }),
     React.createElement(Route, { path: 'sggs', component: SGGS }),
     React.createElement(Route, { path: 'calendar', component: Calendar }),
+    React.createElement(Route, { path: 'shabads', component: Shabads }),
+    React.createElement(Route, { path: 'shabads/:shabad', component: Shabad }),
     React.createElement(Route, { path: 'nitnem', component: Nitnem }),
     React.createElement(Route, { path: 'nitnem/:baani', component: Baani })
   )

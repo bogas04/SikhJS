@@ -50,6 +50,7 @@ class Nav extends Component {
               <li><Link to={`/calendar`}> Calendar </Link></li>
               <li><Link to={`/sggs`}> Sri Guru Granth Sahib </Link></li>
               <li><Link to={`/nitnem`}> Nitnem </Link></li>
+              <li><Link to={`/shabads`}> Shabads </Link></li>
             </ul>
             <form className = "navbar-form navbar-right form-inline">
               <input onChange = {(e) => this.updateFontSize(e)} id = "fontChanger" type = "range" name = "font-size" min = "1" max = "10" step = "0.1"/>

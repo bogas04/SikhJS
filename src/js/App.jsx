@@ -16,6 +16,8 @@ const Baani = require(__dirname + '/dist/js/components/Baani');
 const SGGS = require(__dirname + '/dist/js/components/SGGS');
 const Nitnem = require(__dirname + '/dist/js/components/Nitnem');
 const Calendar = require(__dirname + '/dist/js/components/Calendar');
+const Shabad = require(__dirname + '/dist/js/components/Shabad');
+const Shabads = require(__dirname + '/dist/js/components/Shabads');
 
 class App extends Component {
   render () {
@@ -36,6 +38,8 @@ require('react-dom').render((
       <Route path="about" component={About}/>
       <Route path="sggs" component={SGGS}/>
       <Route path="calendar" component={Calendar}/>
+      <Route path="shabads" component={Shabads}/>
+      <Route path="shabads/:shabad" component={Shabad}/>
       <Route path="nitnem" component={Nitnem}/>
       <Route path="nitnem/:baani" component={Baani}/>
     </Route>

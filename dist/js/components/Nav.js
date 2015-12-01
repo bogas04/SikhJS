@@ -127,6 +127,15 @@ var Nav = (function (_Component) {
                   { to: '/nitnem' },
                   ' Nitnem '
                 )
+              ),
+              React.createElement(
+                'li',
+                null,
+                React.createElement(
+                  Link,
+                  { to: '/shabads' },
+                  ' Shabads '
+                )
               )
             ),
             React.createElement(

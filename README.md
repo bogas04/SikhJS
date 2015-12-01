@@ -75,7 +75,7 @@ Changelog
     - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus
     - [ ] Picture Gallery
   - [ ] Redefine shabads on internet
-    - [ ] Proper searching (SearchGurbani can help)
+    - [x] Proper searching (SearchGurbani can help)
     - [ ] Introduction to all forms and styles
     - [ ] SoundCloud integration for Shabads
     - [ ] YouTube integration for Shabads
