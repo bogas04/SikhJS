@@ -6,17 +6,13 @@ const ReactMarkdown = require('react-markdown');
 class About extends Component {
   constructor (props) {
     super (props);
-    this.state = {
-      file: ""
-    };
-  }
-  componentDidMount() {
-    fs.readFile(__dirname + '/../../../README.md', 'utf8', (err, file) => {
-      this.setState({file});
-    });
   }
   render () {
-    return (<ReactMarkdown className = "text-left" source = {this.state.file} />);
+    return (<ReactMarkdown
+      style = {{ fontSize: '100% !important' }}
+      className = "text-left"
+      source = {fs.readFileSync(__dirname + '/../../../README.md', 'utf8')}
+    />);
   }
 }
 

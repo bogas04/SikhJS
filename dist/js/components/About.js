@@ -19,27 +19,17 @@ var About = (function (_Component) {
   function About(props) {
     _classCallCheck(this, About);
 
-    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(About).call(this, props));
-
-    _this.state = {
-      file: ""
-    };
-    return _this;
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(About).call(this, props));
   }
 
   _createClass(About, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      fs.readFile(__dirname + '/../../../README.md', 'utf8', function (err, file) {
-        _this2.setState({ file: file });
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      return React.createElement(ReactMarkdown, { className: 'text-left', source: this.state.file });
+      return React.createElement(ReactMarkdown, {
+        style: { fontSize: '100% !important' },
+        className: 'text-left',
+        source: fs.readFileSync(__dirname + '/../../../README.md', 'utf8')
+      });
     }
   }]);
 

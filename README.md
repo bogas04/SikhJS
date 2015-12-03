@@ -1,9 +1,9 @@
-SikhJS v0.0.1b
+SikhJS v0.0.2b
 ==
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 **NOTE**: The application is still in active development and is not fit for public release just yet.
 
-![Screencast on OSX](assets/OSX.gif)
+<!--![Screencast on OSX](assets/OSX.gif)-->
 
 Goal
 ==
@@ -81,19 +81,20 @@ Changelog
     - [ ] YouTube integration for Shabads
 
 ## v1.0.0
-  - [x] Go react
-    - [ ] Optimize Components
-    - [ ] Go react-native android
-    - [ ] Go react-native iOS
+  - [ ] Go react-native android
+  - [ ] Go react-native iOS
   - [ ] Experiment with Unicode Font (It has some perf issues)
 
 ## v0.5.0
-  - [x] Sikh calendar
-    - [x] Beautify
+  - [x] Go react
+    - [ ] Optimize Components
   - [ ] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
     - [ ] Indexed SGGS with quick search
     - [ ] English and Romanized Nitnem
+  - [x] Sikh calendar
+    - [x] Beautify
+    - [ ] Add images 
   - [x] Complete Gurmukhi Nitnem
   - [x] Baanis stored as markdown files for easier parsing
 

@@ -9,20 +9,18 @@ class SGGS extends Component {
   }
   componentWillUnmount() {
     document.getElementById('sggs').innerHTML = '';
-      document.getElementById('sggs').style.display = 'none';
+    document.getElementById('sggs').style.display = 'none';
   }
   componentDidMount() {
     mdLoad.file(__dirname + '/../../../docs/SGGS.md')
     .then(t => {
-      //TODO: Huge file can't be set as state!
       document.getElementById('sggs').innerHTML = t;
       document.getElementById('sggs').style.display = 'block';
       this.setState({ loading: false });
     });
   }
   render () {
-    return (<h1>{this.state.loading && "Loading..."}</h1>);
+    return (<h1>{this.state.loading && 'Loading...'}</h1>);
   }
 }
-
 module.exports = SGGS;

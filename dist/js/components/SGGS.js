@@ -37,7 +37,6 @@ var SGGS = (function (_Component) {
       var _this2 = this;
 
       mdLoad.file(__dirname + '/../../../docs/SGGS.md').then(function (t) {
-        //TODO: Huge file can't be set as state!
         document.getElementById('sggs').innerHTML = t;
         document.getElementById('sggs').style.display = 'block';
         _this2.setState({ loading: false });
@@ -49,7 +48,7 @@ var SGGS = (function (_Component) {
       return React.createElement(
         'h1',
         null,
-        this.state.loading && "Loading..."
+        this.state.loading && 'Loading...'
       );
     }
   }]);
