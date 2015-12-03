@@ -19,7 +19,10 @@ var SGGS = (function (_Component) {
   function SGGS(props) {
     _classCallCheck(this, SGGS);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(SGGS).call(this, props));
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SGGS).call(this, props));
+
+    _this.state = { loading: true };
+    return _this;
   }
 
   _createClass(SGGS, [{
@@ -31,16 +34,23 @@ var SGGS = (function (_Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var _this2 = this;
+
       mdLoad.file(__dirname + '/../../../docs/SGGS.md').then(function (t) {
         //TODO: Huge file can't be set as state!
         document.getElementById('sggs').innerHTML = t;
         document.getElementById('sggs').style.display = 'block';
+        _this2.setState({ loading: false });
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      return React.createElement('div', null);
+      return React.createElement(
+        'h1',
+        null,
+        this.state.loading && "Loading..."
+      );
     }
   }]);
 

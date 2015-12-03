@@ -5,6 +5,7 @@ const mdLoad = require(__dirname + '/../mdLoad');
 class SGGS extends Component {
   constructor (props) {
     super (props);
+    this.state = { loading: true }
   }
   componentWillUnmount() {
     document.getElementById('sggs').innerHTML = '';
@@ -16,10 +17,11 @@ class SGGS extends Component {
       //TODO: Huge file can't be set as state!
       document.getElementById('sggs').innerHTML = t;
       document.getElementById('sggs').style.display = 'block';
+      this.setState({ loading: false });
     });
   }
   render () {
-    return (<div></div>);
+    return (<h1>{this.state.loading && "Loading..."}</h1>);
   }
 }
 

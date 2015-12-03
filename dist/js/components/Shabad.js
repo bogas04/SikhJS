@@ -37,7 +37,11 @@ var Shabad = (function (_Component) {
           null,
           ' This feature requires internet connection '
         ),
-        React.createElement('webview', { src: this.shabad.url + '/print_view', style: { width: '100%' } })
+        React.createElement(
+          'webview',
+          { src: this.shabad.url + '/print_view', style: { width: '100%' } },
+          'Loading...'
+        )
       );
     }
   }]);

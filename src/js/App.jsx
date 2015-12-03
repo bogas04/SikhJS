@@ -1,3 +1,5 @@
+window.jQuery = window.$ = require('jQuery');
+
 const React = require('react');
 const Component = React.Component;
 
@@ -6,8 +8,6 @@ const Router = ReactRouter.Router;
 const Route = ReactRouter.Route;
 const IndexRoute = ReactRouter.Route;
 const Link = ReactRouter.Link;
-
-window.jQuery = window.$ = require('jQuery');
 
 const Nav = require(__dirname + '/dist/js/components/Nav');
 const Greeting = require(__dirname + '/dist/js/components/Greeting');

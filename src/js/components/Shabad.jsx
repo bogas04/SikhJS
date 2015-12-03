@@ -11,7 +11,7 @@ class Shabad extends Component {
     return (
       <div style = {{height: '100%'}}>
         <h3> This feature requires internet connection </h3>
-        <webview src = {this.shabad.url + '/print_view'} style = {{width: '100%'}}/>
+        <webview src = {this.shabad.url + '/print_view'} style = {{width: '100%'}} />
       </div>
     );
   }

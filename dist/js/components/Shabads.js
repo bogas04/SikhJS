@@ -10,6 +10,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = require('react');
 var Component = React.Component;
+var maxResults = 300;
 
 var Shabads = (function (_Component) {
   _inherits(Shabads, _Component);
@@ -33,9 +34,9 @@ var Shabads = (function (_Component) {
     key: 'filteredResults',
     value: function filteredResults() {
       var keyword = this.state.keyword;
-      return keyword !== "" ? this.database.filter(function (e) {
+      return (keyword !== "" ? this.database.filter(function (e) {
         return e.title.toLowerCase().includes(keyword.toLowerCase());
-      }) : this.database;
+      }) : this.database).slice(0, maxResults);
     }
   }, {
     key: 'render',
@@ -81,9 +82,9 @@ var Shabads = (function (_Component) {
           React.createElement(
             'small',
             null,
-            ' ',
+            ' Showing ',
             results.length,
-            ' Shabads Found '
+            ' Shabad Results '
           )
         ),
         React.createElement(

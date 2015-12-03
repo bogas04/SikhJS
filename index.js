@@ -8,11 +8,11 @@ require('crash-reporter').start();
 
 app.on('window-all-closed', () => (process.platform != 'darwin') ? app.quit() : '');
 
-app.on('ready', getMainWindow); 
+app.on('ready', getMainWindow);
 
 function getMainWindow() {
   mainWindow = new BrowserWindow({
-    'width': 1280, 
+    'width': 1280,
     'height': 768,
     'min-width': 400,
     'min-height': 400,
