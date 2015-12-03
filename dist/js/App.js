@@ -8,6 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+window.jQuery = window.$ = require('jQuery');
+
 var React = require('react');
 var Component = React.Component;
 
@@ -16,8 +18,6 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.Route;
 var Link = ReactRouter.Link;
-
-window.jQuery = window.$ = require('jQuery');
 
 var Nav = require(__dirname + '/dist/js/components/Nav');
 var Greeting = require(__dirname + '/dist/js/components/Greeting');

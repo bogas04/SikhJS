@@ -13,7 +13,7 @@ class Shabads extends Component {
   }
   filteredResults () {
     let keyword = this.state.keyword;
-    return (keyword !== "" ? this.database.filter(e => e.title.toLowerCase().includes(keyword.toLowerCase())) : this.database).slice(0, maxResults);
+    return (keyword !== "" ? this.database.filter(e => e.title.toLowerCase().includes(keyword.toLowerCase()) || e.ang === keyword) : this.database).slice(0, maxResults);
   }
   render () {
     let results = this.filteredResults().map(e => <tr key = {e.url} ><td><Link to = {`/shabads/${e.title}`}> {e.title} </Link></td><td>{e.ang}</td></tr>);

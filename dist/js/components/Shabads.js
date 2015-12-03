@@ -35,7 +35,7 @@ var Shabads = (function (_Component) {
     value: function filteredResults() {
       var keyword = this.state.keyword;
       return (keyword !== "" ? this.database.filter(function (e) {
-        return e.title.toLowerCase().includes(keyword.toLowerCase());
+        return e.title.toLowerCase().includes(keyword.toLowerCase()) || e.ang === keyword;
       }) : this.database).slice(0, maxResults);
     }
   }, {
