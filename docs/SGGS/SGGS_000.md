@@ -1,0 +1,267 @@
+# Œ 1 ‰
+---
+<> siq nwmu krqw purKu inrBau inrvYru
+Akwl mUriq AjUnI sYBM gur pRswid ]
+] jpu ]
+Awid scu jugwid scu ] hY BI scu nwnk hosI BI scu ]1]
+socY soic n hoveI jy socI lK vwr ] cupY cup n hoveI jy lwie
+rhw ilv qwr ] BuiKAw BuK n auqrI jy bMnw purIAw Bwr ] shs
+isAwxpw lK hoih q iek n clY nwil ] ikv sicAwrw hoeIAY
+ikv kUVY qutY pwil ] hukim rjweI clxw nwnk iliKAw nwil
+]1] hukmI hovin Awkwr hukmu n kihAw jweI ] hukmI hovin
+jIA hukim imlY vifAweI ] hukmI auqmu nIcu hukim iliK duK
+suK pweIAih ] ieknw hukmI bKsIs ieik hukmI sdw
+BvweIAih ] hukmY AMdir sBu ko bwhir hukm n koie ] nwnk
+hukmY jy buJY q haumY khY n koie ]2] gwvY ko qwxu hovY iksY qwxu
+] gwvY ko dwiq jwxY nIswxu ] gwvY ko gux vifAweIAw cwr ]
+gwvY ko ividAw ivKmu vIcwru ] gwvY ko swij kry qnu Kyh ] gwvY
+ko jIA lY iPir dyh ] gwvY
+
+# Œ 2 ‰
+---
+ko jwpY idsY dUir ] gwvY ko vyKY hwdrw hdUir ] kQnw kQI n AwvY qoit ]
+kiQ kiQ kQI kotI koit koit ] dydw dy lYdy Qik pwih ] jugw jugMqir KwhI
+Kwih ] hukmI hukmu clwey rwhu ] nwnk ivgsY vyprvwhu ]3] swcw swihbu
+swcu nwie BwiKAw Bwau Apwru ] AwKih mMgih dyih dyih dwiq kry dwqwru ]
+Pyir ik AgY rKIAY ijqu idsY drbwru ] muhO ik bolxu bolIAY ijqu suix Dry
+ipAwru ] AMimRq vylw scu nwau vifAweI vIcwru ] krmI AwvY kpVw ndrI
+moKu duAwru ] nwnk eyvY jwxIAY sBu Awpy sicAwru ]4] QwipAw n jwie
+kIqw n hoie ] Awpy Awip inrMjnu soie ] ijin syivAw iqin pwieAw mwnu ]
+nwnk gwvIAY guxI inDwnu ] gwvIAY suxIAY min rKIAY Bwau ] duKu prhir
+suKu Gir lY jwie ] gurmuiK nwdM gurmuiK vydM gurmuiK rihAw smweI ] guru
+eIsru guru gorKu brmw guru pwrbqI mweI ] jy hau jwxw AwKw nwhI khxw
+kQnu n jweI ] gurw iek dyih buJweI ] sBnw jIAw kw ieku dwqw so mY
+ivsir n jweI ]5] qIriQ nwvw jy iqsu Bwvw ivxu Bwxy ik nwie krI ]
+jyqI isriT aupweI vyKw ivxu krmw ik imlY leI ] miq ivic rqn jvwhr
+mwixk jy iek gur kI isK suxI ] gurw iek dyih buJweI ] sBnw jIAw kw
+ieku dwqw so mY ivsir n jweI ]6] jy jug cwry Awrjw hor dsUxI hoie ]
+nvw KMfw ivic jwxIAY nwil clY sBu koie ] cMgw nwau rKwie kY jsu kIriq
+jig lyie ] jy iqsu ndir n AwveI q vwq n puCY ky ] kItw AMdir kItu
+kir dosI dosu Dry ] nwnk inrguix guxu kry guxvMiqAw guxu dy ] qyhw koie n
+suJeI ij iqsu guxu koie kry ]7] suixAY isD pIr suir nwQ ] suixAY Driq
+Dvl Awkws ] suixAY dIp loA pwqwl ] suixAY poih n skY kwlu ] nwnk
+Bgqw sdw ivgwsu ] suixAY dUK pwp kw nwsu ]8] suixAY eIsru brmw ieMdu
+] suixAY muiK swlwhx mMdu ] suixAY jog jugiq qin Byd ] suixAY swsq
+isimRiq vyd ] nwnk Bgqw
+
+# Œ 3 ‰
+---
+sdw ivgwsu ] suixAY dUK pwp kw nwsu ]9] suixAY squ sMqoKu igAwnu ]
+suixAY ATsiT kw iesnwnu ] suixAY piV piV pwvih mwnu ] suixAY lwgY
+shij iDAwnu ] nwnk Bgqw sdw ivgwsu ] suixAY dUK pwp kw nwsu ]10]
+suixAY srw guxw ky gwh ] suixAY syK pIr pwiqswh ] suixAY AMDy pwvih
+rwhu ] suixAY hwQ hovY Asgwhu ] nwnk Bgqw sdw ivgwsu ] suixAY dUK
+pwp kw nwsu ]11] mMny kI giq khI n jwie ] jy ko khY ipCY pCuqwie ]
+kwgid klm n ilKxhwru ] mMny kw bih krin vIcwru ] AYsw nwmu inrMjnu
+hoie ] jy ko mMin jwxY min koie ]12] mMnY suriq hovY min buiD ] mMnY sgl
+Bvx kI suiD ] mMnY muih cotw nw Kwie ] mMnY jm kY swiQ n jwie ] AYsw
+nwmu inrMjnu hoie ] jy ko mMin jwxY min koie ]13] mMnY mwrig Twk n pwie
+] mMnY piq isau prgtu jwie ] mMnY mgu n clY pMQu ] mMnY Drm syqI snbMDu
+] AYsw nwmu inrMjnu hoie ] jy ko mMin jwxY min koie ] 14] mMnY pwvih moKu
+duAwru ] mMnY prvwrY swDwru ] mMnY qrY qwry guru isK ] mMnY nwnk Bvih n
+iBK ] AYsw nwmu inrMjnu hoie ] jy ko mMin jwxY min koie ]15] pMc prvwx
+pMc prDwnu ] pMcy pwvih drgih mwnu ] pMcy sohih dir rwjwnu ] pMcw kw
+guru eyku iDAwnu ] jy ko khY krY vIcwru ] krqy kY krxY nwhI sumwru ] DOlu
+Drmu dieAw kw pUqu ] sMqoKu Qwip riKAw ijin sUiq ] jy ko bUJY hovY
+sicAwru ] DvlY aupir kyqw Bwru ] DrqI horu prY horu horu ] iqs qy Bwru
+qlY kvxu joru ] jIA jwiq rMgw ky nwv ] sBnw iliKAw vuVI klwm ] eyhu
+lyKw iliK jwxY koie ] lyKw iliKAw kyqw hoie ] kyqw qwxu suAwilhu rUpu ]
+kyqI dwiq jwxY kOxu kUqu ] kIqw pswau eyko kvwau ] iqs qy hoey lK
+drIAwau ] kudriq kvx khw vIcwru ] vwirAw n jwvw eyk vwr ] jo quDu
+BwvY sweI BlI kwr ] qU sdw slwmiq inrMkwr ]16] AsMK jp AsMK Bwau
+] AsMK pUjw AsMK qp qwau ] AsMK grMQ muiK vyd pwT ] AsMK jog min
+rhih
+
+# Œ 4 ‰
+---
+audws ] AsMK Bgq gux igAwn vIcwr ] AsMK sqI AsMK dwqwr ] AsMK
+sUr muh BK swr ] AsMK moin ilv lwie qwr ] kudriq kvx khw vIcwru ]
+vwirAw n jwvw eyk vwr ] jo quDu BwvY sweI BlI kwr ] qU sdw slwmiq
+inrMkwr ]17] AsMK mUrK AMD Gor ] AsMK cor hrwmKor ] AsMK Amr
+kir jwih jor ] AsMK glvF hiqAw kmwih ] AsMK pwpI pwpu kir jwih ]
+AsMK kUiVAwr kUVy iPrwih ] AsMK mlyC mlu BiK Kwih ] AsMK inMdk isir
+krih Bwru ] nwnku nIcu khY vIcwru ] vwirAw n jwvw eyk vwr ] jo quDu
+BwvY sweI BlI kwr ] qU sdw slwmiq inrMkwr ] 18] AsMK nwv AsMK
+Qwv ] AgMm AgMm AsMK loA ] AsMK khih isir Bwru hoie ] AKrI nwmu
+AKrI swlwh ] AKrI igAwnu gIq gux gwh ] AKrI ilKxu bolxu bwix ]
+AKrw isir sMjogu vKwix ] ijin eyih ilKy iqsu isir nwih ] ijv Purmwey
+iqv iqv pwih ] jyqw kIqw qyqw nwau ] ivxu nwvY nwhI ko Qwau ] kudriq
+kvx khw vIcwru ] vwirAw n jwvw eyk vwr ] jo quDu BwvY sweI BlI kwr ]
+qU sdw slwmiq inrMkwr ]19] BrIAY hQu pYru qnu dyh ] pwxI DoqY auqrsu
+Kyh ] mUq plIqI kpVu hoie ] dy swbUxu leIAY Ehu Doie ] BrIAY miq pwpw
+kY sMig ] Ehu DopY nwvY kY rMig ] puMnI pwpI AwKxu nwih ] kir kir krxw
+iliK lY jwhu ] Awpy bIij Awpy hI Kwhu ] nwnk hukmI Awvhu jwhu ]20]
+qIrQu qpu dieAw dqu dwnu ] jy ko pwvY iql kw mwnu ] suixAw mMinAw min
+kIqw Bwau ] AMqrgiq qIriQ mil nwau ] siB gux qyry mY nwhI koie ] ivxu
+gux kIqy Bgiq n hoie ] suAsiq AwiQ bwxI brmwau ] siq suhwxu sdw
+min cwau ] kvxu su vylw vKqu kvxu kvx iQiq kvxu vwru ] kvix is ruqI
+mwhu kvxu ijqu hoAw Awkwru ] vyl n pweIAw pMfqI ij hovY lyKu purwxu ]
+vKqu n pwieE kwdIAw ij ilKin lyKu kurwxu ] iQiq vwru nw jogI jwxY ruiq
+mwhu nw koeI ] jw krqw isrTI kau swjy Awpy jwxY soeI ] ikv kir AwKw
+ikv
+
+# Œ 5 ‰
+---
+swlwhI ikau vrnI ikv jwxw ] nwnk AwKix sBu ko AwKY iek dU ieku
+isAwxw ] vfw swihbu vfI nweI kIqw jw kw hovY ] nwnk jy ko AwpO jwxY
+AgY gieAw n sohY ]21] pwqwlw pwqwl lK Awgwsw Awgws ] EVk EVk
+Bwil Qky vyd khin iek vwq ] shs ATwrh khin kqybw AsulU ieku Dwqu
+] lyKw hoie q ilKIAY lyKY hoie ivxwsu ] nwnk vfw AwKIAY Awpy jwxY Awpu
+] 22] swlwhI swlwih eyqI suriq n pweIAw ] ndIAw AqY vwh pvih
+smuMid n jwxIAih ] smuMd swh sulqwn igrhw syqI mwlu Dnu ] kIVI quil n
+hovnI jy iqsu mnhu n vIsrih ]23] AMqu n isPqI khix n AMqu ] AMqu n
+krxY dyix n AMqu ] AMqu n vyKix suxix n AMqu ] AMqu n jwpY ikAw min
+mMqu ] AMqu n jwpY kIqw Awkwru ] AMqu n jwpY pwrwvwru ] AMq kwrix kyqy
+ibllwih ] qw ky AMq n pwey jwih ] eyhu AMqu n jwxY koie ] bhuqw khIAY
+bhuqw hoie ] vfw swihbu aUcw Qwau ] aUcy aupir aUcw nwau ] eyvfu aUcw hovY
+koie ] iqsu aUcy kau jwxY soie ] jyvfu Awip jwxY Awip Awip ] nwnk
+ndrI krmI dwiq ]24] bhuqw krmu iliKAw nw jwie ] vfw dwqw iqlu n
+qmwie ] kyqy mMgih joD Apwr ] kyiqAw gxq nhI vIcwru ] kyqy Kip
+qutih vykwr ] kyqy lY lY mukru pwih ] kyqy mUrK KwhI Kwih ] kyiqAw dUK
+BUK sd mwr ] eyih iB dwiq qyrI dwqwr ] bMid KlwsI BwxY hoie ] horu
+AwiK n skY koie ] jy ko Kwieku AwKix pwie ] Ehu jwxY jyqIAw muih Kwie
+] Awpy jwxY Awpy dyie ] AwKih is iB kyeI kyie ] ijs no bKsy isPiq
+swlwh ] nwnk pwiqswhI pwiqswhu ]25] Amul gux Amul vwpwr ] Amul
+vwpwrIey Amul BMfwr ] Amul Awvih Amul lY jwih ] Amul Bwie Amulw
+smwih ] Amulu Drmu Amulu dIbwxu ] Amulu qulu Amulu prvwxu ] Amulu
+bKsIs Amulu nIswxu ] Amulu krmu Amulu Purmwxu ] Amulo Amulu AwiKAw n
+jwie ] AwiK AwiK rhy ilv lwie ] AwKih vyd pwT purwx ] AwKih pVy
+krih viKAwx ] AwKih brmy AwKih ieMd ]
+
+# Œ 6 ‰
+---
+AwKih gopI qY goivMd ] AwKih eIsr AwKih isD ] AwKih kyqy kIqy buD
+] AwKih dwnv AwKih dyv ] AwKih suir nr muin jn syv ] kyqy AwKih
+AwKix pwih ] kyqy kih kih auiT auiT jwih ] eyqy kIqy hoir kryih ] qw
+AwiK n skih kyeI kyie ] jyvfu BwvY qyvfu hoie ] nwnk jwxY swcw soie ]
+jy ko AwKY boluivgwVu ] qw ilKIAY isir gwvwrw gwvwru ]26] so dru kyhw so
+Gru kyhw ijqu bih srb smwly ] vwjy nwd Anyk AsMKw kyqy vwvxhwry ] kyqy
+rwg prI isau khIAin kyqy gwvxhwry ] gwvih quhno pauxu pwxI bYsMqru
+gwvY rwjw Drmu duAwry ] gwvih icqu gupqu iliK jwxih iliK iliK Drmu
+vIcwry ] gwvih eIsru brmw dyvI sohin sdw svwry ] gwvih ieMd iedwsix
+bYTy dyviqAw dir nwly ] gwvih isD smwDI AMdir gwvin swD ivcwry ]
+gwvin jqI sqI sMqoKI gwvih vIr krwry ] gwvin pMifq pVin rKIsr jugu
+jugu vydw nwly ] gwvih mohxIAw mnu mohin surgw mC pieAwly ] gwvin
+rqn aupwey qyry ATsiT qIrQ nwly ] gwvih joD mhwbl sUrw gwvih KwxI
+cwry ] gwvih KMf mMfl vrBMfw kir kir rKy Dwry ] syeI quDuno gwvih jo
+quDu Bwvin rqy qyry Bgq rswly ] hor kyqy gwvin sy mY iciq n Awvin nwnku
+ikAw vIcwry ] soeI soeI sdw scu swihbu swcw swcI nweI ] hY BI hosI jwie
+n jwsI rcnw ijin rcweI ] rMgI rMgI BwqI kir kir ijnsI mwieAw ijin
+aupweI ] kir kir vyKY kIqw Awpxw ijv iqs dI vifAweI ] jo iqsu BwvY
+soeI krsI hukmu n krxw jweI ] so pwiqswhu swhw pwiqswihbu nwnk rhxu
+rjweI ]27] muMdw sMqoKu srmu pqu JolI iDAwn kI krih ibBUiq ] iKMQw
+kwlu kuAwrI kwieAw jugiq fMfw prqIiq ] AweI pMQI sgl jmwqI min
+jIqY jgu jIqu ] Awdysu iqsY Awdysu ] Awid AnIlu Anwid Anwhiq jugu jugu
+eyko vysu ]28] Bugiq igAwnu dieAw BMfwrix Git Git vwjih nwd ] Awip
+nwQu nwQI sB jw kI iriD isiD Avrw swd ] sMjogu ivjogu duie kwr
+clwvih
+
+# Œ 7 ‰
+---
+lyKy Awvih Bwg ] Awdysu iqsY Awdysu ] Awid AnIlu Anwid Anwhiq jugu
+jugu eyko vysu ]29] eykw mweI jugiq ivAweI iqin cyly prvwxu ] ieku
+sMswrI ieku BMfwrI ieku lwey dIbwxu ] ijv iqsu BwvY iqvY clwvY ijv hovY
+Purmwxu ] Ehu vyKY Enw ndir n AwvY bhuqw eyhu ivfwxu ] Awdysu iqsY Awdysu
+] Awid AnIlu Anwid Anwhiq jugu jugu eyko vysu ]30] Awsxu loie loie
+BMfwr ] jo ikCu pwieAw su eykw vwr ] kir kir vyKY isrjxhwru ] nwnk
+scy kI swcI kwr ] Awdysu iqsY Awdysu ] Awid AnIlu Anwid Anwhiq jugu
+jugu eyko vysu ]31] iek dU jIBO lK hoih lK hovih lK vIs ] lKu lKu gyVw
+AwKIAih eyku nwmu jgdIs ] eyqu rwih piq pvVIAw cVIAY hoie iekIs ]
+suix glw Awkws kI kItw AweI rIs ] nwnk ndrI pweIAY kUVI kUVY TIs
+]32] AwKix joru cupY nh joru ] joru n mMgix dyix n joru ] joru n jIvix
+mrix nh joru ] joru n rwij mwil min soru ] joru n surqI igAwin vIcwir
+] joru n jugqI CutY sMswru ] ijsu hiQ joru kir vyKY soie ] nwnk auqmu nIcu
+n koie ]33] rwqI ruqI iQqI vwr ] pvx pwxI AgnI pwqwl ] iqsu ivic
+DrqI Qwip rKI Drm swl ] iqsu ivic jIA jugiq ky rMg ] iqn ky nwm
+Anyk Anµq ] krmI krmI hoie vIcwru ] scw Awip scw drbwru ] iqQY
+sohin pMc prvwxu ] ndrI krim pvY nIswxu ] kc pkweI EQY pwie ]
+nwnk gieAw jwpY jwie ]34] Drm KMf kw eyho Drmu ] igAwn KMf kw
+AwKhu krmu ] kyqy pvx pwxI vYsMqr kyqy kwn mhys ] kyqy brmy GwViq
+GVIAih rUp rMg ky vys ] kyqIAw krm BUmI myr kyqy kyqy DU aupdys ] kyqy
+ieMd cMd sUr kyqy kyqy mMfl dys ] kyqy isD buD nwQ kyqy kyqy dyvI vys ] kyqy
+dyv dwnv muin kyqy kyqy rqn smuMd ] kyqIAw KwxI kyqIAw bwxI kyqy pwq
+nirMd ] kyqIAw surqI syvk kyqy nwnk AMqu n AMqu ]35] igAwn KMf mih
+igAwnu prcMfu ] iqQY nwd ibnod kof Anµdu ]
+
+# Œ 8 ‰
+---
+srm KMf kI bwxI rUpu ] iqQY GwViq GVIAY bhuqu AnUpu ] qw kIAw glw
+kQIAw nw jwih ] jy ko khY ipCY pCuqwie ] iqQY GVIAY suriq miq min
+buiD ] iqQY GVIAY surw isDw kI suiD ]36] krm KMf kI bwxI joru ] iqQY
+horu n koeI horu ] iqQY joD mhwbl sUr ] iqn mih rwmu rihAw BrpUr ]
+iqQY sIqo sIqw mihmw mwih ] qw ky rUp n kQny jwih ] nw Eih mrih n
+Twgy jwih ] ijn kY rwmu vsY mn mwih ] iqQY Bgq vsih ky loA ] krih
+Anµdu scw min soie ] sc KMif vsY inrMkwru ] kir kir vyKY ndir inhwl
+] iqQY KMf mMfl vrBMf ] jy ko kQY q AMq n AMq ] iqQY loA loA Awkwr
+] ijv ijv hukmu iqvY iqv kwr ] vyKY ivgsY kir vIcwru ] nwnk kQnw
+krVw swru ]37] jqu pwhwrw DIrju suinAwru ] Ahrix miq vydu hQIAwru ]
+Bau Klw Agin qp qwau ] BWfw Bwau AMimRqu iqqu Fwil ] GVIAY sbdu scI
+tkswl ] ijn kau ndir krmu iqn kwr ] nwnk ndrI ndir inhwl
+]38] sloku ] pvxu gurU pwxI ipqw mwqw Driq mhqu ] idvsu rwiq duie
+dweI dwieAw KylY sgl jgqu ] cMigAweIAw buirAweIAw vwcY Drmu hdUir ]
+krmI Awpo AwpxI ky nyVY ky dUir ] ijnI nwmu iDAwieAw gey mskiq Gwil
+] nwnk qy muK aujly kyqI CutI nwil ]1]
+so dru rwgu Awsw mhlw 1 <> siqgur pRswid ]
+so dru qyrw kyhw so Gru kyhw ijqu bih srb smwly ] vwjy qyry nwd Anyk
+AsMKw kyqy qyry vwvxhwry ] kyqy qyry rwg prI isau khIAih kyqy qyry
+gwvxhwry ] gwvin quDno pvxu pwxI bYsMqru gwvY rwjw Drmu duAwry ] gwvin
+quDno icqu gupqu iliK jwxin iliK iliK Drmu bIcwry ] gwvin quDno eIsru
+bRhmw dyvI sohin qyry sdw svwry ] gwvin quDno ieMdR ieMdRwsix bYTy dyviqAw
+dir nwly ] gwvin quDno isD smwDI AMdir gwvin quDno swD bIcwry ]
+
+# Œ 9 ‰
+---
+gwvin quDno jqI sqI sMqoKI gwvin quDno vIr krwry ] gwvin quDno pMifq
+pVin rKIsur jugu jugu vydw nwly ] gwvin quDno mohxIAw mnu mohin surgu
+mCu pieAwly ] gwvin quDno rqn aupwey qyry ATsiT qIrQ nwly ] gwvin
+quDno joD mhwbl sUrw gwvin quDno KwxI cwry ] gwvin quDno KMf mMfl
+bRhmMfw kir kir rKy qyry Dwry ] syeI quDno gwvin jo quDu Bwvin rqy qyry
+Bgq rswly ] hoir kyqy quDno gwvin sy mY iciq n Awvin nwnku ikAw
+bIcwry ] soeI soeI sdw scu swihbu swcw swcI nweI ] hY BI hosI jwie n
+jwsI rcnw ijin rcweI ] rMgI rMgI BwqI kir kir ijnsI mwieAw ijin
+aupweI ] kir kir dyKY kIqw Awpxw ijau iqs dI vifAweI ] jo iqsu BwvY
+soeI krsI iPir hukmu n krxw jweI ] so pwiqswhu swhw piqswihbu nwnk
+rhxu rjweI ]1] Awsw mhlw 1 ] suix vfw AwKY sBu koie ] kyvfu vfw
+fITw hoie ] kImiq pwie n kihAw jwie ] khxY vwly qyry rhy smwie ]1]
+vfy myry swihbw gihr gMBIrw guxI ghIrw ] koie n jwxY qyrw kyqw kyvfu
+cIrw ]1] rhwau ] siB surqI imil suriq kmweI ] sB kImiq imil
+kImiq pweI ] igAwnI iDAwnI gur gurhweI ] khxu n jweI qyrI iqlu
+vifAweI ]2] siB sq siB qp siB cMigAweIAw ] isDw purKw kIAw
+vifAweIAw ] quDu ivxu isDI iknY n pweIAw ] krim imlY nwhI Twik
+rhweIAw ]3] AwKx vwlw ikAw vycwrw ] isPqI Bry qyry BMfwrw ] ijsu qU
+dyih iqsY ikAw cwrw ] nwnk scu svwrxhwrw ]4]2]
+Awsw mhlw 1 ]
+AwKw jIvw ivsrY mir jwau ] AwKix AauKw swcw nwau ] swcy nwm kI lwgY
+BUK ] auqu BUKY Kwie clIAih dUK ]1] so ikau ivsrY myrI mwie ] swcw
+swihbu swcY nwie ]1] rhwau ] swcy nwm kI iqlu vifAweI ] AwiK Qky
+kImiq nhI pweI ] jy siB imil kY AwKx pwih ] vfw n hovY Gwit n jwie
+]2] nw Ehu mrY n hovY sogu ] dydw rhY n cUkY Bogu ] guxu eyho horu nwhI koie
+] nw ko hoAw nw ko hoie ]3] jyvfu Awip qyvf qyrI dwiq ]
+
+# Œ 10 ‰
+---
+ijin idnu kir kY kIqI rwiq ] Ksmu ivswrih qy kmjwiq ] nwnk nwvY
+bwJu snwiq ]4]3] rwgu gUjrI mhlw 4 ] hir ky jn siqgur sqpurKw
+ibnau krau gur pwis ] hm kIry ikrm siqgur srxweI kir dieAw nwmu
+prgwis ]1] myry mIq gurdyv mo kau rwm nwmu prgwis ] gurmiq nwmu myrw
+pRwn sKweI hir kIriq hmrI rhrwis ]1] rhwau ] hir jn ky vf Bwg
+vfyry ijn hir hir srDw hir ipAws ] hir hir nwmu imlY iqRpqwsih imil
+sMgiq gux prgwis ]2] ijn hir hir hir rsu nwmu n pwieAw qy BwghIx
+jm pwis ] jo siqgur srix sMgiq nhI Awey iDRgu jIvy iDRgu jIvwis ]3]
+ijn hir jn siqgur sMigq pweI iqn Duir msqik iliKAw ilKwis ] Dnu
+DMnu sqsMigq ijqu hir rsu pwieAw imil jn nwnk nwmu prgwis ]4]4]
+rwgu gUjrI mhlw 5 ] kwhy ry mn icqvih audmu jw Awhir hir jIau pirAw
+] sYl pQr mih jMq aupwey qw kw irjku AwgY kir DirAw ]1] myry mwDau
+jI sqsMgiq imly su qirAw ] gur prswid prm pdu pwieAw sUky kwst
+hirAw ]1] rhwau ] jnin ipqw lok suq binqw koie n iks kI DirAw ]
+isir isir irjku sMbwhy Twkuru kwhy mn Bau kirAw ]2] aUfy aUif AwvY sY
+kosw iqsu pwCY bcry CirAw ] iqn kvxu KlwvY kvxu cugwvY mn mih ismrnu
+kirAw ]3] siB inDwn ds Ast isDwn Twkur kr ql DirAw ] jn
+nwnk bil bil sd bil jweIAY qyrw AMqu n pwrwvirAw ]4]5]
+rwgu Awsw mhlw 4 so purKu
+<> siqgur pRswid ]
+so purKu inrMjnu hir purKu inrMjnu hir Agmw Agm Apwrw ] siB
+iDAwvih siB iDAwvih quDu jI hir scy isrjxhwrw ] siB jIA qumwry jI
+qUM jIAw kw dwqwrw ] hir iDAwvhu sMqhu jI siB dUK ivswrxhwrw ] hir
+Awpy Twkuru hir Awpy syvku jI
+
