@@ -40,18 +40,22 @@ The project is based on Electron. You can build it as follows:
 
 ## Instructions
 ```bash
+# Installation
 git clone https://github.com/bogas04/SikhJS.git
 cd SikhJS
 npm i
 npm i electron-packager -g
-# For Windows 32 bit
-electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.34.0
-# For OSX
-electron-packager . SikhJS --platform=darwin --arch=all --version=0.34.0
-# For Linux 32 bit
-electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.34.0
-```
 
+# Transpile JSX to JS during development
+npm run build
+# Transpile JSX to JS during development and watch the files
+npm run buildw
+# Transpile and start the app
+npm run start
+
+# Package
+npm run package-(darwin|win32|linux)
+```
 
 Changelog
 ==
@@ -92,8 +96,9 @@ Changelog
     - [ ] Optimize Components
   - [ ] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
-    - [ ] Indexed SGGS with quick search
-    - [ ] English and Romanized Nitnem
+    - [x] Ang numbers
+    - [ ] Quick select angs
+    - [ ] Sehaj Path tracker
   - [x] Sikh calendar
     - [x] Beautify
     - [ ] Add images
