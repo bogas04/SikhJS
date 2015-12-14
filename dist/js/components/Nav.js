@@ -87,13 +87,6 @@ var Nav = (function (_Component) {
               { className: 'nav navbar-nav' },
               React.createElement(
                 'li',
-                { className: 'btn-link', onClick: function onClick(e) {
-                    _this2.toggleNightMode(e);return false;
-                  } },
-                ' Night Mode '
-              ),
-              React.createElement(
-                'li',
                 null,
                 React.createElement(
                   Link,
@@ -144,6 +137,22 @@ var Nav = (function (_Component) {
               React.createElement('input', { onChange: function onChange(e) {
                   return _this2.updateFontSize(e);
                 }, id: 'fontChanger', type: 'range', name: 'font-size', min: '1', max: '10', step: '0.1' })
+            ),
+            React.createElement(
+              'ul',
+              { className: 'nav navbar-nav navbar-right' },
+              React.createElement(
+                'li',
+                { onClick: function onClick(e) {
+                    _this2.toggleNightMode(e);return false;
+                  } },
+                React.createElement(
+                  'a',
+                  { href: 'javascript:;' },
+                  React.createElement('span', { className: 'glyphicon glyphicon-adjust' }),
+                  ' Night Mode'
+                )
+              )
             )
           )
         )

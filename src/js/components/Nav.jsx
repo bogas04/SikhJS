@@ -45,7 +45,6 @@ class Nav extends Component {
           </div>
           <div className = "collapse navbar-collapse" id = "main-menu">
             <ul className = "nav navbar-nav">
-              <li className = "btn-link" onClick={e => { this.toggleNightMode(e); return false }}> Night Mode </li>
               <li><Link to={`/about`}> About </Link></li>
               <li><Link to={`/calendar`}> Calendar </Link></li>
               <li><Link to={`/sggs`}> Sri Guru Granth Sahib </Link></li>
@@ -55,11 +54,18 @@ class Nav extends Component {
             <form className = "navbar-form navbar-right form-inline">
               <input onChange = {(e) => this.updateFontSize(e)} id = "fontChanger" type = "range" name = "font-size" min = "1" max = "10" step = "0.1"/>
             </form>
+            <ul className ="nav navbar-nav navbar-right">
+              <li onClick={e => { this.toggleNightMode(e); return false }}>
+                <a href="javascript:;">
+                  <span className = "glyphicon glyphicon-adjust"></span> Night Mode
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    );
+        </nav>
+      );
+    }
   }
-}
 
-module.exports = Nav;
+  module.exports = Nav;
