@@ -3,7 +3,9 @@ SikhJS v0.0.2b
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 **NOTE**: The application is still in active development and is not fit for public release just yet.
 
-<!--![Screencast on OSX](assets/OSX.gif)-->
+![Screenshot 1](assets/1.png)
+![Screenshot 2](assets/2.png)
+![Screenshot 3](assets/3.png)
 
 Goal
 ==
@@ -94,13 +96,17 @@ Changelog
     - [ ] English and Romanized Nitnem
   - [x] Sikh calendar
     - [x] Beautify
-    - [ ] Add images 
+    - [ ] Add images
   - [x] Complete Gurmukhi Nitnem
   - [x] Baanis stored as markdown files for easier parsing
 
 Credits
 ==
-Thanks to SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis) and to [GurbaniFiles.org] (http://www.gurbanifiles.org/) for SGGS
+Thanks to
+* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis)
+* [GurbaniFiles.org] (http://www.gurbanifiles.org/)
+* [SearchGurbani.com] (http://searchgurbani.com/)
+* and everyone else who are making this possible.
 
 Contribute
 ==

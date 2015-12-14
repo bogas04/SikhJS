@@ -10,6 +10,9 @@
   from { transform: scale(3); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+#root img {
+  width: 100%;
+}
 .navbar-form label {
   color: white;
   vertical-align: middle;
