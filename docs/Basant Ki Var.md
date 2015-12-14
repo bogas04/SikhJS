@@ -1,33 +1,17 @@
 # bsMq kI vwr mhlu 5 (1193-6)
-
 <> siqgur pRswid ] (1193-6)
-
 hir kw nwmu iDAwie kY hohu hirAw BweI ] (1193-7, bsMqu, mÚ 5)
-
 krim ilKMqY pweIAY ieh ruiq suhweI ] (1193-7, bsMqu, mÚ 5)
-
 vxu iqRxu iqRBvxu mauilAw AMimRq Plu pweI ] (1193-7, bsMqu, mÚ 5)
-
 imil swDU suKu aUpjY lQI sB CweI ] (1193-8, bsMqu, mÚ 5)
-
 nwnku ismrY eyku nwmu iPir bhuiV n DweI ]1] (1193-8, bsMqu, mÚ 5)
-
 pMjy bDy mhwblI kir scw FoAw ] (1193-9, bsMqu, mÚ 5)
-
 Awpxy crx jpwieAnu ivic dXu KVoAw ] (1193-9, bsMqu, mÚ 5)
-
 rog sog siB imit gey inq nvw inroAw ] (1193-10, bsMqu, mÚ 5)
-
 idnu rYix nwmu iDAwiedw iPir pwie n moAw ] (1193-10, bsMqu, mÚ 5)
-
 ijs qy aupijAw nwnkw soeI iPir hoAw ]2] (1193-11, bsMqu, mÚ 5)
-
 ikQhu aupjY kh rhY kh mwih smwvY ] (1193-11, bsMqu, mÚ 5)
-
 jIA jMq siB Ksm ky kauxu kImiq pwvY ] (1193-11, bsMqu, mÚ 5)
-
 khin iDAwiein suxin inq sy Bgq suhwvY ] (1193-12, bsMqu, mÚ 5)
-
 Agmu Agocru swihbo dUsru lvY n lwvY ] (1193-12, bsMqu, mÚ 5)
-
 scu pUrY guir aupdyisAw nwnku suxwvY ]3]1] (1193-13, bsMqu, mÚ 5)
