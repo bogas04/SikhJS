@@ -29,26 +29,17 @@
   padding: 20vh 10vw;
 }
 #sggs {
+  display: none;
+}
+#baaniWrapper, #sggs {
   font-size: 175%;
-  padding-top: 100px;
-  box-shadow: 0px 65px 32px -23px black inset;
+  padding: 5px 10px 60px 10px;
+  box-shadow: 0px -65px 32px -23px black inset;
   overflow: auto;
   height: 100vh;
-  display: none;
   cursor: default;
   transition: all 0.25s;
   text-align: center;
-}
-#baaniWrapper {
-  margin-top: 0px;
-  font-size: 175%;
-  padding-top: 70px;
-  padding: 70px 10px 0px 10px;
-  box-shadow: 0px 65px 32px -23px black inset;
-  overflow: auto;
-  height: 100vh;
-  cursor: default;
-  transition: all 0.25s;
 }
 .gurbani-text * {
   font-family: gurmukhi_heavy;

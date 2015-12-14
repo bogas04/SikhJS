@@ -16,11 +16,16 @@ class Shabads extends Component {
     return (keyword !== "" ? this.database.filter(e => e.title.toLowerCase().includes(keyword.toLowerCase()) || e.ang === keyword) : this.database).slice(0, maxResults);
   }
   render () {
-    let results = this.filteredResults().map(e => <tr key = {e.url} ><td><Link to = {`/shabads/${e.title}`}> {e.title} </Link></td><td>{e.ang}</td></tr>);
+    let results = this.filteredResults().map(e => (
+      <tr key = {e.url} >
+        <td><Link to = {`/shabads/${e.title}`}> {e.title} </Link></td>
+        <td>{e.ang}</td>
+        </tr>
+      ));
     return (
-      <div>
+      <div style = {{ paddingTop: '25px' }}>
         <div className = "form-group form-inline">
-          <input 
+          <input
             className = "form-control"
             style = {{width: '70%'}}
             placeholder = "Search shabads from Amrit Keertan"

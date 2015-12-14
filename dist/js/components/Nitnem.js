@@ -23,31 +23,62 @@ var Baanies = (function (_Component) {
   _createClass(Baanies, [{
     key: 'render',
     value: function render() {
-      var baanies = require('../baanies').map(function (e) {
-        return React.createElement(
-          'li',
-          { className: 'list-group-item', key: e },
-          React.createElement(
-            Link,
-            { to: '/nitnem/' + e },
-            ' ',
-            e,
-            ' '
-          )
-        );
-      });
+      var _baanies = require('../baanies');
+      var baanies = {
+        nitnem: _baanies.nitnem.map(function (e) {
+          return React.createElement(
+            'li',
+            { key: e },
+            React.createElement(
+              Link,
+              { className: 'btn-lg', to: '/nitnem/' + e },
+              ' ',
+              e,
+              ' '
+            )
+          );
+        }),
+        others: _baanies.others.map(function (e) {
+          return React.createElement(
+            'li',
+            { key: e },
+            React.createElement(
+              Link,
+              { className: 'btn-lg', to: '/nitnem/' + e },
+              ' ',
+              e,
+              ' '
+            )
+          );
+        })
+      };
       return React.createElement(
         'div',
         null,
         React.createElement(
           'h1',
+          { style: { fontFamily: 'gurmukhi_heavy' } },
+          'Œ Ç ‰'
+        ),
+        React.createElement(
+          'h2',
           null,
           ' Nitnem '
         ),
         React.createElement(
           'ul',
-          { className: 'list-group' },
-          baanies
+          { className: 'list-unstyled' },
+          baanies.nitnem
+        ),
+        React.createElement(
+          'h2',
+          null,
+          ' Other Baanies '
+        ),
+        React.createElement(
+          'ul',
+          { className: 'list-unstyled' },
+          baanies.others
         )
       );
     }

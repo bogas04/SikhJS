@@ -14,7 +14,8 @@ class Baani extends Component {
     let baanies = require('../baanies');
     const baaniLocation = b => __dirname + '/../../../docs/' + b + '.md';
 
-    if (baanies.indexOf(this.props.params.baani) > -1) {
+    if (baanies.nitnem.indexOf(this.props.params.baani) > -1
+    || baanies.others.indexOf(this.props.params.baani) > -1 ) {
       fs.readFile(baaniLocation(this.props.params.baani), 'utf8', (err, file) => {
         this.setState({ file });
       });

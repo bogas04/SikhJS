@@ -59,7 +59,7 @@ var Nav = (function (_Component) {
 
       return React.createElement(
         'nav',
-        { className: 'navbar navbar-default navbar-fixed-top', id: 'menuWrapper' },
+        { className: 'navbar navbar-default navbar-fixed-bottom', id: 'menuWrapper' },
         React.createElement(
           'div',
           { className: 'container-fluid' },

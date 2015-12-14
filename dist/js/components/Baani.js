@@ -37,7 +37,7 @@ var Baani = (function (_Component) {
         return __dirname + '/../../../docs/' + b + '.md';
       };
 
-      if (baanies.indexOf(this.props.params.baani) > -1) {
+      if (baanies.nitnem.indexOf(this.props.params.baani) > -1 || baanies.others.indexOf(this.props.params.baani) > -1) {
         fs.readFile(baaniLocation(this.props.params.baani), 'utf8', function (err, file) {
           _this2.setState({ file: file });
         });

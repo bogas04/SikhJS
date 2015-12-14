@@ -33,7 +33,7 @@ class Nav extends Component {
   }
   render () {
     return (
-      <nav className = "navbar navbar-default navbar-fixed-top" id = "menuWrapper">
+      <nav className = "navbar navbar-default navbar-fixed-bottom" id = "menuWrapper">
         <div className = "container-fluid">
           <div className = "navbar-header">
             <button type = "button" className = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#main-menu" aria-expanded = "false">

@@ -18,7 +18,7 @@ function getMainWindow() {
     'min-height': 400,
     'center': true,
     'title': 'SikhJS',
-    //'title-bar-style': 'hidden-inset'
+    'title-bar-style': 'hidden-inset'
   });
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
   mainWindow.on('closed', () => mainWindow = null);

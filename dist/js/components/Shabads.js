@@ -67,7 +67,7 @@ var Shabads = (function (_Component) {
       });
       return React.createElement(
         'div',
-        null,
+        { style: { paddingTop: '25px' } },
         React.createElement(
           'div',
           { className: 'form-group form-inline' },
