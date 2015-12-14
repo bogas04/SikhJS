@@ -148,7 +148,7 @@ var Nav = (function (_Component) {
                   } },
                 React.createElement(
                   'a',
-                  { href: 'javascript:;' },
+                  { role: 'button' },
                   React.createElement('span', { className: 'glyphicon glyphicon-adjust' }),
                   ' Night Mode'
                 )

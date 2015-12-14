@@ -56,7 +56,7 @@ class Nav extends Component {
             </form>
             <ul className ="nav navbar-nav navbar-right">
               <li onClick={e => { this.toggleNightMode(e); return false }}>
-                <a href="javascript:;">
+                <a role="button">
                   <span className = "glyphicon glyphicon-adjust"></span> Night Mode
                   </a>
                 </li>

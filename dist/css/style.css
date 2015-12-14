@@ -15,22 +15,13 @@
   vertical-align: middle;
   display: inline;
 }
-.navbar-nav li.btn-link {
-  text-decoration: none;
-  padding: 13px 15px;
-  cursor: pointer;
-  line-height: 21px;
-  font-weight: 100;
+.navbar-nav {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.navbar-nav li.btn-link:hover {
-  color: #ffffff;
-  background-color: #272727;
 }
 .greeting {
   animation: SplashIn 0.25s ease-in;
@@ -79,7 +70,7 @@
 }
 .night-mode {
   background-color: black;
-  color: white;  
+  color: white;
 }
 #fontChanger {
   display: inline;
