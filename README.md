@@ -1,4 +1,4 @@
-SikhJS v0.0.2b
+SikhJS v0.0.3b
 ==
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 **NOTE**: The application is still in active development and is not fit for public release just yet.
@@ -87,9 +87,10 @@ Changelog
     - [ ] YouTube integration for Shabads
 
 ## v1.0.0
-  - [ ] Go react-native android
-  - [ ] Go react-native iOS
-  - [ ] Experiment with Unicode Font (It has some perf issues)
+  - [ ] Go service-worker website
+  - [ ] Go react-native
+    - [ ] android
+    - [ ] iOS 
 
 ## v0.5.0
   - [x] Go react
@@ -97,7 +98,7 @@ Changelog
   - [ ] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
   - [x] Sri Guru Granth Sahib
     - [x] Ang numbers
-    - [ ] Quick select angs
+    - [x] Quick select angs
     - [ ] Sehaj Path tracker
   - [x] Sikh calendar
     - [x] Beautify

@@ -9,9 +9,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var Component = React.Component;
-
-var mdLoad = require(__dirname + '/../mdLoad');
+var ReactMarkdown = require('react-markdown');
+var fs = require('fs');
 
 var SGGS = (function (_Component) {
   _inherits(SGGS, _Component);
@@ -21,34 +22,109 @@ var SGGS = (function (_Component) {
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SGGS).call(this, props));
 
-    _this.state = { loading: true };
+    _this.state = { currentSet: '000' };
     return _this;
   }
 
   _createClass(SGGS, [{
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      document.getElementById('sggs').innerHTML = '';
-      document.getElementById('sggs').style.display = 'none';
+    key: 'updateSetBy',
+    value: function updateSetBy(value) {
+      var cs = this.state.currentSet;
+      cs = parseInt(cs) + value;
+      cs = this.setNumberToString(cs);
+      this.changeSet(this.setNumberToString(parseInt(this.state.currentSet) + value));
     }
   }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      mdLoad.file(__dirname + '/../../../docs/SGGS.md').then(function (t) {
-        document.getElementById('sggs').innerHTML = t;
-        document.getElementById('sggs').style.display = 'block';
-        _this2.setState({ loading: false });
-      });
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      ReactDOM.findDOMNode(this).scrollIntoView();
+    }
+  }, {
+    key: 'setNumberToString',
+    value: function setNumberToString(setNumber) {
+      return ('000' + setNumber).slice(-3);
+    }
+  }, {
+    key: 'changeSet',
+    value: function changeSet(newSet) {
+      this.setState({ currentSet: newSet || this.state.currentSet });
     }
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
+      var options = Array(143).fill(0).map(function (e, i) {
+        return React.createElement(
+          'option',
+          {
+            value: _this2.setNumberToString(i),
+            key: i },
+          i * 10 + 1,
+          '-',
+          (i + 1) * 10,
+          ' Angs'
+        );
+      });
+
       return React.createElement(
-        'h1',
+        'div',
         null,
-        this.state.loading && 'Loading...'
+        React.createElement(
+          'h1',
+          null,
+          ' Sri Guru Granth Sahib '
+        ),
+        React.createElement(
+          'form',
+          { className: 'form-inline' },
+          React.createElement(
+            'button',
+            { className: 'btn btn-default', onClick: function onClick(e) {
+                return _this2.updateSetBy(-1);
+              } },
+            'Previous Set'
+          ),
+          React.createElement(
+            'select',
+            { className: 'form-control', onChange: function onChange(e) {
+                return _this2.changeSet(e.currentTarget.value);
+              } },
+            React.createElement(
+              'option',
+              { value: '' },
+              ' Select Ang Set '
+            ),
+            options
+          ),
+          React.createElement(
+            'button',
+            { className: 'btn btn-default', onClick: function onClick(e) {
+                return _this2.updateSetBy(1);
+              } },
+            'Next Set'
+          )
+        ),
+        React.createElement(
+          'div',
+          { className: 'gurbani-text' },
+          React.createElement(ReactMarkdown, {
+            source: fs.readFileSync(__dirname + '/../../../docs/SGGS/SGGS_' + this.state.currentSet + '.md', 'utf-8') })
+        ),
+        React.createElement(
+          'button',
+          { className: 'btn btn-primary', onClick: function onClick(e) {
+              return _this2.updateSetBy(-1);
+            } },
+          '<'
+        ),
+        React.createElement(
+          'button',
+          { className: 'btn btn-primary', onClick: function onClick(e) {
+              return _this2.updateSetBy(1);
+            } },
+          '>'
+        )
       );
     }
   }]);
