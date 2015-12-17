@@ -8,6 +8,11 @@ class SGGS extends Component {
   constructor (props) {
     super (props);
     this.state = { currentSet: '000' };
+    this.options = Array(143).fill(0).map((e, i) => (<option 
+      value = {this.setNumberToString(i)}
+      key = {i} >
+      {i*10 + 1}-{(i + 1)*10} Angs
+    </option>));
   }
   updateSetBy(value) {
     let cs = this.state.currentSet;
@@ -29,11 +34,6 @@ class SGGS extends Component {
     this.setState( { currentSet: newSet || this.state.currentSet } );
   } 
   render () {
-    let options = Array(143).fill(0).map((e, i) => (<option 
-      value = {this.setNumberToString(i)}
-      key = {i} >
-      {i*10 + 1}-{(i + 1)*10} Angs
-    </option>));
 
     return (
       <div>
@@ -42,7 +42,7 @@ class SGGS extends Component {
           <button className = 'btn btn-default' onClick = {e => this.updateSetBy(-1)}>Previous Set</button>
           <select className = 'form-control' onChange = {e => this.changeSet(e.currentTarget.value)}>
             <option value = ''> Select Ang Set </option>
-            {options}
+            {this.options}
           </select>
           <button className = 'btn btn-default' onClick = {e => this.updateSetBy(1)}>Next Set</button>
         </form>

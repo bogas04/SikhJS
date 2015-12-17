@@ -30,29 +30,6 @@ var Nav = (function (_Component) {
   }
 
   _createClass(Nav, [{
-    key: 'toggleNightMode',
-    value: function toggleNightMode(e) {
-      //TODO: Handle this React way
-      if (this.state.nightMode) {
-        e.currentTarget.classList.remove('night-mode');
-        document.getElementById('baaniWrapper').classList.remove('night-mode');
-        document.getElementById('sggs').classList.remove('night-mode');
-      } else {
-        e.currentTarget.classList.add('night-mode');
-        document.getElementById('baaniWrapper').classList.add('night-mode');
-        document.getElementById('sggs').classList.add('night-mode');
-      }
-      this.setState({
-        nightMode: !this.state.nightMode
-      });
-    }
-  }, {
-    key: 'updateFontSize',
-    value: function updateFontSize(e) {
-      document.getElementById('baaniWrapper').style.fontSize = 35 * e.target.value + '%';
-      document.getElementById('sggs').style.fontSize = 35 * e.target.value + '%';
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -85,6 +62,15 @@ var Nav = (function (_Component) {
             React.createElement(
               'ul',
               { className: 'nav navbar-nav' },
+              React.createElement(
+                'li',
+                null,
+                React.createElement(
+                  Link,
+                  { to: '/', style: { fontFamily: 'gurmukhi_heavy' } },
+                  'Ç'
+                )
+              ),
               React.createElement(
                 'li',
                 null,
@@ -157,6 +143,29 @@ var Nav = (function (_Component) {
           )
         )
       );
+    }
+  }, {
+    key: 'toggleNightMode',
+    value: function toggleNightMode(e) {
+      //TODO: Handle this React way
+      if (this.state.nightMode) {
+        e.currentTarget.classList.remove('night-mode');
+        document.getElementById('baaniWrapper').classList.remove('night-mode');
+        document.getElementById('sggs').classList.remove('night-mode');
+      } else {
+        e.currentTarget.classList.add('night-mode');
+        document.getElementById('baaniWrapper').classList.add('night-mode');
+        document.getElementById('sggs').classList.add('night-mode');
+      }
+      this.setState({
+        nightMode: !this.state.nightMode
+      });
+    }
+  }, {
+    key: 'updateFontSize',
+    value: function updateFontSize(e) {
+      document.getElementById('baaniWrapper').style.fontSize = 35 * e.target.value + '%';
+      document.getElementById('sggs').style.fontSize = 35 * e.target.value + '%';
     }
   }]);
 

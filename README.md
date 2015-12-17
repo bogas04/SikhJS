@@ -100,6 +100,7 @@ Changelog
     - [x] Ang numbers
     - [x] Quick select angs
     - [ ] Sehaj Path tracker
+      - [ ] Find a way to keep data persistent even with version updates.
   - [x] Sikh calendar
     - [x] Beautify
     - [ ] Add images

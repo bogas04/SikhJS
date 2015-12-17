@@ -23,6 +23,18 @@ var SGGS = (function (_Component) {
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SGGS).call(this, props));
 
     _this.state = { currentSet: '000' };
+    _this.options = Array(143).fill(0).map(function (e, i) {
+      return React.createElement(
+        'option',
+        {
+          value: _this.setNumberToString(i),
+          key: i },
+        i * 10 + 1,
+        '-',
+        (i + 1) * 10,
+        ' Angs'
+      );
+    });
     return _this;
   }
 
@@ -54,19 +66,6 @@ var SGGS = (function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var options = Array(143).fill(0).map(function (e, i) {
-        return React.createElement(
-          'option',
-          {
-            value: _this2.setNumberToString(i),
-            key: i },
-          i * 10 + 1,
-          '-',
-          (i + 1) * 10,
-          ' Angs'
-        );
-      });
-
       return React.createElement(
         'div',
         null,
@@ -95,7 +94,7 @@ var SGGS = (function (_Component) {
               { value: '' },
               ' Select Ang Set '
             ),
-            options
+            this.options
           ),
           React.createElement(
             'button',
