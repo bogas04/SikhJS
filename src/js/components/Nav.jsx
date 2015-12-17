@@ -53,11 +53,9 @@ class Nav extends Component {
     if (this.state.nightMode) {
       e.currentTarget.classList.remove('night-mode');
       document.getElementById('baaniWrapper').classList.remove('night-mode');
-      document.getElementById('sggs').classList.remove('night-mode');
     } else {
       e.currentTarget.classList.add('night-mode');
       document.getElementById('baaniWrapper').classList.add('night-mode');
-      document.getElementById('sggs').classList.add('night-mode');
     }
     this.setState({
       nightMode : !this.state.nightMode
@@ -65,7 +63,6 @@ class Nav extends Component {
   }
   updateFontSize (e) {
     document.getElementById('baaniWrapper').style.fontSize = ((35 * e.target.value) + '%');
-    document.getElementById('sggs').style.fontSize = ((35 * e.target.value) + '%');
   }
 }
 
