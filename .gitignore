@@ -2,3 +2,4 @@
 node_modules
 *.swp
 SikhJS-*
+npm-debug.log
