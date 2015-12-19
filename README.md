@@ -29,7 +29,7 @@ and converted them to markdown files. The reason why I chose them is because the
   * can be parsed to HTML very easily
   * is pretty widely supported
 
-A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/fonts/) for text having Gurbani.
+A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/dist/fonts/) for text having Gurbani.
 
 Build
 ==
