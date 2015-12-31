@@ -6,7 +6,7 @@ const Component = React.Component;
 const ReactRouter = require('react-router');
 const Router = ReactRouter.Router;
 const Route = ReactRouter.Route;
-const IndexRoute = ReactRouter.Route;
+const IndexRoute = ReactRouter.IndexRoute;
 const Link = ReactRouter.Link;
 
 const Nav = require(__dirname + '/dist/js/components/Nav');
@@ -33,7 +33,7 @@ class App extends Component {
 }
 
 require('react-dom').render((
-  <Router>
+  <Router onUpdate={() => { console.log(window); window.scrollTo(0, 0)}}>
     <Route path="/" component={App} >
       <Route path="about" component={About}/>
       <Route path="sggs" component={SGGS}/>

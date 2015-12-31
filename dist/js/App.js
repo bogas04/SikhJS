@@ -16,7 +16,7 @@ var Component = React.Component;
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.Route;
+var IndexRoute = ReactRouter.IndexRoute;
 var Link = ReactRouter.Link;
 
 var Nav = require(__dirname + '/dist/js/components/Nav');
@@ -59,7 +59,9 @@ var App = (function (_Component) {
 
 require('react-dom').render(React.createElement(
   Router,
-  null,
+  { onUpdate: function onUpdate() {
+      console.log(window);window.scrollTo(0, 0);
+    } },
   React.createElement(
     Route,
     { path: '/', component: App },
