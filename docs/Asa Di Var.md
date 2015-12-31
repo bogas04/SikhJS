@@ -67,12 +67,12 @@ kIqw krxw srb rjwie ]2]
 
 # mhlw 2 ]
 
-iehu jgu scY kI hY koTVIscy kw ivic vwsu ]
+iehu jgu scY kI hY koTVI scy kw ivic vwsu ]
 iekn@w hukim smwie ley
 iekn@w hukmy kry ivxwsu ]
-iekn@w BwxY kiF leyiekn@w mwieAw ivic invwsu ]
-eyv iB AwiK n jwpeIij iksY Awxy rwis ]
-nwnk gurmuiK jwxIAYjw kau Awip kry prgwsu ]3]
+iekn@w BwxY kiF ley iekn@w mwieAw ivic invwsu ]
+eyv iB AwiK n jwpeI ij iksY Awxy rwis ]
+nwnk gurmuiK jwxIAY jw kau Awip kry prgwsu ]3]
 
 # pauVI ]
 
