@@ -1,7 +1,6 @@
-const React = require('react');
-const Component = React.Component;
+import React, { Component } from 'react';
 
-class Calendar extends Component {
+export default class Calendar extends Component {
   constructor (props) {
     super (props);
   }
@@ -89,6 +88,3 @@ class Calendar extends Component {
     );
   }
 }
-
-module.exports = Calendar;
-

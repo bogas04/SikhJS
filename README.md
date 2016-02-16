@@ -87,6 +87,7 @@ Changelog
     - [ ] YouTube integration for Shabads
 
 ## v1.0.0
+  - [ ] Create Browser addon that helps in quick baani search etc.
   - [ ] Go service-worker website
   - [ ] Go react-native
     - [ ] android

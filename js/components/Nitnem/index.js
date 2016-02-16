@@ -1,9 +1,8 @@
-const React = require('react');
-const Component = React.Component;
+import React, { Component } from 'react';
+import { baanies as _baanies } from '../../constants';
 
-class Baanies extends Component {
+export default class Baanies extends Component {
   render () {
-    const _baanies = require('../baanies');
     let baanies = {
       nitnem: _baanies.nitnem.map(e => (
         <li key = {e}><Link className = 'btn-lg' to = {`/nitnem/${e}`}> {e} </Link></li>
@@ -27,5 +26,3 @@ class Baanies extends Component {
     );
   }
 }
-
-module.exports = Baanies;

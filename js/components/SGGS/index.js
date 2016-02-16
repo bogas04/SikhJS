@@ -1,10 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Component = React.Component;
-const ReactMarkdown = require('react-markdown');
-const fs = require('fs');
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+//import ReactMarkdown from 'react-markdown';
+//import fs from 'fs';
 
-class SGGS extends Component {
+export default class SGGS extends Component {
   constructor (props) {
     super (props);
     this.state = { currentSet: '000' };
@@ -47,13 +46,12 @@ class SGGS extends Component {
           <button className = 'btn btn-default' onClick = {e => this.updateSetBy(1)}>Next Set</button>
         </form>
         <div className = 'gurbani-text' >
-          <ReactMarkdown 
-            source =  {fs.readFileSync(__dirname + '/../../../docs/SGGS/SGGS_' + this.state.currentSet + '.md', 'utf-8')} />
+          //<ReactMarkdown source = ""/>
         </div>
         <button className = 'btn btn-primary' onClick = {e => this.updateSetBy(-1)}>&lt;</button>
         <button className = 'btn btn-primary' onClick = {e => this.updateSetBy(1)}>&gt;</button>
       </div>
     );
+    // source =  {fs.readFileSync(__dirname + '/../../../docs/SGGS/SGGS_' + this.state.currentSet + '.md', 'utf-8')} />
   }
 }
-module.exports = SGGS;
