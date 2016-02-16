@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+
 const maxResults = 300;
 
 export default class Shabads extends Component {
   constructor (props) {
     super (props);
-    //this.database = JSON.parse(require('fs').readFileSync(__dirname + '/../../../docs/keertan.json', 'utf8'));
+    this.database = [];
     this.state = { keyword: "" };
+  }
+  componentWillMount() {
+    fetch('docs/keertan.json').then(r => r.json()).then(database => {
+      this.database = database;
+    });
   }
   search (keyword) {
     this.setState({ keyword });
   }
   filteredResults () {
     let keyword = this.state.keyword;
-    //return (keyword !== "" ? this.database.filter(e => e.title.toLowerCase().includes(keyword.toLowerCase()) || e.ang === keyword) : this.database).slice(0, maxResults);
+    return (keyword !== "" ? this.database.filter(e => e.title.toLowerCase().includes(keyword.toLowerCase()) || e.ang === keyword) : this.database).slice(0, maxResults);
   }
   render () {
     let results = this.filteredResults().map(e => (

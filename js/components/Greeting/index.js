@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Greeting = () => {
+export default ({ }) => {
   return (
     <div>
       <h1 className = "greeting gurbani-text">vwihgurU jI kw Kwlsw <br/> vwihgurU jI kI Pqih</h1>
@@ -8,5 +8,3 @@ const Greeting = () => {
     </div>
   );
 }
-
-export default Greeting;
