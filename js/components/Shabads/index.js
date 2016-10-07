@@ -37,10 +37,10 @@ export default class Shabads extends Component {
               className = "form-control"
               style = {{width: '70%'}}
               placeholder = "Search shabads from Amrit Keertan"
-              onChange = { (e) => this.search(e.currentTarget.value) }
+              onChange = {e => this.search(e.currentTarget.value)}
             />
-            <small> Showing {results.length} Shabad Results </small>
           </Throttle>
+          <small> Showing {results.length} Shabad Results </small>
         </div>
         <div style = {{maxHeight: '84vh', overflow: 'auto'}}>
           <table className = "table table-bordered">
