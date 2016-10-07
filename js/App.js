@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 
 import Nav from './components/Nav';
 import Greeting from './components/Greeting';
@@ -24,7 +24,7 @@ const App = ({ children }) => {
 };
 
 render((
-  <Router history={browserHistory} onUpdate={() => document.getElementById('baaniWrapper').scrollTop = 0}>
+  <Router history={hashHistory} onUpdate={() => document.getElementById('baaniWrapper').scrollTop = 0}>
     <Route path="/" component={App} >
       <Route path="about" component={About}/>
       <Route path="sggs" component={SGGS}/>
