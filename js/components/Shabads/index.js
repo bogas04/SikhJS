@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Throttle } from 'react-throttle';
 
 const maxResults = 300;
 
@@ -31,13 +32,15 @@ export default class Shabads extends Component {
     return (
       <div style = {{ paddingTop: '25px' }}>
         <div className = "form-group form-inline">
-          <input
-            className = "form-control"
-            style = {{width: '70%'}}
-            placeholder = "Search shabads from Amrit Keertan"
-            onChange = { (e) => this.search(e.currentTarget.value) }
-          />
-          <small> Showing {results.length} Shabad Results </small>
+          <Throttle handler="onChange" time="200">
+            <input
+              className = "form-control"
+              style = {{width: '70%'}}
+              placeholder = "Search shabads from Amrit Keertan"
+              onChange = { (e) => this.search(e.currentTarget.value) }
+            />
+            <small> Showing {results.length} Shabad Results </small>
+          </Throttle>
         </div>
         <div style = {{maxHeight: '84vh', overflow: 'auto'}}>
           <table className = "table table-bordered">
