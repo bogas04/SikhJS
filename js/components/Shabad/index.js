@@ -5,7 +5,7 @@ export default class Shabad extends Component {
     super(p);
     this.state = { shabad: null };
     fetch('docs/keertan.json').then(r => r.json()).then(database => {
-      shabad = database.find(e => e.title === this.props.params.shabad);
+      let shabad = database.find(e => e.title === this.props.params.shabad);
       this.setState({ shabad });
     });
   }
