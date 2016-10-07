@@ -30,7 +30,6 @@
   animation: SplashIn 0.25s ease-in;
   font-size: 350%;
   padding: 20vh 10vw;
-  font-family: gurmukhi_heavy;
 }
 #baaniWrapper {
   font-size: 175%;
@@ -42,7 +41,7 @@
   transition: all 0.25s;
   text-align: center;
 }
-.gurbani-text * {
+.gurbani-text, .gurbani-text * {
   font-family: gurmukhi_heavy;
 }
 .gurbani-text h1 { font-size: 2em; }
