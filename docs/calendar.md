@@ -1,67 +1,51 @@
-# Nanakshahi Sikh Calendar System
-
-Year begins from 1469
-
-Sikh Month | Begining Date in Common Era(CE)
-:----------|:--------------------------------
-Chet       |  March 14
-Vaisakh    |  April 14
-Jeth       |  May 15
-Harh       |  June 15
-Sawan      |  July 16
-Bahdon     |  August 16
-Asu        |  September 15
-Katakk     |  October 15
-Maghar     |  November 14
-Poh        |  December 14
-Magh       |  January 13
-Fagun      |  Feburary 12
-
-# Events and Celebrations
-## Definition of Terms
-
-Parkash - birth  
-Gurgadi - ascension to Guruship  
-Jotijot - death
-
-Common Era|Nanak Shahi|Event/Celebration
-:---------|:----------|:-----------------
-Jan 05    |23 Poh     |Parkash Guru Gobind Singh
-Jan 31    |19 Magh    |Parkash Guru Har Rai
-Mar 14    |1 Chet     |Gurgadi Guru Har Rai
-Mar 14    |1 Chet     |New Years Day
-Mar 14    |1 Chet     |Hola Mohalla (2008)
-Mar 19    |6 Chet     |Jotijot Guru Hargobind
-Apr 14    |1 Vaisakh  |Parkash Guru Nanak (2008)
-Apr 14    |1 Vaisakh  |Vaisakhi - Creation of the Khalsa
-Apr 16    |3 Vaisakh  |Jotijot Guru Angad
-Apr 16    |3 Vaisakh  |Gurgadi Guru Amar Das
-Apr 16    |3 Vaisakh  |Jotijot Guru Harkrishan
-Apr 16    |3 Vaisakh  |Gurgadi Guru Tegh Bahadur
-Apr 18    |5 Vaisakh  |Parkash Guru Angad
-Apr 18    |5 Vaisakh  |Parkash Guru Tegh Bahadur
-May 02    |19 Vaisakh |Parkash Guru Arjan
-May 23    |9 Jeth     |Parkash Guru Amar Das
-Jun 11    |28 Jeth    |Gurgadi Guru Hargobind
-Jun 16    |2 Harh     |Jotijot Guru Arjan
-Jul 05    |21 Harh    |Parkash Guru Hargobind
-Jul 23    |8 Sawan    |Parkash Guru Harkrishan
-Sep 01    |17 Bhadon  |First Installation of Adi Granth
-Sep 16    |2 Asu      |Jotijot Guru Amar Das
-Sep 16    |2 Asu      |Gurgadi Guru Ramdas
-Sep 16    |2 Asu      |Jotijot Guru Ramdas
-Sep 16    |2 Asu      |Gurgadi Guru Arjan
-Sep 18    |4 Asu      |Gurgadi Guru Angad
-Sep 22    |8 Asu      |Jotijot Guru Nanak
-Oct 09    |25 Asu     |Parkash Guru Ramdas
-Oct 20    |6 Katik    |Jotijot Guru Har Rai
-Oct 20    |6 Katik    |Gurgadi Guru Harkrishan
-Oct 20    |6 Katik    |Gurgadi Guru Granth Sahib
-Oct 21    |7 Katik    |Jotijot Guru Gobind Singh
-Oct 28    |14 Katik   |Bandi Chhor Divas (2008)
-Nov 24    |11 Maghar  |Gurgadi Guru Gobind Singh
-Nov 24    |11 Maghar  |Jotijot Guru Tegh Bahadur
-Dec 21    |8 Poh      |Martyrdom Guru Gobind Singh's Eldest two sons
-Dec 26    |13 Poh     |Martyrdom Guru Gobind Singh's Youngest two sons
-
-Thanks to [Sikhs.org](http://sikhs.org) for above content.
+**Mar 14 - Chet**|**Nanakshahi New Year**
+:--|:--
+Mar 19|Joti Jot Guru Hargobind Sahib Ji
+Mar 24|Hola Mohalla (2016)
+Apr 9|Birth of Sahibzada Jujhar Singh Ji
+**Apr 14 - Vaisakh**|**Vaisakhi and Birth of Khalsa**
+Apr 16|Joti Jot Guru Angad Dev Ji and Guru Har Krishan Ji, Gur Gadi Guru Amar Das Ji and Guru Tegh Bahadur Ji
+Apr 18|Birth of Guru Angad Dev Ji and Guru Tegh Bahadur Ji
+May 2|Birth of Guru Arjan Dev Ji
+**May 15 - Jeth**|**Da Mahina**
+May 23|Birth of Guru Amar Das Ji
+Jun 4|Birthday of Bhagat Puran Singh Ji
+Jun 11|Gur Gadi Guru Hargobind Sahib Ji
+**Jun 15 - Harh**|**Da Mahina**
+Jun 16|Martyrdom of Guru Arjan Dev Ji
+Jul 2|Foundation of Akal Takht
+Jul 5|Birth of Guru Hargobind Sahib Ji
+**Jul 16 - Saawan**|**Da Mahina**
+Jul 23|Birth of Guru Har Krishan Ji
+Aug 5|Barsi Bhagat Puran Singh Ji
+Aug 8|Morcha Guru Ka Bagh
+**Aug 16 - Bhadon**|**Da Mahina**
+Aug 30|Completion of Adi Granth
+Sept 1|Prakash Guru Granth Sahib
+Sept 12|Battle of Saragarhi
+**Sept 15 - Assu**|**Da Mahina**
+Sept 16|Joti Jot Guru Amar Das Ji and Guru Ram Das Ji, Gur Gadi Guru Ram Das Ji and Guru Arjan Devi Ji
+Sept 18|Gur Gadi Guru Angad Dev Ji
+Sept 22|Joti Jot Guru Nanak Dev Ji
+Oct 9|Birth of Guru Ram Das Ji
+**Oct 15 - Katik**|**Da Mahina**
+Oct 20|Joti Jot Guru Har Rai, Gur Gadi Guru Har Krishan Ji Guru Granth Sahib Ji
+Oct 21|Joti Jot Guru Gobind Singh Ji
+Oct 30|Bandi Chhorh Divas (2016)
+**Nov 14 - Maghar**|**Birth of Guru Nanak (2016)**
+Nov 24|Shaheedi Guru Tegh Bahadur Ji and Gur Gadi Guru Gobind Singh Ji
+Nov 25|Birth of Guru Nanak Dev Ji
+Nov 28|Birth of Sahibzada Zorawar Singh
+Dec 12|Birth of Sahibzada Fateh Singh
+**Dec 14 - Poh**|**Da Mahina**
+Dec 21|Shaheedi Sahibzada Ajit Singh Ji and Sahibzada Jujhar Singh Ji (Vaday Sahibzaday)
+Dec 26|Shaheedi Sahibzada Zorawar Singh Ji and Sahibzada Fateh Singh Ji (Chotte Sahibzaday)
+Jan 5|Birth of Guru Gobind Singh Ji
+**Jan 13 - Magh**|**Da Mahina**
+Jan 18|Birth of Bhai Himmat Singh Ji
+Jan 26|Birth of Baba Deep Singh Ji
+Jan 31|Birth of Guru Har Rai Ji
+Feb 11|Birth of Sahibzada Ajit Singh Ji
+**Feb 12 - Phagun**|**Da Mahina**
+Feb 21|Saka Nankana Sahib, Jaito Morcha
+Mar 13|Hola Mohalla (2017), End of Nanakshahi calendar year
