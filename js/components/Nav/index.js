@@ -25,13 +25,13 @@ export default class Nav extends Component {
           onLeftIconButtonTouchTap={e => this.toggleDrawer()}
         />
         <Drawer open={this.state.showDrawer} docked={false} width={200} onRequestChange={e => this.toggleDrawer()}>
-          <Link to={`/`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Home</MenuItem></Link>
-          <Link to={`/hukamnama`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Hukamnama</MenuItem></Link>
-          <Link to={`/calendar`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Calendar</MenuItem></Link>
-          <Link to={`/sggs`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Sri Guru Granth Sahib</MenuItem></Link>
-          <Link to={`/nitnem`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Nitnem</MenuItem></Link>
-          <Link to={`/shabads`}><MenuItem onTouchTap={e => this.toggleDrawer()}>Shabads</MenuItem></Link>
-          <Link to={`/about`}><MenuItem onTouchTap={e => this.toggleDrawer()}>About</MenuItem></Link>
+          <Link to={`/`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Home</MenuItem></Link>
+          <Link to={`/hukamnama`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Hukamnama</MenuItem></Link>
+          <Link to={`/calendar`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Calendar</MenuItem></Link>
+          <Link to={`/sggs`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Sri Guru Granth Sahib</MenuItem></Link>
+          <Link to={`/nitnem`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Nitnem</MenuItem></Link>
+          <Link to={`/shabads`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Shabads</MenuItem></Link>
+          <Link to={`/about`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>About</MenuItem></Link>
           <MenuItem>Font Size<Throttle time="200" handler="onChange"><Slider min={1} max={10} step={0.1} onChange={(e, v) => this.updateFontSize(v)} /></Throttle></MenuItem>
           <MenuItem><Toggle label="Night Mode" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
         </Drawer>
