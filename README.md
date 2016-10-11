@@ -1,5 +1,7 @@
 SikhJS v0.0.3b
 ==
+
+## NOTE: master branch holds the Electron app, which isn't maintained for time-being, you can use web version ([gh-pages](http://bogas04.github.io/SikhJS/)) for now.
 Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
 **NOTE**: The application is still in active development and is not fit for public release just yet.
 
