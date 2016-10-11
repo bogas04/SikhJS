@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button, Form, FormGroup, Input } from 'reactstrap';
 
-export default class Nav extends Component {
+export default class _Nav extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -10,39 +11,49 @@ export default class Nav extends Component {
   }
   render () {
     return (
-      <nav className = "navbar navbar-default navbar-fixed-bottom" id = "menuWrapper">
-        <div className = "container-fluid">
-          <div className = "navbar-header">
-            <button type = "button" className = "navbar-toggle collapsed" data-toggle = "collapse" data-target = "#main-menu" aria-expanded = "false">
-              <span className = "sr-only">Toggle navigation</span>
-              <span className = "icon-bar"></span>
-              <span className = "icon-bar"></span>
-              <span className = "icon-bar"></span>
-            </button>
-          </div>
-          <div className = "collapse navbar-collapse" id = "main-menu">
-            <ul className = "nav navbar-nav">
-              <li><Link to={`/`} style = {{fontFamily: 'gurmukhi_heavy'}} >Ç</Link></li>
-              <li><Link to={`/about`}> About </Link></li>
-              <li><Link to={`/calendar`}> Calendar </Link></li>
-              <li><Link to={`/sggs`}> Sri Guru Granth Sahib </Link></li>
-              <li><Link to={`/nitnem`}> Nitnem </Link></li>
-              <li><Link to={`/shabads`}> Shabads </Link></li>
-            </ul>
-            <form className = "navbar-form navbar-right form-inline">
-              <input onChange = {(e) => this.updateFontSize(e)} id = "fontChanger" type = "range" name = "font-size" min = "1" max = "10" step = "0.1"/>
-            </form>
-            <ul className ="nav navbar-nav navbar-right">
-              <li onClick={e => { this.toggleNightMode(e); return false }}>
-                <a role="button">
-                  <span className = "glyphicon glyphicon-adjust"></span> Night Mode
-                </a>
-              </li>
-            </ul>
-          </div>
+      <Navbar className="bg-inverse" dark fixed="bottom" id="menuWrapper">
+        /*
+        <Button 
+          className="navbar-toggler bg-inverse hidden-lg-up"
+          data-toggle="collapse"
+          data-target="#exCollapsingNavbar2"
+          aria-controls="exCollapsingNavbar2"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          children="&#9776;"
+        />
+        */
+        <NavbarBrand tag={Link} to="/" style = {{fontFamily: 'gurmukhi_heavy'}} children="Ç" />
+        <div className="collapse navbar-toggleable-md" id="exCollapsingNavbar2">
+          <Nav navbar >
+            <NavItem><NavLink tag={Link} to={`/about`}> About </NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to={`/calendar`}> Calendar </NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to={`/sggs`}> Sri Guru Granth Sahib </NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to={`/nitnem`}> Nitnem </NavLink></NavItem>
+          </Nav>
+          <Nav className="pull-xs-right" navbar>
+            <Form inline>
+              <FormGroup>
+                <Input
+                  id = "fontChanger"
+                  type = "range"
+                  name = "font-size"
+                  min = "1"
+                  max = "10"
+                  step = "0.1"
+                  onChange = {(e) => this.updateFontSize(e)}
+                />
+              </FormGroup>
+            </Form>
+          </Nav>
+          <Nav className="pull-xs-right" navbar>
+            <NavItem onClick={e => { this.toggleNightMode(e); return false }}>
+              <NavLink role="button">Night Mode</NavLink>
+            </NavItem>
+          </Nav>
         </div>
-      </nav>
-    );
+      </Navbar>
+      );
   }
   toggleNightMode (e) {
     //TODO: Handle this React way

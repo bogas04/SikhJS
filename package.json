@@ -8,9 +8,6 @@
     "build:webpack": "webpack -p",
     "build:watch": "webpack -w",
     "start": "npm run build:webpack && open index.html",
-    "package-darwin": "rm -rf SikhJS* && electron-packager . SikhJS --platform=darwin --arch=all --version=0.36.3 --ignore=\"(node_modules/babel*|docs/Documents)\"",
-    "package-win32": "rm -rf SikhJS* && electron-packager . SikhJS --platform=win32 --arch=ia32 --version=0.36.3 --ignore=\"(node_modules/babel*|docs/Documents)\"",
-    "package-linux": "rm -rf SikhJS* && electron-packager . SikhJS --platform=linux --arch=ia32 --version=0.36.3 --ignore=\"(node_modules/babel*|docs/Documents)\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -20,10 +17,13 @@
     "babel-preset-react": "^6.5.0",
     "bootstrap": "^3.3.6",
     "react": "15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-addons-transition-group": "^15.3.2",
     "react-dom": "15.3.2",
     "react-remarkable": "^1.1.1",
     "react-router": "^2.0.0",
     "react-throttle": "^0.3.0",
+    "reactstrap": "^3.4.0",
     "webpack": "^1.12.13"
   },
   "author": "bogas04",

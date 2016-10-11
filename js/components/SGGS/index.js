@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Throttle } from 'react-throttle';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default class SGGS extends Component {
   constructor (props) {
@@ -36,72 +37,69 @@ export default class SGGS extends Component {
         {larivaar ? original : ` ${text} `}
         {showTranslation ? <div><small>{translation.text}</small></div> : ''}
       </div>
-    ));
+      ));
 
-    const AngBar = () => <div>
-      <h3>
-        <button className="btn" disabled={ang === MIN_ANG} onClick={() => this.decrementAng()}>Previous Ang</button>
-        <span className="gurbani-text">
-          {' Œ '}
-          <span
-            style={{ display: showAngForm ? 'none' : 'inline' }}
-            onClick={e => this.showAngForm()}
-            children={ang}
-          />
-          <Throttle handler="onChange" time="200">
-            <input
-              hidden={!showAngForm}
-              ref={e => e && e.focus()}
-              onChange={e => this.setAng(Number(e.target.value))}
-              onBlur={e => this.hideAngForm()}
-              type="number"
-              min={MIN_ANG}
-              max={MAX_ANG}
-              style={{width: '100px'}}
-              className="text-center"
-              defaultValue={ang}
+      const AngBar = () => <div>
+        <h3>
+          <button className="btn" disabled={ang === MIN_ANG} onClick={() => this.decrementAng()}>Previous Ang</button>
+          <span className="gurbani-text">
+            {' Œ '}
+            <span
+              style={{ display: showAngForm ? 'none' : 'inline' }}
+              onClick={e => this.showAngForm()}
+              children={ang}
             />
-          </Throttle>
-          {' ‰ '}
-        </span>
-        <button className="btn" disabled={ang === MAX_ANG} onClick={() => this.incrementAng()}>Next Ang</button>
-      </h3>
-      <h4>
-        <small>
-          <input
-            onChange={e => this.toggleLarivaar(e.target.checked)}
-            checked={larivaar}
-            type="checkbox"
-            id="larivaar"
-          />
+            <Throttle handler="onChange" time="200">
+              <input
+                hidden={!showAngForm}
+                ref={e => e && e.focus()}
+                onChange={e => this.setAng(Number(e.target.value))}
+                onBlur={e => this.hideAngForm()}
+                type="number"
+                min={MIN_ANG}
+                max={MAX_ANG}
+                style={{width: '100px'}}
+                className="text-center"
+                defaultValue={ang}
+              />
+            </Throttle>
+            {' ‰ '}
+          </span>
+          <button className="btn" disabled={ang === MAX_ANG} onClick={() => this.incrementAng()}>Next Ang</button>
+        </h3>
+        <Form inline>
+          <FormGroup check>
+            <Label check>
+              <Input checked={larivaar} type="checkbox" onChange={e => this.toggleLarivaar(e.target.checked)}/>{' '}
+              Larivaar
+            </Label>
+          </FormGroup>
           {' '}
-          <label htmlFor="larivaar">Larivaar</label>
-        </small>
-        <small>
-          <input
-            onChange={e => this.toggleTranslation(e.target.checked)}
-            checked={showTranslation}
-            type="checkbox"
-            id="translation"
-          />
-          {' '}
-          <label htmlFor="translation">English Translation</label>
-        </small>
-      </h4>
-    </div>;
+          <FormGroup check>
+            <Label check>
+              <Input
+                checked={showTranslation}
+                type="checkbox"
+                onChange={e => this.toggleTranslation(e.target.checked)}
+              />{' '}
+              Translation
+            </Label>
+          </FormGroup>
+        </Form>
+      </div>;
 
-    return (
-      <div>
-        <h1> Sri Guru Granth Sahib </h1>
-        <AngBar />
+      return (
         <div>
-          {
+          <h1> Sri Guru Granth Sahib </h1>
+          <AngBar />
+          <div>
+            {
             lines.length === 0
-              ? 'Loading'
-              : <div className="text-left">{angContent}</div>
-          }
+            ? 'Loading'
+            : <div className="text-lg-left">{angContent}</div>
+            }
+          </div>
         </div>
-      </div>
-    );
+        );
   }
 }

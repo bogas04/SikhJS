@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-remarkable';
 import { loading } from '../../constants';
+import { Container } from 'reactstrap';
 
 export default class About extends Component {
   constructor (props) {
@@ -9,10 +10,10 @@ export default class About extends Component {
     fetch('README.md').then(r => r.text()).then(file => this.setState({ file }));
   }
   render () {
-    return (<ReactMarkdown
-      style = {{ fontSize: '100% !important' }}
-      className = "text-left"
-      source = {this.state.file}
-    />);
+    return (
+      <Container className="text-lg-left">
+        <ReactMarkdown source={this.state.file} />
+      </Container>
+    );
   }
 }
