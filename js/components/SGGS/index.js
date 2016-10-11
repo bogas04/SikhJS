@@ -1,14 +1,68 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Throttle } from 'react-throttle';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import Toggle from 'material-ui/Toggle';
+import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 export default class SGGS extends Component {
   constructor (props) {
     super (props);
     let { ang = 1 } = this.props.params || { };
-    this.state = { lines: [], ang, larivaar: false, showTranslation: false, showAngForm: false };
+    this.state = { lines: [], ang, larivaar: false, showTranslation: false };
     this.updateLines();
+  }
+  render () {
+    const MAX_ANG = 1430, MIN_ANG = 1;
+    const { lines, ang, larivaar, showTranslation } = this.state;
+
+    const angContent = lines.map(({ id, text, original, translation}) => (
+      <div key={id} style={{ display: showTranslation ? 'block' : 'inline' }}>
+        {larivaar ? original : ` ${text} `}
+        {showTranslation ? <div className="english" style={{ color: 'grey' }}>{translation.text}</div> : ''}
+      </div>
+    ));
+
+    const AngBar = () => <Toolbar style={{ padding: '0 40px' }}>
+      <ToolbarGroup firstChild={true}>
+        <ToolbarTitle text="Sri Guru Granth Sahib" />
+        <RaisedButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="Previous Ang" />
+        <Throttle handler="onChange" time="200">
+          <TextField
+            disabled={lines.length === 0}
+            style={{ width: 100 }}
+            inputStyle={{ textAlign: 'center' }}
+            hintText={ang}
+            onChange={(e, v) => this.setAng(Number(v))}
+            type="number"
+            min={MIN_ANG}
+            max={MAX_ANG}
+            defaultValue={ang}
+          />
+        </Throttle>
+        <RaisedButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label="Next Ang " />
+      </ToolbarGroup>
+      <ToolbarGroup>
+        <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={e => this.toggleLarivaar()} toggled={larivaar} />
+      </ToolbarGroup>
+      <ToolbarGroup>
+        <Toggle style={{ padding: '15px 0' }} name="translation" label="English Translation" onToggle={e => this.toggleTranslation()} toggled={showTranslation} />
+      </ToolbarGroup>
+    </Toolbar>;
+
+    return (
+      <div>
+        <AngBar />
+        <div>
+          {
+            lines.length === 0
+            ? <h1>Loading</h1>
+            : <div style={{ textAlign: 'left', padding: 20 }} className="gurbani-text">{angContent}</div>
+          }
+        </div>
+      </div>
+    );
   }
   setAng(ang) {
     if (ang) {
@@ -24,82 +78,6 @@ export default class SGGS extends Component {
       this.setState({ lines })
     ));
   }
-  showAngForm() { this.setState({ showAngForm: true }); }
   toggleLarivaar() { this.setState({ larivaar: !this.state.larivaar }); }
   toggleTranslation() { this.setState({ showTranslation: !this.state.showTranslation }); }
-  hideAngForm() { this.setState({ showAngForm: false }); }
-  render () {
-    const MAX_ANG = 1430, MIN_ANG = 1;
-    const { showAngForm, lines, ang, larivaar, showTranslation } = this.state;
-
-    const angContent = lines.map(({ id, text, original, translation}) => (
-      <div key={id} style={{ display: showTranslation ? 'block' : 'inline' }}>
-        {larivaar ? original : ` ${text} `}
-        {showTranslation ? <div><small>{translation.text}</small></div> : ''}
-      </div>
-      ));
-
-      const AngBar = () => <div>
-        <h3>
-          <button className="btn" disabled={ang === MIN_ANG} onClick={() => this.decrementAng()}>Previous Ang</button>
-          <span className="gurbani-text">
-            {' Œ '}
-            <span
-              style={{ display: showAngForm ? 'none' : 'inline' }}
-              onClick={e => this.showAngForm()}
-              children={ang}
-            />
-            <Throttle handler="onChange" time="200">
-              <input
-                hidden={!showAngForm}
-                ref={e => e && e.focus()}
-                onChange={e => this.setAng(Number(e.target.value))}
-                onBlur={e => this.hideAngForm()}
-                type="number"
-                min={MIN_ANG}
-                max={MAX_ANG}
-                style={{width: '100px'}}
-                className="text-center"
-                defaultValue={ang}
-              />
-            </Throttle>
-            {' ‰ '}
-          </span>
-          <button className="btn" disabled={ang === MAX_ANG} onClick={() => this.incrementAng()}>Next Ang</button>
-        </h3>
-        <Form inline>
-          <FormGroup check>
-            <Label check>
-              <Input checked={larivaar} type="checkbox" onChange={e => this.toggleLarivaar(e.target.checked)}/>{' '}
-              Larivaar
-            </Label>
-          </FormGroup>
-          {' '}
-          <FormGroup check>
-            <Label check>
-              <Input
-                checked={showTranslation}
-                type="checkbox"
-                onChange={e => this.toggleTranslation(e.target.checked)}
-              />{' '}
-              Translation
-            </Label>
-          </FormGroup>
-        </Form>
-      </div>;
-
-      return (
-        <div>
-          <h1> Sri Guru Granth Sahib </h1>
-          <AngBar />
-          <div>
-            {
-            lines.length === 0
-            ? 'Loading'
-            : <div className="text-lg-left">{angContent}</div>
-            }
-          </div>
-        </div>
-        );
-  }
 }

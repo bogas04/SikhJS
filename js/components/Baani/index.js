@@ -10,7 +10,7 @@ export default class Baani extends Component {
   }
   render () {
     return (<div className="gurbani-text">
-      <ReactMarkdown container={({ children }) => <div className="gurbani-text">{children}</div>} source={this.state.file} />
+      <ReactMarkdown container={({ children }) => <div>{children}</div>} source={this.state.file} />
     </div>);
   }
 }

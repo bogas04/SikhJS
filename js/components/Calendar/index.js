@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-remarkable';
 import { loading } from '../../constants';
-import { Container } from 'reactstrap';
 
 export default class Calendar extends Component {
   constructor (props) {
@@ -11,9 +10,10 @@ export default class Calendar extends Component {
   }
   render () {
     return (
-      <Container className="text-lg-left">
+      <div>
+        <h2>Sikh Calendar</h2>
         <ReactMarkdown source={this.state.file} />
-      </Container>
+      </div>
     );
   }
 }

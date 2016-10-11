@@ -1,0 +1,48 @@
+@font-face { font-family: gurmukhi_thick; src: url('../fonts/gurmukhi_thick.ttf'); }
+@font-face { font-family: gurmukhi_heavy; src: url('../fonts/gurmukhi_heavy.ttf'); }
+@font-face { font-family: gurmukhi_light; src: url('../fonts/gurmukhi_light.ttf'); }
+
+@keyframes SplashIn {
+  from { transform: scale(3); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.greeting {
+  animation: SplashIn 0.25s ease-in;
+  padding: 20vh 10vw;
+  font-size: 5em !important;
+}
+
+.gurbani-text {
+  transition: all 1s;
+  font-size: 2rem;
+}
+.gurbani-text { font-family: gurmukhi_heavy; }
+.gurbani-text div.english { font-family: ''; }
+
+.gurbani-text h1 { font-size: 1.3em; }
+.gurbani-text h2 { font-size: 1.25em; }
+.gurbani-text h3 { font-size: 1.2em; }
+.gurbani-text h4 { font-size: 1.15em; }
+.gurbani-text h5 { font-size: 1.1em; }
+.gurbani-text h6 { font-size: 1em; }
+
+.gurbani-text p, .gurbani-text pre {
+  display: table;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+  font-size: 0.8em;
+}
+.gurbani-text pre {
+  color: #1E43D4;
+  padding: 10px 20vw 0px 20vw;
+}
+.gurbani-text p:hover,.hovered {
+  background-color: #efefef;
+  color: #c7254e;
+}
+.night-mode {
+  background-color: black !important;
+  color: white !important;
+}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-remarkable';
 import { loading } from '../../constants';
-import { Container } from 'reactstrap';
 
 export default class About extends Component {
   constructor (props) {
@@ -11,9 +10,7 @@ export default class About extends Component {
   }
   render () {
     return (
-      <Container className="text-lg-left">
-        <ReactMarkdown source={this.state.file} />
-      </Container>
+      <ReactMarkdown source={this.state.file} />
     );
   }
 }
