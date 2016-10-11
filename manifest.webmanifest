@@ -1,7 +1,7 @@
 {
   "name": "SikhJS",
   "short_name": "SikhJS",
-  "start_url": "/",
+  "start_url": ".",
   "display": "fullscreen",
   "background_color": "#fff",
   "description": "Waheguru Ji Ka Khalsa Waheguru Ji Ki Phateh!",
