@@ -9,8 +9,12 @@
 
 .greeting {
   animation: SplashIn 0.25s ease-in;
-  padding: 20vh 10vw;
   font-size: 5em !important;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
 }
 
 .gurbani-text {

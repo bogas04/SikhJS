@@ -22,7 +22,7 @@ export default class Nav extends Component {
           style={{ top: 0, left: 0, position: 'fixed' }}
           title="SikhJS"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-          onLeftIconButtonTouchTap={e => this.toggleDrawer()}
+          onLeftIconButtonTouchTap={e => this.toggleDrawer(e)}
         />
         <Drawer open={this.state.showDrawer} docked={false} width={200} onRequestChange={e => this.toggleDrawer()}>
           <Link to={`/`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Home</MenuItem></Link>
@@ -38,8 +38,10 @@ export default class Nav extends Component {
       </div>
     );
   }
-  toggleDrawer() {
+  toggleDrawer(e) {
     this.setState({ showDrawer: !this.state.showDrawer });
+    e.stopPropagation();
+    e.preventDefault();
   }
   toggleNightMode (e) {
     let { nightMode } = this.state;
