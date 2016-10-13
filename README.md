@@ -19,7 +19,7 @@ I've added several new goals and roadmap. Would love some support to make this a
 Why ?
 ==
 Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and Sisters.
-Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2015s.
+Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2016s.
 They are in dire neeed of a revamp, and this I believe is the first step towards a modern revolution for Sikhism, when youth uses technology to
 learn more about Baani and Sikhism.
 
