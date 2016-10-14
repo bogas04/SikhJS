@@ -13,7 +13,7 @@ const App = ({ children }) => {
   return (
     <div>
       <Nav />
-      <div id="baaniWrapper" style={{ textAlign: 'center', position: 'absolute', top: 65, width: '100vw', marginLeft: -7, }}>
+      <div id="baaniWrapper">
         {children || <Greeting />}
       </div>
     </div>
