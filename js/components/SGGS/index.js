@@ -18,7 +18,7 @@ export default class SGGS extends Component {
     const { lines, ang, larivaar, showTranslation } = this.state;
 
     const angContent = lines.map(({ id, text, original, translation}) => (
-      <div key={id} style={{ display: showTranslation ? 'block' : 'inline' }}>
+      <div key={id} style={{ display: showTranslation ? 'block' : 'inline-block' }}>
         {larivaar ? original : ` ${text} `}
         {showTranslation ? <div className="english" style={{ color: 'grey' }}>{translation.text}</div> : ''}
       </div>
