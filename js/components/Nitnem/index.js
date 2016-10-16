@@ -12,7 +12,7 @@ export default ({  }) => {
       title={title}
       subtitle={
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', }}>
-          <FlatButton primary label="Open" containerElement={<Link to={`/nitnem/${title}`}/>} /> 
+          <Link to={`/nitnem/${title}`}><FlatButton primary label="Open" /></Link>
           {author.map(id => <AuthorChip key={id} id={id} />)}
         </div>
       }
@@ -27,16 +27,15 @@ export default ({  }) => {
     others: baanies.others.map(e => <BaaniCard key={e.title} {...e} />),
   };
   return (
-    <div style={{ padding: '0 50px 50px 50px', textAlign: 'left' }}>
-      <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
-      <Tabs>
-        <Tab label="Nitnem">
-          {content.nitnem}
-        </Tab>
-        <Tab label="Additional Baanies">
-          {content.others}
-        </Tab>
-      </Tabs>
-    </div>
+    <Tabs style={{ backgroundColor: 'grey' }}>
+      <Tab label="Nitnem">
+        <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
+        <div style={{ padding: 50, textAlign: 'left' }}>{content.nitnem}</div>
+      </Tab>
+      <Tab label="Additional Baanies">
+        <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
+        <div style={{ padding: 50, textAlign: 'left' }}>{content.others}</div>
+      </Tab>
+    </Tabs>
   );
 }
