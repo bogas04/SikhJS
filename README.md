@@ -1,131 +1,107 @@
-SikhJS v0.0.3b
+SikhJS v0.0.3
 ==
-
-## NOTE: master branch holds the Electron app, which isn't maintained for time-being, you can use web version ([gh-pages](http://bogas04.github.io/SikhJS/)) for now.
-Modern Gurbani application for Windows, OSX and Linux. Built on Electron.
+Modern Gurbani Web App
 **NOTE**: The application is still in active development and is not fit for public release just yet.
-
-![Screenshot 1](assets/1.png)
-![Screenshot 2](assets/2.png)
-![Screenshot 3](assets/3.png)
 
 Goal
 ==
 I've added several new goals and roadmap. Would love some support to make this a reality.
-* Create a multiplatform Gurbani application with lightweight modern design.
-* Provide a clean way of representing Baani on Web (Usage of markdown files)
-* Promote it among youth.
+* Create a web app Gurbani application with lightweight modern design.
+* Provide a clean way of representing Baani on Web (Usage of markdown files).
+* Promote Sikhi among youth by use of technology, gamification and what not.
 
 Why ?
 ==
-Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and Sisters.
-Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2015s.
+Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and sisters.
+Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2010s.
 They are in dire neeed of a revamp, and this I believe is the first step towards a modern revolution for Sikhism, when youth uses technology to
 learn more about Baani and Sikhism.
 
 How ?
 ==
-The application is very simple as of now. I've manually taken docs from [SikhNet] (http://www.sikhnet.com/DownloadBanis)
-and converted them to markdown files. The reason why I chose them is because they are
-  * very lightweight
-  * can be parsed to HTML very easily
-  * is pretty widely supported
+The application is very simple as of now. I've manually taken docs from [SikhNet] (http://www.sikhnet.com/DownloadBanis) and [api.sikher.com] (http://api.sikher.com). Can not thank them enough. Nitnem baanies are converted to markdown files. The reason why I chose markdown is because they are
+* very lightweight
+* can be parsed to HTML very easily
+* can be formatted right in code
+* is pretty widely supported
 
-A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/dist/fonts/) for text having Gurbani.
+A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/dist/fonts/) for text having Gurbani. Thanks to the designer of font once again.
 
 Build
 ==
-The project is based on Electron. You can build it as follows:
+The project is uses React, ES2015+, hence a bundler + transpiler is used in the build process.
 
 ## Prerequisites
-  * [NodeJS v4.0.0 or higher] (https://nodejs.org)
+* [NodeJS v4.0.0 or higher] (https://nodejs.org)
 
 ## Instructions
+
 ```bash
 # Installation
 git clone https://github.com/bogas04/SikhJS.git
 cd SikhJS
 npm i
-npm i electron-packager -g
 
 # Transpile JSX to JS during development
-npm run build
-# Transpile JSX to JS during development and watch the files
-npm run buildw
-# Transpile and start the app
-npm run start
+npm run build:webpack
 
-# Package
-npm run package-(darwin|win32|linux)
+# Transpile JSX to JS during development and watch the files
+npm run build:watch
 ```
 
 Changelog
 ==
-## v2.5.0
-  - [ ] Social Aspect
-    - [ ] /r/Sikh column for discussion
-    - [ ] Twitter? GooglePlus? WhatsApp? Telegram?
-  - [ ] Gurudwara finder
-    - [ ] Curated by availability of langar, rooms, etc
-
 ## v2.0.0
-  - [ ] Gurmukhi
-    - [ ] Pronunciation of the words.
-    - [ ] Definition of words. Select a word and `CMD-D` \ `CTRL-D` to get its meaning
-  - [ ] Notifications
-    - [ ] Random Baani and its meaning
-    - [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
-    - [ ] Calendar Alert
-    - [ ] Breaking Sikh News
+- [ ] Gurudwara finder
+  - [ ] Curated by availability of langar, rooms, etc
+- [ ] Moderated commenting on any selected text to promote global level vichaar.
+  - [ ] Notifications for same.
 
 ## v1.5.0
-  - [ ] Saakhis
-    - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus
-    - [ ] Picture Gallery
-  - [ ] Redefine shabads on internet
-    - [x] Proper searching (SearchGurbani can help)
-    - [ ] Introduction to all forms and styles
-    - [ ] SoundCloud integration for Shabads
-    - [ ] YouTube integration for Shabads
+- [ ] Pronunciation of the words.
+- [ ] Definition of words. Select a word and to get its meaning
+- [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
+- [ ] Calendar Alert
+- [ ] Breaking Sikh News
 
 ## v1.0.0
-  - [ ] Create Browser addon that helps in quick baani search etc.
-  - [ ] Go service-worker website
-  - [ ] Go react-native
-    - [ ] android
-    - [ ] iOS 
+- [ ] Improve API routes to leverage browser keywords. Eg. sggs<tab>1234 mapping out into https://bogas04.github.io/SikhJS/#/sggs/1234.
+- [ ] Proper searching (SearchGurbani can help).
+- [ ] Introduction to all forms and styles of kirtan.
+- [ ] SoundCloud integration for Shabads.
+- [ ] Picture Gallery
+- [ ] YouTube integration for Shabads.
+- [ ] Saakhis
+  - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus
 
 ## v0.5.0
-  - [x] Go react
-    - [ ] Optimize Components
-  - [ ] Keyboard shortcuts to hover through lines **check keyboardShortcuts branch**
-  - [x] Sri Guru Granth Sahib
-    - [x] Ang numbers
-    - [x] Quick select angs
-    - [ ] Sehaj Path tracker
-      - [ ] Find a way to keep data persistent even with version updates.
-  - [x] Sikh calendar
-    - [x] Beautify
-    - [ ] Add images
-  - [x] Complete Gurmukhi Nitnem
-  - [x] Baanis stored as markdown files for easier parsing
+- [ ] Optimize Components
+- [ ] Keyboard shortcuts to hover through lines
+- [ ] Sehaj Path tracker
+- [ ] Find a way to keep data persistent even with version updates.
+- [ ] Use react
+- [x] Sri Guru Granth Sahib.
+- [x] Ang numbers.
+- [x] Quick select angs.
+- [x] Sikh calendar.
+- [x] Beautify.
+- [x] Complete Gurmukhi Nitnem.
+- [x] Baanis stored as markdown files for easier parsing.
 
-Credits
-==
+# Credits
 Thanks to
-* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis)
-* [GurbaniFiles.org] (http://www.gurbanifiles.org/)
-* [SearchGurbani.com] (http://searchgurbani.com/)
+* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
+* Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
+* [GurbaniFiles.org] (http://www.gurbanifiles.org/).
+* [SearchGurbani.com] (http://searchgurbani.com/).
 * and everyone else who are making this possible.
 
-Contribute
-==
+# Contribute
 You can contribute by
 * Becoming a code-collaborator
 * Becoming a content-collaborator
 * Suggesting modern designs for the application
 * Finding bugs
 
-License
-==
+# License
 MIT

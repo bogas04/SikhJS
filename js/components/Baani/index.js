@@ -6,7 +6,7 @@ export default class Baani extends Component {
   constructor (props) {
     super (props);
     this.state = { file: "" };
-    fetch(`docs/${this.props.params.baani}.md`).then(r => r.text()).then(file => this.setState({ file }));
+    fetch(`docs/md/${this.props.params.baani}.md`).then(r => r.text()).then(file => this.setState({ file }));
   }
   render () {
     return (<div className="gurbani-text">

@@ -14,6 +14,28 @@
   left: 0;
   width: 100%;
 }
+
+@media (max-width: 700px) {
+  .toolbar-title {
+    display: none !important;;
+  }
+}
+@media (max-width: 500px) {
+  .toolbar .raised-button {
+    word-wrap: nowrap !important;
+    overflow: hidden !important;
+    height: 35px !important;
+  }
+}
+
+.toolbar {
+  padding: 0 40px !important;
+  height: auto !important;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start; 
+}
+
 .greeting {
   animation: SplashIn 0.25s ease-in;
   font-size: 5em !important;

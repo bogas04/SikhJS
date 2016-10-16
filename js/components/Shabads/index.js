@@ -11,7 +11,7 @@ export default class Shabads extends Component {
     this.state = { keyword: "" };
   }
   componentWillMount() {
-    fetch('docs/keertan.json').then(r => r.json()).then(database => {
+    fetch('docs/json/keertan.json').then(r => r.json()).then(database => {
       this.database = database;
     });
   }

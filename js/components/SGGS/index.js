@@ -24,10 +24,10 @@ export default class SGGS extends Component {
       </div>
     ));
 
-    const AngBar = () => <Toolbar style={{ padding: '0 40px' }}>
+    const AngBar = () => <Toolbar className='toolbar' style={{}}>
       <ToolbarGroup firstChild={true}>
-        <ToolbarTitle text="Sri Guru Granth Sahib" />
-        <RaisedButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="Previous Ang" />
+        <ToolbarTitle className='toolbar-title' text="Sri Guru Granth Sahib" />
+        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="Previous Ang" />
         <Throttle handler="onChange" time="200">
           <TextField
             disabled={lines.length === 0}
@@ -41,7 +41,7 @@ export default class SGGS extends Component {
             defaultValue={ang}
           />
         </Throttle>
-        <RaisedButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label="Next Ang " />
+        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label="Next Ang " />
       </ToolbarGroup>
       <ToolbarGroup>
         <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={e => this.toggleLarivaar()} toggled={larivaar} />
@@ -74,7 +74,7 @@ export default class SGGS extends Component {
   incrementAng() { this.setAng(this.state.ang + 1); } 
   decrementAng() { this.setAng(this.state.ang - 1); } 
   updateLines(ang = this.state.ang) {
-    return fetch(`http://api.sikher.com/page/${ang}`).then(r => r.json()).then(lines => Promise.resolve(
+    return fetch(`docs/json/SGGS/Ang ${ang}.json`).then(r => r.json()).then(lines => Promise.resolve(
       this.setState({ lines })
     ));
   }
