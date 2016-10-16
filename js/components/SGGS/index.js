@@ -27,7 +27,7 @@ export default class SGGS extends Component {
     const AngBar = () => <Toolbar className='toolbar'>
       <ToolbarGroup firstChild={true}>
         <ToolbarTitle className='toolbar-title' text="Sri Guru Granth Sahib" />
-        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="Previous Ang" />
+        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="<" />
         <Throttle handler="onChange" time="200">
           <TextField
             disabled={lines.length === 0}
@@ -41,7 +41,7 @@ export default class SGGS extends Component {
             defaultValue={ang}
           />
         </Throttle>
-        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label="Next Ang " />
+        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label=">" />
       </ToolbarGroup>
       <ToolbarGroup>
         <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={e => this.toggleLarivaar()} toggled={larivaar} />
