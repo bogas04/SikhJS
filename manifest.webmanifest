@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#fff",
+  "theme_color": "#00BCD4",
   "description": "Waheguru Ji Ka Khalsa Waheguru Ji Ki Phateh!",
   "icons": [{
     "src": "logo.png",
