@@ -9,10 +9,9 @@ import { AuthorChip } from '../Author';
 export default ({  }) => {
   const BaaniCard = ({ title, info, author }) => <Card style={{ margin: 10 }} key={title}>
     <CardHeader
-      title={title}
+      title={<Link to={`/nitnem/${title}`}>{title}</Link>}
       subtitle={
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', }}>
-          <Link to={`/nitnem/${title}`}><FlatButton primary label="Open" /></Link>
           {author.map(id => <AuthorChip key={id} id={id} />)}
         </div>
       }
@@ -27,7 +26,7 @@ export default ({  }) => {
     others: baanies.others.map(e => <BaaniCard key={e.title} {...e} />),
   };
   return (
-    <Tabs style={{ backgroundColor: 'grey' }}>
+    <Tabs tabItemContainerStyle={{ backgroundColor: 'grey' }}>
       <Tab label="Nitnem">
         <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
         <div style={{ padding: 50, textAlign: 'left' }}>{content.nitnem}</div>
