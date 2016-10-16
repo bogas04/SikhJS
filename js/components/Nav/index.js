@@ -40,8 +40,7 @@ export default class Nav extends Component {
   }
   toggleDrawer(e) {
     this.setState({ showDrawer: !this.state.showDrawer });
-    e.stopPropagation();
-    e.preventDefault();
+    e && e.stopPropagation() && e.preventDefault();
   }
   toggleNightMode (e) {
     let { nightMode } = this.state;
@@ -50,8 +49,6 @@ export default class Nav extends Component {
     this.setState({ nightMode : !nightMode });
   }
   updateFontSize (v) {
-    document.querySelectorAll('.gurbani-text').forEach(e => {
-      e.style.fontSize = ((35 * v) + '%');
-    });
+    document.querySelector('#baaniWrapper').style.fontSize = ((35 * v) + '%');
   }
 }

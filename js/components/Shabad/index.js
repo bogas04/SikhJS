@@ -12,9 +12,9 @@ export default class Shabad extends Component {
   render() {
     return (
       <div style = {{height: '100%'}}>
-        <h3> This feature requires internet connection </h3>
+        <h2>{this.state.shabad ? this.state.title : 'Loading...'}</h2>
         { this.state.shabad && <iframe src = {this.state.shabad.url + '/print_view'} style = {{width: '100vw', height: '85vh', border: 'none' }} />}
       </div>
-      );
-    }
+    );
+  }
 }

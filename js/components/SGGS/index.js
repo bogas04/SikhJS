@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Throttle } from 'react-throttle';
 import Toggle from 'material-ui/Toggle';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
@@ -24,7 +24,7 @@ export default class SGGS extends Component {
       </div>
     ));
 
-    const AngBar = () => <Toolbar className='toolbar' style={{}}>
+    const AngBar = () => <Toolbar className='toolbar'>
       <ToolbarGroup firstChild={true}>
         <ToolbarTitle className='toolbar-title' text="Sri Guru Granth Sahib" />
         <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="Previous Ang" />

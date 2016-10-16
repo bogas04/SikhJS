@@ -10,7 +10,9 @@ export default class About extends Component {
   }
   render () {
     return (
-      <ReactMarkdown source={this.state.file} />
+      <div style={{ padding: 10 }}>
+        <ReactMarkdown source={this.state.file} />
+      </div>
     );
   }
 }
