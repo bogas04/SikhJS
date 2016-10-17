@@ -3,3 +3,5 @@ node_modules
 *.swp
 SikhJS-*
 npm-debug.log
+.DS_Store
+**/*/.DS_Store
