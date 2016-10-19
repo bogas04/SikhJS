@@ -22,17 +22,17 @@ const App = ({ children }) => {
 
 render(
   <MuiThemeProvider>
-    <Router history={hashHistory} onUpdate={() => document.getElementById('baaniWrapper').scrollTop = 0}>
+    <Router history={hashHistory} onUpdate={() => document.body.scrollTop = 0}>
       <Route path="/" component={App} >
-        <Route path="about" component={About}/>
+        <Route path="about" component={About} />
         <Route path="sggs" component={SGGS} />
         <Route path="sggs/:ang" component={SGGS} />
-        <Route path="calendar" component={Calendar}/>
-        <Route path="shabads" component={Shabads}/>
-        <Route path="shabads/:shabad" component={Shabad}/>
-        <Route path="nitnem" component={Nitnem}/>
-        <Route path="nitnem/:baani" component={Baani}/>
-        <Route path="hukamnama" component={Hukamnama}/>
+        <Route path="calendar" component={Calendar} />
+        <Route path="shabads" component={Shabads} />
+        <Route path="shabads/:shabad" component={Shabad} />
+        <Route path="nitnem" component={Nitnem} />
+        <Route path="nitnem/:baani" component={Baani} />
+        <Route path="hukamnama" component={Hukamnama} />
       </Route>
     </Router>
   </MuiThemeProvider>

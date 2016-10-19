@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
+import { baanies } from '../../constants';
 import { Throttle } from 'react-throttle';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -7,7 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Slider from 'material-ui/Slider';
 import Toggle from 'material-ui/Toggle';
 
-export default class Nav extends Component {
+export default withRouter(class Nav extends Component {
   constructor(p) {
     super(p);
     this.state = {
@@ -16,6 +17,8 @@ export default class Nav extends Component {
     };
   }
   render () {
+    const { push } = this.props.router
+      , nBaanies = baanies.nitnem.map(({ title }) => <MenuItem key={title} onTouchTap={e => { push(`/nitnem/${title}`); this.toggleDrawer(); }} primaryText={title} />);
     return (
       <div>
         <AppBar
@@ -24,15 +27,19 @@ export default class Nav extends Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={e => this.toggleDrawer(e)}
         />
-        <Drawer open={this.state.showDrawer} docked={false} width={200} onRequestChange={e => this.toggleDrawer()}>
-          <Link to={`/`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Home</MenuItem></Link>
-          <Link to={`/hukamnama`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Hukamnama</MenuItem></Link>
-          <Link to={`/calendar`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Calendar</MenuItem></Link>
-          <Link to={`/sggs`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Sri Guru Granth Sahib</MenuItem></Link>
-          <Link to={`/nitnem`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Nitnem</MenuItem></Link>
-          <Link to={`/shabads`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>Shabads</MenuItem></Link>
-          <Link to={`/about`} style={{ textDecoration: 'none' }}><MenuItem onTouchTap={e => this.toggleDrawer()}>About</MenuItem></Link>
-          <MenuItem>Font Size<Throttle time="200" handler="onChange"><Slider min={1} max={10} step={0.1} onChange={(e, v) => this.updateFontSize(v)} /></Throttle></MenuItem>
+        <Drawer open={this.state.showDrawer} docked={false} width={350} onRequestChange={e => this.toggleDrawer()}>
+          <MenuItem onTouchTap={e => { push(`/`); this.toggleDrawer()}} primaryText="Home" />
+          <MenuItem onTouchTap={e => { push(`/hukamnama`); this.toggleDrawer(); }} primaryText="Hukamnama" />
+          <MenuItem onTouchTap={e => { push(`/sggs`); this.toggleDrawer(); }} primaryText="Sri Guru Granth Sahib" />
+          <MenuItem onTouchTap={e => { push(`/nitnem`); this.toggleDrawer(); }} primaryText="Nitnem" nestedItems={nBaanies} />
+          <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Shabads" /> 
+          <MenuItem onTouchTap={e => { push(`/calendar`); this.toggleDrawer(); }} primaryText="Calendar" />
+          <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
+          <MenuItem>
+            Font Size
+            {' '}
+            <Throttle time="200" handler="onChange"><Slider min={1} max={10} step={0.1} onChange={(e, v) => this.updateFontSize(v)} /></Throttle>
+          </MenuItem>
           <MenuItem><Toggle label="Night Mode" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
         </Drawer>
       </div>
@@ -51,4 +58,4 @@ export default class Nav extends Component {
   updateFontSize (v) {
     document.querySelector('#baaniWrapper').style.fontSize = ((35 * v) + '%');
   }
-}
+})

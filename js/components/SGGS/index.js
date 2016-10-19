@@ -42,6 +42,7 @@ export default class SGGS extends Component {
           />
         </Throttle>
         <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label=">" />
+        <RaisedButton className="raised-button" label="Random Ang" onClick={() => this.randomAng()}/>
       </ToolbarGroup>
       <ToolbarGroup>
         <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={e => this.toggleLarivaar()} toggled={larivaar} />
@@ -54,11 +55,11 @@ export default class SGGS extends Component {
     return (
       <div>
         <AngBar />
-        <div>
+        <div style={{ textAlign: 'left', padding: 20 }}>
           {
             lines.length === 0
-            ? <h1>Loading</h1>
-            : <div style={{ textAlign: 'left', padding: 20 }} className="gurbani-text">{angContent}</div>
+            ? <h1 className="gurbani-text" style={{ textAlign: 'center' }}>vwihgurU vwihgurU vwihgurU</h1>
+            : <div className="gurbani-text">{angContent}</div>
           }
         </div>
       </div>
@@ -71,6 +72,7 @@ export default class SGGS extends Component {
       this.setState({ ang });
     }
   }
+  randomAng() { this.setAng(parseInt(1 + Math.random() * 1430)); }
   incrementAng() { this.setAng(this.state.ang + 1); } 
   decrementAng() { this.setAng(this.state.ang - 1); } 
   updateLines(ang = this.state.ang) {
