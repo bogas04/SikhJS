@@ -47,10 +47,7 @@
   padding-left: 0;
 }
 
-.gurbani-text {
-  font-size: 2em;
-}
-.gurbani-text { font-family: gurmukhi_heavy; }
+.gurbani-text, .gurbani-text code { font-size: 2em; font-family: gurmukhi_heavy; }
 .gurbani-text div.english { font-family: ''; }
 
 .gurbani-text h1 { font-size: 1.3em; }

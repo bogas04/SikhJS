@@ -2,7 +2,7 @@
   {
     "id":1,
     "author":"Guru Nanak Dev",
-    "gurmukhi":"\u0a2e\u0a03 \u0a67",
+    "gurmukhi":"\u0a17\u0a41\u0a30\u0a42 \u0a28\u0a3e\u0a28\u0a15 \u0a26\u0a47\u0a35",
     "description":"Guru Nanak Dev Ji [1469 - 1539] was the first Guru of the Sikhs born in a village named Talwandi which is now called Nankana Sahib and is in Pakistan. As a child Guru Nanak spent most of his time in isolation and meditation. He slept only for a few hours, ate small quantities of food and spoke little.<br\/><br\/>One day he disappeared while having his morning bath and reappeared 3 days later and said: There is no Hindu and there is no Muslim. By saying this he meant that titles were meaningless because all of humanity is one and the light of God shines within everyone."
   },
   {
@@ -232,5 +232,11 @@
     "author":"Guru Gobind Singh",
     "gurmukhi":"\u0A17\u0A41\u0A30\u0A42 \u0A17\u0A4B\u0A2C\u0A3F\u0A70\u0A26 \u0A38\u0A3F\u0A70\u0A18",
     "description":"Guru Gobind Singh ji (Friday, January 5, 16661, in Patna, Bihar, India - Thursday, 21 October, 1708) was born \"Gobind Rai\" and was the tenth and last of the ten human form Gurus of Sikhism. He became Guru on November 24, 1675 at the age of nine, following in the footsteps of his father Guru Teg Bahadur ji.<br \/> before Guru ji left his mortal body for his heavenly abode, he nominated Sri Guru Granth Sahib ji (SGGS) as the next perpetual Guru of the Sikhs. Guru Gobind Singh molded the Sikh religion into its present shape, with the formation of the Khalsa fraternity and completion of the Guru Granth Sahib as we find it today, which some will say was his greatest act. The author of this line is unknown"
+  },
+  {
+    "id":40,
+    "author":"Khalsa Panth",
+    "gurmukhi":"\u0a16\u0a3e\u0a32\u0a38\u0a3e \u0a2a\u0a70\u0a25",
+    "description":"Khalsa Panth is the collective body of all initiated Sikhs represented by the five beloved-ones and can be called the Guru Panth, the embodiment of the Guru, and the final temporal Guru/leader of the Sikhs along with Guru Granth, the mind of Guru. The first time that this ceremony took place was on Baisakhi, which fell on 30 March 1699 at Anandpur Sahib in Punjab, India. The word \"Khalsa\" is derived from Arabic khalis (literally meaning \"pure\" or \"unsullied\") and Perso-Arabic khalisah (literally pure; office of revenue department; lands directly under government management), is used collectively for the community of baptised Sikhs. "
   }
 ]
