@@ -51,8 +51,7 @@ export default withRouter(class Nav extends Component {
   }
   toggleNightMode (e) {
     let { nightMode } = this.state;
-    const $baaniWrapper = document.getElementById('baaniWrapper');
-    $baaniWrapper.classList.toggle('night-mode');
+    document.body.classList.toggle('night-mode');
     this.setState({ nightMode : !nightMode });
   }
   updateFontSize (v) {
