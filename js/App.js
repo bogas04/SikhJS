@@ -29,7 +29,8 @@ render(
         <Route path="sggs/:ang" component={SGGS} />
         <Route path="calendar" component={Calendar} />
         <Route path="shabads" component={Shabads} />
-        <Route path="shabads/:id" component={Shabad} />
+        <Route path="shabads/:q" component={Shabads} />
+        <Route path="shabad/:id" component={Shabad} />
         <Route path="nitnem" component={Nitnem} />
         <Route path="nitnem/:baani" component={Baani} />
         <Route path="hukamnama" component={Hukamnama} />

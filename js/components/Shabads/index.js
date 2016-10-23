@@ -35,7 +35,13 @@ export const SearchCard = withRouter(props => {
 export default class Shabads extends Component {
   constructor (props) {
     super (props);
-    this.state = { q: "", shabads: [], searchType: 0, baaniSrc: 1 };
+    let q = (this.props.params && this.props.params.q) || '';
+    this.state = { q, shabads: [], searchType: 0, baaniSrc: 1 };
+  }
+  componentDidMount() {
+    if(this.state.q !== '') {
+      this.queryAPI();
+    }
   }
   search(q) {
     this.setState({ q });
@@ -56,7 +62,6 @@ export default class Shabads extends Component {
   render () {
     const { shabads, searchType, baaniSrc } = this.state;
 
-    console.log(searchType);
     return (
       <div>
         <Toolbar className='toolbar'>
