@@ -7,6 +7,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Slider from 'material-ui/Slider';
 import Toggle from 'material-ui/Toggle';
+import Divider from 'material-ui/Divider';
 
 export default withRouter(class Nav extends Component {
   constructor(p) {
@@ -34,16 +35,19 @@ export default withRouter(class Nav extends Component {
           <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Shabads" /> 
           <MenuItem onTouchTap={e => { push(`/calendar`); this.toggleDrawer(); }} primaryText="Calendar" />
           <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
-          <MenuItem>
-            Font Size
-            {' '}
-            <Throttle time="200" handler="onChange">
-              <Slider min={0.5} max={1.5} step={0.1} defaultValue={1} onChange={(e, v) => this.updateFontSize(v)} />
-            </Throttle>
-          </MenuItem>
-          <MenuItem><Toggle label="Night Mode" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
-        </Drawer>
-      </div>
+          <Divider />
+          <MenuItem primaryText="Font Size" nestedItems={[
+            <MenuItem key={1}>
+              <Throttle time="200" handler="onChange">
+                <Slider min={0.5} max={1.5} step={0.1} defaultValue={1} onChange={(e, v) => this.updateFontSize(v)} />
+              </Throttle>
+            </MenuItem>
+          ]} />
+        <MenuItem primaryText="Night Mode" nestedItems={[
+          <MenuItem key={1}><Toggle label="Toggle" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
+        ]} />
+      </Drawer>
+    </div>
     );
   }
   toggleDrawer(e) {
