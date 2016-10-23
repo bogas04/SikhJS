@@ -4,6 +4,10 @@ export const loading = `### Loading.
 
 export const API_URL = `https://gurbaninow.com/api/`;
 
+export const searchTypes = [ 'First Letter of Begining of Shabad (Gurakhar)', 'First Letter from Anywhere of Shabad (Gurakhar)',
+  'Full Word (Gurakhar)', 'Full Word (English)', ];
+export const sourceTypes = [ 'All Scripts', 'Sri Guru Granth Sahib', 'Vaaran', 'Dasam Granth and Amrit Keertan' ];
+
 export const baanies = {
   nitnem: [
     { title: 'Japji', author: [1, 2], info: `Japji Sahib is the first sacred composition found in the main Sikh current Guru called the Guru Granth Sahib, a scripture. It is a famous and concise summary of Sikh philosophy which was compiled by the founder of Sikhism and the first spiritual guide of the Sikhs known worldwide as Guru Nanak.  The compilation consists of the Mool Mantar, an opening Salok or verse, a set of 38 Pauris or hymns and a final closing Salok. This Bani called Japji Sahib, appears at the very beginning of the Guru Granth Sahib from Page 1 to Page 8 in the Holy Book of the Sikhs Nay! of Humanity. It, the most important Bani or 'set of verses', and is lovingly recited by all Sikhs every morning. The word ‘Jap’ means to ‘recite’/‘to ‘chant’/'to stay focused onto'. ‘Ji’ is a word that is used to show respect as is the word ‘Sahib’`, },
