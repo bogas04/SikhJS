@@ -3,8 +3,12 @@ import { findDOMNode } from 'react-dom';
 import { Throttle } from 'react-throttle';
 import Toggle from 'material-ui/Toggle';
 import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
+import Progress from 'material-ui/CircularProgress';
 import TextField from 'material-ui/TextField';
+import LeftIcon from 'material-ui/svg-icons/navigation/chevron-left';
+import RightIcon from 'material-ui/svg-icons/navigation/chevron-right';
 
 export default class SGGS extends Component {
   constructor (props) {
@@ -12,6 +16,11 @@ export default class SGGS extends Component {
     let { ang = 1 } = this.props.params || { };
     this.state = { lines: [], ang, larivaar: false, showTranslation: false };
     this.updateLines();
+    this.decrementAng = this.decrementAng.bind(this);
+    this.incrementAng = this.incrementAng.bind(this);
+    this.toggleLarivaar = this.toggleLarivaar.bind(this);
+    this.toggleTranslation = this.toggleTranslation.bind(this);
+    this.randomAng = this.randomAng.bind(this);
   }
   render () {
     const MAX_ANG = 1430, MIN_ANG = 1;
@@ -27,7 +36,7 @@ export default class SGGS extends Component {
     const AngBar = () => <Toolbar className='toolbar'>
       <ToolbarGroup firstChild={true}>
         <ToolbarTitle className='toolbar-title' text="Sri Guru Granth Sahib" />
-        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MIN_ANG} onClick={() => this.decrementAng()} label="<" />
+        <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng}><LeftIcon /></IconButton>
         <Throttle handler="onChange" time="200">
           <TextField
             disabled={lines.length === 0}
@@ -41,27 +50,28 @@ export default class SGGS extends Component {
             defaultValue={ang}
           />
         </Throttle>
-        <RaisedButton className="raised-button" disabled={lines.length === 0 || ang === MAX_ANG} onClick={() => this.incrementAng()} label=">" />
-        <RaisedButton className="raised-button" label="Random Ang" onClick={() => this.randomAng()}/>
+        <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng}><RightIcon /></IconButton>
       </ToolbarGroup>
       <ToolbarGroup>
-        <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={e => this.toggleLarivaar()} toggled={larivaar} />
+        <Button className="raised-button" label="Random Ang" onClick={this.randomAng}/>
       </ToolbarGroup>
       <ToolbarGroup>
-        <Toggle style={{ padding: '15px 0' }} name="translation" label="English Translation" onToggle={e => this.toggleTranslation()} toggled={showTranslation} />
+        <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={this.toggleLarivaar} toggled={larivaar} />
+      </ToolbarGroup>
+      <ToolbarGroup>
+        <Toggle style={{ padding: '15px 0' }} name="translation" label="English Translation" onToggle={this.toggleTranslation}
+          toggled={showTranslation} />
       </ToolbarGroup>
     </Toolbar>;
 
     return (
       <div>
         <AngBar />
-        <div style={{ textAlign: 'left', padding: 20 }}>
-          {
-            lines.length === 0
-            ? <h1 className="gurbani-text" style={{ textAlign: 'center' }}>vwihgurU vwihgurU vwihgurU</h1>
-            : <div className="gurbani-text">{angContent}</div>
-          }
-        </div>
+        {
+          lines.length === 0
+          ? <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}><Progress size={100} thickness={5} /></div>
+          : <div style={{ textAlign: 'left', padding: 20 }} className="gurbani-text">{angContent}</div>
+        }
       </div>
     );
   }

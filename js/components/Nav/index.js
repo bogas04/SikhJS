@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 import { baanies } from '../../constants';
 import { Throttle } from 'react-throttle';
 import AppBar from 'material-ui/AppBar';
@@ -22,8 +22,7 @@ export default withRouter(class Nav extends Component {
     return (
       <div>
         <AppBar
-          style={{ top: 0, left: 0, position: 'fixed' }}
-          title="SikhJS"
+          style={{ top: 0, left: 0, position: 'fixed' }} title="SikhJS"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={e => this.toggleDrawer(e)}
         />
@@ -38,7 +37,9 @@ export default withRouter(class Nav extends Component {
           <MenuItem>
             Font Size
             {' '}
-            <Throttle time="200" handler="onChange"><Slider min={1} max={10} step={0.1} onChange={(e, v) => this.updateFontSize(v)} /></Throttle>
+            <Throttle time="200" handler="onChange">
+              <Slider min={0.5} max={1.5} step={0.1} defaultValue={1} onChange={(e, v) => this.updateFontSize(v)} />
+            </Throttle>
           </MenuItem>
           <MenuItem><Toggle label="Night Mode" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
         </Drawer>
@@ -54,7 +55,5 @@ export default withRouter(class Nav extends Component {
     document.body.classList.toggle('night-mode');
     this.setState({ nightMode : !nightMode });
   }
-  updateFontSize (v) {
-    document.querySelector('#baaniWrapper').style.fontSize = ((35 * v) + '%');
-  }
+  updateFontSize (v) { document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`; }
 })

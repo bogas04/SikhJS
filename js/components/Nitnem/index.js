@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { withRouter } from 'react-router';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import { baanies } from '../../constants';
 import { AuthorChip } from '../Author';
 
-export default ({  }) => {
-  const BaaniCard = ({ title, info, author }) => <Card style={{ margin: 10 }} key={title}>
-    <CardHeader
-      title={<Link to={`/nitnem/${title}`}>{title}</Link>}
-      subtitle={
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', }}>
-          {author.map(id => <AuthorChip key={id} id={id} />)}
-        </div>
-      }
-      actAsExpander={true}
-      showExpandableButton={true}
-    />
-    <CardText expandable={true}> {info || "No info"} </CardText>
-  </Card>;
+export const BaaniCard = withRouter(({ title, info, author, router: { push } }) => (
+  <Card style={{ margin: 10 }} key={title}>
+    <CardHeader title={<div>{title} <FlatButton label="Read" onTouchTap={e => push(`/nitnem/${title}`)}/></div>}
+      showExpandableButton={true} actAsExpander={true} />
+    <CardText expandable={true}> 
+      {author.map(id => <AuthorChip key={id} id={id} />)}
+      <div children={info || "No info"} />
+    </CardText>
+  </Card>
+));
 
+export default ({  }) => {
   const content = {
     nitnem: baanies.nitnem.map(e => <BaaniCard key={e.title} {...e} />),
     others: baanies.others.map(e => <BaaniCard key={e.title} {...e} />),
   };
+
   return (
     <Tabs tabItemContainerStyle={{ backgroundColor: 'grey' }}>
       <Tab label="Nitnem">
@@ -37,4 +35,4 @@ export default ({  }) => {
       </Tab>
     </Tabs>
   );
-}
+};

@@ -16,6 +16,8 @@ export class AuthorChip extends Component {
   }
   render() {
     const { data, loading } = this.state;
-    return <Chip style={{ margin: '0 2px' }}> { loading ? 'Loading' : `${data.author} ${data.gurmukhi}` } </Chip>;
+    return <Chip style={{ display: 'inline-block', margin: 2 }}>
+      { loading ? 'Loading' : `${data.author} ${data.gurmukhi}` }
+    </Chip>;
   }
 }
