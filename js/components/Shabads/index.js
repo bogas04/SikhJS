@@ -19,7 +19,7 @@ export const SearchCard = withRouter(props => {
           <span className="gurbani-text">{Gurmukhi}</span>
           {' '}
           <span style={{ textTransform: 'capitalize' }}>{Transliteration}</span>
-          <FlatButton label="Open Shabad" onTouchTap={e => push(`/shabads/${ShabadID}`)} />
+          <FlatButton label="Open Shabad" onTouchTap={e => push(`/shabad/${ShabadID}`)} />
           <FlatButton label="Open Ang" onTouchTap={e => push(`/SGGS/${PageNo}`)} disabled={SourceID !== 'G'} />
           <FlatButton label="Open Raag" onTouchTap={e => push(`/SGGS/${PageNo}`)} disabled />
         </div>}

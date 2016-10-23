@@ -14,8 +14,7 @@ Why ?
 ==
 Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and sisters.
 Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2010s.
-They are in dire neeed of a revamp, and this I believe is the first step towards a modern revolution for Sikhism, when youth uses technology to
-learn more about Baani and Sikhism.
+They are in dire neeed of a revamp, and this I believe is the first step towards a modern revolution for Sikhism, when youth uses technology to learn more about Baani and Sikhism.
 
 How ?
 ==
@@ -30,9 +29,6 @@ A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/dist/fonts/)
 Build
 ==
 The project is uses React, ES2015+, hence a bundler + transpiler is used in the build process.
-
-## Prerequisites
-* [NodeJS v4.0.0 or higher] (https://nodejs.org)
 
 ## Instructions
 
@@ -49,37 +45,47 @@ npm run build:webpack
 npm run build:watch
 ```
 
-Changelog
+Changelog and Plans 
 ==
 ## v2.0.0
-- [ ] Gurudwara finder
+- [ ] Gurudwara finder (#46)
   - [ ] Curated by availability of langar, rooms, etc
 - [ ] Moderated commenting on any selected text to promote global level vichaar.
   - [ ] Notifications for same.
 
-## v1.5.0
-- [ ] Pronunciation of the words.
-- [ ] Definition of words. Select a word and to get its meaning
-- [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
-- [ ] Calendar Alert
-- [ ] Breaking Sikh News
-
 ## v1.0.0
-- [ ] Improve API routes to leverage browser keywords. Eg. sggs<tab>1234 mapping out into https://bogas04.github.io/SikhJS/#/sggs/1234.
-- [ ] Proper searching (SearchGurbani can help).
-- [ ] Introduction to all forms and styles of kirtan.
-- [ ] SoundCloud integration for Shabads.
-- [ ] Picture Gallery
-- [ ] YouTube integration for Shabads.
-- [ ] Saakhis
-  - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus
+- [ ] Tech Improvements:
+  - [ ] Use Service Worker for offline support. (#25)
+  - [ ] Optimize Components.
+  - [ ] Highly responsive design.
+  - [ ] Notifications
+    - [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
+    - [ ] Calendar Alert
+  - [ ] CSS Beautification of Granth, Shabads and Angs.
+- [ ] New Content:
+  - [ ] Additional Granths (#39)
+  - [ ] Introduction to all forms Shashtars 
+    - [ ] Shashtar Maala with pictures and descriptiosn would be amazing
+  - [ ] Introduction to all forms and styles of kirtan.
+    - [ ] SoundCloud integration for Shabads.
+    - [ ] YouTube integration for Shabads.
+  - [ ] Saakhis
+    - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus.
+  - [ ] Picture Gallery
+  - [ ] Shabad Kosh
+    - [ ] Pronunciation of the words.
+    - [ ] Definition of words. Select a word and to get its meaning
+
 
 ## v0.5.0
-- [ ] Optimize Components
-- [ ] Keyboard shortcuts to hover through lines
-- [ ] Sehaj Path tracker
-- [ ] Find a way to keep data persistent even with version updates.
-- [ ] Use react
+- [ ] Bookmarks and Sehaj Path tracker (#20)
+  - [ ] Find a way to keep data persistent even with version updates.
+- [x] Improve API routes to leverage browser keywords.
+  - [x] `/sggs/1234` opens 1234 Ang.
+  - [x] `/shabads/mnbmj` opens Search Results for mnbmj (Mohe Na Bisaaro).
+  - [x] `/shabad/1234` opens 1234 Shabad
+- [x] Proper searching (Thanks to [GurbaniNow](https://github.com/Sarabveer/gurbaninow)).
+- [x] Use react
 - [x] Sri Guru Granth Sahib.
 - [x] Ang numbers.
 - [x] Quick select angs.
@@ -90,18 +96,20 @@ Changelog
 
 # Credits
 Thanks to
-* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
+* Guru Sahib for giving me talent and skill.
+* [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
 * Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
-* [GurbaniFiles.org] (http://www.gurbanifiles.org/).
-* [SearchGurbani.com] (http://searchgurbani.com/).
-* and everyone else who are making this possible.
+* Documents from:
+  * SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
+  * [GurbaniFiles.org] (http://www.gurbanifiles.org/).
+  * [SearchGurbani.com] (http://searchgurbani.com/).
+* and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who are making this possible.
 
 # Contribute
 You can contribute by
-* Becoming a code-collaborator
-* Becoming a content-collaborator
-* Suggesting modern designs for the application
-* Finding bugs
+* Reporting [Issues](https://github.com/bogas04/SikhJS/issues/new)
+* Becoming a code-collaborator.
+* Becoming a content-collaborator.
 
 # License
 MIT
