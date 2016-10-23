@@ -34,7 +34,6 @@ export default withRouter(class Nav extends Component {
           <MenuItem onTouchTap={e => { push(`/nitnem`); this.toggleDrawer(); }} primaryText="Nitnem" nestedItems={nBaanies} />
           <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Shabads" /> 
           <MenuItem onTouchTap={e => { push(`/calendar`); this.toggleDrawer(); }} primaryText="Calendar" />
-          <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
           <Divider />
           <MenuItem primaryText="Font Size" nestedItems={[
             <MenuItem key={1}>
@@ -46,8 +45,10 @@ export default withRouter(class Nav extends Component {
         <MenuItem primaryText="Night Mode" nestedItems={[
           <MenuItem key={1}><Toggle label="Toggle" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
         ]} />
-      </Drawer>
-    </div>
+      <Divider />
+      <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
+    </Drawer>
+  </div>
     );
   }
   toggleDrawer(e) {

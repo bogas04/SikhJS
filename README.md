@@ -48,14 +48,14 @@ npm run build:watch
 Changelog and Plans 
 ==
 ## v2.0.0
-- [ ] Gurudwara finder (#46)
+- [ ] Gurudwara finder [#46](https://github.com/bogas04/sikhjs/issues/46).
   - [ ] Curated by availability of langar, rooms, etc
 - [ ] Moderated commenting on any selected text to promote global level vichaar.
   - [ ] Notifications for same.
 
 ## v1.0.0
 - [ ] Tech Improvements:
-  - [ ] Use Service Worker for offline support. (#25)
+  - [x] Use Service Worker for offline support. [#25](https://github.com/bogas04/sikhjs/issues/25).
   - [ ] Optimize Components.
   - [ ] Highly responsive design.
   - [ ] Notifications
@@ -63,7 +63,7 @@ Changelog and Plans
     - [ ] Calendar Alert
   - [ ] CSS Beautification of Granth, Shabads and Angs.
 - [ ] New Content:
-  - [ ] Additional Granths (#39)
+  - [ ] Additional Granths [#39](https://github.com/bogas04/sikhjs/issues/39).
   - [ ] Introduction to all forms Shashtars 
     - [ ] Shashtar Maala with pictures and descriptiosn would be amazing
   - [ ] Introduction to all forms and styles of kirtan.
@@ -78,14 +78,14 @@ Changelog and Plans
 
 
 ## v0.5.0
-- [ ] Bookmarks and Sehaj Path tracker (#20)
+- [ ] Bookmarks and Sehaj Path tracker [#20](https://github.com/bogas04/sikhjs/issues/20).
   - [ ] Find a way to keep data persistent even with version updates.
 - [x] Improve API routes to leverage browser keywords.
   - [x] `/sggs/1234` opens 1234 Ang.
   - [x] `/shabads/mnbmj` opens Search Results for mnbmj (Mohe Na Bisaaro).
-  - [x] `/shabad/1234` opens 1234 Shabad
+  - [x] `/shabad/1234` opens 1234 Shabad.
 - [x] Proper searching (Thanks to [GurbaniNow](https://github.com/Sarabveer/gurbaninow)).
-- [x] Use react
+- [x] Use react.
 - [x] Sri Guru Granth Sahib.
 - [x] Ang numbers.
 - [x] Quick select angs.
@@ -107,7 +107,7 @@ Thanks to
 
 # Contribute
 You can contribute by
-* Reporting [Issues](https://github.com/bogas04/SikhJS/issues/new)
+* Reporting [Issues](https://github.com/bogas04/SikhJS/issues/new).
 * Becoming a code-collaborator.
 * Becoming a content-collaborator.
 
