@@ -27325,7 +27325,7 @@
 	            }, primaryText: 'Home' }),
 	          _react2.default.createElement(_MenuItem2.default, { onTouchTap: function onTouchTap(e) {
 	              push('/hukamnama');_this2.toggleDrawer();
-	            }, primaryText: 'Hukamnama' }),
+	            }, primaryText: 'Hukamnama (Download on Mobile)' }),
 	          _react2.default.createElement(_MenuItem2.default, { onTouchTap: function onTouchTap(e) {
 	              push('/sggs');_this2.toggleDrawer();
 	            }, primaryText: 'Sri Guru Granth Sahib' }),
@@ -68148,12 +68148,8 @@
 	              _IconButton2.default,
 	              { disabled: lines.length === 0 || ang === MAX_ANG, onClick: _this2.incrementAng },
 	              _react2.default.createElement(_chevronRight2.default, null)
-	            )
-	          ),
-	          _react2.default.createElement(
-	            _Toolbar.ToolbarGroup,
-	            null,
-	            _react2.default.createElement(_RaisedButton2.default, { className: 'raised-button', label: 'Random Ang', onClick: _this2.randomAng })
+	            ),
+	            _react2.default.createElement(_RaisedButton2.default, { className: 'raised-button', label: 'Random', onClick: _this2.randomAng })
 	          ),
 	          _react2.default.createElement(
 	            _Toolbar.ToolbarGroup,
@@ -75728,7 +75724,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = function () {
-	  return _react2.default.createElement('iframe', { style: { width: '100vw', height: '90vh', border: 'none' }, src: 'http://old.sgpc.net/hukumnama/jpeg%20hukamnama/hukamnama.pdf' });
+	  return _react2.default.createElement('iframe', {
+	    style: { width: '100vw', height: '90.2vh', border: 'none' }, src: 'http://old.sgpc.net/hukumnama/jpeg%20hukamnama/hukamnama.pdf'
+	  });
 	};
 
 /***/ },

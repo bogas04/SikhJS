@@ -51,9 +51,7 @@ export default class SGGS extends Component {
           />
         </Throttle>
         <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng}><RightIcon /></IconButton>
-      </ToolbarGroup>
-      <ToolbarGroup>
-        <Button className="raised-button" label="Random Ang" onClick={this.randomAng}/>
+        <Button className="raised-button" label="Random" onClick={this.randomAng}/>
       </ToolbarGroup>
       <ToolbarGroup>
         <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={this.toggleLarivaar} toggled={larivaar} />

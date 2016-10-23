@@ -28,7 +28,7 @@ export default withRouter(class Nav extends Component {
         />
         <Drawer open={this.state.showDrawer} docked={false} width={350} onRequestChange={e => this.toggleDrawer()}>
           <MenuItem onTouchTap={e => { push(`/`); this.toggleDrawer()}} primaryText="Home" />
-          <MenuItem onTouchTap={e => { push(`/hukamnama`); this.toggleDrawer(); }} primaryText="Hukamnama" />
+          <MenuItem onTouchTap={e => { push(`/hukamnama`); this.toggleDrawer(); }} primaryText="Hukamnama (Download on Mobile)" />
           <MenuItem onTouchTap={e => { push(`/sggs`); this.toggleDrawer(); }} primaryText="Sri Guru Granth Sahib" />
           <MenuItem onTouchTap={e => { push(`/nitnem`); this.toggleDrawer(); }} primaryText="Nitnem" nestedItems={nBaanies} />
           <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Shabads" /> 
