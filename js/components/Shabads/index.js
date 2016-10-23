@@ -8,41 +8,9 @@ import TextField from 'material-ui/TextField';
 import { AuthorChip } from '../Author';
 import Select from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import Progress from 'material-ui/CircularProgress';
-import Toggle from 'material-ui/Toggle';
+import Shabad from '../Shabad';
+import { API_URL } from '../../constants';
 
-const API_URL = `https://gurbaninow.com/api/`;
-
-export class SearchCardDetails extends Component {
-  constructor(p) {
-    super(p);
-    this.state = { lines: [], showTranslation: false, loading: true };
-  }
-  toggleTranslation() { this.setState({ showTranslation: !this.state.showTranslation }); }
-  componentDidMount () {
-    const { id } = this.props;
-    fetch(`${API_URL}?mode=2&shabadNo=${id}&format=json`).then(r => r.json())
-      .then(({ gurbani = [] }) => this.setState({ lines: gurbani, loading: false }))
-    //fetch(`/docs/json/hymns/Hymn ${id}.json`).then(r => r.json()).then(lines => this.setState({ lines }))
-      .catch(err => console.error(err));
-  }
-  render () {
-    const { lines, showTranslation, loading } = this.state;
-    return (
-      <div>
-        <Toggle label="Show Translation" onToggle={e => this.toggleTranslation()}/>
-        {
-          loading
-          ? <Progress size={100} thickness={5} />
-          : lines.map(e => <div>
-            <span className="gurbani-text">{e.shabad.Gurmukhi}</span>
-            {showTranslation && <div style={{ color: 'grey' }}>{e.shabad.English}</div>}
-          </div>)
-        }
-      </div>
-    );
-  }
-}
 export const SearchCard = withRouter(props => {
   const { ID, Transliteration, WriterID, English, ShabadID, SourceID, Gurmukhi, PageNo, router: { push }} = props;
   return (
@@ -51,16 +19,14 @@ export const SearchCard = withRouter(props => {
           <span className="gurbani-text">{Gurmukhi}</span>
           {' '}
           <span style={{ textTransform: 'capitalize' }}>{Transliteration}</span>
-          <FlatButton disabled label="Open Shabad" onTouchTap={e => push(`/SGGS/${PageNo}`)}/>
-          <FlatButton disabled={SourceID !== 'G'} label="Open Ang" onTouchTap={e => push(`/SGGS/${PageNo}`)}/>
-          <FlatButton disabled label="Open Raag" onTouchTap={e => push(`/SGGS/${PageNo}`)}/>
+          <FlatButton label="Open Shabad" onTouchTap={e => push(`/shabads/${ShabadID}`)} />
+          <FlatButton label="Open Ang" onTouchTap={e => push(`/SGGS/${PageNo}`)} disabled={SourceID !== 'G'} />
+          <FlatButton label="Open Raag" onTouchTap={e => push(`/SGGS/${PageNo}`)} disabled />
         </div>}
         showExpandableButton={true} actAsExpander={true} />
       <CardText expandable={true}> 
         <AuthorChip id={WriterID} />
-        <div className="gurbani-text">{Gurmukhi}</div>
-        <div>{English}</div>
-        <SearchCardDetails id={ShabadID} />
+        <Shabad id={ShabadID}/>
       </CardText>
     </Card>
   );
