@@ -1,4 +1,4 @@
-SikhJS v0.0.3
+SikhJS v0.4.0
 ==
 Modern Gurbani Web App
 **NOTE**: The application is still in active development and is not fit for public release just yet.
