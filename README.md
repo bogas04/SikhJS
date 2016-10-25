@@ -18,7 +18,7 @@ They are in dire neeed of a revamp, and this I believe is the first step towards
 
 How ?
 ==
-The application is very simple as of now. I've manually taken docs from [SikhNet](http://www.sikhnet.com/DownloadBanis) and [gurbaninow.com](https://github.com/Sarabveer/gurbaninow/blob/master/API.md). Can not thank them enough. Nitnem baanies are converted to markdown files. The reason why I chose markdown is because they are
+The application is very simple as of now. I've manually taken docs from [SikhNet](http://www.sikhnet.com/DownloadBanis) and [gurbaninow.com](https://github.com/Sarabveer/gurbaninow/blob/master/API.md) and [other sources](#credits). Can not thank them enough. Nitnem baanies are converted to markdown files. The reason why I chose markdown is because they are
 * very lightweight
 * can be parsed to HTML very easily
 * can be formatted right in code
