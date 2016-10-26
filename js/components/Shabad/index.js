@@ -40,10 +40,10 @@ export default withRouter(class Shabad extends Component {
     return (
       <div>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', padding: '10px 0' }}>
-          <div><Toggle label="Show Translation" onToggle={e => this.toggleTranslation()}/></div>
+          <div><Toggle labelPosition='right' label="Show Translation" onToggle={e => this.toggleTranslation()}/></div>
           <div>{authorId && <AuthorChip id={authorId} />}</div>
           <div>{ang && <Button label={`Open Ang ${ang}`} onTouchTap={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'} />}</div>
-          <div><Toggle label="Unicode Font" onToggle={e => this.toggleFont()}/></div>
+          <div><Toggle labelPosition='right' label="Unicode Font" onToggle={e => this.toggleFont()}/></div>
         </div>
         <div style={{ textAlign: 'center' }}>
           {

@@ -14,21 +14,33 @@ export default class SGGS extends Component {
   constructor (props) {
     super (props);
     let { ang = 1 } = this.props.params || { };
-    this.state = { lines: [], ang, larivaar: false, showTranslation: false };
+    this.state = { lines: [], ang, larivaar: false, larivaarAssist: false, showTranslation: false };
     this.updateLines();
     this.decrementAng = this.decrementAng.bind(this);
     this.incrementAng = this.incrementAng.bind(this);
     this.toggleLarivaar = this.toggleLarivaar.bind(this);
+    this.toggleLarivaarAssist = this.toggleLarivaarAssist.bind(this);
     this.toggleTranslation = this.toggleTranslation.bind(this);
     this.randomAng = this.randomAng.bind(this);
   }
   render () {
     const MAX_ANG = 1430, MIN_ANG = 1;
-    const { lines, ang, larivaar, showTranslation } = this.state;
+    const { lines, ang, larivaar, larivaarAssist, showTranslation } = this.state;
 
-    const angContent = lines.map(({ id, text, original, translation}) => (
+    const Orange = ({ text }) => <span style={{ color: 'orange' }}>{text}</span>;
+
+    const larivaarify = line => <span>{
+      line.split(' ')
+      .map((akhar, index) => (
+        larivaarAssist && akhar.indexOf('॥') < 0 && index % 2 == 0
+        ? <Orange key={index} text={akhar} />
+        : <span key={index}>{akhar}</span>
+      ))
+    }</span>;
+
+    const angContent = lines.map(({ id, text, original, translation }) => (
       <div key={id} style={showTranslation ? { display: 'block' } : { display: larivaar ? 'inline-block' : 'inline' }}>
-        {larivaar ? original : ` ${text} `}
+        {larivaar ? larivaarify(text) : ` ${text} `}
         {showTranslation ? <div className="english" style={{ color: 'grey' }}>{translation.text}</div> : ''}
       </div>
     ));
@@ -54,11 +66,17 @@ export default class SGGS extends Component {
         <Button className="raised-button" label="Random" onClick={this.randomAng}/>
       </ToolbarGroup>
       <ToolbarGroup>
-        <Toggle style={{ padding: '15px 0' }} name="larivaar" label="Larivaar" onToggle={this.toggleLarivaar} toggled={larivaar} />
+        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="larivaar" label="Larivaar"
+          onToggle={this.toggleLarivaar} toggled={larivaar} />
       </ToolbarGroup>
       <ToolbarGroup>
-        <Toggle style={{ padding: '15px 0' }} name="translation" label="English Translation" onToggle={this.toggleTranslation}
-          toggled={showTranslation} />
+        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="larivaarAssist"
+          label={<div>Larivaar<Orange text='Assist' /></div>}
+          onToggle={this.toggleLarivaarAssist} disabled={!this.state.larivaar} toggled={larivaarAssist} />
+      </ToolbarGroup>
+      <ToolbarGroup>
+        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="translation" label="English Translation"
+          onToggle={this.toggleTranslation} toggled={showTranslation} />
       </ToolbarGroup>
     </Toolbar>;
 
@@ -89,5 +107,6 @@ export default class SGGS extends Component {
     ));
   }
   toggleLarivaar() { this.setState({ larivaar: !this.state.larivaar }); }
+  toggleLarivaarAssist() { this.setState({ larivaarAssist: !this.state.larivaarAssist }); }
   toggleTranslation() { this.setState({ showTranslation: !this.state.showTranslation }); }
 }
