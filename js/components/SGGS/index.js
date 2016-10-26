@@ -4,13 +4,14 @@ import { Throttle } from 'react-throttle';
 import Toggle from 'material-ui/Toggle';
 import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 import Button from 'material-ui/RaisedButton';
+import { withRouter } from 'react-router';
 import IconButton from 'material-ui/IconButton';
 import Progress from 'material-ui/CircularProgress';
 import TextField from 'material-ui/TextField';
 import LeftIcon from 'material-ui/svg-icons/navigation/chevron-left';
 import RightIcon from 'material-ui/svg-icons/navigation/chevron-right';
 
-export default class SGGS extends Component {
+export default withRouter(class SGGS extends Component {
   constructor (props) {
     super (props);
     let { ang = 1 } = this.props.params || { };
@@ -93,6 +94,7 @@ export default class SGGS extends Component {
   }
   setAng(ang) {
     if (ang) {
+      this.props.router.push(`/sggs/${ang}`);
       this.setState({ lines: [] });
       this.updateLines(ang);
       this.setState({ ang });
@@ -109,4 +111,4 @@ export default class SGGS extends Component {
   toggleLarivaar() { this.setState({ larivaar: !this.state.larivaar }); }
   toggleLarivaarAssist() { this.setState({ larivaarAssist: !this.state.larivaarAssist }); }
   toggleTranslation() { this.setState({ showTranslation: !this.state.showTranslation }); }
-}
+});

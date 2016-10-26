@@ -32,7 +32,7 @@ export const SearchCard = withRouter(props => {
   );
 });
 
-export default class Shabads extends Component {
+export default withRouter(class Shabads extends Component {
   constructor (props) {
     super (props);
     let q = (this.props.params && this.props.params.q) || '';
@@ -45,6 +45,7 @@ export default class Shabads extends Component {
   }
   search(q) {
     this.setState({ q });
+    this.props.router.push(`shabads/${q}`)
     this.queryAPI();
   }
   updateSearchType(searchType) { this.setState({ searchType }); }
@@ -89,4 +90,4 @@ export default class Shabads extends Component {
       </div>
     );
   }
-}
+});
