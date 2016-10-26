@@ -27,7 +27,7 @@ export default withRouter(class Shabad extends Component {
       .then(({ gurbani = [] }) => this.setState({
         lines: gurbani,
         loading: false,
-        authorId: gurbani[0].shabad.WriterID,
+        authorId: this.state.authorId || gurbani.slice(-1)[0].shabad.WriterID,
         ang: gurbani[0].shabad.PageNo,
         sourceId: gurbani[0].shabad.SourceID,
       }))
