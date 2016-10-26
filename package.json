@@ -1,11 +1,12 @@
 {
   "name": "sikhjs",
-  "version": "0.0.3",
+  "version": "0.4.0",
   "description": "Multiplatform application for Gurbani",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build:webpack": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production webpack -p",
+    "build:webpack": "npm run build",
     "build:watch": "webpack -w",
     "start": "npm run build:watch & ws",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +27,7 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "ws": "^1.1.1"
   }
 }

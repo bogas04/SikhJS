@@ -9,8 +9,9 @@
 
 #baaniWrapper {
   position: absolute;
-  top: 65px;
+  top: 64px;
   left: 0;
+  bottom: 0;
   width: 100%;
   transition: font-size 0.25s;
 }
@@ -38,8 +39,8 @@
 
 .greeting {
   animation: SplashIn 0.25s ease-in;
-  text-align: center;
   font-size: 5em !important;
+  text-align: center;
 }
 
 .list-unstyled {
@@ -71,8 +72,4 @@
 .gurbani-text p:hover,.hovered {
   background-color: #efefef;
   color: #c7254e;
-}
-.night-mode {
-  background-color: black !important;
-  color: white !important;
 }

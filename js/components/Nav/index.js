@@ -12,14 +12,13 @@ import Divider from 'material-ui/Divider';
 export default withRouter(class Nav extends Component {
   constructor(p) {
     super(p);
-    this.state = {
-      nightMode: false,
-      showDrawer: false,
-    };
+    this.state = { showDrawer: false, };
   }
   render () {
-    const { push } = this.props.router
-      , nBaanies = baanies.nitnem.map(({ title }) => <MenuItem key={title} onTouchTap={e => { push(`/nitnem/${title}`); this.toggleDrawer(); }} primaryText={title} />);
+    const { push } = this.props.router;
+    const nBaanies = baanies.nitnem.map(({ title }) => (
+      <MenuItem key={title} onTouchTap={e => { push(`/nitnem/${title}`); this.toggleDrawer(); }} primaryText={title} />)
+    );
     return (
       <div>
         <AppBar
@@ -27,7 +26,7 @@ export default withRouter(class Nav extends Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={e => this.toggleDrawer(e)}
         />
-        <Drawer open={this.state.showDrawer} docked={false} width={350} onRequestChange={e => this.toggleDrawer()}>
+        <Drawer open={this.state.showDrawer} docked={false} width={275} onRequestChange={e => this.toggleDrawer()}>
           <MenuItem onTouchTap={e => { push(`/`); this.toggleDrawer()}} primaryText="Home" />
           <MenuItem onTouchTap={e => { push(`/hukamnama`); this.toggleDrawer(); }} primaryText="Hukamnama (Download on Mobile)" />
           <MenuItem onTouchTap={e => { push(`/sggs`); this.toggleDrawer(); }} primaryText="Sri Guru Granth Sahib" />
@@ -46,6 +45,9 @@ export default withRouter(class Nav extends Component {
           <MenuItem key={1}><Toggle label="Toggle" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
         ]} />
       <Divider />
+      <a style={{ textDecoration: 'none' }} href="https://github.com/bogas04/SikhJS/issues/new" target="_blank">
+        <MenuItem primaryText="Report Issue" />
+      </a>
       <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
     </Drawer>
   </div>
@@ -56,9 +58,7 @@ export default withRouter(class Nav extends Component {
     e && e.stopPropagation() && e.preventDefault();
   }
   toggleNightMode (e) {
-    let { nightMode } = this.state;
-    document.body.classList.toggle('night-mode');
-    this.setState({ nightMode : !nightMode });
+    this.props.onNightModeToggle();
   }
   updateFontSize (v) { document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`; }
 })

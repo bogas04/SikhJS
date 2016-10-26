@@ -61,21 +61,25 @@ export default class Shabads extends Component {
   }
   render () {
     const { shabads, searchType, baaniSrc } = this.state;
+    const styles = {
+      select: { width: 300, textOverflow: 'ellipsis', overflow: 'hidden' },
+      group: { display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' },
+    };
 
     return (
       <div>
         <Toolbar className='toolbar'>
-          <ToolbarGroup firstChild={true}
-            style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
+          <ToolbarGroup firstChild={true} style={styles.group}>
+            <ToolbarTitle className='toolbar-title' text="Gurbani Searcher" />
             <Throttle time={500} handler="onChange">
               <TextField inputStyle={{ fontFamily: 'gurmukhi_heavy' }} id="q" onChange={(e, v) => this.search(v)}
-                style={{ width: 400 }} floatingLabelText="Search" hintText="Search"/>
+                style={{ width: 300 }} floatingLabelText="Search" hintText="Search"/>
             </Throttle>
-            <Select style={{ width: 400 }} floatingLabelText="Search Type" value={searchType}
+            <Select style={styles.select} floatingLabelText="Search Type" value={searchType}
               onChange={(e, v) => this.updateSearchType(v)} children={
                 searchTypes.map((v, i) => <MenuItem value={i} primaryText={v} key={i} />)
               } />
-            <Select style={{ width: 400 }} floatingLabelText="Source of Baani" value={baaniSrc}
+            <Select style={styles.select} floatingLabelText="Source of Baani" value={baaniSrc}
               onChange={(e, v) => this.updateSource(v)} children={
                 sourceTypes.map((v, i) => <MenuItem value={i} primaryText={v} key={i} />)
               } />
