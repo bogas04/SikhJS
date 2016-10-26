@@ -14,7 +14,7 @@ export const SearchCard = withRouter(props => {
   const { ID, Transliteration, WriterID, English, ShabadID, SourceID, Gurmukhi, PageNo, router: { push }} = props;
 
   const title = <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
-    <div>
+    <div style={{ display: 'flex', alignItems: 'flexStart', justifyContent: 'flex-start', flexDirection: 'column', flexWrap: 'wrap', }}>
       <span className="gurbani-text">{Gurmukhi}</span>
       <span style={{ textTransform: 'capitalize' }}>{Transliteration}</span>
     </div>
