@@ -1,4 +1,4 @@
-SikhJS v0.4.0
+SikhJS [![GitHub version](https://badge.fury.io/gh/bogas04%2Fsikhjs.svg)](https://badge.fury.io/gh/bogas04%2Fsikhjs)
 ==
 Modern Gurbani Web App
 **NOTE**: The application is still in active development and is not fit for public release just yet.
