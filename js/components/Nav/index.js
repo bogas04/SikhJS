@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { baanies } from '../../constants';
+import { baanies, getSettings, setSettings } from '../../constants';
 import { Throttle } from 'react-throttle';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -13,6 +13,9 @@ export default withRouter(class Nav extends Component {
   constructor(p) {
     super(p);
     this.state = { showDrawer: false, };
+  }
+  componentDidMount() {
+    this.updateFontSize(getSettings().fontSizeMultiplier);
   }
   render () {
     const { push } = this.props.router;
@@ -36,19 +39,18 @@ export default withRouter(class Nav extends Component {
           <Divider />
           <MenuItem primaryText="Font Size" nestedItems={[
             <Throttle time="200" handler="onChange" key={1}>
-              <Slider min={0.25} max={1.75} step={0.1} defaultValue={1} onChange={(e, v) => this.updateFontSize(v)} />
+              <Slider min={0.25} max={1.75} step={0.1} defaultValue={getSettings().fontSizeMultiplier}
+                onChange={(e, v) => this.updateFontSize(v)} />
             </Throttle>
           ]} />
-        <MenuItem primaryText="Night Mode" nestedItems={[
-          <MenuItem key={1}><Toggle labelPosition='right' label="Toggle" onToggle={e => this.toggleNightMode(e)} /></MenuItem>
-        ]} />
-      <Divider />
-      <a style={{ textDecoration: 'none' }} href="https://github.com/bogas04/SikhJS/issues/new" target="_blank">
-        <MenuItem primaryText="Report Issue" />
-      </a>
-      <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
-    </Drawer>
-  </div>
+        <MenuItem primaryText="Night Mode" onTouchTap={e => this.toggleNightMode(e)} />
+        <Divider />
+        <a style={{ textDecoration: 'none' }} href="https://github.com/bogas04/SikhJS/issues/new" target="_blank">
+          <MenuItem primaryText="Report Issue" />
+        </a>
+        <MenuItem onTouchTap={e => { push(`/about`); this.toggleDrawer(); }} primaryText="About" />
+      </Drawer>
+    </div>
     );
   }
   toggleDrawer(e) {
@@ -58,5 +60,10 @@ export default withRouter(class Nav extends Component {
   toggleNightMode (e) {
     this.props.onNightModeToggle();
   }
-  updateFontSize (v) { document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`; }
+  updateFontSize (v) {
+    document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`;
+    let newSettings = getSettings();
+    newSettings.fontSizeMultiplier = v;
+    setSettings(newSettings);
+  }
 })

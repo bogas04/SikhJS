@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
+import { getSettings, setSettings } from './constants';
 
 import { Nav, Greeting, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
 
@@ -15,9 +16,13 @@ injectTapEventPlugin();
 class Root extends Component {
   constructor(p) {
     super(p);
-    this.state = { nightMode: false };
+    const { nightMode } = getSettings();
+    this.state = { nightMode };
   }
   toggleNightMode() {
+    let newSettings = getSettings();
+    newSettings.nightMode = !this.state.nightMode;
+    setSettings(newSettings);
     this.setState({ nightMode: !this.state.nightMode });
   }
   render() {

@@ -1,6 +1,7 @@
 @font-face { font-family: gurmukhi_thick; src: url('../fonts/gurmukhi_thick.ttf'); }
 @font-face { font-family: gurmukhi_heavy; src: url('../fonts/gurmukhi_heavy.ttf'); }
 @font-face { font-family: gurmukhi_light; src: url('../fonts/gurmukhi_light.ttf'); }
+@font-face { font-family: gurmukhi; src: url('../fonts/GurbaniWebThickTrue.ttf'); }
 
 @keyframes SplashIn {
   from { transform: scale(3); opacity: 0; }
