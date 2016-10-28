@@ -8,7 +8,7 @@ import { Raags, Authors, Bookmarks, Nav, Greeting, Hukamnama, About, Baani, SGGS
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { white, darkBlack, fullBlack, } from 'material-ui/styles/colors';
+import { white, darkBlack } from 'material-ui/styles/colors';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
@@ -17,11 +17,13 @@ export default class Root extends Component {
     super(p);
     const { nightMode } = getSettings();
     this.state = { nightMode };
+    document.body.style.backgroundColor = nightMode ? '#212121' : '';
   }
   toggleNightMode() {
     let newSettings = getSettings();
     newSettings.nightMode = !this.state.nightMode;
     setSettings(newSettings);
+    document.body.style.backgroundColor = !this.state.nightMode ? '#212121' : '';
     this.setState({ nightMode: !this.state.nightMode });
   }
   render() {
@@ -29,7 +31,7 @@ export default class Root extends Component {
       return (
         <div>
           <Nav onNightModeToggle={() => this.toggleNightMode()}/>
-          <div id="baaniWrapper" style={this.state.nightMode ? { backgroundColor: darkBlack, color: white } : {}}>
+          <div id="baaniWrapper" style={this.state.nightMode ? { backgroundColor: '#212121', color: white } : {}}>
             {children || <Greeting />}
           </div>
         </div>
