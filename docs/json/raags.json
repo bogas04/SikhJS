@@ -1,0 +1,644 @@
+[
+  {
+    "id": 0,
+    "raag": "None",
+    "gurmukhi": "",
+    "description": "There is no raag or mood associated with this line, which may be because it is the preamble to the hymn, or is not meant to be read in any particular raag or mood",
+    "granth": 0,
+    "ang": 0
+  },
+  {
+    "id": 1,
+    "raag": "Jap",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 1
+  },
+  {
+    "id": 2,
+    "raag": "So Dar",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 8
+  },
+  {
+    "id": 3,
+    "raag": "So Purakh",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 10
+  },
+  {
+    "id": 4,
+    "raag": "Sohila",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 12
+  },
+  {
+    "id": 5,
+    "raag": "Siri Raag",
+    "gurmukhi": "ਸਿਰੀ ਰਾਗੁ",
+    "description": "The basis of this Raag is steeped in the traditions of mainstream Indian Classical music. Siri Raag is serious and thought provoking in its nature and creates an atmosphere where the listener is led to heed the advice given therein. The listener (the mind) is made aware of the truth of the message and with this ‘education’ is given the strength to face the future with both humility and the ‘gained’ knowledge.",
+    "granth": 1,
+    "ang": 14
+  },
+  {
+    "id": 6,
+    "raag": "Majh",
+    "gurmukhi": "ਮਾਝ",
+    "description": "Raag Majh was composed by the Fifth Sikh Guru (Shri Guru Arjun Dev ji). The Raag’s origins are based in Punjabi Folk Music and its essence was inspired by the Majha regions traditions of ‘Ausian’; the game of waiting and yearning for the return of a loved one.The feelings evoked by this Raag have often been compared to that of a mother waiting for her child to return after a long period of separation. She has an anticipation and hope for the child’s return, although at the same moment she is painfully aware of the uncertainty of their return home. This Raag brings to life the emotion of extreme love and this is highlighted by the sorrow and anguish of separation.",
+    "granth": 1,
+    "ang": 94
+
+  },
+  {
+    "id": 7,
+    "raag": "Gauri",
+    "gurmukhi": "ਗਉੜੀ",
+    "description": "Gauri creates a mood where the listener is encouraged to strive harder in order to achieve an objective. However, the encouragement given by the Raag does not allow the ego to increase. This therefore creates the atmosphere where the listener is encouraged, but still prevented from becoming arrogant and self-important.",
+    "granth": 1,
+    "ang": 151
+
+  },
+  {
+    "id": 8,
+    "raag": "Aasaa",
+    "gurmukhi": "ਆਸਾ",
+    "description": "Aasaa has strong emotions of inspiration and courage. This Raag gives the listener the determination and ambition to put aside any excuses and to proceed with the necessary action to achieve the aim. It generates feelings of passion and zeal to succeed and the energy generated from these feelings enables the listener to find the strength from within to achieve success, even when the achievement seems difficult. The determined mood of this Raag ensures that failure is not an option and motivates the listener to be inspired.",
+    "granth": 1,
+    "ang": 347
+  },
+  {
+    "id": 9,
+    "raag": "Gujari",
+    "gurmukhi": "ਗੂਜਰੀ",
+    "description": "If there is a perfect simile for Raag Gujari, it would be that of a person isolated in the desert, who has their hands cupped, holding water. However, it is only when the water begins to slowly seep through their joined hands that the person comes to realise the real value and importance of the water. Similarly Raag Gujari leads the listener to realise and become aware of passing time and in this way comes to value the precious nature of time itself. The revelation brings the listener to an awareness and admission of their own death and mortality, making them utilise their remaining ‘life time’ more wisely.",
+    "granth": 1,
+    "ang": 489
+  },
+  {
+    "id": 10,
+    "raag": "Devgandhari",
+    "gurmukhi": "ਦੇਵਗੰਧਾਰੀ",
+    "description": "Devgandhari conveys the feeling of satisfaction that comes from making an achievement. These emotions make the listener feel empowered to do more and diminish any feelings of laziness. This state of satisfaction is that of extreme happiness and contentment, and leaves the listener with the feeling of being in paradise.",
+    "granth": 1,
+    "ang": 527
+  },
+  {
+    "id": 11,
+    "raag": "Bihagara",
+    "gurmukhi": "ਬਿਹਾਗੜਾ",
+    "description": "The mood of Bihagara is that of extreme sadness and pain, which gives rise to the need to find peace and understanding. The heightened emotional state of sadness is only harnessed by the craving for truth and meaning.",
+    "granth": 1,
+    "ang": 537
+  },
+  {
+    "id": 12,
+    "raag": "Vadhans",
+    "gurmukhi": "ਵਡਹੰਸੁ",
+    "description": "Vadhans is based on Punjabi Folk music and is set in the traditions of ‘Ghoreea’, ‘Suhag’ and ‘Alohnian’. The feelings instilled by this Raag can be compared to those of a bride on the day of her wedding; she is happy and sad. Although she is going to her groom, who fills her with hope and joy, she is also sad to be leaving her family.",
+    "granth": 1,
+    "ang": 557
+  },
+  {
+    "id": 13,
+    "raag": "Sorath",
+    "gurmukhi": "ਸੋਰਠਿ",
+    "description": "Sorath conveys the feeling of having such a strong belief in something that you want to keep repeating the experience. In fact this feeling of certainty is so strong that you become the belief and live that belief. The atmosphere of Sorath is so powerful, that eventually even the most unresponsive listener will be attracted.",
+    "granth": 1,
+    "ang": 597
+  },
+  {
+    "id": 14,
+    "raag": "Dhanasari",
+    "gurmukhi": "ਧਨਾਸਰੀ",
+    "description": "Dhanasari is a sense of being completely carefree. This sensation arises from a feeling of contentment and ‘richness’ from the things we have in our lives and gives the listener a positive and optimistic attitude towards the future.",
+    "granth": 1,
+    "ang": 660
+  },
+  {
+    "id": 15,
+    "raag": "Jaitsiri",
+    "gurmukhi": "ਜੈਤਸਰੀ",
+    "description": "Jaitsiri conveys the heartfelt emotion of not being able to live without someone. Its mood is preoccupied with feelings of dependence and an overwhelming sense of desperately reaching out to be with that person.",
+    "granth": 1,
+    "ang": 696
+  },
+  {
+    "id": 16,
+    "raag": "Todi",
+    "gurmukhi": "ਟੋਡੀ",
+    "description": "Todi consists of both wisdom and humbleness. It is through these sentiments that the Raag takes a simple approach to explain things that we may be aware of, but fail to ponder upon. The Raag draws the attention of the listener to contemplate these things and gives an explanation with such conviction, that we are compelled to agree.",
+    "granth": 1,
+    "ang": 711
+  },
+  {
+    "id": 17,
+    "raag": "Bairari",
+    "gurmukhi": "ਬੈਰਾੜੀ",
+    "description": "Bairari stimulates the feeling of improving and continuing with a task, which has already been accomplished. It is an unmoving belief that what has been achieved is true and positive, which leads to a hunger and desire to progress to the next stage. Although there is immense confidence in the achievement, there is no conceit or vanity in the accomplishment.",
+    "granth": 1,
+    "ang": 719
+  },
+  {
+    "id": 18,
+    "raag": "Tilang",
+    "gurmukhi": "ਤਿਲੰਗ",
+    "description": "Tilang is full of the feeling of having tried hard to impress, but the feeling that the effort made has not been appreciated. However, the atmosphere is not of anger or upset, but of brooding, as the person you are trying to impress is very dear to you.",
+    "granth": 1,
+    "ang": 721
+  },
+  {
+    "id": 19,
+    "raag": "Suhi",
+    "gurmukhi": "ਸੂਹੀ",
+    "description": "Suhi is an expression of such devotion that the listener experiences feelings of extreme closeness and undying love. The listener is bathed in that love and genuinely comes to know what it means to adore.",
+    "granth": 1,
+    "ang": 728
+  },
+  {
+    "id": 20,
+    "raag": "Bilaval",
+    "gurmukhi": "ਬਿਲਾਵਲ",
+    "description": "Bilaval conveys the emotions of great happiness that come from having attained a goal or achieved an aim. It is an overwhelming feeling of fulfilment, satisfaction and joy, that is experienced when the accomplishments is very important and dear to you. The happiness felt is like laughing out loud, there is no planning or any ulterior motive; it’s just a natural expression of heartfelt happiness arising from a sense of achievement.",
+    "granth": 1,
+    "ang": 795
+  },
+  {
+    "id": 21,
+    "raag": "Gond",
+    "gurmukhi": "ਗੋਂਡ",
+    "description": "Gond is an expression of triumph, however these feelings are balanced and in perspective ensuring that there is also an aspect of humility. Therefore, although there is a sense of knowing and understanding the achievement, there is not a feeling of becoming obsessed or getting lost in the achievement itself.",
+    "granth": 1,
+    "ang": 859
+  },
+  {
+    "id": 22,
+    "raag": "Ramkali",
+    "gurmukhi": "ਰਾਮਕਲੀ",
+    "description": "The emotions in Ramkali are like those of a wise teacher disciplining their student. The student is aware of the pain of learning, but is still conscious of the fact that ultimately it is for the best. In this way Ramkali conveys the change from all that we are familiar with, to something we are certain will be better.",
+    "granth": 1,
+    "ang": 876
+  },
+  {
+    "id": 23,
+    "raag": "Nat Narayan",
+    "gurmukhi": "ਨਟ ਨਾਰਾਇਨ",
+    "description": "Nat Narayan consists of feelings of hastiness and impatience, however simultaneously there is stability and control. Although there is control in the Raag, there is still the impression that it is unbalanced and prone to topple at any time.",
+    "granth": 1,
+    "ang": 975
+  },
+  {
+    "id": 24,
+    "raag": "Mali Gaura",
+    "gurmukhi": "ਮਾਲੀ ਗਉੜਾ",
+    "description": "Mali Gaura conveys the confidence of an expert, whose knowledge is self-evident in both their outlook and actions. This knowledge is learned through experience and therefore creates an air of ‘coolness’. However, this sense of ‘coolness’ is an aspect of true happiness because you have learned how to manage things with expertise and skill.",
+    "granth": 1,
+    "ang": 984
+  },
+  {
+    "id": 25,
+    "raag": "Maru",
+    "gurmukhi": "ਮਾਰੂ",
+    "description": "Maru was traditionally sung on the battlefield in preparation for war. This Raag has an aggressive nature, which creates an inner strength and power to express and emphasise the truth, regardless of the consequences. Maru’s nature conveys the fearlessness and strength that ensures the truth is spoken, no matter what the cost.",
+    "granth": 1,
+    "ang": 889
+  },
+  {
+    "id": 26,
+    "raag": "Tukhari",
+    "gurmukhi": "ਤੁਖਾਰੀ",
+    "description": "Tukhari conveys the soul’s strong ambition to highlight the greatness of The Creator to the mind. This goal is of paramount importance to the soul and it will therefore, not give up even if stubborn mind is unresponsive. This Raag illustrates the soul’s focus on its goal, by conveying its message to the mind directly and then adopting a softer approach. The feelings of this Raag are dominated by the soul’s burning desire to convince the mind to follow its plan of enlightenment and hence becoming one with Akaal (God).",
+    "granth": 1,
+    "ang": 1107
+  },
+  {
+    "id": 27,
+    "raag": "Kedara",
+    "gurmukhi": "ਕੇਦਾਰਾ",
+    "description": "Kedara expresses and makes the mind aware of the true character and nature of the soul. It conveys the emotions of honesty, integrity and truthfulness in a practical and caring way. This approach highlights the soul’s character and is memorable, so that the mind is made aware, without arousing cynicism.",
+    "granth": 1,
+    "ang": 1118
+  },
+  {
+    "id": 28,
+    "raag": "Bhairao",
+    "gurmukhi": "ਭੇਰੳ",
+    "description": "Bhairao embodies the soul’s faith and heartfelt devotion towards The Creator. It is a kind of fanaticism, where there is a feeling of not being aware or caring about anything else. The emotions conveyed are those of contentment and of being absorbed in a steadfast belief or faith. In this Raag, the soul is relaying the happiness that the mind could potentially experience if it joined in with this devotion.",
+    "granth": 1,
+    "ang": 1125
+  },
+  {
+    "id": 29,
+    "raag": "Basant",
+    "gurmukhi": "ਬਸੰਤੁ",
+    "description": "Basant denotes the changing of the season and the newness of spring. This Raag encourages the mind to brush away its selfishness, just like spring-cleaning removes all the cobwebs and creates a fresh start. There are feelings of hope and expectation of a new beginning and the start of a new cycle. However, these emotions are not dependent on the physical change of the season, but are an encouragement of an internal effort to change.",
+    "granth": 1,
+    "ang": 1168
+  },
+  {
+    "id": 30,
+    "raag": "Sarang",
+    "gurmukhi": "ਸਾਰੰਗ",
+    "description": "Sarangs character is soothing and has the ability to extinguish the minds smouldering selfishness and negative nature. The emotions of Sarang quench the minds burning desires, by expressing and highlighting the souls pure and true thoughts. This is a positive and fulfilling change.",
+    "granth": 1,
+    "ang": 1197
+  },
+  {
+    "id": 31,
+    "raag": "Malhar",
+    "gurmukhi": "ਮਲਾਰ",
+    "description": "Malhar is a communication of feelings from the soul, to show the mind how to become cool and refreshed. The mind is always burning with the desire to reach its goals quickly and without effort, however the emotions conveyed in this Raag are able to bring composure and fulfilment to the mind. It is able to bring the mind into this calmness, bringing a sense of satisfaction and contentment.",
+    "granth": 1,
+    "ang": 1254
+  },
+  {
+    "id": 32,
+    "raag": "Kaanara",
+    "gurmukhi": "ਕਾਨੜਾ",
+    "description": "Kaanara invokes feelings of being overcome by a personality, which is so impressive that its character is difficult to stop thinking about. The personality conveyed has a magnetism, which makes you think of them as your own and is able to win you over with its remarkable qualities and outlook.",
+    "granth": 1,
+    "ang": 1294
+  },
+  {
+    "id": 33,
+    "raag": "Kalian",
+    "gurmukhi": "ਕਲਿਆਨ",
+    "description": "Kalian has a forceful, yet flexible nature. It conveys a desire for something and a resolve to attain it, by whatever means possible. Although determined in its desire, Kalian sometimes uses an accommodating approach and at other times has an aggressive approach, in order to reach its goal. This Raag has a determined, forceful, yet persuasive character, through which it fulfils its desire.",
+    "granth": 1,
+    "ang": 1319
+  },
+  {
+    "id": 34,
+    "raag": "Parbhati",
+    "gurmukhi": "ਪ੍ਰਭਾਤੀ",
+    "description": "The emotions conveyed in Parbhati are those of extreme devotion; there is an intense confidence and love for the entity it is devoted to. This affection arises from knowledge, common sense and a detailed study. There is therefore an understanding and a considered will to devote itself to that entity.",
+    "granth": 1,
+    "ang": 1327
+  },
+  {
+    "id": 35,
+    "raag": "Jaijavanti",
+    "gurmukhi": "ਜੈਜਾਵੰਤੀ",
+    "description": "Jaijavanti expresses the feeling of happiness and satisfaction of achievement, however it simultaneously conveys the sadness of losing. An apt simile for this Raag is that of a king winning a battle, however he is then told that his son has perished on the battlefield. This Raag conveys a sense of having to put your duty first, no matter what your inner feelings may be. The duality of the emotions of joy and sorrow help to keep you stable and prevent you revelling in your own achievement.",
+    "granth": 1,
+    "ang": 1352
+  },
+  {
+    "id": 36,
+    "raag": "Salok Sehshritee",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 37,
+    "raag": "Fifth Mehl, Gaatha",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 38,
+    "raag": "Phunhay Fifth Mehl",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 39,
+    "raag": "Chaubolas Fifth Mehl",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 40,
+    "raag": "Salok Kabeer Jee",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1364,
+    "ang": 0
+  },
+  {
+    "id": 41,
+    "raag": "Salok Fareed Jee",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1377,
+    "ang": 0
+  },
+  {
+    "id": 42,
+    "raag": "Svaiyay Mehl 5",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 43,
+    "raag": "Salok Vaaran Tay Vadheek",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 1410
+  },
+  {
+    "id": 44,
+    "raag": "Salok Mehl 9",
+    "gurmukhi": "",
+    "description": "Salok Mahala 9 are the saloks by the ninth Sikh Guru, Guru Tegh Bahadur which form the concluding portion of the Guru Granth Sahib. They precede Guru Arjan's Mundavani and appear from page 1426 to 1429 of the Sikh current Guru Guru Granth. This composition consists of 57 (fifty seven) saloks and span just 4 pages of Gurbani. Each salok is a couplet consisting of 2 lines. This Bani was incorporated into the Guru Granth Sahib by Guru Gobind Singh, the last human Guru of the Sikhs.",
+    "granth": 1,
+    "ang": 1426
+  },
+  {
+    "id": 45,
+    "raag": "Mundavani Fifth Mehla",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 46,
+    "raag": "Raag Maala",
+    "gurmukhi": "",
+    "description": "Raagmala literally means a beaded string of musical melodies. \"Mala\" means \"a beaded string\" and \"Raga\" is a \"musical composition\". It is the name given to the last composition in the Guru Granth Sahib appearing after Mundavani (riddle) and a Salok by Guru Arjan Dev. Like Japji Sahib, which appears at the beginning of the Guru Granth Sahib this composition has no heading to show the name of the author.",
+    "granth": 1,
+    "ang": 1429
+  },
+  {
+    "id": 47,
+    "raag": "Vaaran",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 2,
+    "ang": 0
+  },
+  {
+    "id": 48,
+    "raag": "Dasam Granth Sahib",
+    "gurmukhi": "",
+    "description": "",
+    "granth": 3,
+    "ang": 0
+  },
+  {
+    "id": 49,
+    "raag": "Uggardanti",
+    "gurmukhi": "ਉਗ੍ਰਦੰਤੀ",
+    "description": "Ugardanti is a poetic composition written by Guru Gobind Singh, after the creation of the Khalsa Panth at Anandpur Sahib. The composition is present in Dasam Granth Bir Patna Sahib. The bani contains information about the creation of the Khalsa Panth, the dress code of the Sikhs, and is strictly against ritualism. Etymologically, Ugardanti is a feminine term made of two words, Ugar means Fierce and Danti means Tooth. One having Fierce Tooth, is called Ugardanti. Guru Gobind Singh is praying to Ugardanti, writing various attributes of Ugardanti and asking for blessings of prospering of new Panth which is free from hypocrisy, ritualism, casteism, avtarvada, human worship and worship only one immortal god. In Gurmat, Fierce Tooth is explained as Hukam/Command/Will Power(Shakti) of God which tears off and destroys enemies.  In Bansavalinama Dasan Patshahian ka (1769), the author Kesar Singh Chibbar explains and quotes a few passages from Guru Gobind Singh's Ugardanti. In Hum Hindu Nahi(1898 ), the author Bhai Kahn Singh Nabha, believed that Ugardanti Bani was not written by Guru Gobind Singh but by Bhai Sukha Singh, a priest at Patna. Nihang Sikhs believe it to be written by Guru Gobind Singh and is part of their daily liturgy. It was and is read to inspire warriors to stand up for truth and righteousness in the face of tyranny and oppression. The Composition is divided into six verses called Chhands in which the syllables and the rhythm are arranged in a precisely controlled pattern. The Type of Chhandd used is Bhagvati Chhand.",
+    "granth": 3,
+    "ang": 0
+  },
+  {
+    "id": 50,
+    "raag": "Amrit Keertan",
+    "gurmukhi": "",
+    "description": "Amrit Kirtan is a collection of verses from Sri Guru Granth Sahib traditionally sung in the Sikh congregations. The poetry of the Sri Guru Granth Sahib is worthy of the highest consideration in singing the hymns. Music forms the basis of the rhythms and classification of the hymns of Sri Guru Granth Sahib. They follow a definite metrical system called raags. A raag in Indian classical music means a pattern of melodic notes. This form is not only used to preserve the originality of the composition, as the poetry written in this form is difficult to imitate, but more so to provide the divine experience through the medium of music and the sounds of God’s creation. The total number of ragas is 31. The gurus themselves invented some of those. Under each Raag, the hymns are arranged in different meters as Chaupadas and Ashtapadas; long poems include Chhands, Vars, and Bhagat verses. In the congregation, kirtan only of Gurbani (Guru Granth’s or Guru Gobind Singh’s hymns) and, for its elaboration, of the compositions of Bhai Gurdas and Bhai Nand Lal, may be performed.",
+    "granth": 3,
+    "ang": 0
+  },
+  {
+    "id": 51,
+    "raag": "Gauri Deepaki",
+    "gurmukhi": "ਗਉੜੀ ਦੀਪਕੀ",
+    "description": "In the Guru Granth Sahib, there is one shabad (hymn) under the title Raag Gauri Deepaki. In this shabad, Sohila is a lorrie (lullaby), which is narrating a kind of bedtime story. <br/><br/>This Raag generates feelings of warmth and security, just like a mother singing a lullaby to her child. Lullabies were traditionally used not only as a way of comforting a child, but also as a means in which mothers shared their past experiences and knowledge.<br/><br/>Similarly this Raag enlightens the listener through knowledge and experience and brings them to the realisation that to gain the truth, you must first realise that you are in darkness. This enlightened state gives the listener a feeling of certainty, fearlessness and a new hope for the future.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 52,
+    "raag": "Gauri Purbi",
+    "gurmukhi": "ਗਉੜੀ ਪੂਰਬੀ",
+    "description": "Gauri Purbi contains strong emotions of experience along with feelings of preparation, in order to go further and to achieve more. Although there are confident feelings in this Raag, there is a sense of uncertainty as there is a heart felt request for help to achieve the desired goal. The sentiments of this Raag are well considered assessments of the circumstances, without excess confidence or extreme helplessness.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 53,
+    "raag": "Gauri Guarairi",
+    "gurmukhi": "ਗਉੜੀ ਗੁਆਰੇਰੀ",
+    "description": "Gauri Guarairi contains a mixture of calmness and control in feeling, however the emotional message of the Raag is open and truthful in its approach. The emotions are conveyed in a direct and disciplined way. The balanced and focused character of this Raag is evident in its structure, in that its scale is restricted to ‘madh saptak’ (middle scale).",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 54,
+    "raag": "Gauri Dakhani",
+    "gurmukhi": "ਗਉੜੀ ਦਖਣੀ",
+    "description": "Gauri Dakhani has a similar nature to Gauri; however, the South Indian style of this Raag, including the taal (rhythm) highlights the strict and disciplined aspect of Gauri.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 55,
+    "raag": "Gauri Chayti",
+    "gurmukhi": "ਗਉੜੀ ਚੇਤੀ",
+    "description": "Gauri Chayti generates a deliberate sensation of fear by creating a conscious reminder of what may occur if we loose the things we take for granted. It awakens feelings of panic and regret, by exposing the listener to the possible outcome of what might happen should this warning not be heeded.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 56,
+    "raag": "Gauri Bairagan",
+    "gurmukhi": "ਗਉੜੀ ਬੈਰਾਗਣਿ",
+    "description": "As the title suggests Gauri ‘Bairagan’ is a Raag of bairaag (sadness of separation). The listener is left with an intense feeling of sorrow and emptiness. However, the balance of Raag Gauri ensures that this sense of loss and sadness motivates the listener to try to discover exactly what is missing. Gauri Bairagan therefore evokes feelings of sadness, which become a lesson, as opposed to creating a sense of depression.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 57,
+    "raag": "Gauri Purbi Deepaki",
+    "gurmukhi": "ਗਉੜੀ ਪੂਰਬੀ ਦੀਪਕੀ",
+    "description": "The tone of this Raag is that of self-assessment with a positive attitude of improvement. It creates an atmosphere of constantly progressing with confidence and experience, as well as instilling a positive belief of enduring achievement.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 58,
+    "raag": "Gauri Malva",
+    "gurmukhi": "ਗੌੜੀ ਮਾਲਵਾ",
+    "description": "Gauri Malva is based on Punjabi Folk music and is influenced by the ‘Malva’ region of Punjab and the Malvaee hospitality. The nature of this Raag can be compared to the thoughtful, very serious, yet caring advice given by a true friend. The Raag persuades the listener with such truth and friendliness, that it is impossible to disagree, even if the listener does not like the advice being given.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 59,
+    "raag": "Gauri Mala",
+    "gurmukhi": "ਗਉੜੀ ਮਾਲਾ",
+    "description": "The essence of Gauri Mala is a combination of good, pure, true and positive thoughts added together one by one. There is a feeling of having worked hard and an increased energy, which encourages more devotion towards the truth.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 60,
+    "raag": "Gauri Sorath",
+    "gurmukhi": "ਗਉੜੀ ਸੋਰਠਿ",
+    "description": "Gauri Sorath has a definite feeling of attraction and appeal, which woos the listener’s attention to the subject matter or target. However, the feelings of being enticed and lured are balanced with a sense of duty and realisation, of needing to obey the warning given.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 61,
+    "raag": "Aasaa Kafi",
+    "gurmukhi": "ਆਸਾ ਕਾਫੀ",
+    "description": "Aasaa Kafi has a carefree and self-assured nature. It is confident in its outlook and does not hold onto any false hopes. The feelings of boundless energy, along with the confidence gained by previous experiences, create an inspirational atmosphere for the listener.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 62,
+    "raag": "Asavari",
+    "gurmukhi": "ਆਸਾਵਰੀ",
+    "description": "Asavari has an atmosphere of real energy and enthusiasm, which encourages the listener to complete the necessary tasks. However, the mood of this Raag is genuine and there is therefore no pretence of showing off its hardworking nature.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 63,
+    "raag": "Aasaa Asavari",
+    "gurmukhi": "ਆਸਾ ਆਸਾਵਰੀ",
+    "description": "Aasaa Asavari provides a sense of assurance to achieve your desired goal with courage, love and confidence. It is a precise direction toward achieving a set outcome, with confidence and positivity fuelled with a burst of energy. The nature of this raag is to produce a strong sense of capability in the listener, converting energy into passion with the motivation to repeat this positivity. The strength of this raag churns out the best of a personality providing the individual with the necessary knowledge to bring thoughts into action.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 64,
+    "raag": "Vadhans Dakhani",
+    "gurmukhi": "ਵਡਹੰਸੁ ਦਖਣੀ",
+    "description": "The mood of this Raag is very similar to Raag Vadhans, however due to its South Indian style of expression, it is more disciplined in its nature.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 65,
+    "raag": "Tilang Kafi",
+    "gurmukhi": "ਤਿਲੰਗ ਕਾਫੀ",
+    "description": "As with Tilang, this Raag contains the feeling that your effort has been unappreciated, when trying to impress someone. However, in contrast to Raag Tilang, the individual is unperturbed by this feeling. This differentiating aspect arises from the deep love for the person concerned, which prevents the individual from becoming annoyed at the apparent lack of approval.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 66,
+    "raag": "Suhi Kafi",
+    "gurmukhi": "ਸੂਹੀ ਕਾਫੀ",
+    "description": "Suhi Kafi expresses feelings of deep love and security, like that of a child and a parent. A young child feels secure and safe, when surrounded in their parents love. The love felt is so strong that there are no worries and the individual gains a certain confidence from being so secure.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 67,
+    "raag": "Suhi Lalit",
+    "gurmukhi": "ਸੂਹੀ ਲਲਿਤ",
+    "description": "Suhi Lalit contains feelings of emotional resolve. However, there is also a volatile characteristic in that although there is love in these emotions, there is a willingness to step over the line to attain the goal.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 68,
+    "raag": "Bilaval Dakhani",
+    "gurmukhi": "ਬਿਲਾਵਲ ਦਖਣੀ",
+    "description": "This Raag is full of energy, which is shown by the fast rhythm and singing of the South Indian style of expression. The feelings of Bilaval Dakhani are of confidence and happiness, which arises from having achieved the unachievable.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 69,
+    "raag": "Bilaval Gond",
+    "gurmukhi": "ਬਿਲਾਵਲ ਗੋਂਡ",
+    "description": "Bilaval Gond consists of emotions of courage and conviction. The atmosphere created by the Raag is that of abstract happiness, however it is still disciplined enough to not be out of control. This Raag expresses its emotions poignantly, with insight and has a thoughtful strategy. It expresses feelings of confidence and happiness, but without any pride.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 70,
+    "raag": "Ramkali Dakhani",
+    "gurmukhi": "ਰਾਮਕਲੀ ਦਖਣੀ",
+    "description": "The emotions created by Ramkali Dakhani are those of change from old to new and there is a surety that this alteration is advantageous. These feelings are highlighted and emphasised by the South Indian rhythm and style of expression.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 71,
+    "raag": "Nat",
+    "gurmukhi": "ਨਟ",
+    "description": "Nat creates the impression of being wild and uncontrollable and appears extreme in its feeling. It conveys the feeling of being out of control and on the edge, however it returns from the brink, by reestablishing control and stability, and hence creating a sense of relief. This Raag uses its expertise in this way to create feelings of suspense.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 72,
+    "raag": "Maru Kafi",
+    "gurmukhi": "ਮਾਰੂ ਕਾਫੀ",
+    "description": "Although Maru Kafi is forceful and blunt in its nature, it still expresses its emotions in a sweet and attractive way. This Raag is uncompromising in its nature, yet it retains the ability and charm to win the listener over with its relaxed and self-assured approach. As the listener, it makes you feel willing to listen even though the sentiments are harsh and direct.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 73,
+    "raag": "Maru Dakhani",
+    "gurmukhi": "ਮਾਰੂ ਦਖਣੀ",
+    "description": "Maru Dakhani expresses feelings of truth and reality in an uncompromising and outspoken way, which is emphasised by the South Indian style of expression and taal.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 74,
+    "raag": "Basant Hindol",
+    "gurmukhi": "ਬਸੰਤੁ ਹਿੰਡੋਲ",
+    "description": "Basant Hindol conveys the freshness and happiness of a new start and expresses the type of contentment, which comes from working hard to make a change. This Raag is full of hope and creates a sense of being at ease and being satisfied because a new chapter is beginning.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 75,
+    "raag": "Kalian Bhopali",
+    "gurmukhi": "ਕਲਿਆਨ ਭੋਪਾਲੀ",
+    "description": "Kalian Bhopali’s nature is direct and insistent. Just as in Kaliyaan, this Raag conveys the feeling of determination to fulfil its desires. However, in contrast it is not flexible in its approach, as the desired goal is tackled head-on and in a regimented fashion. There is no hesitation and it is only focused on its goal.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 76,
+    "raag": "Parbhati Bibhas",
+    "gurmukhi": "ਪ੍ਰਭਾਤੀ ਬਿਭਾਸ",
+    "description": "Parbhati Bibhas expresses the feelings of compromise between the mind and the soul; a common understanding between the selfishness of the mind and the devotion of the soul evolves. The atmosphere created is like the calmness and serenity of daybreak, along with a sense of preparation for the day to unfold. The ‘partaal’ rhythm represents the change in the method, which is induced by compromise, however it also highlights the balance of concentration.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 77,
+    "raag": "Parbhati Dakhani",
+    "gurmukhi": "ਪ੍ਰਭਾਤੀ ਦਖਣੀ",
+    "description": "The nature of Parbhati Dakhani is very similar to that of Parbhati, except that the feelings of devotion are more disciplined. This discipline arises from the South Indian style of expression of this Raag.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 78,
+    "raag": "Bibhas Parbhati",
+    "gurmukhi": "ਬਿਭਾਸ ਪ੍ਰਭਾਤੀ",
+    "description": "Bibhas Parbhati has a self-assured character and has a sense of certainty, which arises from the knowledge gained through awareness. It conveys the wisdom achieved from learning, which inspires contentment. However, this wisdom is not arrogant, but is gentle in its persuasion because there is not a need to ‘show-off’ this knowledge, but a desire to share it, so the recipient is able to learn.",
+    "granth": 1,
+    "ang": 0
+  },
+  {
+    "id": 79,
+    "raag": "Gauri Majh",
+    "gurmukhi": "ਗਉੜੀ ਮਾਝ",
+    "description": "Gauri Majh is a well-planed emotional ‘act’, which reaches out to fulfil a yearning created by the Raag. This yearning is similar to that of Raag Majh’s regret, hope and anticipation, however in this instance it is created deliberately in order to sway the listener to react to the longing.",
+    "granth": 1,
+    "ang": 0
+  }
+]

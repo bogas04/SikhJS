@@ -29,13 +29,17 @@ export default withRouter(class Nav extends Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           onLeftIconButtonTouchTap={e => this.toggleDrawer(e)}
         />
-        <Drawer open={this.state.showDrawer} docked={false} width={275} onRequestChange={e => this.toggleDrawer()}>
+        <Drawer open={this.state.showDrawer} docked={false} width={250} onRequestChange={e => this.toggleDrawer()}>
           <MenuItem onTouchTap={e => { push(`/`); this.toggleDrawer()}} primaryText="Home" />
           <MenuItem onTouchTap={e => { push(`/hukamnama`); this.toggleDrawer(); }} primaryText="Hukamnama" />
           <MenuItem onTouchTap={e => { push(`/sggs`); this.toggleDrawer(); }} primaryText="Sri Guru Granth Sahib" />
           <MenuItem onTouchTap={e => { push(`/nitnem`); this.toggleDrawer(); }} primaryText="Nitnem" nestedItems={nBaanies} />
-          <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Shabads" /> 
+          <MenuItem onTouchTap={e => { push(`/shabads`); this.toggleDrawer(); }} primaryText="Search Shabads" /> 
+          <Divider />
           <MenuItem onTouchTap={e => { push(`/calendar`); this.toggleDrawer(); }} primaryText="Calendar" />
+          <MenuItem onTouchTap={e => { push(`/authors`); this.toggleDrawer(); }} primaryText="Authors" />
+          <MenuItem onTouchTap={e => { push(`/raags`); this.toggleDrawer(); }} primaryText="Raags" />
+          <MenuItem onTouchTap={e => { push(`/bookmarks`); this.toggleDrawer(); }} primaryText="Bookmarks" /> 
           <Divider />
           <MenuItem primaryText="Font Size" nestedItems={[
             <Throttle time="200" handler="onChange" key={1}>

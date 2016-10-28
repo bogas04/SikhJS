@@ -1,3 +1,5 @@
+import Dexie from 'dexie';
+
 export const loading = `### Loading. 
 [Report](https://github.com/bogas/sikhjs/issues) if you are seeing this for a long time.
 `;
@@ -8,6 +10,7 @@ export const searchTypes = [ 'First Letter of Begining of Shabad (Gurakhar)', 'F
   'Full Word (Gurakhar)', 'Full Word (English)', ];
 
 export const sourceTypes = [ 'All Scripts', 'Sri Guru Granth Sahib', 'Vaaran', 'Dasam Granth and Amrit Keertan' ];
+export const sourceIds = { G: 1, D: 3, B: 2, A: 3 };
 
 const defaultStore = { fontSizeMultiplier: 1, nightMode: false };
 
@@ -28,6 +31,16 @@ export const getSettings = (initialStore = defaultStore) => {
   } catch (err) {
     return setSettings();
   }
+};
+
+export const getDB = () => {
+  const db = new Dexie("SikhJS");
+  db.version(1).stores({
+    bookmarks: "++id,timestamp,title,key,value,[key+value]",
+    sehaj_paath: "++id,timestamp,ang,title",
+  });
+  db.open();
+  return db;
 };
 
 export const baanies = {
@@ -120,7 +133,7 @@ export const baanies = {
     },
     {
       "title": "Slok Mahala 9",
-      "author": [11],
+      "author": [6],
       "info": "Salok Mahala 9 are the saloks by the ninth Sikh Guru, Guru Tegh Bahadur which form the concluding portion of the Guru Granth Sahib. They precede Guru Arjan's Mundavani and appear from page 1426 to 1429 of the Sikh current Guru Guru Granth. This composition consists of 57 (fifty seven) saloks and span just 4 pages of Gurbani. Each salok is a couplet consisting of 2 lines. This Bani was incorporated into the Guru Granth Sahib by Guru Gobind Singh, the last human Guru of the Sikhs."
     },
     {

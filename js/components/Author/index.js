@@ -11,10 +11,11 @@ export class AuthorChip extends Component {
     this.updateData();
   }
   updateData() {
-    if (this.props.id) {
-      this.setState({ loading: true });
-      fetch(`docs/json/authors/${this.props.id}.json`).then(r => r.json()).then(data => this.setState({ data, loading: false })).catch(e => console.error(e));
-    }
+    this.setState({ loading: true });
+    fetch(`docs/json/authors/${this.props.id}.json`)
+      .then(r => r.json())
+      .then(data => this.setState({ data, loading: false }))
+      .catch(e => console.error(e));
   }
   render() {
     const { data, loading } = this.state;

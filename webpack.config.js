@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 const isProd = process.env.NODE_ENV && process.env.NODE_ENV === 'production';
 module.exports = {
-  entry: "./js/App.js",
+  entry: "./js/index.js",
   output: {
     path: __dirname,
     filename: "bundle.js",

@@ -1,6 +1,6 @@
 {
   "name": "sikhjs",
-  "version": "0.4.5",
+  "version": "0.4.8",
   "description": "Multiplatform application for Gurbani",
   "private": true,
   "main": "index.js",
@@ -12,6 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "dexie": "^1.5.0",
     "material-ui": "^0.16.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",

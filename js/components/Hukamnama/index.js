@@ -5,7 +5,7 @@ import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import Progress from 'material-ui/CircularProgress';
 
-export const HukamnamaView = withRouter(({ ang, english, punjabi, gurbani, date }) => (
+export const HukamnamaView = withRouter(({ ang, english, punjabi, gurbani, date, router: { push } }) => (
   <div>
     <Toolbar className='toolbar'>
       <ToolbarGroup firstChild={true}>
@@ -18,7 +18,7 @@ export const HukamnamaView = withRouter(({ ang, english, punjabi, gurbani, date 
     <Tabs tabItemContainerStyle={{ backgroundColor: 'grey' }}>
       <Tab label="Hukam"> <div style={{ padding: 20 }} className="gurbani-text">{gurbani}</div> </Tab>
       <Tab label="English Translation"> <div style={{ padding: 20 }}> {english} </div></Tab>
-      <Tab label="Punjabi Translation"> <div style={{ padding: 20 }} className="gurbani-text">{punjabi}</div> </Tab>
+      {false && <Tab label="Punjabi Translation"> <div style={{ padding: 20 }} className="gurbani-text">{punjabi}</div> </Tab>}
     </Tabs>
   </div>
 ));

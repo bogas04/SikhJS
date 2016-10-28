@@ -8,3 +8,6 @@ export { default as Calendar } from './Calendar';
 export { default as Shabad } from './Shabad';
 export { default as Shabads } from './Shabads';
 export { default as Hukamnama } from './Hukamnama';
+export { default as Bookmarks } from './Bookmarks';
+export { default as Authors } from './Authors';
+export { default as Raags } from './Raags';

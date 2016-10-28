@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import Progress from 'material-ui/CircularProgress';
 import { Throttle } from 'react-throttle';
-import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
-import { Card, CardHeader, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
+import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
+import { Card, CardHeader, CardText } from 'material-ui/Card';
+
+import { withRouter } from 'react-router';
 import Select from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Shabad from '../Shabad';
@@ -36,32 +38,38 @@ export default withRouter(class Shabads extends Component {
   constructor (props) {
     super (props);
     let q = (this.props.params && this.props.params.q) || '';
-    this.state = { q, shabads: [], searchType: 0, baaniSrc: 1 };
+    this.state = { q, shabads: [], searchType: 0, baaniSrc: 1, loading: false };
   }
   componentDidMount() {
     if(this.state.q !== '') {
-      this.queryAPI();
+      this.queryAPI(this.state);
     }
   }
   search(q) {
     this.setState({ q });
     this.props.router.push(`shabads/${q}`)
-    this.queryAPI();
+    this.queryAPI({...this.state, q });
   }
-  updateSearchType(searchType) { this.setState({ searchType }); }
-  updateSource(baaniSrc) { this.setState({ baaniSrc }); }
+  updateSearchType(searchType) {
+    this.setState({ searchType });
+    this.queryAPI({...this.state, searchType });
+  }
+  updateSource(baaniSrc) {
+    this.setState({ baaniSrc });
+    this.queryAPI({...this.state, baaniSrc });
+  }
 
-  queryAPI() {
-    let { q, searchType, baaniSrc } = this.state;
+  queryAPI({ q, searchType, baaniSrc }) {
+    this.setState({ loading: true });
     const mode = 1, maxRecords = 20;
     const url = `${API_URL}?&mode=${mode}&q=${q}&src=${baaniSrc}&type=${searchType}&recnum=${maxRecords}&writer=0&raag=0&format=json`;
 
     fetch(url).then(r => r.json())
-      .then(({ shabads }) => this.setState({ shabads }))
+      .then(({ shabads }) => this.setState({ shabads, loading: false }))
       .catch(err => console.error(err));
   }
   render () {
-    const { shabads, searchType, baaniSrc } = this.state;
+    const { shabads, searchType, baaniSrc, loading } = this.state;
     const styles = {
       select: { width: 300, textOverflow: 'ellipsis', overflow: 'hidden' },
       group: { display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' },
@@ -86,7 +94,15 @@ export default withRouter(class Shabads extends Component {
               } />
           </ToolbarGroup>
         </Toolbar>
-        {shabads.map(({ shabad }) => <SearchCard key={shabad.ID} {...shabad} />)}
+        {
+          loading
+            ? <Progress size={100} thickness={5} />
+            : (
+              shabads.length === 0
+              ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
+              : shabads.map(({ shabad }) => <SearchCard key={shabad.ID} {...shabad} />)
+            )
+        }
       </div>
     );
   }

@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import { getSettings, setSettings } from './constants';
 
-import { Nav, Greeting, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
+import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
+
+import { getSettings, setSettings } from './constants';
+import { Raags, Authors, Bookmarks, Nav, Greeting, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { white, darkBlack, fullBlack, } from 'material-ui/styles/colors';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
 injectTapEventPlugin();
 
-class Root extends Component {
+export default class Root extends Component {
   constructor(p) {
     super(p);
     const { nightMode } = getSettings();
@@ -46,6 +45,9 @@ class Root extends Component {
           <Route path="sggs/:ang" component={SGGS} />
           <Route path="calendar" component={Calendar} />
           <Route path="shabads" component={Shabads} />
+          <Route path="bookmarks" component={Bookmarks} />
+          <Route path="authors" component={Authors} />
+          <Route path="raags" component={Raags} />
           <Route path="shabads/:q" component={Shabads} />
           <Route path="shabad/:id" component={Shabad} />
           <Route path="nitnem" component={Nitnem} />
@@ -56,5 +58,3 @@ class Root extends Component {
     </MuiThemeProvider>
   }
 }
-
-render(<Root /> , document.getElementById('root'));
