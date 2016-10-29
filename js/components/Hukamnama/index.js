@@ -15,7 +15,7 @@ export const HukamnamaView = withRouter(class extends Component {
     const { ang, english, punjabi, gurbani, date, router: { push } } = this.props;
     return <div>
       <Toolbar title={`Hukamnama ${date}`}>
-        <Button onClick={e => push(`/SGGS/${ang}`)} ripple raised>{`Open Ang ${ang}`}</Button>
+        <Button onClick={e => push(`/SGGS/${ang}`)} ripple raised accent >{`Open Ang ${ang}`}</Button>
         <Tabs activeTab={this.state.activeTab} onChange={activeTab => this.setState({ activeTab })} ripple>
           <Tab style={{ fontWeight: this.state.activeTab === 0 ? 900 : 100 }}> Hukam </Tab>
           <Tab style={{ fontWeight: this.state.activeTab === 1 ? 900 : 100 }}>English Translation</Tab>

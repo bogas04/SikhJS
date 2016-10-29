@@ -8,7 +8,7 @@ import { Textfield, Button, Card, CardTitle, CardText, CardActions } from 'react
 import Toolbar from '../Toolbar';
 import Loader from '../Loader';
 
-export const SearchCard = withRouter(({ id, raag, gurmukhi, granth, ang, description, router: { push } }) => <Card style={{ margin: 10 }}>
+export const SearchCard = withRouter(({ id, raag, gurmukhi, granth, ang, description, router: { push } }) => <Card style={{ margin: 10 }} shadow={0} >
   <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
     {`${raag} ${gurmukhi}`}
   </CardTitle>
@@ -51,7 +51,7 @@ export default class Raags extends Component {
           </Throttle>
         </Toolbar>
         <Loader loading={loading}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
             {raags.map(raag => <SearchCard key={raag.id} {...raag} />)}
           </div>
         </Loader>

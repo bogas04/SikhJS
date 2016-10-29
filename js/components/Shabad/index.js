@@ -34,18 +34,27 @@ export default withRouter(class Shabad extends Component {
 
     return (
       <div>
-        <Toolbar title="Shabad">
-          <div style={{ display: 'block' }}>{authorId && <AuthorChip id={authorId} />}</div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', padding: '10px 0' }}>
+        <Toolbar>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+
             <div>
-              <Switch ripple id="translation" onChange={e => this.toggleTranslation()}>English Translation</Switch>
-              <Switch ripple id="font" onChange={e => this.toggleFont()}>Unicode Font</Switch>
+              <Button raised accent={showTranslation} ripple onClick={e => this.toggleTranslation()}>Translation</Button>
+
+              {
+                ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'} ripple raised colored accent>
+                  {`Open Ang ${ang}`}
+                </Button>
+              }
             </div>
+
+            { authorId && <AuthorChip id={authorId} /> }
+
             <div>
-              <div>{ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'}>{`Open Ang ${ang}`}</Button>}</div>
-              <Button raised ripple onClick={e => this.toggleBookmark()} >
-                <Icon name={ isBookmarked ? 'star rate' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
+              <Button raised ripple onClick={e => this.toggleBookmark()} raised colored>
+                <Icon name={ isBookmarked ? 'star' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
               </Button>
+
+              <Button raised colored={unicode} ripple onClick={e => this.toggleFont()}>Unicode Font</Button>
             </div>
           </div>
         </Toolbar>

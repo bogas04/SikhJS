@@ -56,27 +56,29 @@ export default withRouter(class SGGS extends Component {
     ));
 
     const AngBar = () => <Toolbar title={`Sri Guru Granth Sahib`}>
-      <div>
-        <Button raised ripple onClick={e => this.toggleBookmark()} >
-          <Icon name={ isBookmarked ? 'star rate' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Button raised accent ripple onClick={e => this.toggleBookmark()} >
+          <Icon name={ isBookmarked ? 'star' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
         </Button>
-        <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng} name="chevron_left" />
-        <Throttle handler="onChange" time="200">
-          <Textfield
-            disabled={lines.length === 0}
-            className="center-input"
-            style={{ width: 100 }}
-            label={"" + ang}
-            onBlur={e => this.setAng(Number(e.target.value))}
-            type="number"
-            min={MIN_ANG}
-            max={MAX_ANG}
-            defaultValue={ang}
-          />
-        </Throttle>
-        <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng} name="chevron_right" />
+        <div>
+          <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng} name="chevron_left" />
+          <Throttle handler="onChange" time="200">
+            <Textfield
+              disabled={lines.length === 0}
+              className="center-input"
+              style={{ width: 60 }}
+              label={"" + ang}
+              onBlur={e => this.setAng(Number(e.target.value))}
+              type="number"
+              min={MIN_ANG}
+              max={MAX_ANG}
+              defaultValue={ang}
+            />
+          </Throttle>
+          <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng} name="chevron_right" />
+        </div>
 
-        <Button onClick={this.randomAng} raised ripple><Icon name="autorenew" /> Random</Button>
+        <Button onClick={this.randomAng} raised colored ripple><Icon name="autorenew" /> Random</Button>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', paddingBottom: 5 }}>
 

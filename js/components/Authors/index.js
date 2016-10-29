@@ -8,7 +8,7 @@ import { Textfield, Card, CardTitle, CardText } from 'react-mdl';
 import Toolbar from '../Toolbar';
 import Loader from '../Loader';
 
-export const SearchCard = ({ id, author, gurmukhi, description }) => <Card style={{ margin: 10 }}>
+export const SearchCard = ({ id, author, gurmukhi, description }) => <Card style={{ margin: 10 }} shadow={0}>
   <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
     {`${author} ${gurmukhi}`}
   </CardTitle>
@@ -47,7 +47,7 @@ export default class Authors extends Component {
           </Throttle>
         </Toolbar>
         <Loader loading={loading}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
             {authors.map(author => <SearchCard key={author.id} {...author} />)}
           </div>
         </Loader>

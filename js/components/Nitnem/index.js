@@ -16,7 +16,7 @@ export const BaaniCard = withRouter(class extends Component {
   }
   render() {
     const { title, info, author, router: { push } } = this.props;
-    return <Card style={{ margin: 10 }}>
+    return <Card style={{ margin: 10, minHeight: 140 }} shadow={0}>
       <CardTitle>{title}</CardTitle>
       <CardActions>
         <Button onClick={e => push(`/nitnem/${title}`)} ripple>Read</Button>
@@ -50,7 +50,7 @@ export default class Nitnem extends Component {
           </Tabs>
         </Toolbar>
         <section>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
             {this.state.activeTab === 0 ? content.nitnem : content.others}
           </div>
         </section>

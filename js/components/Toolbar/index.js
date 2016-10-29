@@ -6,11 +6,12 @@ const style = {
   color: 'white',
   display: 'flex',
   flexDirection: 'column',
+  padding: 5,
   alignItems: 'center',
 };
-export default ({ title, children }) => (
+export default ({ title = null, children }) => (
   <div style={style}>
-    <h4>{title}</h4>
+    {title && <h4>{title}</h4>}
     {children}
   </div>
 );
