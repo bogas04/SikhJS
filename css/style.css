@@ -48,7 +48,8 @@
   padding-left: 0;
 }
 
-.gurbani-text, .gurbani-text code { font-size: 2em; font-family: gurmukhi_heavy; }
+.center-input input { text-align: center; }
+.gurbani-input input, .gurbani-text, .gurbani-text code { font-size: 2em; font-family: gurmukhi_heavy; }
 .gurbani-text div.english { font-family: ''; }
 
 .gurbani-text h1 { font-size: 1.3em; }

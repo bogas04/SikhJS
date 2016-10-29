@@ -1,38 +1,60 @@
 import React, { Component } from 'react';
+
 import { withRouter } from 'react-router';
-import { Card, CardHeader, CardText } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
-import { Tabs, Tab } from 'material-ui/Tabs';
+
 import { baanies } from '../../constants';
 import { AuthorChip } from '../Author';
 
-export const BaaniCard = withRouter(({ title, info, author, router: { push } }) => (
-  <Card style={{ margin: 10 }} key={title}>
-    <CardHeader title={<div>{title} <FlatButton label="Read" onTouchTap={e => push(`/nitnem/${title}`)}/></div>}
-      showExpandableButton={true} actAsExpander={true} />
-    <CardText expandable={true}> 
-      {author.map(id => <AuthorChip key={id} id={id} />)}
-      <div children={info || "No info"} />
-    </CardText>
-  </Card>
-));
+import Toolbar from '../Toolbar';
 
-export default ({  }) => {
-  const content = {
-    nitnem: baanies.nitnem.map(e => <BaaniCard key={e.title} {...e} />),
-    others: baanies.others.map(e => <BaaniCard key={e.title} {...e} />),
+import { Tabs, Tab, Button, Card, CardTitle, CardText, CardActions } from 'react-mdl';
+
+export const BaaniCard = withRouter(class extends Component {
+  constructor(p) {
+    super(p);
+    this.state = { showMore: false };
+  }
+  render() {
+    const { title, info, author, router: { push } } = this.props;
+    return <Card style={{ margin: 10 }}>
+      <CardTitle>{title}</CardTitle>
+      <CardActions>
+        <Button onClick={e => push(`/nitnem/${title}`)} ripple>Read</Button>
+        <Button onClick={e => this.setState({ showMore: !this.state.showMore })} ripple>Info</Button>
+      </CardActions>
+      <CardText style={{ display: this.state.showMore ? 'block' : 'none' }}> 
+        {author.map(id => <AuthorChip key={id} id={id} />)}
+        <div children={info || "No info"} />
+      </CardText>
+    </Card>
+  }
+});
+
+export default class Nitnem extends Component {
+  constructor(p) {
+    super(p);
+    this.state = { activeTab: 0 };
+  }
+  render() {
+    const content = {
+      nitnem: baanies.nitnem.map(e => <BaaniCard key={e.title} {...e} />),
+      others: baanies.others.map(e => <BaaniCard key={e.title} {...e} />),
+    };
+
+    return (
+      <div>
+        <Toolbar title={<span className="gurbani-text">Œ Ç ‰</span>}>
+          <Tabs style={{  }} activeTab={this.state.activeTab} onChange={activeTab => this.setState({ activeTab })} ripple>
+            <Tab style={{ fontWeight: this.state.activeTab === 0 ? 900 : 100 }}>Nitnem</Tab>
+            <Tab style={{ fontWeight: this.state.activeTab === 1 ? 900 : 100 }}>Additional Baanies</Tab>
+          </Tabs>
+        </Toolbar>
+        <section>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+            {this.state.activeTab === 0 ? content.nitnem : content.others}
+          </div>
+        </section>
+      </div>
+    );
   };
-
-  return (
-    <Tabs tabItemContainerStyle={{ backgroundColor: 'grey' }}>
-      <Tab label="Nitnem">
-        <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
-        <div style={{ padding: 50, textAlign: 'left' }}>{content.nitnem}</div>
-      </Tab>
-      <Tab label="Additional Baanies">
-        <h1 className="gurbani-text" style={{ textAlign: 'center' }}>Œ Ç ‰</h1>
-        <div style={{ padding: 50, textAlign: 'left' }}>{content.others}</div>
-      </Tab>
-    </Tabs>
-  );
-};
+}

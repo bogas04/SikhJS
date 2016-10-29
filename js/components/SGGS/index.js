@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
+
 import { Throttle } from 'react-throttle';
-import Toggle from 'material-ui/Toggle';
-import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
-import Button from 'material-ui/RaisedButton';
 import { withRouter } from 'react-router';
-import IconButton from 'material-ui/IconButton';
-import Progress from 'material-ui/CircularProgress';
-import TextField from 'material-ui/TextField';
-import LeftIcon from 'material-ui/svg-icons/navigation/chevron-left';
-import RightIcon from 'material-ui/svg-icons/navigation/chevron-right';
-import BookmarkIcon from 'material-ui/svg-icons/action/bookmark-border';
-import BookmarkedIcon from 'material-ui/svg-icons/action/bookmark';
+
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
+
+import { Icon, IconButton, Textfield, Switch, Button, } from 'react-mdl';
+
+import Loader from '../Loader';
+import Toolbar from '../Toolbar';
 
 export default withRouter(class SGGS extends Component {
   constructor (props) {
@@ -58,54 +55,45 @@ export default withRouter(class SGGS extends Component {
       </div>
     ));
 
-    const AngBar = () => <Toolbar className='toolbar'>
-      <ToolbarGroup firstChild={true}>
-        <ToolbarTitle className='toolbar-title' text="Sri Guru Granth Sahib" />
-        <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng}><LeftIcon /></IconButton>
+    const AngBar = () => <Toolbar title={`Sri Guru Granth Sahib`}>
+      <div>
+        <Button raised ripple onClick={e => this.toggleBookmark()} >
+          <Icon name={ isBookmarked ? 'star rate' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
+        </Button>
+        <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng} name="chevron_left" />
         <Throttle handler="onChange" time="200">
-          <TextField
+          <Textfield
             disabled={lines.length === 0}
+            className="center-input"
             style={{ width: 100 }}
-            inputStyle={{ textAlign: 'center' }}
-            hintText={ang}
-            onChange={(e, v) => this.setAng(Number(v))}
+            label={"" + ang}
+            onBlur={e => this.setAng(Number(e.target.value))}
             type="number"
             min={MIN_ANG}
             max={MAX_ANG}
             defaultValue={ang}
           />
         </Throttle>
-        <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng}><RightIcon /></IconButton>
-        <Button className="raised-button" label="Random" onClick={this.randomAng}/>
-      </ToolbarGroup>
-      <ToolbarGroup>
-        <IconButton label='Bookmark' onClick={this.toggleBookmark}>
-          { isBookmarked ? <BookmarkedIcon /> : <BookmarkIcon /> }
-        </IconButton>
-      </ToolbarGroup>
-      <ToolbarGroup>
-        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="larivaar" label="Larivaar"
-          onToggle={this.toggleLarivaar} toggled={larivaar} />
-      </ToolbarGroup>
-      <ToolbarGroup>
-        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="larivaarAssist"
-          label={<div>Larivaar<Orange text='Assist' /></div>}
-          onToggle={this.toggleLarivaarAssist} disabled={!this.state.larivaar} toggled={larivaarAssist} />
-      </ToolbarGroup>
-      <ToolbarGroup>
-        <Toggle labelPosition='right' style={{ padding: '15px 0' }} name="translation" label="English Translation"
-          onToggle={this.toggleTranslation} toggled={showTranslation} />
-      </ToolbarGroup>
+        <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng} name="chevron_right" />
+
+        <Button onClick={this.randomAng} raised ripple><Icon name="autorenew" /> Random</Button>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', paddingBottom: 5 }}>
+
+
+        <div style={{ margin: '0 40px' }}><Switch id="larivaar" style={{ padding: '15px 0' }} onChange={this.toggleLarivaar} defaultChecked={larivaar}>Larivaar</Switch></div>
+        <div style={{ margin: '0 40px' }}><Switch id="larivaarAssist" style={{ padding: '15px 0' }} onChange={this.toggleLarivaarAssist} disabled={!this.state.larivaar} defaultChecked={larivaarAssist}><div>Larivaar<Orange text='Assist' /></div></Switch></div>
+
+        <div style={{ margin: '0 40px' }}><Switch id="translation" style={{ padding: '15px 0' }} onChange={this.toggleTranslation} defaultChecked={showTranslation}>English Translation</Switch></div>
+      </div>
     </Toolbar>;
 
     return (
       <div>
         <AngBar />
-        {
-          lines.length === 0
-            ? <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}><Progress size={100} thickness={5} /></div>
-            : <div style={{ textAlign: 'left', padding: 20 }} className="gurbani-text">{angContent}</div>
-        }
+        <Loader loading={lines.length === 0}>
+          <div style={{ textAlign: 'left', padding: 20, lineHeight: '2em', }} className="gurbani-text">{angContent}</div>
+        </Loader>
       </div>
     );
   }

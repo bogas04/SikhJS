@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import Chip from 'material-ui/Chip';
+import { Chip } from 'react-mdl';
 
 export class AuthorChip extends Component {
   constructor(p) {
@@ -18,8 +18,9 @@ export class AuthorChip extends Component {
       .catch(e => console.error(e));
   }
   render() {
+    console.log(Chip);
     const { data, loading } = this.state;
-    return <Chip style={{ display: 'inline-block', margin: 2 }}>
+    return <Chip style={{ margin: 5 }}>
       { loading ? 'Loading' : `${data.author} ${data.gurmukhi}` }
     </Chip>;
   }

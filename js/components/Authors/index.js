@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import Progress from 'material-ui/CircularProgress';
-import { Throttle } from 'react-throttle';
-import FlatButton from 'material-ui/FlatButton';
-import TextField from 'material-ui/TextField';
-import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
-import { Card, CardHeader, CardText } from 'material-ui/Card';
 
-export const SearchCard = ({ id, author, gurmukhi, description }) => (
-  <Card style={{ margin: 10 }} key={id}>
-    <CardHeader title={`${author} ${gurmukhi}`} textStyle={{ display: 'block' }} showExpandableButton={true} actAsExpander={true} />
-    <CardText expandable={true}>{description}</CardText>
-  </Card>
-);
+import { withRouter } from 'react-router';
+import { Throttle } from 'react-throttle';
+
+import { Textfield, Card, CardTitle, CardText } from 'react-mdl';
+
+import Toolbar from '../Toolbar';
+import Loader from '../Loader';
+
+export const SearchCard = ({ id, author, gurmukhi, description }) => <Card style={{ margin: 10 }}>
+  <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
+    {`${author} ${gurmukhi}`}
+  </CardTitle>
+  <CardText>{description}</CardText>
+</Card>;
 
 export default class Authors extends Component {
   constructor(p) {
@@ -38,20 +40,17 @@ export default class Authors extends Component {
 
     return (
       <div>
-        <Toolbar className='toolbar'>
-          <ToolbarGroup firstChild={true}>
-            <ToolbarTitle className='toolbar-title' text="Authors" />
-            <Throttle time={500} handler="onChange">
-              <TextField id="q" onChange={(e, v) => this.updateKeyword(v)}
-                style={{ width: 300 }} floatingLabelText="Search" hintText="Search"/>
-            </Throttle>
-          </ToolbarGroup>
+        <Toolbar title="Authors">
+          <Throttle time={500} handler="onChange">
+            <Textfield label="Search" floatingLabel onChange={e => this.updateKeyword(e.target.value)}
+              style={{ width: 300 }} />
+          </Throttle>
         </Toolbar>
-        {
-          loading
-            ? <Progress size={100} thickness={5} />
-            : authors.map(author => <SearchCard key={author.id} {...author} />)
-        }
+        <Loader loading={loading}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+            {authors.map(author => <SearchCard key={author.id} {...author} />)}
+          </div>
+        </Loader>
       </div>
     );
   }

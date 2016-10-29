@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Toggle from 'material-ui/Toggle';
-import Progress from 'material-ui/CircularProgress';
-import Button from 'material-ui/FlatButton';
-import IconButton from 'material-ui/IconButton';
+
+import { withRouter } from 'react-router';
+
+import { AuthorChip } from '../Author';
 import { API_URL, sourceTypes, sourceIds } from '../../constants';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
-import { AuthorChip } from '../Author';
-import { withRouter } from 'react-router';
-import BookmarkIcon from 'material-ui/svg-icons/action/bookmark-border';
-import BookmarkedIcon from 'material-ui/svg-icons/action/bookmark';
+
+import { Icon, IconButton, Button, Switch } from 'react-mdl';
+import Toolbar from '../Toolbar';
+import Loader from '../Loader';
 
 export default withRouter(class Shabad extends Component {
   constructor(p) {
@@ -30,28 +30,36 @@ export default withRouter(class Shabad extends Component {
   }
   render () {
     const { id, authorId, ang, sourceId, lines, showTranslation, unicode, loading, isBookmarked } = this.state;
-    const { router: { push }} = this.props;
+    const { router: { push } } = this.props;
 
     return (
       <div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', padding: '10px 0' }}>
-          <div><Toggle labelPosition='right' label="Show Translation" onToggle={e => this.toggleTranslation()}/></div>
-          <div>{authorId && <AuthorChip id={authorId} />}</div>
-          <div>{ang && <Button label={`Open Ang ${ang}`} onTouchTap={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'} />}</div>
-          <div><IconButton label='Bookmark' onClick={e => this.toggleBookmark()}>
-              { isBookmarked ? <BookmarkedIcon /> : <BookmarkIcon /> }
-          </IconButton></div>
-          <div><Toggle labelPosition='right' label="Unicode Font" onToggle={e => this.toggleFont()}/></div>
-        </div>
+        <Toolbar title="Shabad">
+          <div style={{ display: 'block' }}>{authorId && <AuthorChip id={authorId} />}</div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', padding: '10px 0' }}>
+            <div>
+              <Switch ripple id="translation" onChange={e => this.toggleTranslation()}>English Translation</Switch>
+              <Switch ripple id="font" onChange={e => this.toggleFont()}>Unicode Font</Switch>
+            </div>
+            <div>
+              <div>{ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'}>{`Open Ang ${ang}`}</Button>}</div>
+              <Button raised ripple onClick={e => this.toggleBookmark()} >
+                <Icon name={ isBookmarked ? 'star rate' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
+              </Button>
+            </div>
+          </div>
+        </Toolbar>
         <div style={{ textAlign: 'center' }}>
-          {
-            loading
-            ? <Progress size={100} thickness={5} />
-            : lines.map((e, i) => <div key={e.shabad.ID}>
-              <span className="gurbani-text">{unicode ? e.shabad.GurmukhiUni : e.shabad.Gurmukhi}</span>
-              {showTranslation && <div style={{ color: 'grey' }}>{e.shabad.English}</div>}
-            </div>)
-          }
+          <Loader loading={loading}>
+            <div style={{ lineHeight: '2em', padding: 10 }}>
+              {
+                lines.map((e, i) => <div key={e.shabad.ID}>
+                  <span className="gurbani-text">{unicode ? e.shabad.GurmukhiUni : e.shabad.Gurmukhi}</span>
+                  {showTranslation && <div style={{ color: 'grey' }}>{e.shabad.English}</div>}
+                </div>)
+              }
+            </div>
+          </Loader>
         </div>
       </div>
     );

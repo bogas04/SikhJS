@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-remarkable';
+
 import { loading } from '../../constants';
-import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
+
+import Toolbar from '../Toolbar';
 
 export default class Calendar extends Component {
   constructor (props) {
@@ -12,11 +14,7 @@ export default class Calendar extends Component {
   render () {
     return (
       <div>
-        <Toolbar className='toolbar'>
-          <ToolbarGroup firstChild={true}>
-            <ToolbarTitle className='toolbar-title' text="Sikh Calendar" />
-          </ToolbarGroup>
-        </Toolbar>
+        <Toolbar title="Sikh Calendar" />
         <div style={{ padding: 10, textAlign: 'left' }}>
           <ReactMarkdown source={this.state.file} />
         </div>
