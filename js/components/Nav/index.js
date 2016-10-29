@@ -6,6 +6,8 @@ import { Throttle } from 'react-throttle';
 
 import { Content, Slider, Button, Layout, Header, Drawer, Navigation } from 'react-mdl';
 
+import Hammer from 'react-hammerjs';
+
 export default ({ children, onNightModeToggle, nightMode }) => {
   const updateFontSize = (v) => {
     document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`;
@@ -42,7 +44,9 @@ export default ({ children, onNightModeToggle, nightMode }) => {
           </Navigation>
         </Drawer>
         <Content>
+          <Hammer onSwipe={() => document.querySelector('.mdl-layout__drawer-button').click()} direction={Hammer.DIRECTION_HORIZONTAL}>
           {children}
+        </Hammer>
         </Content>
       </Layout>
     </div>

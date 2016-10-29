@@ -16,6 +16,7 @@
     "dexie": "^1.5.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
+    "react-hammerjs": "^0.5.0",
     "react-mdl": "^1.7.2",
     "react-remarkable": "^1.1.1",
     "react-router": "^2.8.1",
