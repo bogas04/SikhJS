@@ -18,7 +18,6 @@ export class AuthorChip extends Component {
       .catch(e => console.error(e));
   }
   render() {
-    console.log(Chip);
     const { data, loading } = this.state;
     return <Chip style={{ margin: 5 }}>
       { loading ? 'Loading' : `${data.author} ${data.gurmukhi}` }

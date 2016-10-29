@@ -22,7 +22,7 @@ export default class Root extends Component {
   render() {
     const App = ({ children }) => {
       return (
-        <Nav onNightModeToggle={() => this.toggleNightMode()}>
+        <Nav onNightModeToggle={() => this.toggleNightMode()} nightMode={this.state.nightMode}>
           <div id="baaniWrapper" style={{ color: this.state.nightMode ? '#ffffff' : ''}}>
             {children || <Greeting />}
           </div>
