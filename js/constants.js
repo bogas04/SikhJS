@@ -4,7 +4,7 @@ export const loading = `### Loading.
 [Report](https://github.com/bogas/sikhjs/issues) if you are seeing this for a long time.
 `;
 
-export const API_URL = `https://gurbaninow.com/api/`;
+export const API_URL = `https://api.gurbaninow.com/v1/`;
 
 export const searchTypes = [ 'First Letter of Begining of Shabad (Gurakhar)', 'First Letter from Anywhere of Shabad (Gurakhar)',
   'Full Word (Gurakhar)', 'Full Word (English)', ];
