@@ -1,5 +1,11 @@
-SikhJS [![GitHub version](https://badge.fury.io/gh/bogas04%2Fsikhjs.svg)](https://badge.fury.io/gh/bogas04%2Fsikhjs)
+SikhJS 
 ==
+[![Release](https://img.shields.io/github/release/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/releases)
+[![Dependencies](https://img.shields.io/librariesio/github/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues/new?title=Outdated%20Dependencies)
+[![Issues](https://img.shields.io/github/issues/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues)
+[![Issue Closure](https://img.shields.io/issuestats/i/github/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+is%3Aclosed)
+
+
 Modern Gurbani Web App
 **NOTE**: The application is still in active development and is not fit for public release just yet.
 
@@ -83,9 +89,21 @@ Plans, Changelog and [Bugs](https://github.com/bogas04/SikhJS/labels/bug)
     - [ ] Pronunciation of the words.
     - [ ] Definition of words. Select a word and to get its meaning
 
+## [v0.8.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.8.0)
+- [ ] Switch to react-router 4
+
+## [v0.7.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.7.0)
+- [ ] Use BrowserHistory instead of HashHistory
+- [ ] Add transliterations
+- [ ] Sharing buttons
+
+## [v0.6.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.6.0)
+- [ ] Move to react-mdl
+
 ## [v0.5.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3Av0.5.0)
-- [ ] Bookmarks and Sehaj Path tracker [#20](https://github.com/bogas04/sikhjs/issues/20).
-  - [ ] Find a way to keep data persistent even with version updates.
+- [ ] Submenu for SGGS
+- [ ] Sehaj Path tracker [#20](https://github.com/bogas04/SikhJS/issues/60).
+- [x] Bookmarks.
 - [x] Improve API routes to leverage browser keywords.
   - [x] `/sggs/1234` opens 1234 Ang.
   - [x] `/shabads/mnbmj` opens Search Results for mnbmj (Mohe Na Bisaaro).
