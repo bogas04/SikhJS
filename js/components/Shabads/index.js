@@ -13,7 +13,7 @@ import Loader from '../Loader';
 export const SearchCard = withRouter(props => {
   const { ID, Transliteration, WriterID, English, ShabadID, SourceID, Gurmukhi, PageNo, router: { push }} = props;
 
-  return (<Card style={{ margin: 10 }}>
+  return (<Card shadow={0} style={{ margin: 10 }}>
     <CardTitle><span className="gurbani-text">{Gurmukhi}</span></CardTitle>
     <CardText><span style={{ textTransform: 'capitalize' }}>{Transliteration}</span></CardText>
     <CardActions>
@@ -88,7 +88,9 @@ export default withRouter(class Shabads extends Component {
             {
               shabads.length === 0
               ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
-              : shabads.map(({ shabad }) => <SearchCard key={shabad.ID} {...shabad} />)
+              : <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
+                {shabads.map(({ shabad }) => <SearchCard key={shabad.ID} {...shabad} />)}
+              </div>
             }
           </div>
         </Loader>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const style = {
   marginTop: -64,
-  backgroundColor: 'teal',
+  backgroundColor: '#606060',
   color: 'white',
   display: 'flex',
   flexDirection: 'column',

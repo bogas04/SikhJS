@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-
-import { baanies, getSettings, setSettings } from '../../constants';
-import { Throttle } from 'react-throttle';
+import React from 'react';
 
 import { Content, Slider, Button, Layout, Header, Drawer, Navigation } from 'react-mdl';
 
+import { Throttle } from 'react-throttle';
+import { Link } from 'react-router';
 import Hammer from 'react-hammerjs';
 
-export default ({ children, onNightModeToggle, nightMode }) => {
+import { baanies, getSettings, setSettings } from '../../constants';
+import Greeting from '../Greeting';
+
+export default ({ children = Greeting, onNightModeToggle, nightMode }) => {
   const updateFontSize = (v) => {
     document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`;
     let newSettings = getSettings();
@@ -45,8 +46,10 @@ export default ({ children, onNightModeToggle, nightMode }) => {
         </Drawer>
         <Content>
           <Hammer onSwipe={() => document.querySelector('.mdl-layout__drawer-button').click()} direction={Hammer.DIRECTION_HORIZONTAL}>
-          {children}
-        </Hammer>
+            <div id="baaniWrapper" style={{ color: nightMode ? '#ffffff' : ''}}>
+              {children}
+            </div>
+          </Hammer>
         </Content>
       </Layout>
     </div>

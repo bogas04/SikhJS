@@ -11,6 +11,9 @@ import { Icon, IconButton, Textfield, Switch, Button, } from 'react-mdl';
 import Loader from '../Loader';
 import Toolbar from '../Toolbar';
 
+import styles from './styles';
+import constants from './constants';
+
 export default withRouter(class SGGS extends Component {
   constructor (props) {
     super (props);
@@ -34,10 +37,9 @@ export default withRouter(class SGGS extends Component {
     this.toggleBookmark = this.toggleBookmark.bind(this);
   }
   render () {
-    const MAX_ANG = 1430, MIN_ANG = 1;
     const { isBookmarked, lines, ang, larivaar, larivaarAssist, showTranslation } = this.state;
 
-    const Orange = ({ text }) => <span style={{ color: 'orange' }}>{text}</span>;
+    const Orange = ({ text }) => <span style={styles.orange}>{text}</span>;
 
     const larivaarify = line => <span>{
       line.split(' ')
@@ -49,19 +51,23 @@ export default withRouter(class SGGS extends Component {
     }</span>;
 
     const angContent = lines.map(({ id, text, original, translation }) => (
-      <div key={id} style={showTranslation ? { display: 'block' } : { display: larivaar ? 'inline-block' : 'inline' }}>
+      <div key={id} style={styles.translation(showTranslation, larivaar)}>
         {larivaar ? larivaarify(text) : ` ${text} `}
-        {showTranslation ? <div className="english" style={{ color: 'grey' }}>{translation.text}</div> : ''}
+        {showTranslation ? <div className="english" style={styles.grey}>{translation.text}</div> : ''}
       </div>
     ));
 
+    const className = ['gurbani-text', 'gurbani-text raag-ang'][constants.RAAG_ANGS.includes(ang) ? 1 : 0];
+
     const AngBar = () => <Toolbar title={`Sri Guru Granth Sahib`}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={styles.flex}>
         <Button raised accent ripple onClick={e => this.toggleBookmark()} >
           <Icon name={ isBookmarked ? 'star' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
         </Button>
-        <div>
-          <IconButton disabled={lines.length === 0 || ang === MIN_ANG} onClick={this.decrementAng} name="chevron_left" />
+        <Button onClick={this.randomAng} raised colored ripple><Icon name="autorenew" /> Random</Button>
+
+        <div style={styles.flex}>
+          <IconButton disabled={lines.length === 0 || ang === constants.MIN_ANG} onClick={this.decrementAng} name="chevron_left" />
           <Throttle handler="onChange" time="200">
             <Textfield
               disabled={lines.length === 0}
@@ -70,31 +76,42 @@ export default withRouter(class SGGS extends Component {
               label={"" + ang}
               onBlur={e => this.setAng(Number(e.target.value))}
               type="number"
-              min={MIN_ANG}
-              max={MAX_ANG}
+              min={constants.MIN_ANG}
+              max={constants.MAX_ANG}
               defaultValue={ang}
             />
           </Throttle>
-          <IconButton disabled={lines.length === 0 || ang === MAX_ANG} onClick={this.incrementAng} name="chevron_right" />
+          <IconButton disabled={lines.length === 0 || ang === constants.MAX_ANG} onClick={this.incrementAng} name="chevron_right" />
         </div>
 
-        <Button onClick={this.randomAng} raised colored ripple><Icon name="autorenew" /> Random</Button>
+        <div style={styles.buttons}>
+          <div style={styles.marginH('40px')}>
+            <Switch style={styles.paddingV('15px')} defaultChecked={larivaar} id="larivaar" onChange={this.toggleLarivaar}>
+              Larivaar
+            </Switch>
+          </div>
+          <div style={styles.marginH('40px')}>
+            <Switch style={styles.paddingV('15px')} defaultChecked={larivaarAssist} id="larivaarAssist"
+              onChange={this.toggleLarivaarAssist} disabled={!this.state.larivaar} >
+              <div>Larivaar<Orange text='Assist' /></div>
+            </Switch>
+          </div>
+
+          <div style={styles.marginH('40px')}>
+            <Switch defaultChecked={showTranslation} style={styles.paddingV('15px')} id="translation" onChange={this.toggleTranslation}>
+              English Translation
+            </Switch>
+          </div>
+        </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flexWrap: 'wrap', paddingBottom: 5 }}>
 
-
-        <div style={{ margin: '0 40px' }}><Switch id="larivaar" style={{ padding: '15px 0' }} onChange={this.toggleLarivaar} defaultChecked={larivaar}>Larivaar</Switch></div>
-        <div style={{ margin: '0 40px' }}><Switch id="larivaarAssist" style={{ padding: '15px 0' }} onChange={this.toggleLarivaarAssist} disabled={!this.state.larivaar} defaultChecked={larivaarAssist}><div>Larivaar<Orange text='Assist' /></div></Switch></div>
-
-        <div style={{ margin: '0 40px' }}><Switch id="translation" style={{ padding: '15px 0' }} onChange={this.toggleTranslation} defaultChecked={showTranslation}>English Translation</Switch></div>
-      </div>
     </Toolbar>;
 
     return (
       <div>
         <AngBar />
         <Loader loading={lines.length === 0}>
-          <div style={{ textAlign: 'left', padding: 20, lineHeight: '2em', }} className="gurbani-text">{angContent}</div>
+          <div style={styles.angContent} className={className}>{angContent}</div>
         </Loader>
       </div>
     );

@@ -1,7 +1,8 @@
-const webpack = require('webpack');
+import webpack from 'webpack';
 
 const isProd = process.env.NODE_ENV && process.env.NODE_ENV === 'production';
-module.exports = {
+
+export default {
   entry: "./js/index.js",
   output: {
     path: __dirname,
@@ -16,11 +17,9 @@ module.exports = {
       },
     ]
   },
-  plugins: isProd 
-  ? ([
+  plugins: isProd ? ([
     new webpack.DefinePlugin({ 'process.env': { 'NODE_ENV': JSON.stringify('production') } }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-  ])
-  : []
+  ]) : []
 };

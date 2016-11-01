@@ -36,25 +36,20 @@ export default withRouter(class Shabad extends Component {
       <div>
         <Toolbar>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-
+            { authorId && <AuthorChip id={authorId} /> }
             <div>
               <Button raised accent={showTranslation} ripple onClick={e => this.toggleTranslation()}>Translation</Button>
-
+              <Button raised colored={unicode} ripple onClick={e => this.toggleFont()}>Unicode Font</Button>
+            </div>
+            <div>
               {
                 ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'} ripple raised colored accent>
                   {`Open Ang ${ang}`}
                 </Button>
               }
-            </div>
-
-            { authorId && <AuthorChip id={authorId} /> }
-
-            <div>
               <Button raised ripple onClick={e => this.toggleBookmark()} raised colored>
                 <Icon name={ isBookmarked ? 'star' : 'stars' } /> { isBookmarked ? 'Bookmarked' : 'Bookmark' }
               </Button>
-
-              <Button raised colored={unicode} ripple onClick={e => this.toggleFont()}>Unicode Font</Button>
             </div>
           </div>
         </Toolbar>

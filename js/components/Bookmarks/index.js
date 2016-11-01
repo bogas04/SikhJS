@@ -14,15 +14,14 @@ const SearchCard = withRouter(({ data, router: { push }, onTitleChange }) => {
   const { title, id, key, value, timestamp } = data;
 
   return (
-    <Card style={{ margin: 10 }}>
+    <Card shadow={0} style={{ margin: 10 }}>
       <CardTitle>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column', flexWrap: 'wrap', }}>
             <Throttle handler="onChange" time="200">
               <Textfield
-                hintText={title}
+                label={title}
                 onChange={(e, v) => onTitleChange(v)}
-                style={{ width: 350 }}
                 type="text"
                 defaultValue={title}
               />
@@ -69,9 +68,13 @@ export default class Bookmarks extends Component {
           {
             bookmarks.length === 0
             ? <h1 style={{ textAlign: 'center' }}>No Bookmarks Found</h1>
-            : <div> bookmarks.map(b => (
-              <SearchCard data={b} key={b.id} onTitleChange={(title = b.title) => this.updateBookmark({ ...b, title })} />
-              ))</div>
+            : <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
+              {
+                bookmarks.map(b => (
+                  <SearchCard data={b} key={b.id} onTitleChange={(title = b.title) => this.updateBookmark({ ...b, title })} />
+                ))
+              }
+            </div>
           }
         </Loader>
       </div>
