@@ -58,7 +58,7 @@ npm run build:webpack
 npm run build:watch
 ```
 
-Plans, Changelog and [Bugs](https://github.com/bogas04/SikhJS/labels/bug)
+[Progress](https://github.com/bogas04/SikhJS/milestones?direction=desc&sort=completeness&state=open), Plans, Changelog and [Bugs](https://github.com/bogas04/SikhJS/labels/bug)
 ==
 ## [v2.0.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3Av2.0.0)
 - [ ] Gurudwara finder [#46](https://github.com/bogas04/sikhjs/issues/46).
