@@ -60,6 +60,7 @@
   -moz-user-select: text;
   -ms-user-select: text;
   -webkit-user-select: text;
+  user-select: text;
 }
 
 .gurbani-text h1 { font-size: 1.3em; }
