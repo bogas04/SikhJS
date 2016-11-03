@@ -83,18 +83,18 @@ npm run build:watch
 - [ ] Pronunciation of the words.
 - [ ] Definition of words. Select a word and to get its meaning
 
-## [v0.9.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.9.0)
+## [v0.9.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.9.0)
 - [ ] Sehaj Path tracker [#20](https://github.com/bogas04/SikhJS/issues/60)
 
-## [v0.8.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.8.0)
+## [v0.8.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.8.0)
 - [ ] Switch to react-router 4
 
-## [v0.7.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.7.0)
+## [v0.7.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.7.0)
 - [ ] Use BrowserHistory instead of HashHistory
 - [ ] Add transliterations
 - [ ] Sharing buttons
 
-## [v0.6.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.6.0)
+## [v0.6.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.6.0)
 - [x] Move to react-mdl
 
 ## [v0.5.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.5.0)
