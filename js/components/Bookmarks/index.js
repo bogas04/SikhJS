@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { withRouter } from 'react-router';
+import { Link } from 'react-router';
 import { Throttle } from 'react-throttle';
 
 import { Textfield, Button, Card, CardTitle, CardText, CardActions } from 'react-mdl';
@@ -10,7 +10,7 @@ import Loader from '../Loader';
 
 import { clearAllBookmarks, getAllBookmarks, updateBookmarkTitle } from '../../bookmarks';
 
-const SearchCard = withRouter(({ data, router: { push }, onTitleChange }) => {
+const SearchCard = ({ data, onTitleChange }) => {
   const { title, id, key, value, timestamp } = data;
 
   return (
@@ -30,12 +30,12 @@ const SearchCard = withRouter(({ data, router: { push }, onTitleChange }) => {
         </div>
       </CardTitle>
       <CardActions>
-        { key === 'shabad' && <Button onClick={e => push(`/shabad/${value}`)}>Open Shabad</Button> }
-        { key === 'sggs' && <Button onClick={e => push(`/SGGS/${value}`)}>{`Open Ang ${value}`}</Button> }
+        { key === 'shabad' && <Link to={`/shabad/${value}`}><Button ripple>Open Shabad</Button></Link> }
+        { key === 'sggs' && <Link to={`/SGGS/${value}`}><Button ripple>{`Open Ang ${value}`}</Button></Link> }
       </CardActions>
     </Card>
   );
-});
+};
 
 export default class Bookmarks extends Component {
   constructor(p) {

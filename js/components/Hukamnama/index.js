@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import { Link } from 'react-router';
 
 import { Button, Tabs, Tab } from 'react-mdl';
 
 import Loader from '../Loader';
 import Toolbar from '../Toolbar';
 
-export const HukamnamaView = withRouter(class extends Component {
+export class HukamnamaView extends Component {
   constructor(p) {
     super(p);
     this.state = { activeTab: 0 };
   }
   render() {
-    const { ang, english, punjabi, gurbani, date, router: { push } } = this.props;
+    const { ang, english, punjabi, gurbani, date, } = this.props;
     return <div>
       <Toolbar title={`Hukamnama ${date}`}>
-        <Button onClick={e => push(`/SGGS/${ang}`)} ripple raised accent >{`Open Ang ${ang}`}</Button>
+        <Link to={`/SGGS/${ang}`}><Button ripple raised accent >{`Open Ang ${ang}`}</Button></Link>
         <Tabs activeTab={this.state.activeTab} onChange={activeTab => this.setState({ activeTab })} ripple>
           <Tab style={{ fontWeight: this.state.activeTab === 0 ? 900 : 100 }}> Hukam </Tab>
           <Tab style={{ fontWeight: this.state.activeTab === 1 ? 900 : 100 }}>English Translation</Tab>
@@ -30,7 +30,7 @@ export const HukamnamaView = withRouter(class extends Component {
       </section>
     </div>
   }
-});
+}
 
 export default class Hukamnama extends Component {
   constructor(p) {

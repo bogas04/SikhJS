@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { withRouter } from 'react-router';
+import { Link } from 'react-router';
 
 import { baanies } from '../../constants';
 import { AuthorChip } from '../Author';
@@ -9,26 +9,28 @@ import Toolbar from '../Toolbar';
 
 import { Tabs, Tab, Button, Card, CardTitle, CardText, CardActions } from 'react-mdl';
 
-export const BaaniCard = withRouter(class extends Component {
+export class BaaniCard extends Component {
   constructor(p) {
     super(p);
     this.state = { showMore: false };
   }
   render() {
-    const { title, info, author, router: { push } } = this.props;
-    return <Card style={{ margin: 10, minHeight: 140 }} shadow={0}>
-      <CardTitle>{title}</CardTitle>
-      <CardActions>
-        <Button onClick={e => push(`/nitnem/${title}`)} ripple>Read</Button>
-        <Button onClick={e => this.setState({ showMore: !this.state.showMore })} ripple>Info</Button>
-      </CardActions>
-      <CardText style={{ display: this.state.showMore ? 'block' : 'none' }}> 
-        {author.map(id => <AuthorChip key={id} id={id} />)}
-        <div children={info || "No info"} />
-      </CardText>
-    </Card>
+    const { title, info, author, } = this.props;
+    return (
+      <Card style={{ margin: 10, minHeight: 140 }} shadow={0}>
+        <CardTitle>{title}</CardTitle>
+        <CardActions>
+          <Link to={`/nitnem/${title}`}><Button ripple>Read</Button></Link>
+          <Button onClick={e => this.setState({ showMore: !this.state.showMore })} ripple>Info</Button>
+        </CardActions>
+        <CardText style={{ display: this.state.showMore ? 'block' : 'none' }}> 
+          {author.map(id => <AuthorChip key={id} id={id} />)}
+          <div children={info || "No info"} />
+        </CardText>
+      </Card>
+    );
   }
-});
+}
 
 export default class Nitnem extends Component {
   constructor(p) {

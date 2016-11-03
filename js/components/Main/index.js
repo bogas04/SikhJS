@@ -54,7 +54,7 @@ export default ({ children, onNightModeToggle, nightMode }) => {
         </Drawer>
 
         <Content>
-          <Hammer onSwipe={handleSwipe} direction={Hammer.DIRECTION_HORIZONTAL}>
+          <Hammer onSwipe={handleSwipe} direction={Hammer.DIRECTION_RIGHT}>
             <div id="baaniWrapper" style={styles.color(nightMode)}>
               {children || <Greeting />}
             </div>

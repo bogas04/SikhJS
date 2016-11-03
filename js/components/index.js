@@ -11,3 +11,5 @@ export { default as Hukamnama } from './Hukamnama';
 export { default as Bookmarks } from './Bookmarks';
 export { default as Authors } from './Authors';
 export { default as Raags } from './Raags';
+export { default as Author } from './Author';
+export { default as Raag } from './Raag';

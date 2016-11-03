@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import { Main, Raags, Authors, Bookmarks, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
+import { Author, Raag, Main, Raags, Authors, Bookmarks, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
 
 import { getSettings, setSettings } from './constants';
 
@@ -32,7 +32,9 @@ export default class Root extends Component {
           <Route path="shabads" component={Shabads} />
           <Route path="bookmarks" component={Bookmarks} />
           <Route path="authors" component={Authors} />
+          <Route path="author/:id" component={Author} />
           <Route path="raags" component={Raags} />
+          <Route path="raag/:id" component={Raag} />
           <Route path="shabads/:q" component={Shabads} />
           <Route path="shabad/:id" component={Shabad} />
           <Route path="nitnem" component={Nitnem} />

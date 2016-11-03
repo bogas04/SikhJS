@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { Throttle } from 'react-throttle';
 
-import { Textfield, Button, Card, CardTitle, CardText, CardActions } from 'react-mdl';
+import { Textfield, Button, Card, CardTitle, CardActions } from 'react-mdl';
 
 import Toolbar from '../Toolbar';
 import Loader from '../Loader';
@@ -12,9 +12,9 @@ export const SearchCard = withRouter(({ id, raag, gurmukhi, granth, ang, descrip
   <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
     {`${raag} ${gurmukhi}`}
   </CardTitle>
-  <CardText>{description}</CardText>
   <CardActions border>
     <Button disabled={granth !== 1 && ang === 0} onClick={e => push(`/SGGS/${ang}`)}>{`Open Ang ${ang}`}</Button>
+    <Button onClick={e => push(`/raag/${id}`)}>More Info</Button>
   </CardActions>
 </Card>
 );

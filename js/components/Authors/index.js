@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { withRouter } from 'react-router';
+import {  Link } from 'react-router';
 import { Throttle } from 'react-throttle';
 
-import { Textfield, Card, CardTitle, CardText } from 'react-mdl';
+import { Textfield, Card, CardTitle, CardActions, Button } from 'react-mdl';
 
 import Toolbar from '../Toolbar';
 import Loader from '../Loader';
@@ -12,7 +12,9 @@ export const SearchCard = ({ id, author, gurmukhi, description }) => <Card style
   <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
     {`${author} ${gurmukhi}`}
   </CardTitle>
-  <CardText>{description}</CardText>
+  <CardActions border>
+    <Link to={`/author/${id}`}><Button>More Info</Button></Link>
+  </CardActions>
 </Card>;
 
 export default class Authors extends Component {
