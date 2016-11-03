@@ -4,25 +4,25 @@ SikhJS
 [![Issues](https://img.shields.io/github/issues/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues)
 
 
-Modern Gurbani Web App.
+SikhJS aims to be a [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) because we feel just like one slowly progresses in Sikhi by reading baani little by little, so should the storage of an application increase, while giving consistent experience everywhere.
 
 **NOTE**: The application is still in active development and is not fit for public release just yet.
 
 Why ?
 ==
-Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and sisters.
-Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2010s.
+Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and sisters.  Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2010s.
 They are in dire need of a revamp, and this I believe is the first step towards a modernization of Baani on web.
 
-How ?
-==
-The application is very simple as of now. I've manually taken docs from [SikhNet](http://www.sikhnet.com/DownloadBanis) and [gurbaninow.com](https://github.com/Sarabveer/gurbaninow/blob/master/API.md) and [other sources](#credits). Can not thank them enough. Nitnem baanies are converted to markdown files. The reason why I chose markdown is because they are
-* very lightweight
-* can be parsed to HTML very easily
-* can be formatted right in code
-* is pretty widely supported
+Common Issues with current Sikh Apps | How web solves it
+:--|:--|
+Usually only available on one platform. | Web on other hand, works everywhere.
+Feature parity between platforms is bad.| Web is consistent throughout platforms.
+Sharing baani needs you to use share features within the app or go back to screenshots! | It's still a URL in web, you can share or copy or print it easily!
+You can't bookmark something on your phone app and later use it on desktop app. This sort of ecosystem is not really present in popular Sikh apps. | Once again, web with help of synced databases can help you acheive this very easily.
 
-A CSS class `gurbani-text` is used to use proper [Gurmukhi Fonts] (/dist/fonts/) for text having Gurbani. Thanks to the designer of font once again.
+More importantly, this project is MIT license, which anyone can contribute to or even fork into a separate project. This way whatever innovation and problems we solve or create, will become a lesson for the future software teams.
+
+And the project is totally free. No ads, no operating costs (it's a web app hosted on [gh-pages](https://pages.github.com/)). 
 
 Contribute
 == 
@@ -50,28 +50,22 @@ npm run build:webpack
 npm run build:watch
 ```
 
-[Progress](https://github.com/bogas04/SikhJS/milestones?direction=desc&sort=completeness&state=open)
-==
-Progres of the project.
+### [Progress](https://github.com/bogas04/SikhJS/milestones?direction=desc&sort=completeness&state=open)
 
-[Plans & Changelog](./CHANGELOG.md)
-==
-Plans for future versions and major changes throughout the versions.
+### [Plans & Changelog](./CHANGELOG.md)
 
-[Bugs](https://github.com/bogas04/SikhJS/labels/bug)
-==
-Known issues.
+### [Bugs](https://github.com/bogas04/SikhJS/labels/bug)
 
 # Credits
 Thanks to
-* Guru Sahib for giving me talent and skill.
-* [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
-* Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
-* Documents from:
-* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
-* [GurbaniFiles.org] (http://www.gurbanifiles.org/).
-* [SearchGurbani.com] (http://searchgurbani.com/).
-* and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who are making this possible.
+  * Guru Sahib for giving me talent and skill.
+  * [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
+  * Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
+  * Documents from:
+  * SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
+  * [GurbaniFiles.org] (http://www.gurbanifiles.org/).
+  * [SearchGurbani.com] (http://searchgurbani.com/).
+  * and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who are making this possible.
 
 # License
 MIT
