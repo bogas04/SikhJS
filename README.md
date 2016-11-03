@@ -1,26 +1,18 @@
 SikhJS 
 ==
 [![Release](https://img.shields.io/github/release/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/releases)
-[![Dependencies](https://img.shields.io/librariesio/github/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues/new?title=Outdated%20Dependencies)
 [![Issues](https://img.shields.io/github/issues/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues)
-[![Issue Closure](https://img.shields.io/issuestats/i/github/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+is%3Aclosed)
 
 
-Modern Gurbani Web App
+Modern Gurbani Web App.
+
 **NOTE**: The application is still in active development and is not fit for public release just yet.
-
-Goal
-==
-I've added several new goals and roadmap. Would love some support to make this a reality.
-* Create a web app Gurbani application with lightweight modern design.
-* Provide a clean way of representing Baani on Web (Usage of markdown files).
-* Promote Sikhi among youth by use of technology, gamification and what not.
 
 Why ?
 ==
 Well I'm a Sikh and I happen to be a web developer, so I saw an opportunity to use my skills to serve to my fellow Sikh brothers and sisters.
 Apart from that, the main reason behind the project is that the Baani softwares are of 1990s era in 2010s.
-They are in dire neeed of a revamp, and this I believe is the first step towards a modern revolution for Sikhism, when youth uses technology to learn more about Baani and Sikhism.
+They are in dire need of a revamp, and this I believe is the first step towards a modernization of Baani on web.
 
 How ?
 ==
@@ -60,54 +52,58 @@ npm run build:watch
 
 [Progress](https://github.com/bogas04/SikhJS/milestones?direction=desc&sort=completeness&state=open), Plans, Changelog and [Bugs](https://github.com/bogas04/SikhJS/labels/bug)
 ==
-## [v2.0.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3Av2.0.0)
+## [v2.0.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av2.0.0)
 - [ ] Gurudwara finder [#46](https://github.com/bogas04/sikhjs/issues/46).
-  - [ ] Curated by availability of langar, rooms, etc
+- [ ] Curated by availability of langar, rooms, etc
 - [ ] Moderated commenting on any selected text to promote global level vichaar.
-  - [ ] Notifications for same.
+- [ ] Notifications for same.
 
-## [v1.0.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0.0)
+## [v1.5.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av1.5.0)
+
+## [v1.0.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av1.0.0)
 - [ ] Tech Improvements:
-  - [ ] Use Service Worker for offline support. [#25](https://github.com/bogas04/sikhjs/issues/25).
-  - [ ] Optimize Components.
-  - [ ] Highly responsive design.
-  - [ ] Notifications
-    - [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
-    - [ ] Calendar Alert
-  - [ ] CSS Beautification of Granth, Shabads and Angs.
+- [ ] Use Service Worker for offline support. [#25](https://github.com/bogas04/sikhjs/issues/25).
+- [ ] Optimize Components.
+- [ ] Highly responsive design.
+- [ ] Notifications
+- [ ] Nitnem Alert (With stats like "It took you 15 minutes to do Japji yesterday. You can spare that much time")
+- [ ] Calendar Alert
+- [ ] CSS Beautification of Granth, Shabads and Angs.
 - [ ] New Content:
-  - [ ] Additional Granths [#39](https://github.com/bogas04/sikhjs/issues/39).
-  - [ ] Introduction to all forms Shashtars 
-    - [ ] Shashtar Maala with pictures and descriptiosn would be amazing
-  - [ ] Introduction to all forms and styles of kirtan.
-    - [ ] SoundCloud integration for Shabads.
-    - [ ] YouTube integration for Shabads.
-  - [ ] Saakhis
-    - [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus.
-  - [ ] Picture Gallery
-  - [ ] Shabad Kosh
-    - [ ] Pronunciation of the words.
-    - [ ] Definition of words. Select a word and to get its meaning
+- [ ] Additional Granths [#39](https://github.com/bogas04/sikhjs/issues/39).
+- [ ] Introduction to all forms Shashtars 
+- [ ] Shashtar Maala with pictures and descriptiosn would be amazing
+- [ ] Introduction to all forms and styles of kirtan.
+- [ ] SoundCloud integration for Shabads.
+- [ ] YouTube integration for Shabads.
+- [ ] Saakhis
+- [ ] Need to add credible Saakhis which actually do akaal ustat and detach from physical form of Gurus.
+- [ ] Picture Gallery
+- [ ] Shabad Kosh
+- [ ] Pronunciation of the words.
+- [ ] Definition of words. Select a word and to get its meaning
 
-## [v0.8.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.8.0)
+## [v0.9.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.9.0)
+- [ ] Sehaj Path tracker [#20](https://github.com/bogas04/SikhJS/issues/60)
+
+## [v0.8.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.8.0)
 - [ ] Switch to react-router 4
 
-## [v0.7.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.7.0)
+## [v0.7.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.7.0)
 - [ ] Use BrowserHistory instead of HashHistory
 - [ ] Add transliterations
 - [ ] Sharing buttons
 
-## [v0.6.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3A0.6.0)
-- [ ] Move to react-mdl
+## [v0.6.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3A0.6.0)
+- [x] Move to react-mdl
 
-## [v0.5.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aopen+is%3Aissue+milestone%3Av0.5.0)
-- [ ] Submenu for SGGS
-- [ ] Sehaj Path tracker [#20](https://github.com/bogas04/SikhJS/issues/60).
+## [v0.5.0](https://github.com/bogas04/SikhJS/issues?q=is%3Aissue+milestone%3Av0.5.0)
+- [x] Submenu for SGGS
 - [x] Bookmarks.
 - [x] Improve API routes to leverage browser keywords.
-  - [x] `/sggs/1234` opens 1234 Ang.
-  - [x] `/shabads/mnbmj` opens Search Results for mnbmj (Mohe Na Bisaaro).
-  - [x] `/shabad/1234` opens 1234 Shabad.
+- [x] `/sggs/1234` opens 1234 Ang.
+- [x] `/shabads/mnbmj` opens Search Results for mnbmj (Mohe Na Bisaaro).
+- [x] `/shabad/1234` opens 1234 Shabad.
 - [x] Proper searching (Thanks to [GurbaniNow](https://github.com/Sarabveer/gurbaninow)).
 - [x] Use react.
 - [x] Sri Guru Granth Sahib.
@@ -128,9 +124,9 @@ Thanks to
 * [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
 * Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
 * Documents from:
-  * SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
-  * [GurbaniFiles.org] (http://www.gurbanifiles.org/).
-  * [SearchGurbani.com] (http://searchgurbani.com/).
+* SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
+* [GurbaniFiles.org] (http://www.gurbanifiles.org/).
+* [SearchGurbani.com] (http://searchgurbani.com/).
 * and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who are making this possible.
 
 # License
