@@ -1,6 +1,6 @@
 {
   "name": "sikhjs",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Multiplatform application for Gurbani",
   "private": true,
   "main": "index.js",
