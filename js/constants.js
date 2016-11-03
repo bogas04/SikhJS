@@ -1,15 +1,16 @@
 import Dexie from 'dexie';
 
-export const loading = `### Loading. 
-[Report](https://github.com/bogas/sikhjs/issues) if you are seeing this for a long time.
-`;
-
 export const API_URL = `https://api.gurbaninow.com/v1/`;
 
-export const searchTypes = [ 'First Letter of Begining of Shabad (Gurakhar)', 'First Letter from Anywhere of Shabad (Gurakhar)',
-  'Full Word (Gurakhar)', 'Full Word (English)', ];
+export const searchTypes = [
+  'First Letter of Begining of Shabad (Gurakhar)',
+  'First Letter from Anywhere of Shabad (Gurakhar)',
+  'Full Word (Gurakhar)',
+  'Full Word (English)',
+];
 
 export const sourceTypes = [ 'All Scripts', 'Sri Guru Granth Sahib', 'Vaaran', 'Dasam Granth and Amrit Keertan' ];
+
 export const sourceIds = { G: 1, D: 3, B: 2, A: 3 };
 
 const defaultStore = { fontSizeMultiplier: 1, nightMode: false };
