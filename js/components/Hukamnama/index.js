@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-
+import { Link } from 'react-router'; 
 import { Button, Tabs, Tab } from 'react-mdl';
 
 import Loader from '../Loader';
@@ -42,9 +41,9 @@ export default class Hukamnama extends Component {
   }
   render() {
     const { data, loading } = this.state;
-    const loadingText = <div style={{ fontSize: '4em', margin: 10 }} className="gurbani-text">
-      <p style={{ lineHeight: '2em' }}>su khu tl guru syvIAY Aihinis shij suBwie ]</p>
-      <p style={{ lineHeight: '2em' }}>drsin prisAY gurU kY jnm mrx duKu jwie ]10]</p>
+    const loadingText = <div style={{ fontSize: '6vw', margin: 10 }} className="gurbani-text">
+      <p>su khu tl guru syvIAY Aihinis shij suBwie ]</p>
+      <p>drsin prisAY gurU kY jnm mrx duKu jwie ]10]</p>
     </div>;
     return (
       <Loader loading={this.state.loading} loadingText={loadingText}>

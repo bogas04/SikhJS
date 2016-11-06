@@ -71,7 +71,10 @@ export default withRouter(class Shabads extends Component {
         <Toolbar title="Gurbani Searcher">
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
             <Throttle time={500} handler="onChange">
-              <Textfield className={ searchType != 3 ? 'gurbani-input' : '' } style={{ width: 300 }} id="q" onChange={e => this.search(e.target.value)} floatingLabel label="Search"/>
+              <Textfield autoCapitalize="off" className={searchType != 3 ? 'gurbani-input' : ''}
+                style={{ width: 300, color: 'white' }} id="q"
+                onChange={e => this.search(e.target.value)} floatingLabel label="Search"
+              />
             </Throttle>
             <select style={styles.select} label="Search Type" value={searchType}
               onChange={(e, v) => this.updateSearchType(v)} children={
@@ -84,7 +87,7 @@ export default withRouter(class Shabads extends Component {
           </div>
         </Toolbar>
         <Loader loading={loading}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', flexDirection: 'row' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
             {
               shabads.length === 0
               ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
