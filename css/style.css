@@ -51,7 +51,7 @@
 
 .center-input input { text-align: center; }
 
-.gurbani-input input, .gurbani-text, .gurbani-text code { font-size: 2em; }
+.gurbani-input input, .gurbani-text, .gurbani-text code { font-size: 2em; line-height: 1.35em; }
 
 .gurbani-text div.english { font-family: ''; }
 
@@ -69,7 +69,7 @@
 
 .gurbani-text p, .gurbani-text pre {
   display: table;
-  padding: 2px;
+  padding: .2em;
   border-radius: 5px;
   margin: 2px auto;
   font-size: 0.8em;
@@ -95,5 +95,8 @@
   text-align: center !important;
   font-size: 1.25em !important;
 }
-.gurbani-text.raag-ang {
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  background-color: #09a4bd !important;
+  color: white !important;
 }

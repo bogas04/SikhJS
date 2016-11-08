@@ -12,7 +12,7 @@ export const AuthorChip = ({ id }) => (
         <Chip style={{ margin: 5 }} children={loading ? 'Loading' : `${data.author} ${data.gurmukhi}` } />
       )
     }</Json>
-  </Link>
+</Link>
 );
 
 export default ({ params: { id } }) => (
@@ -20,7 +20,7 @@ export default ({ params: { id } }) => (
     ({ data = [] }) => (
       <div>
         <Toolbar title={`${data.author} ${data.gurmukhi}`} />
-        <div style={{ padding: 10 }}>
+        <div style={{ padding: 10, lineHeight: '1em' }}>
           {data.description || 'No information'}
         </div>
       </div>
