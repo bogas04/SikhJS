@@ -1,11 +1,10 @@
 import React from 'react';
-import { baanies, getSettings, setSettings } from '../../constants';
+import { getSettings, setSettings } from '../../constants';
 import Greeting from '../Greeting';
 import styles from './styles';
 
 import { Link } from 'react-router';
 import { Throttle } from 'react-throttle';
-import Hammer from 'react-hammerjs';
 import { FooterDropDownSection, FooterLinkList, IconButton, Content, Slider, Button, Layout, Header, Drawer, Navigation } from 'react-mdl';
 
 export default ({ children, onNightModeToggle, nightMode }) => {
@@ -18,8 +17,6 @@ export default ({ children, onNightModeToggle, nightMode }) => {
     newSettings.fontSizeMultiplier = v;
     setSettings(newSettings);
   };
-
-  const nBaanies = baanies.nitnem.map(({ title }) => <Link key={title} to={`/nitnem/${title}`}>{title}</Link>);
 
   return (
     <div style={styles.wrapper}>
@@ -54,11 +51,9 @@ export default ({ children, onNightModeToggle, nightMode }) => {
         </Drawer>
 
         <Content>
-          <Hammer onSwipe={handleSwipe} direction={Hammer.DIRECTION_RIGHT}>
-            <div id="baaniWrapper" style={styles.color(nightMode)}>
-              {children || <Greeting />}
-            </div>
-          </Hammer>
+          <div id="baaniWrapper" style={{...styles.color(nightMode), fontSize: `${20 * getSettings().fontSizeMultiplier}px`}}>
+            {children || <Greeting />}
+          </div>
         </Content>
 
       </Layout>

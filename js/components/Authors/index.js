@@ -1,44 +1,42 @@
 import React, { Component } from 'react';
 
-import {  Link } from 'react-router';
+import { Link } from 'react-router';
 import { Throttle } from 'react-throttle';
 
-import { Textfield, Card, CardTitle, CardActions, Button } from 'react-mdl';
+import { Textfield, Button, } from 'react-mdl';
 
+import Json from '../Json';
 import Toolbar from '../Toolbar';
-import Loader from '../Loader';
+import Card from '../Card';
 
-export const SearchCard = ({ id, author, gurmukhi, description }) => <Card style={{ margin: 10 }} shadow={0}>
-  <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
-    {`${author} ${gurmukhi}`}
-  </CardTitle>
-  <CardActions border>
-    <Link to={`/author/${id}`}><Button>More Info</Button></Link>
-  </CardActions>
-</Card>;
+export const AuthorsView = ({ keyword }) => ({ data = [] }) => {
+  let authors = data;
+
+  if (keyword !== '') {
+    authors = authors.filter(e => e.author.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
+  }
+
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
+      {
+        authors.map(author => (
+          <Card key={author.id} title={`${author.author} ${author.gurmukhi}`} actions={[
+            <Link to={`/author/${author.id}`}><Button>More Info</Button></Link>,
+          ]} />
+        ))
+      }
+    </div>
+  );
+};
 
 export default class Authors extends Component {
   constructor(p) {
     super(p);
-    this.state = { authors: [], loading: true, keyword: '' };
+    this.state = { keyword: '' };
   }
-  componentDidMount() {
-    this.updateData();
-  }
-  updateData() {
-    this.setState({ loading: true });
-    fetch(`docs/json/authors.json`)
-      .then(r => r.json())
-      .then(authors => this.setState({ authors, loading: false }))
-      .catch(e => console.error(e));
-  }
-  updateKeyword(keyword) {
-    this.setState({ keyword });
-  }
+  updateKeyword(keyword) { this.setState({ keyword }); }
   render() {
-    let { authors, loading, keyword } = this.state;
-
-    if (keyword !== '') { authors = authors.filter(e => e.author.toLowerCase().indexOf(keyword.toLowerCase()) > -1); }
+    let { keyword } = this.state;
 
     return (
       <div>
@@ -48,11 +46,8 @@ export default class Authors extends Component {
               style={{ width: 300 }} />
           </Throttle>
         </Toolbar>
-        <Loader loading={loading}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
-            {authors.map(author => <SearchCard key={author.id} {...author} />)}
-          </div>
-        </Loader>
+
+        <Json url={`docs/json/authors.json`}>{AuthorsView({ keyword })}</Json>
       </div>
     );
   }

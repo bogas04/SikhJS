@@ -1,46 +1,46 @@
 import React, { Component } from 'react';
 
-import { withRouter } from 'react-router';
+import { Link } from 'react-router';
 import { Throttle } from 'react-throttle';
 
-import { Textfield, Button, Card, CardTitle, CardActions } from 'react-mdl';
+import { Textfield, Button, } from 'react-mdl';
 
 import Toolbar from '../Toolbar';
-import Loader from '../Loader';
+import Json from '../Json';
+import Card from '../Card';
 
-export const SearchCard = withRouter(({ id, raag, gurmukhi, granth, ang, description, router: { push } }) => <Card style={{ margin: 10 }} shadow={0} >
-  <CardTitle style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
-    {`${raag} ${gurmukhi}`}
-  </CardTitle>
-  <CardActions border>
-    <Button disabled={granth !== 1 && ang === 0} onClick={e => push(`/SGGS/${ang}`)}>{`Open Ang ${ang}`}</Button>
-    <Button onClick={e => push(`/raag/${id}`)}>More Info</Button>
-  </CardActions>
-</Card>
-);
+
+export const RaagsView = ({ keyword }) => ({ data = [] }) => {
+  let raags = data;
+
+  if (keyword !== '') {
+    raags = raags.filter(e => e.raag.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
+  }
+
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
+      {
+        raags.map(({ raag, gurmukhi, granth, id, ang }) => (
+          <Card key={id} title={`${raag} ${gurmukhi}`} actions={[
+            granth !== 1 || ang === 0 ? '' : <Link to={`/SGGS/${ang}`}><Button>{`Open Ang ${ang}`}</Button></Link>,
+            <Link to={`/raag/${id}`}><Button>More Info</Button></Link>,
+          ]} />
+        ))
+      }
+    </div>
+  );
+};
 
 export default class Raags extends Component {
   constructor(p) {
     super(p);
-    this.state = { raags: [], loading: true, keyword: '' };
-  }
-  componentDidMount() {
-    this.updateData();
-  }
-  updateData() {
-    this.setState({ loading: true });
-    fetch(`docs/json/raags.json`)
-      .then(r => r.json())
-      .then(raags => this.setState({ raags, loading: false }))
-      .catch(e => console.error(e));
+    this.state = { keyword: '' };
   }
   updateKeyword(keyword) {
     this.setState({ keyword });
   }
   render() {
-    let { raags, loading, keyword } = this.state;
-
-    if (keyword !== '') { raags = raags.filter(e => e.raag.toLowerCase().indexOf(keyword.toLowerCase()) > -1); }
+    let { keyword } = this.state;
 
     return (
       <div>
@@ -50,11 +50,8 @@ export default class Raags extends Component {
               style={{ width: 300 }} />
           </Throttle>
         </Toolbar>
-        <Loader loading={loading}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
-            {raags.map(raag => <SearchCard key={raag.id} {...raag} />)}
-          </div>
-        </Loader>
+
+        <Json url={`docs/json/raags.json`}>{RaagsView({ keyword })}</Json>
       </div>
     );
   }

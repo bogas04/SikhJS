@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'; 
 import { Button, Tabs, Tab } from 'react-mdl';
 
-import Loader from '../Loader';
+import Json from '../Json';
 import Toolbar from '../Toolbar';
 
 export class HukamnamaView extends Component {
@@ -31,25 +31,15 @@ export class HukamnamaView extends Component {
   }
 }
 
-export default class Hukamnama extends Component {
-  constructor(p) {
-    super(p);
-    this.state = { data: {}, loading: true };
-    fetch(`https://mukhwakh.herokuapp.com/api`).then(r => r.json())
-      .then(({ data }) => this.setState({ data, loading: false }))
-      .catch(err => console.error(err));
-  }
-  render() {
-    const { data, loading } = this.state;
-    const loadingText = <div style={{ fontSize: '6vw', margin: 10 }} className="gurbani-text">
-      <p>su khu tl guru syvIAY Aihinis shij suBwie ]</p>
-      <p>drsin prisAY gurU kY jnm mrx duKu jwie ]10]</p>
-    </div>;
-    return (
-      <Loader loading={this.state.loading} loadingText={loadingText}>
-        <HukamnamaView {...data} />
-      </Loader>
-    );
-  }
-}
+export default () => {
+  const loadingText = <div style={{ fontSize: '6vw', margin: 10 }} className="gurbani-text">
+    <p>su khu tl guru syvIAY Aihinis shij suBwie ]</p>
+    <p>drsin prisAY gurU kY jnm mrx duKu jwie ]10]</p>
+  </div>;
 
+  return (
+    <Json url={`https://mukhwakh.herokuapp.com/api`} loadingText={loadingText}>{
+      ({ data: { data } }) => <HukamnamaView {...data} />
+    }</Json>
+  );
+}

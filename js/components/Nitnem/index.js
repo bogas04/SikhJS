@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router';
 
-import { baanies } from '../../constants';
+import { baanies } from './constants';
 import { AuthorChip } from '../Author';
 
 import Toolbar from '../Toolbar';
@@ -46,7 +46,7 @@ export default class Nitnem extends Component {
     return (
       <div>
         <Toolbar title={<span className="gurbani-text">Œ Ç ‰</span>}>
-          <Tabs style={{  }} activeTab={this.state.activeTab} onChange={activeTab => this.setState({ activeTab })} ripple>
+          <Tabs activeTab={this.state.activeTab} onChange={activeTab => this.setState({ activeTab })} ripple>
             <Tab style={{ fontWeight: this.state.activeTab === 0 ? 900 : 100 }}>Nitnem</Tab>
             <Tab style={{ fontWeight: this.state.activeTab === 1 ? 900 : 100 }}>Additional Baanies</Tab>
           </Tabs>

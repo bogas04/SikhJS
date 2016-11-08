@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import { Author, Raag, Main, Raags, Authors, Bookmarks, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads } from './components';
+
+import { 
+  Author, Raag, Main, Raags, Authors, Bookmarks, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads 
+} from './components';
 
 import { getSettings, setSettings } from './constants';
 
@@ -20,7 +23,9 @@ export default class Root extends Component {
     this.setState({ nightMode: !this.state.nightMode });
   }
   render() {
-    const App = props => (<Main onNightModeToggle={() => this.toggleNightMode()} nightMode={this.state.nightMode} {...props} />);
+    const App = props => (
+      <Main onNightModeToggle={() => this.toggleNightMode()} nightMode={this.state.nightMode} {...props} />
+    );
 
     return (
       <Router history={hashHistory} onUpdate={() => document.body.scrollTop = 0}>

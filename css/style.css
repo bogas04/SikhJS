@@ -58,10 +58,6 @@
 .gurbani-text p, .gurbani-input input, .gurbani-text, .gurbani-text code, .gurbani-text h1, .gurbani-text h2, .gurbani-text h3, .gurbani-text h4, .gurbani-text h5, .gurbani-text h6 {
   font-family: gurmukhi_heavy;
   line-height: 1em;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 .gurbani-text h1 { font-size: 1.3em; }
