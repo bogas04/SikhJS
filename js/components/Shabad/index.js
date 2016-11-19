@@ -54,7 +54,7 @@ export const ShabadView = withRouter(class extends Component {
           {
             gurbani.map((e, i) => <div key={e.shabad.ID}>
               <span className="gurbani-text">{unicode ? e.shabad.GurmukhiUni : e.shabad.Gurmukhi}</span>
-              {showTranslation && <div style={{ color: 'grey' }}>{e.shabad.English}</div>}
+              {showTranslation && <blockquote>{e.shabad.English}</blockquote>}
             </div>)
           }
         </div>

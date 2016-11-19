@@ -3,8 +3,8 @@
   "short_name": "SikhJS",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#00BCD4",
-  "theme_color": "#00BCD4",
+  "background_color": "#0097A7",
+  "theme_color": "#0097A7",
   "description": "Waheguru Ji Ka Khalsa Waheguru Ji Ki Phateh!",
   "icons": [{
       "src": "logo.png",

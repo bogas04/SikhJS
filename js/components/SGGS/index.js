@@ -53,7 +53,7 @@ export default withRouter(class SGGS extends Component {
     const angContent = lines.map(({ id, text, original, translation }) => (
       <div key={id} style={styles.translation(showTranslation, larivaar)}>
         {larivaar ? larivaarify(text) : ` ${text} `}
-        {showTranslation ? <div className="english" style={styles.grey}>{translation.text}</div> : ''}
+        {showTranslation ? <blockquote className="english">{translation.text}</blockquote> : ''}
       </div>
     ));
 
