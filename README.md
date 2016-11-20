@@ -43,10 +43,13 @@ git clone https://github.com/bogas04/SikhJS.git
 cd SikhJS
 npm i
 
-# Transpile JSX to JS during development
+# Transpile JSX to JS
+# during development
 npm run build:webpack
 
-# Transpile JSX to JS during development and watch the files
+# Transpile JSX to JS
+# during development
+# and watch the files
 npm run build:watch
 ```
 
