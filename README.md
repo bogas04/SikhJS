@@ -1,3 +1,8 @@
+# DEVELOPMENT HALTED. 
+# WILL RESUME IN COMING WEEKS WITH A TOTAL REWRITE.
+# API CHANGES HAVE BROKEN THE APP FOR NOW.
+# HAPPY TO ACCEPT PRs FOR FIXES.
+
 SikhJS 
 ==
 [![Release](https://img.shields.io/github/release/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/releases)
