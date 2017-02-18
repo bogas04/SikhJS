@@ -1,11 +1,14 @@
 import React from 'react';
 import Json from '../Json';
 
+export const API_URL = `https://devapi.khajana.org/`;
+
 export const TYPES = [
-  'Initials from beginning (Gurmukhi)',
+  'Initials from starting (Gurmukhi)',
   'Initials from anywhere (Gurmukhi)',
-  'Full word (Gurakhar)',
-  'Full word (English)',
+  'Full Word (Gurakhar)',
+  'Full Word (English)',
+  'Romanized (English)',
 ];
 
 export const SOURCES = {
@@ -15,12 +18,10 @@ export const SOURCES = {
   B: 'Bhai Gurdas Ji Vaaran',
   N: 'Bhai Nand Lal Ji Vaaran',
   A: 'Amrit Keertan',
-  U: 'Uggardanti',
 };
 
 export const buildApiUrl = options => {
   const {
-    API_URL = `https://api.gurbaninow.com/`,
     q = false,
     source = false,
     type = false,
@@ -28,10 +29,12 @@ export const buildApiUrl = options => {
     raag = false,
     ang = false,
     results = false,
+    offset = false,
     id = false,
     hukam = false,
     akhar = false,
     lipi = false,
+    random = false
   } = options;
 
   let url = API_URL;
@@ -44,17 +47,20 @@ export const buildApiUrl = options => {
     if (raag) url += `raag=${raag}&`;
     if (ang) url += `ang=${ang}&`;
     if (results) url += `results=${results}&`;
-  } else if (id !== false) { 
+    if (offset) url += `offset=${offset}&`;
+  } else if (id !== false) {
     url += `shabad/${id}`;
   } else if (ang !== false) {
     url += `ang/${ang}/`;
-    if (source) url += `source=${source}`;
+    if (source) url += source;
   } else if (hukam !== false) {
-    url += `hukamnama`;
+    url += `hukamnama/today`;
   } else if (akhar !== false && lipi !== false) {
     url += `akhar/${lipi}`;
+  } else if (random !== false) {
+    url += `random`;
   } else {
-    throw new Error('Invalid props sent');
+    throw new Error('Invalid options sent');
   }
   return url;
 }

@@ -6,19 +6,19 @@ import { Icon, IconButton, Button, Switch } from 'react-mdl';
 import { AuthorChip } from '../Author';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import Toolbar from '../Toolbar';
-import GurbaniNow, { TYPES, SOURCES } from '../GurbaniNow';
+import Khajana, { TYPES, SOURCES } from '../Khajana';
 
 export const ShabadView = withRouter(class extends Component {
   constructor(p) {
     super(p);
 
-    const { id, gurbani, authorId, ang, sourceId } = this.props;
+    const { id, gurbani, authorId, ang, source } = this.props;
     this.state = { 
       showTranslation: false,
       loading: true,
       unicode: false,
       isBookmarked: false,
-      id, gurbani, authorId, ang, sourceId
+      id, gurbani, authorId, ang, source
     };
 
     isBookmarked({ key: 'shabad', value: id })
@@ -26,7 +26,7 @@ export const ShabadView = withRouter(class extends Component {
       .catch(e => console.error(e));
   }
   render () {
-    const { id, ang, authorId, gurbani, sourceId, showTranslation, unicode, loading, isBookmarked } = this.state;
+    const { id, ang, authorId, gurbani, source, showTranslation, unicode, loading, isBookmarked } = this.state;
     const { router: { push } } = this.props;
 
     return <div>
@@ -39,7 +39,7 @@ export const ShabadView = withRouter(class extends Component {
           </div>
           <div>
             {
-              ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={sourceId !== 'G'} ripple raised colored accent>
+              ang && <Button onClick={e => push(`/SGGS/${ang}`)} disabled={source.id !== 'G'} ripple raised colored accent>
                 {`Open Ang ${ang}`}
               </Button>
             }
@@ -50,16 +50,20 @@ export const ShabadView = withRouter(class extends Component {
         </div>
       </Toolbar>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ lineHeight: '2em', padding: 10 }}>
-          {
-            gurbani.map((e, i) => <div key={e.shabad.ID}>
-              <span className="gurbani-text">{unicode ? e.shabad.GurmukhiUni : e.shabad.Gurmukhi}</span>
-              {showTranslation && <blockquote>{e.shabad.English}</blockquote>}
-            </div>)
-          }
-        </div>
-      </div>
-    </div>;
+        <div style={{ lineHeight: '2em', padding: 10 }}>{
+          gurbani.map((e, i) => (
+            <div key={e.shabad.id}>
+              <span className="gurbani-text">{
+                unicode
+                  ? e.shabad.gurbani.unicode
+                  : e.shabad.gurbani.gurmukhi
+              }</span>
+              {showTranslation && <blockquote>{e.shabad.translation.english.ssk}</blockquote>}
+            </div>
+          ))
+        }</div>
+    </div>
+  </div>;
   }
   toggleTranslation() {
     this.setState({ showTranslation: !this.state.showTranslation });
@@ -68,8 +72,8 @@ export const ShabadView = withRouter(class extends Component {
     this.setState({ unicode: !this.state.unicode });
   }
   toggleBookmark() {
-    const { isBookmarked, id, sourceId, ang, lines } = this.state;
-    const title =  `Shabad ${id} ${SOURCES[sourceId]} Ang ${ang}`;
+    const { isBookmarked, id, source, ang, lines } = this.state;
+    const title =  `Shabad ${id} ${SOURCES[source.id]} Ang ${ang}`;
 
     toggleBookmark({ isBookmarked, title, key: 'shabad', value: id, })
       .then(isBookmarked => this.setState({ isBookmarked }))
@@ -77,12 +81,14 @@ export const ShabadView = withRouter(class extends Component {
   }
 })
 
-export default props => <GurbaniNow options={{ id: props.id || props.params.id }}>{({ data: { gurbani = [] } }) => (
-  gurbani && gurbani.length > 0 && <ShabadView 
-    id={props.id || props.params.id}
-    gurbani={gurbani}
-    ang={gurbani[0].shabad.PageNo}
-    sourceId={gurbani[0].shabad.SourceID}
-    authorId={gurbani.slice(-1)[0].shabad.WriterID} 
-  />
-)}</GurbaniNow>;
+export default props => <Khajana options={{ id: props.id || props.params.id }} >{
+  ({ data: { shabadinfo = {}, gurbani = [] } }) => (
+    gurbani && gurbani.length > 0 && <ShabadView 
+      id={props.id || props.params.id}
+      gurbani={gurbani}
+      ang={gurbani[0].shabad.PageNo}
+      source={gurbani[0].shabad.source}
+      authorId={shabadinfo.writer.id} 
+    />
+  )}
+</Khajana>;

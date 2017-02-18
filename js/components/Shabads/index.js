@@ -6,7 +6,7 @@ import { Throttle } from 'react-throttle';
 import { Textfield, Button, } from 'react-mdl';
 
 import Toolbar from '../Toolbar'; 
-import GurbaniNow, { TYPES, SOURCES } from '../GurbaniNow'; 
+import Khajana, { TYPES, SOURCES } from '../Khajana'; 
 import Card from '../Card';
 
 const styles = {
@@ -17,15 +17,15 @@ const styles = {
 };
 
 export const SearchCard = withRouter(props => {
-  const { ID, Transliteration, WriterID, English, ShabadID, SourceID, Gurmukhi, PageNo, router: { push }} = props;
+  const { id, transliteration, writer, translation, gurbani, shabadid, source, router: { push }} = props;
 
   return <Card
-    title={<span className="gurbani-text">{Gurmukhi}</span>}
-    text={<span style={styles.capitalize}>{Transliteration}</span>}
+    title={<span className="gurbani-text">{gurbani.gurmukhi}</span>}
+    text={<span style={styles.capitalize}>{transliteration}</span>}
     actions={[
-      <Button onClick={e => push(`/shabad/${ShabadID}`)}>Open Shabad</Button>,
-      <Button onClick={e => push(`/SGGS/${PageNo}`)} disabled={SourceID !== 'G'}>{`Open Ang ${PageNo}`}</Button>,
-      <Button onClick={e => push(`/SGGS/${PageNo}`)} disabled>Open Raag</Button>,
+      <Button onClick={e => push(`/shabad/${shabadid}`)}>Open Shabad</Button>,
+      <Button onClick={e => push(`/SGGS/${source.pageno}`)} disabled={source.id !== 'G'}>{`Open Ang ${source.pageno}`}</Button>,
+      <Button onClick={e => push(`/SGGS/${source.pageno}`)} disabled>Open Raag</Button>,
     ]}
   />;
 });
@@ -76,16 +76,16 @@ export default withRouter(class Shabads extends Component {
           {
             q.length === 0
             ? <h1 style={{ textAlign: 'center' }}>Enter a query</h1>
-            : <GurbaniNow options={{ q, source, type, }}>{
+            : <Khajana options={{ q, source, type, }}>{
               ({ data: { shabads = [] } }) => (shabads.length === 0
                 ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
                 : (
                   <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'row' }}>
-                    {shabads.map(({ shabad }) => <SearchCard key={shabad.ID} {...shabad} />)}
+                    {shabads.map(({ shabad }) => <SearchCard key={shabad.id} {...shabad} />)}
                   </div>
                 )
               )
-            }</GurbaniNow>
+            }</Khajana>
           }
         </div>
       </div>
