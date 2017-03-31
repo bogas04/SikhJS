@@ -1,0 +1,76 @@
+/*@font-face { font-family: gurmukhi_thick; src: url('../fonts/gurmukhi_thick.ttf'); }*/
+@font-face { font-family: gurmukhi_heavy; src: url('../fonts/gurmukhi_heavy.ttf'); }
+/*@font-face { font-family: gurmukhi_light; src: url('../fonts/gurmukhi_light.ttf'); }*/
+/*@font-face { font-family: gurmukhi; src: url('../fonts/GurbaniWebThickTrue.ttf'); }*/
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+#baaniWrapper {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 100px;
+  transition: font-size 0.05s, background-color 0.5s;
+}
+
+.toolbar {
+  padding: 0 40px !important;
+  height: auto !important;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start; 
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.center-input input { text-align: center; }
+
+.gurbani-input input, .gurbani-text, .gurbani-text code { font-size: 2em; line-height: 1.35em; }
+
+.gurbani-text div.english,
+.gurbani-text blockquote.english { font-family: ''; }
+
+.gurbani-text p, .gurbani-input input, .gurbani-text, .gurbani-text code, .gurbani-text h1, .gurbani-text h2, .gurbani-text h3, .gurbani-text h4, .gurbani-text h5, .gurbani-text h6 {
+  font-family: gurmukhi_heavy;
+  line-height: 1em;
+}
+
+.gurbani-text h1 { font-size: 1.3em; }
+.gurbani-text h2 { font-size: 1.25em; }
+.gurbani-text h3 { font-size: 1.2em; }
+.gurbani-text h4 { font-size: 1.15em; }
+.gurbani-text h5 { font-size: 1.1em; }
+.gurbani-text h6 { font-size: 1em; }
+
+.gurbani-text p, .gurbani-text pre {
+  display: table;
+  padding: .2em;
+  border-radius: 5px;
+  margin: 2px auto;
+  font-size: 0.8em;
+}
+.gurbani-text pre {
+  color: #1E43D4;
+  padding: 10px 20vw 0px 20vw;
+}
+.gurbani-text p:hover,.hovered {
+  background-color: #efefef;
+  color: #c7254e;
+}
+.gurbani-text.raag-ang > div:nth-child(1) {
+  font-size: 2em !important;
+  display: block !important;
+  text-align: center !important;
+}
+.gurbani-text.raag-ang > div:nth-child(2) {
+  display: block !important;
+  text-align: center !important;
+  font-size: 1.25em !important;
+}

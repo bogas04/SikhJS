@@ -13,21 +13,18 @@
         location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
       }
     </script>
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
 
-    <link rel="stylesheet" href="css/material.icons.css" />
-    <link rel="stylesheet" href="css/material.min.css" />
-    <link rel="stylesheet" href="css/react-big-calendar.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     
     <div id="root"></div>
 
-    <script src="material.min.js"></script>
-    <script src="bundle.js" type="text/javascript"></script>
-    <script src="service-worker.js" type="text/javascript"></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/service-worker.js"></script>
     
     <!-- Google Analytics -->
     <script>

@@ -1,33 +1,35 @@
+import path from 'path';
 import webpack from 'webpack';
 
-const isProd = process.env.NODE_ENV && process.env.NODE_ENV === 'production';
-
 export default {
-  entry: "./js/index.js",
+
+  entry: {
+    vendor: [ 'react', 'react-dom', 'react-router-dom', 'dexie', 'styled-components', 'snarkdown' ],
+    main: './src/index.js',
+  },
+
+  devtool: 'source-map',
+
   output: {
-    path: __dirname,
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'assets', 'js'),
+    publicPath: '/assets/js',
+    filename: '[name].js',
   },
+
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        include: [ __dirname + '/js', ],
-        loader: "babel"
+        test: /\.js$/,
+        loaders: [ 'babel-loader' ],
       },
-    ]
+    ],
   },
-  plugins: isProd ? ([
-    new webpack.DefinePlugin({ 'process.env': { 'NODE_ENV': JSON.stringify('production') } }),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
-  ]) : [],
-  /*
-  resolve: {
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
-  },
-  */
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: 3,
+    }),
+  ],
+
 };
