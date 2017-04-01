@@ -97,6 +97,10 @@ export default class Shabads extends Component {
     this.setState({ source });
   }
 
+  shouldComponentUpdate (props, state) {
+    return this.state.q !== state.q;
+  }
+
   render () {
     const { type, source, q } = this.state;
 

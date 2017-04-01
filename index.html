@@ -9,9 +9,8 @@
 
     <!-- Force HTTPS -->
     <script>
-      if (location.protocol != 'https:') {
+      if (location.protocol != 'https:' && location.href.indexOf('http://localhost') < 0)
         location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-      }
     </script>
 
     <link rel="icon" type="image/png" href="assets/img/logo.png" />

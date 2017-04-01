@@ -3,17 +3,17 @@ import styled from 'styled-components';
 export default styled.nav`
   position: fixed;
   z-index: 2;
-  width: 100vw;
+  height: 35px;
   bottom: 0;
   left: 0;
+  right: 0;
   display: flex;
-  padding: 5px 10px;
+  padding: 5px 10vw;
   align-items: center;
   justify-content: space-between;
   background-color: teal;
   color: white;
   overflow-x: auto;
-  box-shadow: -30px 0px 20px -7px black inset;
 `;
 
 export const NavItem = styled.div`

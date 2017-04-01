@@ -1,6 +1,5 @@
 export { default as Greeting } from './Greeting';
 export { default as Main } from './Main';
-export { default as About } from './About';
 export { default as Baani } from './Baani';
 export { default as SGGS } from './SGGS';
 export { default as Nitnem } from './Nitnem';

@@ -10,10 +10,12 @@ import Nav, { NavItem } from '../../components/Nav';
 
 import Slider from '../../components/Slider';
 
+import FloatingIcon from '../../components/FloatingIcon';
+
 import { getSettings, setSettings } from '../../constants';
 
 import {
-  Author, Raag, Raags, Authors, Bookmarks, Hukamnama, About, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
+  Author, Raag, Raags, Authors, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
 } from '../';
 
 import Greeting from '../Greeting';
@@ -43,9 +45,8 @@ export default class Main extends React.Component {
 
   render () {
     const Content = () => <div>
-      <Route path="/" component={Greeting} exact />
       <div id="baaniWrapper">
-        <Route path="/about" component={About} />
+        <Route path="/" component={Greeting} exact />
         <Route path="/sggs/:ang?" component={SGGS} />
         <Route path="/calendar" component={Calendar} />
         <Route path="/shabads/:q([a-z]+)?" exact component={Shabads} />
@@ -91,11 +92,6 @@ export default class Main extends React.Component {
 
     const Header = () => <Nav>
       <NavItem><StyledLink to={`/`} >Home</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/hukamnama`} >Hukamnama</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/sggs`} >Sri Guru Granth Sahib</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/nitnem`} >Nitnem</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/shabads`} >Search</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/bookmarks`} >Bookmarks</StyledLink></NavItem>
       <NavItem><StyledLink to={`/calendar`} >Calendar</StyledLink></NavItem>
       <NavItem><StyledLink to={`/authors`} >Authors</StyledLink></NavItem>
       <NavItem><StyledLink to={`/raags`} >Raags</StyledLink></NavItem>
@@ -108,7 +104,15 @@ export default class Main extends React.Component {
           Report Issue
         </StyledAnchor>
       </NavItem>
-      <NavItem><StyledLink to={`/about`}>About</StyledLink></NavItem>
+      <NavItem>
+        <StyledAnchor
+          href="https://github.com/bogas04/SikhJS"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          About
+        </StyledAnchor>
+      </NavItem>
       <NavItem>
         <Slider
           min={0.25}
@@ -130,6 +134,9 @@ export default class Main extends React.Component {
         <div style={styles.wrapper}>
           <Header />
           <Content />
+          <Route path="/shabads" exact>{
+            ({ match }) => !match && <FloatingIcon to="/shabads">🔍 </FloatingIcon>
+          }</Route>
         </div>
       </Router>
     );

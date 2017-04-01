@@ -11,11 +11,12 @@ export default function Switch ({ children, ...props }) {
     transform: translate(-13px, 17px);
     display: inline-block;
     &::after {
-      content: "●";
+      content: ".";
+      margin: -160px -10px;
+      font-size: 190px;
       color: grey;
       transform: translate(-13px, -14px);
       display: block;
-      font-size: 24px;
     }
   `;
 
