@@ -7,15 +7,22 @@ const Wrapper = styled.div`
   background-color: #606060;
   color: white;
   display: flex;
-  flex-direction: column;
-  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+`;
+
+const Title = styled.h2`
+  background-color: #9a9a9a;
+  margin: 0;
+  margin-right: 10px;
+  padding: 10px;
 `;
 
 export default function Toolbar ({ title = null, children }) {
   return (
     <Wrapper>
-      {title && <h2>{title}</h2>}
+      {title && <Title>{title}</Title>}
       {children}
     </Wrapper>
   );

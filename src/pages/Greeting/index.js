@@ -37,17 +37,20 @@ const HomeWrapper = styled.div`
 
 const HomeLink = styled(Link)`
   display: block;
-  padding: 50px;
+  padding: 25px 50px;
   flex: 1;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   text-align: center;
   border: 1px solid black;
   transition: all 0.25s;
   text-transform: uppercase;
+  text-overflow: ellipsis;
   text-decoration: none;
   overflow: hidden;
   white-space: nowrap;
   color: black;
+  margin: 10px;
+  border-radius: 5px;
   &:hover {
     background: linear-gradient(141deg, #4fe8dd 0%, #4ff8fb 51%, #5cf5ec 75%);
   }
@@ -70,6 +73,10 @@ export default () => {
       <HomeWrapper>
         <HomeLink to="/nitnem">Nitnem</HomeLink>
         <HomeLink to="/bookmarks">Bookmarks</HomeLink>
+      </HomeWrapper>
+      <HomeWrapper>
+        <HomeLink to="/authors">Authors</HomeLink>
+        <HomeLink to="/raags">Raags</HomeLink>
       </HomeWrapper>
     </Wrapper>
   );

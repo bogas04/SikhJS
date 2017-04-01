@@ -4,11 +4,11 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import Button from '../../components/Button';
-
 import Nav, { NavItem } from '../../components/Nav';
 
 import Slider from '../../components/Slider';
+
+import Emoji from '../../components/Emoji';
 
 import FloatingIcon from '../../components/FloatingIcon';
 
@@ -68,6 +68,8 @@ export default class Main extends React.Component {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      width: 100%;
+      height: 100%;
       &:hover {
         color: white;
       }
@@ -80,6 +82,8 @@ export default class Main extends React.Component {
       text-decoration: none;
       color: lightgrey;
       text-overflow: ellipsis;
+      width: 100%;
+      height: 100%;
       white-space: nowrap;
       overflow: hidden;
       &:hover {
@@ -91,30 +95,17 @@ export default class Main extends React.Component {
     `;
 
     const Header = () => <Nav>
-      <NavItem><StyledLink to={`/`} >Home</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/calendar`} >Calendar</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/authors`} >Authors</StyledLink></NavItem>
-      <NavItem><StyledLink to={`/raags`} >Raags</StyledLink></NavItem>
       <NavItem>
-        <StyledAnchor
-          href="https://github.com/bogas04/SikhJS/issues/new"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Report Issue
-        </StyledAnchor>
+        <StyledLink title="Home" to={`/`} >
+          <Emoji>🙏🏼</Emoji>
+        </StyledLink>
       </NavItem>
-      <NavItem>
-        <StyledAnchor
-          href="https://github.com/bogas04/SikhJS"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          About
-        </StyledAnchor>
+      <NavItem onClick={this.handleToggleNightMode} title="Night Mode" pointer>
+        <Emoji>{this.state.nightMode ? '🌞' : '🌙'}</Emoji>
       </NavItem>
       <NavItem>
         <Slider
+          title="Adjust Font Size"
           min={0.25}
           max={1.75}
           step={0.1}
@@ -123,9 +114,24 @@ export default class Main extends React.Component {
         />
       </NavItem>
       <NavItem>
-        <Button onClick={this.handleToggleNightMode} naked dark title="Night Mode">
-          {this.state.nightMode ? '☀' : '☾'}
-        </Button>
+        <StyledAnchor
+          title="About"
+          href="https://github.com/bogas04/SikhJS"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Emoji>ⓘ</Emoji>
+        </StyledAnchor>
+      </NavItem>
+      <NavItem>
+        <StyledAnchor
+          title="Report Issue"
+          href="https://github.com/bogas04/SikhJS/issues/new"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Emoji>🐞</Emoji>
+        </StyledAnchor>
       </NavItem>
     </Nav>;
 
@@ -135,7 +141,7 @@ export default class Main extends React.Component {
           <Header />
           <Content />
           <Route path="/shabads" exact>{
-            ({ match }) => !match && <FloatingIcon to="/shabads">🔍 </FloatingIcon>
+            ({ match }) => !match && <FloatingIcon to="/shabads"><Emoji>🔍 </Emoji></FloatingIcon>
           }</Route>
         </div>
       </Router>

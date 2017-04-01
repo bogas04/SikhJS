@@ -8,7 +8,6 @@ export default styled.nav`
   left: 0;
   right: 0;
   display: flex;
-  padding: 5px 10vw;
   align-items: center;
   justify-content: space-between;
   background-color: teal;
@@ -18,5 +17,12 @@ export default styled.nav`
 
 export const NavItem = styled.div`
   flex: 1 1 20px;
-  margin: 2px 10px;
+  cursor: ${({ pointer }) => pointer ? 'pointer' : 'auto'};
+  margin: 0 5px;
+  text-align: center;
+  background-color: ${({ border }) => border ? '#009595' : 'none'};
+  padding: 10px 0;
+  & a {
+    padding: 10px 40px;
+  }
 `;

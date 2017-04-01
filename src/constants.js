@@ -1,6 +1,6 @@
 import Dexie from 'dexie';
 
-const defaultStore = { fontSizeMultiplier: 1, nightMode: false };
+const defaultStore = { fontSizeMultiplier: 1, nightMode: true };
 
 export const setSettings = (store = defaultStore) => {
   try {

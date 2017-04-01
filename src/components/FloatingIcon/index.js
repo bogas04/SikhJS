@@ -19,7 +19,7 @@ const BubbleOut = keyframes`
 export default styled(Link)`
   border-radius: 50%;
   position: fixed;
-  right: 10px;
+  right: 25px;
   background-color: #ce177c;
   bottom: 75px;
   overflow: hidden;
@@ -33,8 +33,6 @@ export default styled(Link)`
   display: flex;
   transition: all 0.25s;
   text-decoration: none;
-  color: transparent;
-  text-shadow: 0 0 0 white;
   &:active {
     transform: translate(1px, 1px);
   }

@@ -1,11 +1,11 @@
 {
   "name": "sikhjs",
-  "version": "0.6.1",
+  "version": "0.6.5",
   "description": "Multiplatform application for Gurbani",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p",
     "lint": "xo",
     "start": "webpack-dev-server --open",
     "test": "npm run lint"

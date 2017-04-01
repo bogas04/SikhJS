@@ -4,6 +4,8 @@ import { isBookmarked, toggleBookmark } from '../../bookmarks';
 
 import Loader from '../../components/Loader';
 
+import Emoji from '../../components/Emoji';
+
 import Toolbar from '../../components/Toolbar';
 
 import Textfield from '../../components/Textfield';
@@ -84,7 +86,7 @@ export default class SGGS extends Component {
             onClick={this.handleDecrementAng}
             title="Previous"
           >
-            ◀
+            <Emoji color="black">👈</Emoji>
           </Button>
 
           <Textfield
@@ -104,11 +106,11 @@ export default class SGGS extends Component {
             onClick={this.handleIncrementAng}
             title="Next"
           >
-            ▶
+            <Emoji color="black">👉</Emoji>
           </Button>
         </div>
 
-        <Button size={13} title="Random Ang" onClick={this.handleRandomAng}>⤭</Button>
+        <Button size={13} title="Random Ang" onClick={this.handleRandomAng}><Emoji color="black">🍀</Emoji></Button>
 
         <div style={styles.buttons}>
           <div style={styles.marginH('40px')}>
