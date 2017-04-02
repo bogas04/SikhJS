@@ -1,26 +1,13 @@
 import React from 'react';
-
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-
 import styled from 'styled-components';
-
 import Nav, { NavItem } from '../../components/Nav';
-
-import Slider from '../../components/Slider';
-
 import Emoji from '../../components/Emoji';
-
 import FloatingIcon from '../../components/FloatingIcon';
-
 import { getSettings, setSettings } from '../../constants';
-
 import {
-  Author, Raag, Raags, Authors, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
+  Author, Raag, Raags, Authors, Greeting, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
 } from '../';
-
-import Greeting from '../Greeting';
-
-import styles from './styles';
 
 export default class Main extends React.Component {
   constructor (p) {
@@ -32,7 +19,9 @@ export default class Main extends React.Component {
 
     this.handleToggleNightMode = this.handleToggleNightMode.bind(this);
 
-    this.handleFontSize = this.handleFontSize.bind(this);
+    this.handleIncrementFontSize = this.handleIncrementFontSize.bind(this);
+
+    this.handleDecrementFontSize = this.handleDecrementFontSize.bind(this);
 
     document.body.style.backgroundColor = nightMode ? '#212121' : '';
 
@@ -43,9 +32,18 @@ export default class Main extends React.Component {
     return false;
   }
 
+  componentDidMount () {
+    this.baaniWrapper.style.fontSize = `${20 * getSettings().fontSizeMultiplier}px`;
+  }
+
   render () {
     const Content = () => <div>
-      <div id="baaniWrapper">
+      <div
+        ref={dom => {
+          this.baaniWrapper = dom;
+        }}
+        id="baaniWrapper"
+      >
         <Route path="/" component={Greeting} exact />
         <Route path="/sggs/:ang?" component={SGGS} />
         <Route path="/calendar" component={Calendar} />
@@ -103,15 +101,11 @@ export default class Main extends React.Component {
       <NavItem onClick={this.handleToggleNightMode} title="Night Mode" pointer>
         <Emoji>{this.state.nightMode ? '🌞' : '🌙'}</Emoji>
       </NavItem>
-      <NavItem>
-        <Slider
-          title="Adjust Font Size"
-          min={0.25}
-          max={1.75}
-          step={0.1}
-          defaultValue={getSettings().fontSizeMultiplier}
-          onChange={this.handleFontSize}
-        />
+      <NavItem title="Adjust font size" pointer onClick={this.handleDecrementFontSize()}>
+        a
+      </NavItem>
+      <NavItem title="Adjust font size" pointer onClick={this.handleIncrementFontSize()}>
+        A
       </NavItem>
       <NavItem>
         <StyledAnchor
@@ -135,15 +129,20 @@ export default class Main extends React.Component {
       </NavItem>
     </Nav>;
 
+    const Wrapper = styled.div`
+      height: 100vh;
+      position: relative;
+    `;
+
     return (
       <Router>
-        <div style={styles.wrapper}>
+        <Wrapper>
           <Header />
           <Content />
           <Route path="/shabads" exact>{
             ({ match }) => !match && <FloatingIcon to="/shabads"><Emoji>🔍 </Emoji></FloatingIcon>
           }</Route>
-        </div>
+        </Wrapper>
       </Router>
     );
   }
@@ -162,13 +161,39 @@ export default class Main extends React.Component {
     this.setState({ nightMode: newSettings.nightMode });
   }
 
-  handleFontSize ({ target: { value: v } }) {
-    document.querySelector('#baaniWrapper').style.fontSize = `${20 * v}px`;
+  handleDecrementFontSize () {
+    let timesClicked = 1;
 
-    let newSettings = getSettings();
+    return () => {
+      const v = Math.max(0.25, getSettings().fontSizeMultiplier - (0.1 * timesClicked));
 
-    newSettings.fontSizeMultiplier = v;
+      this.baaniWrapper.style.fontSize = `${20 * v}px`;
 
-    setSettings(newSettings);
+      let newSettings = getSettings();
+
+      newSettings.fontSizeMultiplier = v;
+
+      setSettings(newSettings);
+
+      timesClicked++;
+    };
+  }
+
+  handleIncrementFontSize () {
+    let timesClicked = 1;
+
+    return () => {
+      const v = Math.max(0.25, getSettings().fontSizeMultiplier + (0.1 * timesClicked));
+
+      this.baaniWrapper.style.fontSize = `${20 * v}px`;
+
+      let newSettings = getSettings();
+
+      newSettings.fontSizeMultiplier = v;
+
+      setSettings(newSettings);
+
+      timesClicked++;
+    };
   }
 }

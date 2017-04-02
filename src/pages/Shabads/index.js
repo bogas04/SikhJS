@@ -1,21 +1,12 @@
 import React, { Component } from 'react';
-
 import { TYPES, SOURCES } from 'khajana';
-
 import styled from 'styled-components';
-
 import Toolbar from '../../components/Toolbar';
-
 import CardView from '../../components/Card';
-
 import Khajana from '../../components/Khajana';
-
 import LinkButton from '../../components/LinkButton';
-
 import Textfield from '../../components/Textfield';
-
 import Select from '../../components/Select';
-
 import GurbaniFont from '../../components/GurbaniFont';
 
 const SearchForm = styled.form`
@@ -98,7 +89,12 @@ export default class Shabads extends Component {
   }
 
   shouldComponentUpdate (props, state) {
-    return this.state.q !== state.q;
+    return this.state.q !== state.q || this.state.type !== state.type || this.state.source !== state.source;
+  }
+
+  componentDidMount () {
+    console.dir(this.$search);
+    this.$search.focus();
   }
 
   render () {
@@ -111,6 +107,9 @@ export default class Shabads extends Component {
           <SearchForm onSubmit={this.handleSearch}>
             <GurbaniFont disabled={parseInt(type, 10) === 3}>
               <Textfield
+                innerRef={input => {
+                  this.$search = input;
+                }}
                 defaultValue={q}
                 placeholder={parseInt(type, 10) === 3 ? 'Search' : 'Koj'}
                 autoCapitalize="off"

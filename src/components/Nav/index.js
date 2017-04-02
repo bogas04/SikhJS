@@ -16,7 +16,8 @@ export default styled.nav`
 `;
 
 export const NavItem = styled.div`
-  flex: 1 1 20px;
+  min-width: 100px;
+  width: 16%;
   cursor: ${({ pointer }) => pointer ? 'pointer' : 'auto'};
   margin: 0 5px;
   text-align: center;
