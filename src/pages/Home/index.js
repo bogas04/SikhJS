@@ -1,7 +1,5 @@
 import React from 'react';
-
 import styled, { keyframes } from 'styled-components';
-
 import { Link } from 'react-router-dom';
 
 import GurbaniFont from '../../components/GurbaniFont';
@@ -39,7 +37,7 @@ const HomeLink = styled(Link)`
   display: block;
   padding: 25px 50px;
   flex: 1;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #1d8881 0%, #2b9eab 51%, #2387ad 75%);
   text-align: center;
   border: 1px solid black;
   transition: all 0.25s;
@@ -48,11 +46,11 @@ const HomeLink = styled(Link)`
   text-decoration: none;
   overflow: hidden;
   white-space: nowrap;
-  color: black;
+  color: #0a0a0a;
   margin: 10px;
   border-radius: 5px;
   &:hover {
-    background: linear-gradient(141deg, #1d8881 0%, #2b9eab 51%, #2387ad 75%);
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   }
 `;
 

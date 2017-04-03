@@ -12,8 +12,8 @@ export default function Switch ({ children, ...props }) {
     display: inline-block;
     &::after {
       content: ".";
-      margin: -160px -10px;
-      font-size: 190px;
+      margin: -488% -10px;
+      font-size: 170px;
       color: grey;
       transform: translate(-13px, -14px);
       display: block;

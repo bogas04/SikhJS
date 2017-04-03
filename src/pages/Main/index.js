@@ -9,6 +9,47 @@ import {
   Author, Raag, Raags, Authors, Home, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
 } from '../';
 
+const Wrapper = styled.div`
+  height: 100vh;
+  position: relative;
+`;
+
+const BaaniWrapper = styled.div`
+  transition: all 0.25s ease-in-out;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: lightgrey;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    color: white;
+  }
+  &:active {
+    color: darkgrey;
+  }
+`;
+
+const StyledAnchor = styled.a`
+  text-decoration: none;
+  color: lightgrey;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  &:hover {
+    color: white;
+  }
+  &:active {
+    color: darkgrey;
+  }
+`;
+
 export default class Main extends React.Component {
   constructor (p) {
     super(p);
@@ -37,10 +78,6 @@ export default class Main extends React.Component {
   }
 
   render () {
-    const BaaniWrapper = styled.div`
-      transition: all 0.25s ease-in-out;
-    `;
-
     const Content = () => <div>
       <BaaniWrapper
         innerRef={dom => {
@@ -63,38 +100,6 @@ export default class Main extends React.Component {
         <Route path="/hukamnama" component={Hukamnama} />
       </BaaniWrapper>
     </div>;
-
-    const StyledLink = styled(Link)`
-      text-decoration: none;
-      color: lightgrey;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      &:hover {
-        color: white;
-      }
-      &:active {
-        color: darkgrey;
-      }
-    `;
-
-    const StyledAnchor = styled.a`
-      text-decoration: none;
-      color: lightgrey;
-      text-overflow: ellipsis;
-      width: 100%;
-      height: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      &:hover {
-        color: white;
-      }
-      &:active {
-        color: darkgrey;
-      }
-    `;
 
     const Header = () => <Nav>
       <NavItem>
@@ -132,11 +137,6 @@ export default class Main extends React.Component {
         </StyledAnchor>
       </NavItem>
     </Nav>;
-
-    const Wrapper = styled.div`
-      height: 100vh;
-      position: relative;
-    `;
 
     return (
       <Router>

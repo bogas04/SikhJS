@@ -1,22 +1,48 @@
 import React, { Component } from 'react';
-
+import styled from 'styled-components';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
-
 import Loader from '../../components/Loader';
-
 import Emoji from '../../components/Emoji';
-
 import Toolbar from '../../components/Toolbar';
-
 import Textfield from '../../components/Textfield';
-
 import Button from '../../components/Button';
-
 import Switch from '../../components/Switch';
-
-import styles from './styles';
-
 import constants from './constants';
+
+const Wrapper = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+`;
+
+const Orange = styled.span`
+  color: orange;
+`;
+
+const ButtonList = styled(Wrapper)`
+ flex-direction: row;
+ padding-bottom: 5px;
+`;
+
+const ButtonWrapper = styled.div`
+  margin: 0 40px;
+`;
+
+const AngContent = styled.div`
+  textAlign: ${({ align = 'left' }) => align};
+  padding: 20px;
+  lineHeight: 2em ;
+`;
+
+const Translation = styled.div`
+  display: ${({ showTranslation, larivaar }) => showTranslation
+    ? 'block'
+    : larivaar
+      ? 'inline-block'
+      : 'inline'
+  };
+`;
 
 export default class SGGS extends Component {
   constructor (props) {
@@ -54,33 +80,30 @@ export default class SGGS extends Component {
   render () {
     const { isBookmarked, lines, ang, larivaar, larivaarAssist, showTranslation } = this.state;
 
-    const Orange = ({ text }) => <span style={styles.orange}>{text}</span>;
-
     const larivaarify = line => <span>{
       line
         .split(' ')
         .map((akhar, index) => (
           larivaarAssist && akhar.indexOf('॥') < 0 && index % 2 === 0
-          ? <Orange key={index} text={akhar} />
+          ? <Orange key={index}>akhar</Orange>
           : <span key={index}>{akhar}</span>
         ))
     }</span>;
 
     const angContent = lines.map(({ id, text, translation }) => (
-      <div key={id} style={styles.translation(showTranslation, larivaar)}>
+      <Translation key={id} showTranslation={showTranslation} larivaar={larivaar}>
         {larivaar ? larivaarify(text) : ` ${text} `}
         {showTranslation ? <blockquote className="english">{translation.text}</blockquote> : ''}
-      </div>
+      </Translation>
     ));
 
     const className = [ 'gurbani-text', 'gurbani-text raag-ang' ][constants.RAAG_ANGS.includes(ang) ? 1 : 0];
 
     const AngBar = () => <Toolbar title={`Sri Guru Granth Sahib`}>
-      <div style={styles.flex}>
-
+      <Wrapper>
         <Button title="Bookmark" onClick={this.handleToggleBookmark}>{isBookmarked ? '★' : '☆'}</Button>
 
-        <div style={styles.flex}>
+        <Wrapper>
           <Button
             disabled={lines.length === 0 || ang === constants.MIN_ANG}
             onClick={this.handleDecrementAng}
@@ -108,12 +131,12 @@ export default class SGGS extends Component {
           >
             <Emoji color="black">👉</Emoji>
           </Button>
-        </div>
+        </Wrapper>
 
         <Button size={13} title="Random Ang" onClick={this.handleRandomAng}><Emoji color="black">🍀</Emoji></Button>
 
-        <div style={styles.buttons}>
-          <div style={styles.marginH('40px')}>
+        <ButtonList>
+          <ButtonWrapper>
             <Switch
               defaultChecked={larivaar}
               id="larivaar"
@@ -121,9 +144,9 @@ export default class SGGS extends Component {
             >
               Larivaar
             </Switch>
-          </div>
+          </ButtonWrapper>
 
-          <div style={styles.marginH('40px')}>
+          <ButtonWrapper>
             <Switch
               defaultChecked={larivaarAssist}
               id="larivaarAssist"
@@ -132,9 +155,9 @@ export default class SGGS extends Component {
             >
               <span>Larivaar<Orange text="Assist" /></span>
             </Switch>
-          </div>
+          </ButtonWrapper>
 
-          <div style={styles.marginH('40px')}>
+          <ButtonWrapper>
             <Switch
               defaultChecked={showTranslation}
               id="translation"
@@ -142,16 +165,16 @@ export default class SGGS extends Component {
             >
               English Translation
             </Switch>
-          </div>
-        </div>
-      </div>
+          </ButtonWrapper>
+        </ButtonList>
+      </Wrapper>
     </Toolbar>;
 
     return (
       <div>
         <AngBar />
         <Loader loading={lines.length === 0}>
-          <div style={styles.angContent} className={className}>{angContent}</div>
+          <AngContent className={className}>{angContent}</AngContent>
         </Loader>
       </div>
     );
