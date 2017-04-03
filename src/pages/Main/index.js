@@ -6,7 +6,7 @@ import Emoji from '../../components/Emoji';
 import FloatingIcon from '../../components/FloatingIcon';
 import { getSettings, setSettings } from '../../constants';
 import {
-  Author, Raag, Raags, Authors, Greeting, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
+  Author, Raag, Raags, Authors, Home, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads,
 } from '../';
 
 export default class Main extends React.Component {
@@ -37,14 +37,18 @@ export default class Main extends React.Component {
   }
 
   render () {
+    const BaaniWrapper = styled.div`
+      transition: all 0.25s ease-in-out;
+    `;
+
     const Content = () => <div>
-      <div
-        ref={dom => {
+      <BaaniWrapper
+        innerRef={dom => {
           this.baaniWrapper = dom;
         }}
         id="baaniWrapper"
       >
-        <Route path="/" component={Greeting} exact />
+        <Route path="/" component={Home} exact />
         <Route path="/sggs/:ang?" component={SGGS} />
         <Route path="/calendar" component={Calendar} />
         <Route path="/shabads/:q([a-z]+)?" exact component={Shabads} />
@@ -57,7 +61,7 @@ export default class Main extends React.Component {
         <Route path="/nitnem" exact component={Nitnem} />
         <Route path="/nitnem/:baani" component={Baani} />
         <Route path="/hukamnama" component={Hukamnama} />
-      </div>
+      </BaaniWrapper>
     </div>;
 
     const StyledLink = styled(Link)`
@@ -98,14 +102,14 @@ export default class Main extends React.Component {
           <Emoji>🙏🏼</Emoji>
         </StyledLink>
       </NavItem>
-      <NavItem onClick={this.handleToggleNightMode} title="Night Mode" pointer>
-        <Emoji>{this.state.nightMode ? '🌞' : '🌙'}</Emoji>
-      </NavItem>
       <NavItem title="Adjust font size" pointer onClick={this.handleDecrementFontSize()}>
         a
       </NavItem>
       <NavItem title="Adjust font size" pointer onClick={this.handleIncrementFontSize()}>
         A
+      </NavItem>
+      <NavItem onClick={this.handleToggleNightMode} title="Night Mode" pointer>
+        <Emoji>{this.state.nightMode ? '🌞' : '🌙'}</Emoji>
       </NavItem>
       <NavItem>
         <StyledAnchor

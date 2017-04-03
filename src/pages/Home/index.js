@@ -52,7 +52,7 @@ const HomeLink = styled(Link)`
   margin: 10px;
   border-radius: 5px;
   &:hover {
-    background: linear-gradient(141deg, #4fe8dd 0%, #4ff8fb 51%, #5cf5ec 75%);
+    background: linear-gradient(141deg, #1d8881 0%, #2b9eab 51%, #2387ad 75%);
   }
 `;
 

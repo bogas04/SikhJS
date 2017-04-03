@@ -13,6 +13,7 @@ export default styled.nav`
   background-color: teal;
   color: white;
   overflow-x: auto;
+  overflow-y: hidden;
 `;
 
 export const NavItem = styled.div`

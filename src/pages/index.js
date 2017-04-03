@@ -1,4 +1,4 @@
-export { default as Greeting } from './Greeting';
+export { default as Home } from './Home';
 export { default as Main } from './Main';
 export { default as Baani } from './Baani';
 export { default as SGGS } from './SGGS';
