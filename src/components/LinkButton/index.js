@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
-export default function LinkButton ({ disabled = false, children, to }) {
+export default function LinkButton ({ disabled = false, children, to, ...otherProps }) {
   return disabled
-    ? <Button disabled>{children}</Button>
-    : <Link to={to}><Button>{children}</Button></Link>
+    ? <Button disabled {...otherProps}>{children}</Button>
+    : <Link to={to} {...otherProps}><Button>{children}</Button></Link>
     ;
 }
 

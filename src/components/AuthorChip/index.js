@@ -14,10 +14,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-function AuthorChip ({ english, gurmukhi, id }) {
+function AuthorChip ({ english, gurmukhi, id, ...otherProps }) {
   if (english) {
     return (
-      <StyledLink to={`/authors/${id}`}>
+      <StyledLink to={`/authors/${id}`} {...otherProps}>
         <Chip>
           <span>{english} <GurbaniFont inline>{gurmukhi}</GurbaniFont></span>
         </Chip>

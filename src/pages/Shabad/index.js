@@ -44,33 +44,31 @@ export class ShabadView extends Component {
   render () {
     const { ang, author, gurbani, source, showTranslation, unicode, isBookmarked } = this.state;
 
-    return (<div>
-
+    const toolbar = (
       <Toolbar>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-          { author && <AuthorChip {...author} /> }
-          <div>
-            <Button onClick={this.handleToggleTranslation}>Translation</Button>
-            <Button onClick={this.handleToggleFont}>Unicode Font</Button>
-          </div>
-          <div>
-            {
-              ang && (
-                <LinkButton
-                  to={`/SGGS/${ang}`}
-                  disabled={source.id !== 'G'}
-                >
-                  {`Open Ang ${ang}`}
-                </LinkButton>
-              )
-            }
-            <Button onClick={this.handleToggleBookmark}>
-              { isBookmarked ? 'Bookmarked' : 'Bookmark' }
-            </Button>
-          </div>
+        <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Button style={{ display: 'block' }} onClick={this.handleToggleTranslation}>Translation</Button>
+          <Button style={{ display: 'block' }} onClick={this.handleToggleFont}>Unicode Font</Button>
+          { author && <AuthorChip style={{ display: 'block' }} {...author} /> }
+          {
+            ang && (
+              <LinkButton
+                style={{ display: 'block' }} 
+                to={`/SGGS/${ang}`}
+                disabled={source.id !== 'G'}
+              >
+                {`Open Ang ${ang}`}
+              </LinkButton>
+            )
+          }
+          <Button style={{ display: 'block' }} onClick={this.handleToggleBookmark}>
+            { isBookmarked ? 'Bookmarked' : 'Bookmark' }
+          </Button>
         </div>
       </Toolbar>
+    );
 
+    const content = (
       <div style={{ textAlign: 'center' }}>
         <div style={{ lineHeight: '2em', padding: 10 }}>
           {
@@ -94,8 +92,14 @@ export class ShabadView extends Component {
           }
         </div>
       </div>
+    );
 
-    </div>);
+    return (
+      <div>
+        {toolbar}
+        {content}
+      </div>
+    );
   }
   handleToggleTranslation () {
     this.setState({ showTranslation: !this.state.showTranslation });
