@@ -8,6 +8,24 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
+p::-moz-selection,
+span::-moz-selection,
+a::-moz-selection,
+div::-moz-selection,
+blockquote::-moz-selection {
+  background-color: orange !important;
+  color: black !important;
+}
+
+p::selection,
+span::selection,
+a::selection,
+div::selection,
+blockquote::selection {
+  background-color: orange !important;
+  color: black !important;
+}
+
 #baaniWrapper {
   position: absolute;
   top: 64px;

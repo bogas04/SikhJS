@@ -19,7 +19,6 @@ export class ShabadView extends Component {
     super(p);
 
     const { id, gurbani, author, ang, source } = this.props;
-    console.log(this.props);
 
     this.state = {
       showTranslation: false,
