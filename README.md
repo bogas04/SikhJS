@@ -43,14 +43,11 @@ git clone https://github.com/bogas04/SikhJS.git
 cd SikhJS
 npm i
 
-# Transpile JSX to JS
-# during development
-npm run build:webpack
+# Run development server
+npm start
 
-# Transpile JSX to JS
-# during development
-# and watch the files
-npm run build:watch
+# Build bundle
+npm run build
 ```
 
 ### [Progress](https://github.com/bogas04/SikhJS/milestones?direction=desc&sort=completeness&state=open)
