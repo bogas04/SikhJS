@@ -1,10 +1,10 @@
 import React from 'react';
-import snarkdown from 'snarkdown';
+import Parser from 'markdown';
 import Fetch from '../Fetch';
 
 /* eslint-disable react/no-danger */
 
-export const Markdown = ({ text }) => <div dangerouslySetInnerHTML={{ __html: snarkdown(text) }} />;
+export const Markdown = ({ text }) => <div dangerouslySetInnerHTML={{ __html: Parser.markdown.toHTML(text) }} />;
 
 Markdown.propTypes = {
   text: React.PropTypes.string,

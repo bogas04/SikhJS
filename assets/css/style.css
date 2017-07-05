@@ -84,6 +84,7 @@ blockquote::selection {
 }
 .gurbani-text.raag-ang > div:nth-child(1) {
   font-size: 2em !important;
+  line-height: 1em;
   display: block !important;
   text-align: center !important;
 }
