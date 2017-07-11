@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Nav, { NavItem } from '../../components/Nav';
 import Emoji from '../../components/Emoji';
 import FloatingIcon from '../../components/FloatingIcon';

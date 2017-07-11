@@ -4,7 +4,7 @@ import webpack from 'webpack';
 export default {
 
   entry: {
-    vendor: [ 'react', 'react-dom', 'react-router-dom', 'dexie', 'styled-components', 'markdown' ],
+    vendor: [ 'react', 'react-dom', 'react-router-dom', 'dexie', 'emotion', 'markdown' ],
     main: './src/index.js',
   },
 

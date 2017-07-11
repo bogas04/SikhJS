@@ -1,6 +1,6 @@
 import React from 'react';
-
-import styled, { keyframes } from 'styled-components';
+import { keyframes } from 'emotion';
+import styled from 'emotion/react';
 
 const spinAnimation = keyframes`
   0% { transform: rotate(0deg); }

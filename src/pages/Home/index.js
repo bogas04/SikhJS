@@ -1,6 +1,7 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { keyframes } from 'emotion';
+import styled from 'emotion/react';
 
 import GurbaniFont from '../../components/GurbaniFont';
 

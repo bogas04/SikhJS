@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 export const Card = styled.div`
   margin: 10px;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 export default function Switch ({ children, ...props }) {
   const Status = styled.span`

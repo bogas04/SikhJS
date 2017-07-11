@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 const Wrapper = styled.div`
   margin-top: -64px;

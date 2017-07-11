@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 export default styled.span`
   border-radius: 10px;

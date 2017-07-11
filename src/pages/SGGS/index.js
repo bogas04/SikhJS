@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import Loader from '../../components/Loader';
 import Emoji from '../../components/Emoji';

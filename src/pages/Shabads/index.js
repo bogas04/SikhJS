@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TYPES, SOURCES } from 'khajana';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Toolbar from '../../components/Toolbar';
 import CardView from '../../components/Card';
 import Khajana from '../../components/Khajana';

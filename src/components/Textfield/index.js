@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 export default styled.input`
   border-radius: 5px;
