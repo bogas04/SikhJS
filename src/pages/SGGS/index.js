@@ -85,7 +85,7 @@ export default class SGGS extends Component {
         .split(' ')
         .map((akhar, index) => (
           larivaarAssist && akhar.indexOf('॥') < 0 && index % 2 === 0
-          ? <Orange key={index}>akhar</Orange>
+          ? <Orange key={index}>{akhar}</Orange>
           : <span key={index}>{akhar}</span>
         ))
     }</span>;
