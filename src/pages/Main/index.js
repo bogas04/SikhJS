@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import styled from 'emotion/react';
 import Nav, { NavItem } from '../../components/Nav';
-import Emoji from '../../components/Emoji';
+import { Day, Night, Search, Information, Bug, Prayer } from '../../components/Icons';
 import FloatingIcon from '../../components/FloatingIcon';
 import { getSettings, setSettings } from '../../constants';
 import {
@@ -104,7 +104,7 @@ export default class Main extends React.Component {
     const Header = () => <Nav>
       <NavItem>
         <StyledLink title="Home" to={`/`} >
-          <Emoji>🙏🏼</Emoji>
+          <Prayer />
         </StyledLink>
       </NavItem>
       <NavItem title="Adjust font size" pointer onClick={this.handleDecrementFontSize()}>
@@ -114,7 +114,7 @@ export default class Main extends React.Component {
         A
       </NavItem>
       <NavItem onClick={this.handleToggleNightMode} title="Night Mode" pointer>
-        <Emoji>{this.state.nightMode ? '🌞' : '🌙'}</Emoji>
+        {this.state.nightMode ? <Night /> : <Day />}
       </NavItem>
       <NavItem>
         <StyledAnchor
@@ -123,7 +123,7 @@ export default class Main extends React.Component {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Emoji>ⓘ</Emoji>
+          <Information />
         </StyledAnchor>
       </NavItem>
       <NavItem>
@@ -133,7 +133,7 @@ export default class Main extends React.Component {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Emoji>🐞</Emoji>
+          <Bug />
         </StyledAnchor>
       </NavItem>
     </Nav>;
@@ -144,7 +144,7 @@ export default class Main extends React.Component {
           <Header />
           <Content />
           <Route path="/shabads" exact>{
-            ({ match }) => !match && <FloatingIcon to="/shabads"><Emoji>🔍 </Emoji></FloatingIcon>
+            ({ match }) => !match && <FloatingIcon to="/shabads"><Search /></FloatingIcon>
           }</Route>
         </Wrapper>
       </Router>

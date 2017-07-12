@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'emotion/react';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import Loader from '../../components/Loader';
-import Emoji from '../../components/Emoji';
+import { Previous, Next, Random } from '../../components/Icons';
 import Toolbar from '../../components/Toolbar';
 import Textfield from '../../components/Textfield';
 import Button from '../../components/Button';
@@ -109,7 +109,7 @@ export default class SGGS extends Component {
             onClick={this.handleDecrementAng}
             title="Previous"
           >
-            <Emoji color="black">👈</Emoji>
+            <Previous />
           </Button>
 
           <Textfield
@@ -129,11 +129,13 @@ export default class SGGS extends Component {
             onClick={this.handleIncrementAng}
             title="Next"
           >
-            <Emoji color="black">👉</Emoji>
+            <Next />
           </Button>
         </Wrapper>
 
-        <Button size={13} title="Random Ang" onClick={this.handleRandomAng}><Emoji color="black">🍀</Emoji></Button>
+        <Button size={13} title="Random Ang" onClick={this.handleRandomAng}>
+          <Random />
+        </Button>
 
         <ButtonList>
           <ButtonWrapper>
@@ -180,13 +182,13 @@ export default class SGGS extends Component {
     );
   }
 
-  updateLines (ang = this.state.ang) {
+  updateLines(ang = this.state.ang) {
     return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`).then(r => r.json()).then(lines => Promise.resolve(
       this.setState({ lines })
     ));
   }
 
-  setAng (ang) {
+  setAng(ang) {
     if (ang) {
       this.setState({ lines: [] });
       this.updateLines(ang);
@@ -198,31 +200,31 @@ export default class SGGS extends Component {
     }
   }
 
-  handleRandomAng () {
+  handleRandomAng() {
     this.setAng(parseInt(1 + (Math.random() * 1430), 10));
   }
 
-  handleIncrementAng () {
+  handleIncrementAng() {
     this.setAng(parseInt(this.state.ang, 10) + 1);
   }
 
-  handleDecrementAng () {
+  handleDecrementAng() {
     this.setAng(parseInt(this.state.ang, 10) - 1);
   }
 
-  handleToggleLarivaar () {
+  handleToggleLarivaar() {
     this.setState({ larivaar: !this.state.larivaar });
   }
 
-  handleToggleLarivaarAssist () {
+  handleToggleLarivaarAssist() {
     this.setState({ larivaarAssist: !this.state.larivaarAssist });
   }
 
-  handleToggleTranslation () {
+  handleToggleTranslation() {
     this.setState({ showTranslation: !this.state.showTranslation });
   }
 
-  handleToggleBookmark () {
+  handleToggleBookmark() {
     const { isBookmarked, ang } = this.state;
     const title = `Sri Guru Granth Sahib ${ang}`;
 
