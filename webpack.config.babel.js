@@ -4,7 +4,7 @@ import webpack from 'webpack';
 export default {
 
   entry: {
-    vendor: [ 'react', 'react-dom', 'react-router-dom', 'dexie', 'emotion', 'markdown' ],
+    vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'dexie', 'emotion', 'markdown'],
     main: './src/index.js',
   },
 
@@ -20,7 +20,7 @@ export default {
     rules: [
       {
         test: /\.js$/,
-        loaders: [ 'babel-loader' ],
+        loaders: ['babel-loader'],
       },
     ],
   },
