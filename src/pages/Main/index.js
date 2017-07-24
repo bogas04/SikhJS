@@ -19,7 +19,9 @@ export default class Main extends React.PureComponent {
           <Header />
           <Content />
           <Route path="/shabads" exact>{
-            ({ match }) => !match && <FloatingIcon to="/shabads"><Search /></FloatingIcon>
+            ({ match }) => !match && <FloatingIcon to="/shabads">
+              <Search fill="white" height="30px" width="30px" />
+            </FloatingIcon>
           }</Route>
         </Wrapper>
       </Router>

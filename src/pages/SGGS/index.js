@@ -48,7 +48,7 @@ export default class SGGS extends Component {
   constructor (props) {
     super(props);
 
-    let { ang = 1 } = this.props.match.params || { };
+    let { ang = parseInt(localStorage.getItem('sggs-ang')) || 1} = this.props.match.params || { };
 
     ang = parseInt(ang, 10);
 
@@ -193,6 +193,7 @@ export default class SGGS extends Component {
       this.setState({ lines: [] });
       this.updateLines(ang);
       this.setState({ ang });
+      localStorage.setItem('sggs-ang', ang);
 
       isBookmarked({ key: 'sggs', value: ang })
         .then(isBookmarked => this.setState({ isBookmarked }))
