@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import styled from 'emotion/react';
 import Header from './Header';
 import Content from './Content';
@@ -18,11 +18,6 @@ export default class Main extends React.PureComponent {
         <Wrapper>
           <Header />
           <Content />
-          <Route path="/shabads" exact>{
-            ({ match }) => !match && <FloatingIcon to="/shabads">
-              <Search fill="white" height="30px" width="30px" />
-            </FloatingIcon>
-          }</Route>
         </Wrapper>
       </Router>
     );

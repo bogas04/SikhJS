@@ -11,6 +11,7 @@ export default props => (
     x='0px'
     y='0px'
     enableBackground='new 0 0 1000 1000'
+    fill="white" 
     { ...props }
   />
 );

@@ -7,24 +7,31 @@
     <meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0097A7" />
 
-    <!-- Force HTTPS -->
-    <script>
-      if (location.protocol != 'https:' && location.href.indexOf('http://localhost') < 0)
-        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-    </script>
-
     <link rel="icon" type="image/png" href="assets/img/logo.png" />
     <link rel="manifest" href="manifest.json" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script defer src="assets/js/vendor.js"></script>
+    <script defer src="assets/js/main.js"></script>
   </head>
   <body>
     
     <div id="root"></div>
 
-    <script src="assets/js/vendor.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/service-worker.js"></script>
-    
+    <noscript>
+      <div style="text-align: center; padding: 5vh 5vw;">
+        <img style="height: 20vh;" src="assets/img/logo.png" alt="Khanda - Sikh Emblem" />
+        <h1 style="font-family: gurmukhi_heavy;">
+          vwihgurU jI kw Kwlsw
+          <br /> vwihgurU jI kI Pqih
+        </h1>
+        <p>
+          Sorry, this web-app relies on JavaScript to function. Please <a href="http://www.enable-javascript.com/" target="_blank">enable it.</a>
+        </p>
+      </div>
+    </noscript>
+
     <!-- Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
