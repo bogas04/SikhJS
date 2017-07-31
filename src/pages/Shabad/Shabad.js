@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'emotion/react';
 import { SETTINGS } from '../../constants';
+import { BlockQuote, GurbaniFont } from '../../components';
 
 const Wrapper = styled.div`
   line-height: 2em;
@@ -21,23 +22,11 @@ class Shabad extends React.PureComponent {
           gurbani
             .map(({ shabad }) => (
               <div key={shabad.id}>
-                <span className="gurbani-text">
-                  {
-                    unicode
-                      ? shabad.gurbani.unicode
-                      : shabad.gurbani.gurmukhi
-                  }
-                </span>
-                {
-                  transliteration && (
-                    <div><i>{shabad.transliteration}</i></div>
-                  )
-                }
-                {
-                  translation && (
-                    <blockquote style={{ margin: 0, padding: 10 }}>{shabad.translation.english.ssk}</blockquote>
-                  )
-                }
+                { unicode ? shabad.gurbani.unicode : <GurbaniFont>{shabad.gurbani.gurmukhi}</GurbaniFont>}
+
+                {transliteration && ( <div><i>{shabad.transliteration}</i></div>)}
+
+                {translation && <BlockQuote>{shabad.translation.english.ssk}</BlockQuote>}
               </div>
             ))
         }

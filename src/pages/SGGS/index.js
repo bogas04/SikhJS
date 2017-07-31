@@ -2,12 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'emotion/react';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
-import Loader from '../../components/Loader';
+import { Button, Switch, Toolbar, Textfield, Loader } from '../../components';
 import { Previous, Next, Random } from '../../components/Icons';
-import Toolbar from '../../components/Toolbar';
-import Textfield from '../../components/Textfield';
-import Button from '../../components/Button';
-import Switch from '../../components/Switch';
 import constants from './constants';
 
 const Wrapper = styled.div`
