@@ -1,6 +1,7 @@
 /node_modules
 node_modules
 *.swp
+.vscode
 SikhJS-*
 npm-debug.log
 .DS_Store

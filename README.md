@@ -58,14 +58,15 @@ npm run build
 
 # Credits
 Thanks to
-  * Guru Sahib for giving me talent and skill.
-  * [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
-  * Sikher.com for SGGS [api.sikher.com] (http://api.sikher.com).
-  * Documents from:
-  * SikhNet for the actual [Baanies] (http://www.sikhnet.com/DownloadBanis).
-  * [GurbaniFiles.org] (http://www.gurbanifiles.org/).
-  * [SearchGurbani.com] (http://searchgurbani.com/).
-  * and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who are making this possible.
+* Guru Sahib for giving me talent and skill.
+* [Khalis Foundation](https://khalisfoundation.org/) for their [Khajana API](https://github.com/bogas04/khajana-js).
+* [GurbaniNow](https://github.com/Sarabveer/gurbaninow).
+* Sikher.com for SGGS [api.sikher.com](http://api.sikher.com).
+* Documents from:
+  * SikhNet for the actual [Baanies](http://www.sikhnet.com/DownloadBanis).
+  * [GurbaniFiles.org](http://www.gurbanifiles.org/).
+  * [SearchGurbani.com](http://searchgurbani.com/).
+* and [everyone](https://github.com/bogas04/SikhJS/graphs/contributors) else who is making this possible.
 
 # License
 MIT
