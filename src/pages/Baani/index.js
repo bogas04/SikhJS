@@ -1,19 +1,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import FetchAndMarkdown from '../../components/Markdown';
+import { GurbaniFont, Markdown as FetchAndMarkdown } from '../../components';
 
 export default class Baani extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     window.scrollTo(0, 0);
   }
-  render () {
+  shouldComponentUpdate(nextProps) {
+    const currentBaani = this.props.match.params.baani;
+    const nextBaani = nextProps.match.params.baani;
+
+    return nextBaani !== currentBaani;
+  }
+  render() {
     const { match: { params: { baani } } } = this.props;
 
     return (
-      <div className="gurbani-text" style={{ textAlign: 'center' }} >
+      <GurbaniFont style={{ textAlign: 'center' }}>
         <FetchAndMarkdown url={`assets/docs/md/${baani}.md`} />
-      </div>
+      </GurbaniFont>
     );
   }
 }

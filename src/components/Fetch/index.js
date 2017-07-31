@@ -8,6 +8,9 @@ export default class Fetch extends Component {
     this.state = { data: this.props.initialValue, loading: true };
     this.update(this.props);
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.url !== nextProps.url || this.state.loading !== nextState.loading;
+  }
   componentWillReceiveProps (props) {
     this.setState({ loading: true });
     this.update(props);

@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { GurbaniFont, Json } from '../../components';
 
-import Json from '../../components/Json';
-
-export function HukamnamaView ({ ang, english, punjabi, gurbani, date }) {
-  return (
-    <div>
-      <section style={{ padding: 20, lineHeight: '2em' }}>
-        <div>{ang} {date}</div>
-        <div className="gurbani-text">{gurbani}</div>
-        <div className="english">{english}</div>
-        <div className="gurbani-text">{punjabi}</div>
-      </section>
-    </div>
-  );
+export class HukamnamaView extends React.PureComponent {
+  render() {
+    const { ang, english, punjabi, gurbani, date } = this.props;
+    return (
+      <div>
+        <section style={{ padding: 20, lineHeight: '2em' }}>
+          <div>{ang} {date}</div>
+          <GurbaniFont>{gurbani}</GurbaniFont>
+          <div className="english">{english}</div>
+          <GurbaniFont>{punjabi}</GurbaniFont>
+        </section>
+      </div>
+    );
+  }
 }
 
 HukamnamaView.propTypes = {
@@ -24,15 +26,15 @@ HukamnamaView.propTypes = {
   date: PropTypes.date,
 };
 
-export default () => {
-  const loadingText = (<div style={{ fontSize: '6vw', margin: 10 }} className="gurbani-text">
+const loadingText = (
+  <GurbaniFont style={{ fontSize: '6vw', margin: 10 }}>
     <p>su khu tl guru syvIAY Aihinis shij suBwie ]</p>
     <p>drsin prisAY gurU kY jnm mrx duKu jwie ]10]</p>
-  </div>);
+  </GurbaniFont>
+);
 
-  return (
-    <Json url={`https://mukhwakh.herokuapp.com/api`} loadingText={loadingText}>{
-      ({ data: { data } }) => <HukamnamaView {...data} />
-    }</Json>
-  );
-};
+export default () => (
+  <Json url={`https://mukhwakh.herokuapp.com/api`} loadingText={loadingText}>{
+    ({ data: { data } }) => <HukamnamaView {...data} />
+  }</Json>
+);

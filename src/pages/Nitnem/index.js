@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom';
-
 import styled from 'emotion/react';
-
-import AuthorChip from '../../components/AuthorChip';
-
-import Toolbar from '../../components/Toolbar';
-
+import { GurbaniFont, Button, AuthorChip, Toolbar } from '../../components';
 import { Card, CardActions, CardText, CardTitle } from '../../components/Card';
-
-import Button from '../../components/Button';
-
-import GurbaniFont from '../../components/GurbaniFont';
-
 import baanies from './constants';
+
+const ShowMoreWrapper = styled.div`
+  margin: 5px;
+  padding: 5px;
+`;
+
+const InfoWrapper = styled.div`
+  border-top: 1px solid lightgrey;
+  margin: 5px;
+  padding: 5px;
+`;
 
 export class BaaniCard extends Component {
   constructor (p) {
@@ -25,17 +25,6 @@ export class BaaniCard extends Component {
   }
   render () {
     const { title, info, author } = this.props;
-
-    const ShowMoreWrapper = styled.div`
-      margin: 5px;
-      padding: 5px;
-    `;
-
-    const InfoWrapper = styled.div`
-      border-top: 1px solid lightgrey;
-      margin: 5px;
-      padding: 5px;
-    `;
 
     return (
       <Card>
@@ -66,15 +55,15 @@ BaaniCard.propTypes = {
   author: PropTypes.array,
 };
 
+const Wrapper = styled.section`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 10vw;
+`;
+
 export default function Nitnem () {
   const content = [ ...baanies.nitnem, ...baanies.others ].map(e => <BaaniCard key={e.title} {...e} />);
-
-  const Wrapper = styled.section`
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    padding: 0 10vw;
-  `;
 
   return (
     <div>
