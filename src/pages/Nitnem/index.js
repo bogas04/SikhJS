@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -60,9 +61,9 @@ export class BaaniCard extends Component {
 }
 
 BaaniCard.propTypes = {
-  title: React.PropTypes.string,
-  info: React.PropTypes.string,
-  author: React.PropTypes.array,
+  title: PropTypes.string,
+  info: PropTypes.string,
+  author: PropTypes.array,
 };
 
 export default function Nitnem () {

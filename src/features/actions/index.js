@@ -16,5 +16,11 @@ export const nextAng = createAction(NEXT_ANG);
 export const PREVIOUS_ANG = 'PREVIOUS_ANG';
 export const previousAng = createAction(PREVIOUS_ANG);
 
+export const UPDATE_SETTING = 'UPDATE_SETTING';
+export const updateSetting = createAction(UPDATE_SETTING);
+
+export const RESET_SETTINGS = 'RESET_SETTINGS';
+export const resetSettings = createAction(RESET_SETTINGS);
+
 export const SET_ANG = 'SET_ANG';
 export const setAng = createAction(SET_ANG);

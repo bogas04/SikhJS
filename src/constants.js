@@ -10,3 +10,15 @@ export const getDB = () => {
   db.open();
   return db;
 };
+
+export const SETTINGS = {
+  UNICODE: 'unicode',
+  TRANSLATION: 'translation',
+  TRANSLITERATION: 'transliteration',
+  TRANSLITERATION_LANGUAGE: 'transliterationLanguage',
+};
+
+export const SEARCH_OPTIONS = {
+  TYPE: 'search-type',
+  SOURCE: 'search-source',
+};

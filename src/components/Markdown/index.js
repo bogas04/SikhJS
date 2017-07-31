@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Parser from 'markdown';
 import Fetch from '../Fetch';
@@ -7,7 +8,7 @@ import Fetch from '../Fetch';
 export const Markdown = ({ text }) => <div dangerouslySetInnerHTML={{ __html: Parser.markdown.toHTML(text) }} />;
 
 Markdown.propTypes = {
-  text: React.PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default function FetchAndMarkdown ({ style, className, ...props }) {
@@ -21,6 +22,6 @@ export default function FetchAndMarkdown ({ style, className, ...props }) {
 }
 
 FetchAndMarkdown.propTypes = {
-  className: React.PropTypes.string,
-  style: React.PropTypes.object,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };

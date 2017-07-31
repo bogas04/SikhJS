@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -47,8 +48,8 @@ const SearchCard = ({ data, onTitleChange }) => {
 };
 
 SearchCard.propTypes = {
-  data: React.PropTypes.object,
-  onTitleChange: React.PropTypes.func,
+  data: PropTypes.object,
+  onTitleChange: PropTypes.func,
 };
 
 export default class Bookmarks extends Component {

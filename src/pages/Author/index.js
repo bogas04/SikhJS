@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Toolbar from '../../components/Toolbar';
@@ -20,7 +21,7 @@ function Author ({ match: { params: { id } } }) {
 }
 
 Author.propTypes = {
-  match: React.PropTypes.object,
+  match: PropTypes.object,
 };
 
 export default Author;

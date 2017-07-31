@@ -1,14 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
 import styled from 'emotion/react';
-
-import Json from '../Json';
-
-import Chip from '../Chip';
-
-import GurbaniFont from '../GurbaniFont';
+import { GurbaniFont, Chip, Json } from '../';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -39,9 +33,9 @@ function AuthorChip ({ english, gurmukhi, id, ...otherProps }) {
 }
 
 AuthorChip.propTypes = {
-  english: React.PropTypes.string,
-  gurmukhi: React.PropTypes.string,
-  id: React.PropTypes.number,
+  english: PropTypes.string,
+  gurmukhi: PropTypes.string,
+  id: PropTypes.number,
 };
 
 export default AuthorChip;

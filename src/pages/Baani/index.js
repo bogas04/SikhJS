@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FetchAndMarkdown from '../../components/Markdown';
@@ -18,5 +19,5 @@ export default class Baani extends React.Component {
 }
 
 Baani.propTypes = {
-  match: React.PropTypes.object,
+  match: PropTypes.object,
 };

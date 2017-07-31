@@ -3,12 +3,43 @@ import webpack from 'webpack';
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
-export default {
+const vendor = [
+  'react',
+  'react-dom',
+  'react-router-dom',
+  'redux',
+  'react-redux',
+  'dexie',
+  'emotion',
+  'remarkable',
+  'unfetch',
+];
 
-  entry: {
-    vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'dexie', 'emotion', 'remarkable', 'unfetch'],
-    main: './src/index.js',
-  },
+const main = './src/index.js';
+
+
+const plugins = PRODUCTION
+  ? [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: 3,
+    }),
+  ]
+  : [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: 3,
+    }),
+  ]
+  ;
+
+export default {
+  entry: { vendor, main },
 
   devtool: PRODUCTION ? false : 'source-map',
 
@@ -27,16 +58,5 @@ export default {
     ],
   },
 
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: 3,
-    }),
-  ],
-
+  plugins,
 };

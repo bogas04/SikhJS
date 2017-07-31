@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Toolbar from '../../components/Toolbar';
 import Json from '../../components/Json';
@@ -18,7 +19,7 @@ function Raag ({ match: { params: { id } } }) {
 }
 
 Raag.propTypes = {
-  match: React.PropTypes.object,
+  match: PropTypes.object,
 };
 
 export default Raag;

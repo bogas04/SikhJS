@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styled from 'emotion/react';
@@ -29,6 +30,6 @@ export default function Toolbar ({ title = null, children }) {
 }
 
 Toolbar.propTypes = {
-  title: React.PropTypes.node,
-  children: React.PropTypes.node,
+  title: PropTypes.node,
+  children: PropTypes.node,
 };

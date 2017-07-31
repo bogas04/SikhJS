@@ -19,3 +19,15 @@ export {
   Previous,
   Random,
 };
+
+export default {
+  Bug,
+  Information,
+  Prayer,
+  Search,
+  Day,
+  Night,
+  Next,
+  Previous,
+  Random,
+};

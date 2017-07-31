@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { keyframes } from 'emotion';
 import styled from 'emotion/react';
@@ -32,7 +33,7 @@ export default function LoaderView ({ loading, children, loadingText = '' }) {
 }
 
 LoaderView.propTypes = {
-  children: React.PropTypes.node,
-  loading: React.PropTypes.bool,
-  loadingText: React.PropTypes.node,
+  children: PropTypes.node,
+  loading: PropTypes.bool,
+  loadingText: PropTypes.node,
 };

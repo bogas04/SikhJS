@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'emotion/react';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
@@ -236,5 +237,5 @@ export default class SGGS extends Component {
 }
 
 SGGS.propTypes = {
-  match: React.PropTypes.object,
+  match: PropTypes.object,
 };

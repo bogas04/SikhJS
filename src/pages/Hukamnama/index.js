@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Json from '../../components/Json';
@@ -16,11 +17,11 @@ export function HukamnamaView ({ ang, english, punjabi, gurbani, date }) {
 }
 
 HukamnamaView.propTypes = {
-  ang: React.PropTypes.number,
-  english: React.PropTypes.string,
-  punjabi: React.PropTypes.string,
-  gurbani: React.PropTypes.string,
-  date: React.PropTypes.date,
+  ang: PropTypes.number,
+  english: PropTypes.string,
+  punjabi: PropTypes.string,
+  gurbani: PropTypes.string,
+  date: PropTypes.date,
 };
 
 export default () => {

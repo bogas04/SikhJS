@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Loader from '../Loader';
 
@@ -30,20 +31,20 @@ export default class Fetch extends Component {
 }
 
 Fetch.propTypes = {
-  initialValue: React.PropTypes.oneOfType([
-    React.PropTypes.array,
-    React.PropTypes.object,
+  initialValue: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
   ]),
-  cache: React.PropTypes.oneOf([
+  cache: PropTypes.oneOf([
     'default',
     'no-store',
     'reload',
     'no-cache',
     'force-cache',
   ]),
-  url: React.PropTypes.string,
-  transform: React.PropTypes.func,
-  showLoader: React.PropTypes.bool,
-  loadingText: React.PropTypes.string,
-  children: React.PropTypes.func,
+  url: PropTypes.string,
+  transform: PropTypes.func,
+  showLoader: PropTypes.bool,
+  loadingText: PropTypes.string,
+  children: PropTypes.func,
 };

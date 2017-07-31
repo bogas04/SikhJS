@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import Toolbar from '../../components/Toolbar';
@@ -39,7 +40,7 @@ export const RaagsView = ({ keyword }) => {
   };
 
   View.propTypes = {
-    data: React.PropTypes.array,
+    data: PropTypes.array,
   };
 
   return View;

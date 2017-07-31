@@ -53,6 +53,13 @@ const HomeLink = styled(Link)`
   &:hover {
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   }
+  @media(max-width: 800px) {
+    padding: 25px 5px;
+  }
+  @media(max-width: 500px) {
+    padding: 25px 0px;
+    font-size: 14px;
+  }
 `;
 
 export default () => {
@@ -67,15 +74,18 @@ export default () => {
       </Heading>
       <HomeWrapper>
         <HomeLink to="/hukamnama">Hukamnama</HomeLink>
-        <HomeLink to="/sggs">Sehaj Paath</HomeLink>
       </HomeWrapper>
       <HomeWrapper>
         <HomeLink to="/nitnem">Nitnem</HomeLink>
-        <HomeLink to="/bookmarks">Bookmarks</HomeLink>
+        <HomeLink to="/sggs">Sehaj Paath</HomeLink>
       </HomeWrapper>
       <HomeWrapper>
         <HomeLink to="/authors">Authors</HomeLink>
         <HomeLink to="/raags">Raags</HomeLink>
+      </HomeWrapper>
+      <HomeWrapper>
+        <HomeLink to="/bookmarks">Bookmarks</HomeLink>
+        <HomeLink to="/settings">Settings</HomeLink>
       </HomeWrapper>
     </Wrapper>
   );

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -12,7 +13,7 @@ export default function LinkButton ({ disabled = false, children, to, ...otherPr
 }
 
 LinkButton.propTypes = {
-  to: React.PropTypes.string,
-  children: React.PropTypes.node,
-  disabled: React.PropTypes.bool,
+  to: PropTypes.string,
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
 };

@@ -2,7 +2,8 @@ import React from 'react';
 
 import styled from 'emotion/react';
 
+const Input = styled.input``;
+
 export default props => {
-  const Input = styled.input``;
   return <Input type="range" {...props} />;
 };

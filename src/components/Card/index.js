@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import styled from 'emotion/react';
@@ -21,13 +22,13 @@ export const CardTitle = styled.div`
   font-weight: bold;
 `;
 
-export const CardText = ({ enabled = true, ...props }) => {
-  const Text = styled.div`
-    margin: 5px;
-    color: #232323;
-    paddgin: 5px;
-  `;
+const Text = styled.div`
+  margin: 5px;
+  color: #232323;
+  paddgin: 5px;
+`;
 
+export const CardText = ({ enabled = true, ...props }) => {
   return enabled
     ? <Text {...props} />
     : null
@@ -35,7 +36,7 @@ export const CardText = ({ enabled = true, ...props }) => {
 };
 
 CardText.propTypes = {
-  enabled: React.PropTypes.bool,
+  enabled: PropTypes.bool,
 };
 
 export const CardActions = styled.div`
@@ -58,9 +59,9 @@ const ComposedCard = ({ title, text, actions = [] }) => (
 );
 
 ComposedCard.propTypes = {
-  title: React.PropTypes.node,
-  text: React.PropTypes.node,
-  actions: React.PropTypes.array,
+  title: PropTypes.node,
+  text: PropTypes.node,
+  actions: PropTypes.array,
 };
 
 export default ComposedCard;

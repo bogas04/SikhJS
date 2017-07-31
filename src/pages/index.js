@@ -13,3 +13,4 @@ export { default as Raags } from './Raags';
 export { default as Author } from './Author';
 export { default as Raag } from './Raag';
 export { default as NotFound } from './NotFound';
+export { default as Settings } from './Settings';

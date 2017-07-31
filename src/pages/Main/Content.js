@@ -3,7 +3,8 @@ import styled from 'emotion/react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
-  Author, Raag, Raags, Authors, Home, Bookmarks, Hukamnama, Baani, SGGS, Nitnem, Calendar, Shabad, Shabads, NotFound,
+  Author, Raag, Raags, Authors, Home, Bookmarks, Hukamnama, Baani,
+  SGGS, Nitnem, Calendar, Shabad, Shabads, NotFound, Settings,
 } from '../';
 import { Search } from '../../components/Icons';
 import FloatingIcon from '../../components/FloatingIcon';
@@ -24,6 +25,7 @@ const Content = () => (
         <Route path="/calendar" component={Calendar} />
         <Route path="/shabads/:q([a-z]+)?" exact component={Shabads} />
         <Route path="/shabads/:id(\d+)" exact component={Shabad} />
+        <Route path="/settings" component={Settings} />
         <Route path="/bookmarks" component={Bookmarks} />
         <Route path="/authors" exact component={Authors} />
         <Route path="/authors/:id" component={Author} />

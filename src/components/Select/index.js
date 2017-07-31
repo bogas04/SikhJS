@@ -6,4 +6,7 @@ export default styled.select`
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 5px;
+  max-width: 80vw;
+  font-size: 20px;
+  padding: 5px;
 `;

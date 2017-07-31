@@ -6,9 +6,10 @@ export default styled.input`
   border: none;
   padding: 10px;
   margin: 5px;
-  ${({ size }) => size && `width: ${size}px`}
+  width: ${({ size }) => size ? `${size}px` : '280px'};
+  max-width: 80vw;
   font-size: 16px;
-  ${({ center }) => center && 'text-align: center;'}
+  text-align: ${({ center }) => center ? 'center' : 'initial'};
   &:focus {
     outline: none;
   }
