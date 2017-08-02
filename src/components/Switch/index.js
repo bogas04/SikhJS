@@ -7,15 +7,22 @@ const Status = styled.span`
   border-radius: 5px;
   height: 0px;
   width: 28px;
-  transform: translate(-13px, 17px);
+  margin-left: 20px;
+  transform: translate(-13px, 13px);
   display: inline-block;
   &::after {
+    pointer-events: none;
     content: ".";
-    margin: -488% -10px;
-    font-size: 170px;
     color: grey;
-    transform: translate(-13px, -14px);
+    transform: scale(9);
+    transform-origin: 6% 84%;
+    transition: transform .25s;
     display: block;
+  }
+  &:focus, &:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    user-select: none;
   }
 `;
 
@@ -34,21 +41,32 @@ const Checkbox = styled.input`
   }
   &:checked + span::after {
     color: teal;
-    transform: translate(14px, -14px);
+    transform: translate(33%, 0) scale(9);
+  }
+  &:focus, &:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    user-select: none;
   }
 `;
 
 const Label = styled.label`
   color: ${({ disabled }) => disabled ? 'grey' : 'inherit'};
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  &:focus, &:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    user-select: none;
+  }
 `;
 
-export default function Switch({ children, ...props }) {
+export default function Switch({ children, left = true, ...props }) {
   return (
     <Label {...props}>
       <Checkbox type="checkbox" {...props} />
+      {left ? null : children}
       <Status />
-      {children}
+      {left ? children : null}
     </Label>
   );
 }

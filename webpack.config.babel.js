@@ -58,5 +58,13 @@ export default {
     ],
   },
 
+  devServer: {
+    contentBase: path.join(__dirname),
+    compress: true,
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  },
+
   plugins,
 };

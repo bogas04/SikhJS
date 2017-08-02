@@ -7,6 +7,7 @@ import Night from './Night';
 import Next from './Next';
 import Previous from './Previous';
 import Random from './Random';
+import Bookmark from './Bookmark';
 
 export {
   Bug,
@@ -18,6 +19,7 @@ export {
   Next,
   Previous,
   Random,
+  Bookmark,
 };
 
 export default {
@@ -30,4 +32,5 @@ export default {
   Next,
   Previous,
   Random,
+  Bookmark,
 };

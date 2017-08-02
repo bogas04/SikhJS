@@ -1,4 +1,4 @@
-const VERSION = 'v1';
+const VERSION = 'v2';
 const RUNTIME = 'runtime';
 
 const currentCaches = [RUNTIME, VERSION];
@@ -6,7 +6,6 @@ const currentCaches = [RUNTIME, VERSION];
 const CACHE_URLS = [
   './',
   './index.html',
-  './assets/css/style.css',
   './assets/css/style.css',
   './assets/fonts/gurmukhi_heavy.ttf',
   './assets/js/main.js',

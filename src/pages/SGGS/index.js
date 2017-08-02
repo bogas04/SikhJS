@@ -2,43 +2,15 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'emotion/react';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
-import { Button, Switch, Toolbar, Textfield, Loader } from '../../components';
-import { Previous, Next, Random } from '../../components/Icons';
+import { Loader } from '../../components';
 import constants from './constants';
+import AngBar from './AngBar';
+import AngContent from './AngContent';
 
-const Wrapper = styled.div`
- display: flex;
- justify-content: center;
- align-items: center;
- flex-wrap: wrap;
-`;
-
-const Orange = styled.span`
-  color: orange;
-`;
-
-const ButtonList = styled(Wrapper)`
- flex-direction: row;
- padding-bottom: 5px;
-`;
-
-const ButtonWrapper = styled.div`
-  margin: 0 40px;
-`;
-
-const AngContent = styled.div`
+const AngContentWrapper = styled.div`
   textAlign: ${({ align = 'left' }) => align};
   padding: 20px;
-  lineHeight: 2em ;
-`;
-
-const Translation = styled.div`
-  display: ${({ showTranslation, larivaar }) => showTranslation
-    ? 'block'
-    : larivaar
-      ? 'inline-block'
-      : 'inline'
-  };
+  lineHeight: 2em;
 `;
 
 export default class SGGS extends Component {
@@ -77,103 +49,31 @@ export default class SGGS extends Component {
   render () {
     const { isBookmarked, lines, ang, larivaar, larivaarAssist, showTranslation } = this.state;
 
-    const larivaarify = line => <span>{
-      line
-        .split(' ')
-        .map((akhar, index) => (
-          larivaarAssist && akhar.indexOf('॥') < 0 && index % 2 === 0
-          ? <Orange key={index}>{akhar}</Orange>
-          : <span key={index}>{akhar}</span>
-        ))
-    }</span>;
-
-    const angContent = lines.map(({ id, text, translation }) => (
-      <Translation key={id} showTranslation={showTranslation} larivaar={larivaar}>
-        {larivaar ? larivaarify(text) : ` ${text} `}
-        {showTranslation ? <blockquote className="english">{translation.text}</blockquote> : ''}
-      </Translation>
-    ));
-
-    const className = [ 'gurbani-text', 'gurbani-text raag-ang' ][constants.RAAG_ANGS.includes(ang) ? 1 : 0];
-
-    const AngBar = () => <Toolbar title={`Sri Guru Granth Sahib`}>
-      <Wrapper>
-        <Button title="Bookmark" onClick={this.handleToggleBookmark}>{isBookmarked ? '★' : '☆'}</Button>
-
-        <Wrapper>
-          <Button
-            disabled={lines.length === 0 || ang === constants.MIN_ANG}
-            onClick={this.handleDecrementAng}
-            title="Previous"
-          >
-            <Previous />
-          </Button>
-
-          <Textfield
-            disabled={lines.length === 0}
-            center
-            size={60}
-            placeholder={String(ang)}
-            onBlur={e => this.setAng(Number(e.target.value))}
-            type="number"
-            min={constants.MIN_ANG}
-            max={constants.MAX_ANG}
-            defaultValue={ang}
-          />
-
-          <Button
-            disabled={lines.length === 0 || ang === constants.MAX_ANG}
-            onClick={this.handleIncrementAng}
-            title="Next"
-          >
-            <Next />
-          </Button>
-        </Wrapper>
-
-        <Button size={13} title="Random Ang" onClick={this.handleRandomAng}>
-          <Random />
-        </Button>
-
-        <ButtonList>
-          <ButtonWrapper>
-            <Switch
-              defaultChecked={larivaar}
-              id="larivaar"
-              onChange={this.handleToggleLarivaar}
-            >
-              Larivaar
-            </Switch>
-          </ButtonWrapper>
-
-          <ButtonWrapper>
-            <Switch
-              defaultChecked={larivaarAssist}
-              id="larivaarAssist"
-              onChange={this.handleToggleLarivaarAssist}
-              disabled={!this.state.larivaar}
-            >
-              <span>Larivaar<Orange text="Assist" /></span>
-            </Switch>
-          </ButtonWrapper>
-
-          <ButtonWrapper>
-            <Switch
-              defaultChecked={showTranslation}
-              id="translation"
-              onChange={this.handleToggleTranslation}
-            >
-              English Translation
-            </Switch>
-          </ButtonWrapper>
-        </ButtonList>
-      </Wrapper>
-    </Toolbar>;
+    const className = ['gurbani-text', 'gurbani-text raag-ang'][constants.RAAG_ANGS.includes(ang) ? 1 : 0];
 
     return (
       <div>
-        <AngBar />
+        <AngBar
+          isBookmarked={isBookmarked}
+          lines={lines}
+          ang={ang}
+          larivaar={larivaar}
+          larivaarAssist={larivaarAssist}
+          showTranslation={showTranslation}
+          onSetAng={this.setAng}
+          onDecrementAng={this.handleDecrementAng}
+          onIncrementAng={this.handleIncrementAng}
+          onRandomAng={this.handleRandomAng}
+          onToggleLarivaar={this.handleToggleLarivaar}
+          onToggleLarivaarAssist={this.handleToggleLarivaarAssist}
+          onToggleTranslation={this.handleToggleTranslation}
+          onToggleBookmark={this.handleToggleBookmark}
+        />
+
         <Loader loading={lines.length === 0}>
-          <AngContent className={className}>{angContent}</AngContent>
+          <AngContentWrapper className={className}>
+            <AngContent lines={lines} larivaar={larivaar} larivaarAssist={larivaarAssist} showTranslation={showTranslation} />
+          </AngContentWrapper>
         </Loader>
       </div>
     );
