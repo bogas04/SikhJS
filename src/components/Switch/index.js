@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'emotion/react';
 
-const Status = styled.span`
+const Status = styled.div`
   border: 5px solid darkgrey;
   border-radius: 5px;
   height: 0px;
@@ -12,10 +12,12 @@ const Status = styled.span`
   display: inline-block;
   &::after {
     pointer-events: none;
+    margin-right: 23px;
+    overflow: hidden;
     content: ".";
     color: grey;
     transform: scale(9);
-    transform-origin: 6% 84%;
+    transform-origin: 32% 84%;
     transition: transform .25s;
     display: block;
   }
@@ -30,18 +32,18 @@ const Checkbox = styled.input`
   & {
     opacity: 0;
   }
-  & + span {
+  & + div {
     border-color: darkgrey;
   }
-  & + span::after {
+  & + div::after {
     color: grey;
   }
-  &:checked + span {
+  &:checked + div {
     border-color: #139292;
   }
-  &:checked + span::after {
+  &:checked + div::after {
     color: teal;
-    transform: translate(33%, 0) scale(9);
+    transform: translate(172%, 0) scale(9);
   }
   &:focus, &:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -51,8 +53,13 @@ const Checkbox = styled.input`
 `;
 
 const Label = styled.label`
+  padding: 0 10px;
   color: ${({ disabled }) => disabled ? 'grey' : 'inherit'};
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   &:focus, &:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     outline: none;
@@ -60,15 +67,33 @@ const Label = styled.label`
   }
 `;
 
-export default function Switch({ children, left = true, ...props }) {
-  return (
-    <Label {...props}>
-      <Checkbox type="checkbox" {...props} />
-      {left ? null : children}
-      <Status />
-      {left ? children : null}
+export default function Switch({ children, checked, right = false, ...props }) {
+
+  const leftView = (
+    <Label {...props } id={children} >
+      <div>
+        <Checkbox type="checkbox" {...props} />
+        <Status />
+      </div>
+      <div>
+        {children}
+      </div>
     </Label>
   );
+
+  const rightView = (
+    <Label {...props } id={children} >
+      <div>
+        {children}
+      </div>
+      <div>
+        <Checkbox type="checkbox" {...props} />
+        <Status />
+      </div>
+    </Label>
+  );
+
+  return right ? rightView : leftView;
 }
 
 Switch.propTypes = {

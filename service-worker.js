@@ -1,4 +1,4 @@
-const VERSION = 'v2';
+const VERSION = 'v4';
 const RUNTIME = 'runtime';
 
 const currentCaches = [RUNTIME, VERSION];

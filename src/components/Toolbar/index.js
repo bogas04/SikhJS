@@ -8,9 +8,14 @@ const Wrapper = styled.div`
   background-color: #606060;
   color: white;
   display: flex;
+  font-size: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  @media(min-width: 1000px) {
+    position: sticky;
+    top: 0;
+  }
 `;
 
 const Title = styled.h2`
@@ -18,6 +23,9 @@ const Title = styled.h2`
   margin: 0;
   margin-right: 10px;
   padding: 10px;
+  @media(max-width: 1330px) {
+    display: none;
+  }
 `;
 
 export default function Toolbar ({ title = null, children }) {

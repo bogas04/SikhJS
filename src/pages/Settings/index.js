@@ -13,6 +13,7 @@ const SettingsGroup = styled.div`
 
 const HelpText = styled.div`
   margin: 2px 0px;
+  padding: 5px;
   font-size: 16px;
 `;
 
@@ -27,7 +28,7 @@ class Settings extends React.PureComponent {
         <Toolbar title="Settings" />
 
         <SettingsGroup>
-          <Switch defaultChecked={this.props.settings[UNICODE]} id={UNICODE} onChange={this.handleSettings(UNICODE)}>
+          <Switch right defaultChecked={this.props.settings[UNICODE]} id={UNICODE} onChange={this.handleSettings(UNICODE)}>
             Unicode Font
           </Switch>
           <HelpText>
@@ -36,7 +37,7 @@ class Settings extends React.PureComponent {
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch defaultChecked={this.props.settings[TRANSLATION]} id={TRANSLATION} onChange={this.handleSettings(TRANSLATION)}>
+          <Switch right defaultChecked={this.props.settings[TRANSLATION]} id={TRANSLATION} onChange={this.handleSettings(TRANSLATION)}>
             English Translation
           </Switch>
           <HelpText>
@@ -45,7 +46,7 @@ class Settings extends React.PureComponent {
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch defaultChecked={this.props.settings[TRANSLITERATION]} id={TRANSLITERATION} onChange={this.handleSettings(TRANSLITERATION)}>
+          <Switch right defaultChecked={this.props.settings[TRANSLITERATION]} id={TRANSLITERATION} onChange={this.handleSettings(TRANSLITERATION)}>
             English Transliteration
           </Switch>
           <HelpText>
@@ -54,7 +55,7 @@ class Settings extends React.PureComponent {
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch disabled={true} id={'tl1'}>
+          <Switch right disabled={true} id={'tl1'}>
             Translation Language
           </Switch>
           <HelpText>
@@ -63,7 +64,7 @@ class Settings extends React.PureComponent {
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch disabled={true} id={'tl2'}>
+          <Switch right disabled={true} id={'tl2'}>
             Transliteration Language
           </Switch>
           <HelpText>

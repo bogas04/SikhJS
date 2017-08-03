@@ -1,10 +1,13 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import styled from 'emotion/react';
 import { Button, Switch, Toolbar, Textfield } from '../../components';
 import { Bookmark, Previous, Next, Random } from '../../components/Icons';
 import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 import Orange from './Orange';
 import constants from './constants';
+
+const { MIN_ANG, MAX_ANG } = constants;
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,82 +16,106 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-const ButtonList = styled(Wrapper)`
+const ButtonList = styled(Wrapper) `
   flex-direction: row;
   padding-bottom: 5px;
+  @media(max-width: 500px) {
+    width: 100vw;
+  }
 `;
 
-const ButtonWrapper = styled.div`
-  margin: 0 40px;
+const SwitchList = styled(ButtonList)`
+  @media(max-width: 500px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
-function AngBar ({ lines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
+const SwitchWrapper = styled.div`
+  margin: 5px 0;
+  @media(max-width: 500px) {
+    width: 100%;
+  }
+`;
+
+const enterPressed = f => e => e.keyCode === 13 ? f(e) : null;
+
+
+let $text = null;
+function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
+  const handleSetAng = ({ target: { value } }) => {
+    if (value < MIN_ANG) {
+      events.onSetAng(MIN_ANG);
+    } else if (value > MAX_ANG) {
+      events.onSetAng(MAX_ANG);
+    } else {
+      events.onSetAng(parseInt(Number(value)))
+    }
+  };
+
+  if ($text) {
+    findDOMNode($text).value = ang;
+  }
+
   return (
     <Toolbar title={`Sri Guru Granth Sahib`}>
       <Wrapper>
-        <Button title="Bookmark" onClick={events.onToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
+        <ButtonList style={{ justifyContent: 'space-around' }}>
+          <Button title="Bookmark" onClick={events.onToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
 
-        <Wrapper>
-          <Button disabled={lines.length === 0 || ang === constants.MIN_ANG} onClick={events.onDecrementAng} title="Previous" >
+          <Button disabled={totalLines === 0 || ang === MIN_ANG} onClick={events.onDecrementAng} title="Previous" >
             <Previous />
           </Button>
 
           <Textfield
-            disabled={lines.length === 0}
+            disabled={totalLines === 0}
             center
             size={60}
             placeholder={String(ang)}
-            onBlur={e => onSetAng(Number(e.target.value))}
+            onKeyDown={enterPressed(handleSetAng)}
+            onBlur={handleSetAng}
+            ref={d => ($text = d)}
             type="number"
-            min={constants.MIN_ANG}
-            max={constants.MAX_ANG}
+            min={MIN_ANG}
+            max={MAX_ANG}
             defaultValue={ang}
           />
 
-          <Button disabled={lines.length === 0 || ang === constants.MAX_ANG} onClick={events.onIncrementAng} title="Next">
+          <Button disabled={totalLines === 0 || ang === MAX_ANG} onClick={events.onIncrementAng} title="Next">
             <Next />
           </Button>
-        </Wrapper>
+          <Button size={13} title="Random Ang" onClick={events.onRandomAng}>
+            <Random />
+          </Button>
+        </ButtonList>
 
-        <Button size={13} title="Random Ang" onClick={events.onRandomAng}>
-          <Random />
-        </Button>
-
-        <ButtonList>
-          <ButtonWrapper>
-            <Switch
-              defaultChecked={larivaar}
-              id="larivaar"
-              onChange={events.onToggleLarivaar}
-            >
+        <SwitchList>
+          <SwitchWrapper>
+            <Switch right defaultChecked={larivaar} checked={larivaar} onChange={events.onToggleLarivaar}>
               Larivaar
             </Switch>
-          </ButtonWrapper>
+          </SwitchWrapper>
 
-          <ButtonWrapper>
-            <Switch
-              defaultChecked={larivaarAssist}
-              id="larivaarAssist"
-              onChange={events.onToggleLarivaarAssist}
-              disabled={!larivaar}
-            >
-              <span>Larivaar<Orange text="Assist" /></span>
+          <SwitchWrapper>
+            <Switch right defaultChecked={larivaarAssist} checked={larivaarAssist} onChange={events.onToggleLarivaarAssist} disabled={!larivaar}>
+              <span>Larivaar<Orange>Assist</Orange></span>
             </Switch>
-          </ButtonWrapper>
+          </SwitchWrapper>
 
-          <ButtonWrapper>
-            <Switch defaultChecked={showTranslation} id="translation" onChange={events.onToggleTranslation} >
+          <SwitchWrapper>
+            <Switch right defaultChecked={showTranslation} checked={showTranslation} onChange={events.onToggleTranslation}>
               English Translation
             </Switch>
-          </ButtonWrapper>
-        </ButtonList>
+          </SwitchWrapper>
+        </SwitchList>
       </Wrapper>
     </Toolbar>
   )
 };
 
 const shouldComponentUpdate = notEqualsSome([
-  'lines', 'ang', 'isBookmarked', 'larivaar', 'larivaarAssist', 'showTranslation',
+  'totalLines', 'ang', 'isBookmarked', 'larivaar', 'larivaarAssist', 'showTranslation',
 ]);
 
 export default shouldComponentUpdateEnhancer(shouldComponentUpdate)(AngBar);

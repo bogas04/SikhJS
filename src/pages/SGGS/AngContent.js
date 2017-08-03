@@ -11,6 +11,12 @@ const Translation = styled.div`
       ? 'inline-block'
       : 'inline'
   };
+  @media(max-width: 500px) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
 `;
 
 function AngContent({ larivaarAssist, showTranslation, larivaar, lines }) {
@@ -18,7 +24,7 @@ function AngContent({ larivaarAssist, showTranslation, larivaar, lines }) {
     <span>
       {
         lines.map(({ id, text, translation }) =>
-          <Translation key={id} showTranslation={showTranslation} larivaar={larivaar}>
+          <Translation className="line" key={id} showTranslation={showTranslation} larivaar={larivaar}>
             <Larivaared larivaarAssist={larivaarAssist} enabled={larivaar}>{text}</Larivaared>
             {showTranslation ? <BlockQuote className="english">{translation.text}</BlockQuote> : ''}
           </Translation>

@@ -6,12 +6,7 @@ import { Loader } from '../../components';
 import constants from './constants';
 import AngBar from './AngBar';
 import AngContent from './AngContent';
-
-const AngContentWrapper = styled.div`
-  textAlign: ${({ align = 'left' }) => align};
-  padding: 20px;
-  lineHeight: 2em;
-`;
+import RaagAng from './RaagAng';
 
 export default class SGGS extends Component {
   constructor (props) {
@@ -22,6 +17,7 @@ export default class SGGS extends Component {
     ang = parseInt(ang, 10);
 
     this.state = {
+      error: false,
       lines: [],
       ang,
       larivaar: false,
@@ -34,8 +30,12 @@ export default class SGGS extends Component {
 
     isBookmarked({ key: 'sggs', value: this.state.ang })
       .then(isBookmarked => this.setState({ isBookmarked }))
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err);
+        this.setState({ error: true });
+      });
 
+    this.setAng = this.setAng.bind(this);
     this.handleDecrementAng = this.handleDecrementAng.bind(this);
     this.handleIncrementAng = this.handleIncrementAng.bind(this);
     this.handleRandomAng = this.handleRandomAng.bind(this);
@@ -47,15 +47,13 @@ export default class SGGS extends Component {
   }
 
   render () {
-    const { isBookmarked, lines, ang, larivaar, larivaarAssist, showTranslation } = this.state;
-
-    const className = ['gurbani-text', 'gurbani-text raag-ang'][constants.RAAG_ANGS.includes(ang) ? 1 : 0];
+    const { isBookmarked, lines, ang, larivaar, larivaarAssist, showTranslation, error } = this.state;
 
     return (
       <div>
         <AngBar
           isBookmarked={isBookmarked}
-          lines={lines}
+          totalLines={lines.length}
           ang={ang}
           larivaar={larivaar}
           larivaarAssist={larivaarAssist}
@@ -70,22 +68,33 @@ export default class SGGS extends Component {
           onToggleBookmark={this.handleToggleBookmark}
         />
 
-        <Loader loading={lines.length === 0}>
-          <AngContentWrapper className={className}>
-            <AngContent lines={lines} larivaar={larivaar} larivaarAssist={larivaarAssist} showTranslation={showTranslation} />
-          </AngContentWrapper>
-        </Loader>
+          {
+          error
+            ? <h2> Can't find the ang {ang} </h2>
+            : (
+              <Loader loading={lines.length === 0}>
+                <RaagAng enabled={constants.RAAG_ANGS.indexOf(ang) > -1}>
+                  <AngContent lines={lines} larivaar={larivaar} larivaarAssist={larivaarAssist} showTranslation={showTranslation} />
+                </RaagAng>
+              </Loader>
+            )
+          }
       </div>
     );
   }
 
   updateLines(ang = this.state.ang) {
-    return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`).then(r => r.json()).then(lines => Promise.resolve(
-      this.setState({ lines })
-    ));
+    return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`)
+      .then(r => r.json())
+      .then(lines => this.setState({ lines, error: false }))
+      .catch(err => {
+        console.error(err);
+        this.setState({ error: true });
+      });
   }
 
   setAng(ang) {
+    console.log('SGGS received ' + ang);
     if (ang) {
       this.setState({ lines: [] });
       this.updateLines(ang);
@@ -94,7 +103,10 @@ export default class SGGS extends Component {
 
       isBookmarked({ key: 'sggs', value: ang })
         .then(isBookmarked => this.setState({ isBookmarked }))
-        .catch(err => console.error(err));
+        .catch(err => {
+          console.error(err);
+          this.setState({ error: true });
+        });
     }
   }
 
@@ -111,7 +123,9 @@ export default class SGGS extends Component {
   }
 
   handleToggleLarivaar() {
-    this.setState({ larivaar: !this.state.larivaar });
+    this.setState({
+      larivaar: !this.state.larivaar,
+    });
   }
 
   handleToggleLarivaarAssist() {
@@ -128,7 +142,10 @@ export default class SGGS extends Component {
 
     toggleBookmark({ isBookmarked, title, key: 'sggs', value: ang })
       .then(isBookmarked => this.setState({ isBookmarked }))
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err);
+        this.setState({ error: true });
+      });
   }
 }
 

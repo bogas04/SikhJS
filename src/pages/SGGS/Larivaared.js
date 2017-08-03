@@ -2,9 +2,9 @@ import React from 'react';
 import Orange from './Orange';
 import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 
-function Larivaared({ larivaarAssist, enabled, children, ...props }) {
+function Larivaared({ larivaarAssist, enabled, children, style, ...props }) {
   return (
-    <span {...props}>{
+    <span style={{ margin: '0 5px', wordWrap: 'break-word', ...style }} {...props}>{
       !enabled
         ? children
         : children
@@ -18,6 +18,6 @@ function Larivaared({ larivaarAssist, enabled, children, ...props }) {
   );
 }
 
-const shouldComponentUpdate = notEqualsSome(['larivaarAssist', 'children']);
+const shouldComponentUpdate = notEqualsSome(['larivaarAssist', 'children', 'enabled']);
 
 export default shouldComponentUpdateEnhancer(shouldComponentUpdate)(Larivaared);

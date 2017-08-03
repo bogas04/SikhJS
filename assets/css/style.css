@@ -82,14 +82,3 @@ blockquote::selection {
   background-color: #efefef;
   color: #c7254e;
 }
-.gurbani-text.raag-ang > div:nth-child(1) {
-  font-size: 2em !important;
-  line-height: 1em;
-  display: block !important;
-  text-align: center !important;
-}
-.gurbani-text.raag-ang > div:nth-child(2) {
-  display: block !important;
-  text-align: center !important;
-  font-size: 1.25em !important;
-}

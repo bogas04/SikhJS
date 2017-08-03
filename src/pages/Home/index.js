@@ -36,7 +36,7 @@ const HomeWrapper = styled.div`
 
 const HomeLink = styled(Link)`
   display: block;
-  padding: 25px 50px;
+  padding: 15px 50px;
   flex: 1;
   background: linear-gradient(141deg, #1d8881 0%, #2b9eab 51%, #2387ad 75%);
   text-align: center;
@@ -50,6 +50,7 @@ const HomeLink = styled(Link)`
   color: #0a0a0a;
   margin: 10px;
   border-radius: 5px;
+  font-size: 20px;
   &:hover {
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   }

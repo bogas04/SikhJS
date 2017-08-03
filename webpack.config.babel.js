@@ -11,6 +11,8 @@ const vendor = [
   'react-redux',
   'dexie',
   'emotion',
+  'emotion/react',
+  'khajana',
   'markdown',
   'unfetch',
 ];
