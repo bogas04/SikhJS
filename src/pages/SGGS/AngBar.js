@@ -1,8 +1,8 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
 import styled from 'emotion/react';
 import { Button, Switch, Toolbar, Textfield } from '../../components';
 import { Bookmark, Previous, Next, Random } from '../../components/Icons';
+import { slide } from '../../components/BlockQuote';
 import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 import Orange from './Orange';
 import constants from './constants';
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-const ButtonList = styled(Wrapper) `
+const ButtonList = styled(Wrapper)`
   flex-direction: row;
   padding-bottom: 5px;
   @media(max-width: 500px) {
@@ -34,6 +34,7 @@ const SwitchList = styled(ButtonList)`
 
 const SwitchWrapper = styled.div`
   margin: 5px 0;
+  animation: ${slide} normal .25s;
   @media(max-width: 500px) {
     width: 100%;
   }
@@ -42,21 +43,16 @@ const SwitchWrapper = styled.div`
 const enterPressed = f => e => e.keyCode === 13 ? f(e) : null;
 
 
-let $text = null;
 function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
   const handleSetAng = ({ target: { value } }) => {
     if (value < MIN_ANG) {
       events.onSetAng(MIN_ANG);
     } else if (value > MAX_ANG) {
       events.onSetAng(MAX_ANG);
-    } else {
+    } else if (value != ang) {
       events.onSetAng(parseInt(Number(value)))
     }
   };
-
-  if ($text) {
-    findDOMNode($text).value = ang;
-  }
 
   return (
     <Toolbar title={`Sri Guru Granth Sahib`}>
@@ -73,13 +69,13 @@ function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showT
             center
             size={60}
             placeholder={String(ang)}
-            onKeyDown={enterPressed(handleSetAng)}
+            key={ang}
+            onKeyDown={handleSetAng}
             onBlur={handleSetAng}
-            ref={d => ($text = d)}
+            defaultValue={ang}
             type="number"
             min={MIN_ANG}
             max={MAX_ANG}
-            defaultValue={ang}
           />
 
           <Button disabled={totalLines === 0 || ang === MAX_ANG} onClick={events.onIncrementAng} title="Next">
@@ -97,11 +93,13 @@ function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showT
             </Switch>
           </SwitchWrapper>
 
-          <SwitchWrapper>
-            <Switch right defaultChecked={larivaarAssist} checked={larivaarAssist} onChange={events.onToggleLarivaarAssist} disabled={!larivaar}>
-              <span>Larivaar<Orange>Assist</Orange></span>
-            </Switch>
-          </SwitchWrapper>
+          {larivaar && (
+            <SwitchWrapper>
+              <Switch right defaultChecked={larivaarAssist} checked={larivaarAssist} onChange={events.onToggleLarivaarAssist} disabled={!larivaar}>
+                <span>Larivaar<Orange>Assist</Orange></span>
+              </Switch>
+            </SwitchWrapper>
+          )}
 
           <SwitchWrapper>
             <Switch right defaultChecked={showTranslation} checked={showTranslation} onChange={events.onToggleTranslation}>

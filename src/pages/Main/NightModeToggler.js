@@ -6,7 +6,7 @@ function NightModeToggler({ nightMode }) {
   document.body.style.backgroundColor = nightMode ? '#212121' : '';
   document.body.style.color = nightMode ? 'white' : '';
 
-  return nightMode ? <Night /> : <Day />;
+  return nightMode ? <Night style={{ cursor: 'pointer' }} /> : <Day style={{ cursor: 'pointer' }} />;
 };
 
 const mapStateToProps = ({ nightMode }) => ({ nightMode });

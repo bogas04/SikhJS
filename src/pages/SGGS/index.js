@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'emotion/react';
+import { withRouter } from 'react-router-dom';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import { Loader } from '../../components';
 import constants from './constants';
@@ -8,7 +9,7 @@ import AngBar from './AngBar';
 import AngContent from './AngContent';
 import RaagAng from './RaagAng';
 
-export default class SGGS extends Component {
+class SGGS extends Component {
   constructor (props) {
     super(props);
 
@@ -84,9 +85,10 @@ export default class SGGS extends Component {
   }
 
   updateLines(ang = this.state.ang) {
+    this.setState({ lines: [] });
     return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`)
       .then(r => r.json())
-      .then(lines => this.setState({ lines, error: false }))
+      .then(lines => this.setState({ lines, error: false, ang }))
       .catch(err => {
         console.error(err);
         this.setState({ error: true });
@@ -96,10 +98,8 @@ export default class SGGS extends Component {
   setAng(ang) {
     console.log('SGGS received ' + ang);
     if (ang) {
-      this.setState({ lines: [] });
+      this.props.history.push(`/sggs/${ang}`);
       this.updateLines(ang);
-      this.setState({ ang });
-      localStorage.setItem('sggs-ang', ang);
 
       isBookmarked({ key: 'sggs', value: ang })
         .then(isBookmarked => this.setState({ isBookmarked }))
@@ -107,6 +107,8 @@ export default class SGGS extends Component {
           console.error(err);
           this.setState({ error: true });
         });
+
+      localStorage.setItem('sggs-ang', ang);
     }
   }
 
@@ -152,3 +154,5 @@ export default class SGGS extends Component {
 SGGS.propTypes = {
   match: PropTypes.object,
 };
+
+export default withRouter(SGGS);

@@ -14,6 +14,11 @@ const mapStateToProps = ({ fontSize }) => ({ fontSize });
 const BaaniWrapper = connect(mapStateToProps, null)(styled.div`
   transition: all 0.25s ease-in-out;
   font-size: ${({ fontSize }) => `${fontSize}px`};
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 100px;
 `);
 
 const Content = () => (

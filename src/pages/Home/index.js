@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { keyframes } from 'emotion';
 import styled from 'emotion/react';
 
-import GurbaniFont from '../../components/GurbaniFont';
-
 const SplashIn = keyframes`
   from { transform: scale(3) perspective(500px); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -12,6 +10,7 @@ const SplashIn = keyframes`
 
 const Wrapper = styled.div`
   display: flex;
+  user-select: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -67,11 +66,9 @@ export default () => {
   return (
     <Wrapper>
       <Heading>
-        <GurbaniFont>
-          vwihgurU jI kw Kwlsw
-          <br />
-          vwihgurU jI kI Pqih
-        </GurbaniFont>
+        ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ
+        <br />
+        ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ 
       </Heading>
       <HomeWrapper>
         <HomeLink to="/hukamnama">Hukamnama</HomeLink>

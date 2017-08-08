@@ -1,6 +1,7 @@
 import styled from 'emotion/react';
 
 export default styled.nav`
+  user-select: none;
   position: fixed;
   z-index: 2;
   height: 35px;
@@ -10,7 +11,7 @@ export default styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: teal;
+  background-color: ${({ online = navigator.onLine }) => online ? 'teal' : '#606060'};
   color: white;
   overflow-x: auto;
   overflow-y: hidden;

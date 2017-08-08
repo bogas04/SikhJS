@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { LinkButton, Card as CardView } from '../../components/';
+import { GurbaniFont, LinkButton, Card as CardView } from '../../components/';
 import styled from 'emotion/react';
 
 const Capitalize = styled.span`
@@ -12,7 +12,7 @@ export default function SearchCard(props) {
 
   return (
     <CardView
-      title={<span className="gurbani-text">{gurbani.gurmukhi}</span>}
+      title={<GurbaniFont>{gurbani.gurmukhi}</GurbaniFont>}
       text={<Capitalize>{transliteration}</Capitalize>}
       actions={[
         <LinkButton key={0} to={`/shabads/${shabadid}`}>

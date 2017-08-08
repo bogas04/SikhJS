@@ -1,8 +1,22 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'emotion/react';
+import PropTypes from 'prop-types';
 
-const Status = styled.div`
+const Dot = styled('div')`
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: transform .25s;
+  margin-top: -.6rem;
+  margin-left: -.2rem;
+`;
+
+const Status = styled('div')`
   border: 5px solid darkgrey;
   border-radius: 5px;
   height: 0px;
@@ -10,40 +24,21 @@ const Status = styled.div`
   margin-left: 20px;
   transform: translate(-13px, 13px);
   display: inline-block;
-  &::after {
-    pointer-events: none;
-    margin-right: 23px;
-    overflow: hidden;
-    content: ".";
-    color: grey;
-    transform: scale(9);
-    transform-origin: 32% 84%;
-    transition: transform .25s;
-    display: block;
-  }
-  &:focus, &:active {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    outline: none;
-    user-select: none;
-  }
+  margin-top: -1rem;
 `;
 
-const Checkbox = styled.input`
-  & {
-    opacity: 0;
-  }
+const Checkbox = styled('input')`
+  display: none;
+  opacity: 0;
   & + div {
     border-color: darkgrey;
-  }
-  & + div::after {
-    color: grey;
   }
   &:checked + div {
     border-color: #139292;
   }
-  &:checked + div::after {
-    color: teal;
-    transform: translate(172%, 0) scale(9);
+  &:checked + .status .dot {
+    background-color: teal;
+    transform: translate(1rem, 0);
   }
   &:focus, &:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -52,10 +47,10 @@ const Checkbox = styled.input`
   }
 `;
 
-const Label = styled.label`
+const Label = styled('label')`
   padding: 0 10px;
-  color: ${({ disabled }) => disabled ? 'grey' : 'inherit'};
-  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
+  color: ${({ disabled }) => (disabled ? 'grey' : 'inherit')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -67,36 +62,27 @@ const Label = styled.label`
   }
 `;
 
-export default function Switch({ children, checked, right = false, ...props }) {
-
-  const leftView = (
-    <Label {...props } id={children} >
-      <div>
-        <Checkbox type="checkbox" {...props} />
-        <Status />
-      </div>
-      <div>
-        {children}
-      </div>
+function Switch({ children, checked, right = false, ...props }) {
+  const checkbox = (
+    <div style={{ display: 'flex' }}>
+      <Checkbox type='checkbox' {...props} />
+      <Status className='status'>
+        <Dot className='dot' />
+      </Status>
+    </div>
+  );
+  
+  return (
+    <Label {...props} id={children}>
+      {right ? children : checkbox}
+      {right ? checkbox : children}
     </Label>
   );
-
-  const rightView = (
-    <Label {...props } id={children} >
-      <div>
-        {children}
-      </div>
-      <div>
-        <Checkbox type="checkbox" {...props} />
-        <Status />
-      </div>
-    </Label>
-  );
-
-  return right ? rightView : leftView;
 }
 
 Switch.propTypes = {
   children: PropTypes.node,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
+
+export default Switch;

@@ -4,16 +4,17 @@ import styled from 'emotion/react';
 import { SOURCES } from 'khajana';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import { Chip, AuthorChip, Toolbar, LinkButton, Button } from '../../components/';
+import Bookmark from '../../components/Icons/Bookmark';
 import { Link } from 'react-router-dom';
 import Shabad from './Shabad';
 
-const ToolbarWrapper = styled.div({
-  width: '100%',
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-});
+const ToolbarWrapper = styled('div')`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
 export default class ShabadView extends React.PureComponent {
   constructor (p) {
@@ -43,6 +44,7 @@ export default class ShabadView extends React.PureComponent {
     const toolbar = (
       <Toolbar>
         <ToolbarWrapper>
+          <Button title="Bookmark" onClick={this.handleToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
           { author && <AuthorChip style={{ display: 'block' }} {...author} /> }
           {
             ang && (
@@ -53,9 +55,6 @@ export default class ShabadView extends React.PureComponent {
               </Link>
             )
           }
-          <Button style={{ display: 'block' }} onClick={this.handleToggleBookmark}>
-            { isBookmarked ? 'Bookmarked' : 'Bookmark' }
-          </Button>
         </ToolbarWrapper>
       </Toolbar>
     );

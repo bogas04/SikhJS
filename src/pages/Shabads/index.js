@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'emotion/react';
+import { withRouter } from 'react-router-dom';
 import { SEARCH_OPTIONS } from '../../constants';
 import { Toolbar, Khajana } from '../../components/';
 import SearchCard from './SearchCard';
@@ -16,11 +17,11 @@ const ShabadResults = styled.div`
 
 const { TYPE: SEARCH_TYPE, SOURCE: SEARCH_SOURCE } = SEARCH_OPTIONS;
 
-export default class Shabads extends Component {
+class Shabads extends Component {
   constructor(props) {
     super(props);
 
-    let q = (this.props.match.params && this.props.match.params.q) || '';
+    const q = (this.props.match.params && this.props.match.params.q) || '';
 
     this.state = {
       q,
@@ -82,6 +83,7 @@ export default class Shabads extends Component {
 
   handleSearch(e) {
     this.setState({ q: this.state.keyword });
+    this.props.history.push(`/shabads/${this.state.keyword}`);
     e.preventDefault();
   }
 
@@ -103,3 +105,5 @@ export default class Shabads extends Component {
 Shabads.propTypes = {
   match: PropTypes.object,
 };
+
+export default withRouter(Shabads);

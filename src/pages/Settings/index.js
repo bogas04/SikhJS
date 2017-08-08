@@ -13,7 +13,7 @@ const SettingsGroup = styled.div`
 
 const HelpText = styled.div`
   margin: 2px 0px;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 16px;
 `;
 
@@ -33,7 +33,7 @@ class Settings extends React.PureComponent {
           </Switch>
           <HelpText>
             Unicode lets you copy Gurmukhi test and share it on internet. However, it doesn't look quite as good.
-        </HelpText>
+          </HelpText>
         </SettingsGroup>
 
         <SettingsGroup>
@@ -42,7 +42,7 @@ class Settings extends React.PureComponent {
           </Switch>
           <HelpText>
             This setting allows you to toggle english translations in search results.
-        </HelpText>
+          </HelpText>
         </SettingsGroup>
 
         <SettingsGroup>

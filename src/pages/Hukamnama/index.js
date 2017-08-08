@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { GurbaniFont, Json } from '../../components';
+import { Json } from '../../components';
+import GurbaniFont, { English } from '../../components/GurbaniFont';
 
 export class HukamnamaView extends React.PureComponent {
   render() {
@@ -10,7 +11,7 @@ export class HukamnamaView extends React.PureComponent {
         <section style={{ padding: 20, lineHeight: '2em' }}>
           <div>{ang} {date}</div>
           <GurbaniFont>{gurbani}</GurbaniFont>
-          <div className="english">{english}</div>
+          <English>{english}</English>
           <GurbaniFont>{punjabi}</GurbaniFont>
         </section>
       </div>

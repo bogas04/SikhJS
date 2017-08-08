@@ -4,6 +4,8 @@ import React from 'react';
 import styled from 'emotion/react';
 
 const Wrapper = styled.div`
+  z-index: 1;
+  user-select: none;
   margin-top: -64px;
   background-color: #606060;
   color: white;
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h2`
+  cursor: default;
   background-color: #9a9a9a;
   margin: 0;
   margin-right: 10px;
