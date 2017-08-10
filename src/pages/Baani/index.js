@@ -17,7 +17,7 @@ export default class Baani extends React.Component {
 
     return (
       <GurbaniFont style={{ textAlign: 'center' }}>
-        <FetchAndMarkdown url={`assets/docs/md/${baani}.md`} />
+        <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
       </GurbaniFont>
     );
   }

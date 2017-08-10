@@ -30,6 +30,8 @@ You can contribute by
 * Reporting [Issues](https://github.com/bogas04/SikhJS/issues/new).
 * Becoming a code-collaborator.
 * Becoming a content-collaborator.
+  * Contribute to [Raags](https://github.com/bogas04/SikhJS/tree/master/assets/docs/md/raags) and [Authors](https://github.com/bogas04/SikhJS/tree/master/assets/docs/md/authors) descriptions. Add images, links, more text etc to the markdown files.
+  * Contribute to beautification/correction(if any) of Nitnem [baanies](https://github.com/bogas04/SikhJS/tree/master/assets/docs/md/baanies). These are simple markdown files that can take help of formatting of text.
 
 Build
 ==

@@ -6,7 +6,6 @@ const currentCaches = [RUNTIME, VERSION];
 const CACHE_URLS = [
   './',
   './index.html',
-  './assets/css/style.css',
   './assets/fonts/gurmukhi_heavy.ttf',
   './assets/js/main.js',
   './assets/js/vendor.js',

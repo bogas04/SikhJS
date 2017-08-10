@@ -1,22 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Toolbar, Markdown } from '../../components';
+import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 
-import Toolbar from '../../components/Toolbar';
-
-import Json from '../../components/Json';
-
-function Author ({ match: { params: { id } } }) {
+function Author ({ match: { params: { id, name } } }) {
   return (
-    <Json url={`assets/docs/json/authors/${id}.json`}>{
-      ({ data = [] }) => (
-        <div>
-          <Toolbar title={`${data.author} ${data.gurmukhi}`} />
-          <div style={{ padding: 10, lineHeight: '1em' }}>
-            {data.description || 'No information'}
-          </div>
-        </div>
-      )
-    }</Json>
+    <div>
+      <Toolbar title={name} />
+      <Markdown url={`assets/docs/md/authors/${id}.md`} />
+    </div>
   );
 }
 
@@ -24,4 +16,4 @@ Author.propTypes = {
   match: PropTypes.object,
 };
 
-export default Author;
+export default shouldComponentUpdateEnhancer((c, n) => c.match.params.id !== n.match.params.id)(Author);

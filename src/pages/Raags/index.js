@@ -7,7 +7,7 @@ const mapItemToView = ({ raag, gurmukhi, granth, id, ang }) => (
     granth !== 1 || ang === 0
       ? ''
       : <LinkButton key={0} to={`/SGGS/${ang}`}>{`Open Ang ${ang}`}</LinkButton>,
-    <LinkButton key={1} to={`/raags/${id}`}>More Info</LinkButton>,
+    <LinkButton key={1} to={`/raags/${id}/${raag}`}>More Info</LinkButton>,
   ]} />
 );
 

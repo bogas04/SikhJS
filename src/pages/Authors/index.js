@@ -4,7 +4,7 @@ import { Card, LinkButton } from '../../components';
 
 const mapItemToView = author => (
     <Card key={author.id} title={`${author.author} ${author.gurmukhi}`} actions={[
-      <LinkButton key={0} to={`/authors/${author.id}`}>More Info</LinkButton>,
+      <LinkButton key={0} to={`/authors/${author.id}/${author.author}`}>More Info</LinkButton>,
     ]} />
 );
 

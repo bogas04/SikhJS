@@ -1,20 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Toolbar from '../../components/Toolbar';
-import Json from '../../components/Json';
+import { Toolbar, Markdown } from '../../components';
+import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 
-function Raag ({ match: { params: { id } } }) {
+function Raag ({ match: { params: { id, name } } }) {
   return (
-    <Json url={`assets/docs/json/raags/${id}.json`}>{
-      ({ data = [] }) => (
-        <div>
-          <Toolbar title={`${data.raag} ${data.gurmukhi}`} />
-          <div style={{ padding: 10 }}>
-            {data.description || 'No information'}
-          </div>
-        </div>
-      )
-    }</Json>
+    <div>
+      <Toolbar title={name} />
+      <Markdown url={`assets/docs/md/raags/${id}.md`} />
+    </div>
   );
 }
 
@@ -22,4 +16,4 @@ Raag.propTypes = {
   match: PropTypes.object,
 };
 
-export default Raag;
+export default shouldComponentUpdateEnhancer((c, n) => c.match.params.id !== n.match.params.id)(Raag);

@@ -33,9 +33,9 @@ const Content = () => (
         <Route path="/settings" component={Settings} />
         <Route path="/bookmarks" component={Bookmarks} />
         <Route path="/authors" exact component={Authors} />
-        <Route path="/authors/:id" component={Author} />
+        <Route path="/authors/:id/:name" component={Author} />
         <Route path="/raags" exact component={Raags} />
-        <Route path="/raags/:id" component={Raag} />
+        <Route path="/raags/:id/:name" component={Raag} />
         <Route path="/nitnem" exact component={Nitnem} />
         <Route path="/nitnem/:baani" component={Baani} />
         <Route path="/hukamnama" component={Hukamnama} />
