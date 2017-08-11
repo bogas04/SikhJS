@@ -1,56 +1,63 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
 import { Link } from 'react-router-dom';
-
 import styled from 'emotion/react';
-
-import Toolbar from '../../components/Toolbar';
-
-import Loader from '../../components/Loader';
-
+import { BOOKMARK_TYPES } from '../../constants';
 import { clearAllBookmarks, getAllBookmarks, updateBookmarkTitle } from '../../bookmarks';
+import { Textfield, Button, Toolbar, Loader } from '../../components';
+import { Card, CardText, CardActions, CardTitle } from '../../components/Card';
 
-import { Card, CardActions, CardTitle } from '../../components/Card';
+const { SGGS, SHABAD } = BOOKMARK_TYPES;
 
-import Textfield from '../../components/Textfield';
+const SearchCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+`;
 
-import Button from '../../components/Button';
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: teal;
+  cursor: pointer;
+`;
 
-const SearchCard = ({ data, onTitleChange }) => {
-  const { title, key, value } = data;
+const SearchCard = ({ data: { title, key, value }, onTitleChange }) => (
+  <Card style={{ width: '30vw' }}>
+    <CardTitle style={{ textTransform: 'capitalize' }}>{title}</CardTitle>
 
-  const Wrapper = styled.div`
-    display: flex;
-    flexWrap: wrap;
-    alignItems: center;
-    justifyContent: space-between 
-  `;
+    <CardText>
+      Edit Title <Textfield className="input" label={title} onChange={onTitleChange} type="text" defaultValue={title} />
+    </CardText>
 
-  return (
-    <Card>
-      <CardTitle>
-        <Wrapper>
-          <Textfield
-            label={title}
-            onChange={(e, v) => onTitleChange(v)}
-            type="text"
-            defaultValue={title}
-          />
-        </Wrapper>
-      </CardTitle>
-      <CardActions>
-        { key === 'shabad' && <Link to={`/shabad/${value}`}><Button>Open Shabad</Button></Link> }
-        { key === 'sggs' && <Link to={`/SGGS/${value}`}><Button>{`Open Ang ${value}`}</Button></Link> }
-      </CardActions>
-    </Card>
-  );
-};
+    <CardActions>
+      {key === SHABAD && <StyledLink to={`/shabad/${value}`}>Open Shabad</StyledLink>}
+      {key === SGGS && <StyledLink to={`/SGGS/${value}`}>Open Ang {value}</StyledLink>}
+    </CardActions>
+  </Card>
+);
 
 SearchCard.propTypes = {
   data: PropTypes.object,
   onTitleChange: PropTypes.func,
 };
+
+const SearchCards = ({ items, onTitleChange }) => (
+  <SearchCardWrapper>
+    {
+      items
+        .map(b => (
+          <SearchCard
+            data={b}
+            key={b.id}
+            onTitleChange={({ currentTarget: { value: title = b.title } }) => onTitleChange({ ...b, title })}
+          />
+        ))
+    }
+  </SearchCardWrapper>
+);
 
 export default class Bookmarks extends Component {
   constructor (p) {
@@ -77,25 +84,6 @@ export default class Bookmarks extends Component {
       bookmarks = bookmarks.filter(e => e.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
     }
 
-    const SearchCards = ({ items }) => {
-      const Wrapper = styled.div`
-        display: flex;
-        flexWrap: wrap;
-        justifyContent: center;
-        flexDirection: row
-      `;
-
-      return (<Wrapper>{
-        items
-          .map(b => (
-            <SearchCard
-              data={b}
-              key={b.id}
-              onTitleChange={(title = b.title) => this.updateBookmark({ ...b, title })}
-            />
-          ))
-      }</Wrapper>);
-    };
 
     return (
       <div>
@@ -110,7 +98,7 @@ export default class Bookmarks extends Component {
         <Loader loading={loading}>{
           bookmarks.length === 0
             ? <h1 style={{ textAlign: 'center' }}>No Bookmarks Found</h1>
-            : <SearchCards items={bookmarks} />
+            : <SearchCards items={bookmarks} onTitleChange={this.handleUpdateBookmark} />
         }</Loader>
       </div>
     );
@@ -128,7 +116,7 @@ export default class Bookmarks extends Component {
       .catch(err => console.error(err));
   }
 
-  handleUpdateKeyword (keyword) {
+  handleUpdateKeyword ({ currentTarget: { value: keyword }}) {
     this.setState({ keyword });
   }
 }

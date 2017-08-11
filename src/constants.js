@@ -22,3 +22,8 @@ export const SEARCH_OPTIONS = {
   TYPE: 'search-type',
   SOURCE: 'search-source',
 };
+
+export const BOOKMARK_TYPES = {
+  SGGS: 'sggs',
+  SHABAD: 'shabad',
+};

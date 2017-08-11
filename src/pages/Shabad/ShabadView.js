@@ -2,11 +2,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'emotion/react';
 import { SOURCES } from 'khajana';
+import { Link } from 'react-router-dom';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import { Chip, AuthorChip, Toolbar, LinkButton, Button } from '../../components/';
 import Bookmark from '../../components/Icons/Bookmark';
-import { Link } from 'react-router-dom';
+import { findShabadTitle } from '../../utils';
+import pageTitleEnchancer from '../pageTitleEnchancer';
 import Shabad from './Shabad';
+
+const StyledLink = styled(Link)`
+  display: block;
+  text-decoration: none;
+`;
 
 const ToolbarWrapper = styled('div')`
   width: 100%;
@@ -16,21 +23,13 @@ const ToolbarWrapper = styled('div')`
   align-items: center;
 `;
 
-export default class ShabadView extends React.PureComponent {
+class ShabadView extends React.PureComponent {
   constructor (p) {
     super(p);
 
-    const { id, gurbani, author, ang, source } = this.props;
+    this.state = { isBookmarked: false };
 
-    this.state = {
-      loading: true,
-      isBookmarked: false,
-      id,
-      gurbani,
-      author,
-      ang,
-      source,
-    };
+    const { id, ang, gurbani: lines, source } = this.props;
 
     isBookmarked({ key: 'shabad', value: id })
       .then(isBookmarked => this.setState({ isBookmarked }))
@@ -39,20 +38,23 @@ export default class ShabadView extends React.PureComponent {
     this.handleToggleBookmark = this.handleToggleBookmark.bind(this);
   }
   render () {
-    const { ang, author, gurbani, source, isBookmarked } = this.state;
+    const { ang, author, gurbani, source } = this.props;
+    const { isBookmarked } = this.state;
 
     const toolbar = (
       <Toolbar>
         <ToolbarWrapper>
-          <Button title="Bookmark" onClick={this.handleToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
-          { author && <AuthorChip style={{ display: 'block' }} {...author} /> }
+          <Button title="Bookmark" onClick={this.handleToggleBookmark}>
+            <Bookmark isBookmarked={isBookmarked} />
+          </Button>
+          {author && <AuthorChip style={{ display: 'block' }} {...author} />}
           {
             ang && (
-              <Link style={{ display: 'block', textDecoration: 'none' }} to={`/SGGS/${ang}`} disabled={source.id !== 'G'}>
+              <StyledLink to={`/SGGS/${ang}`} disabled={source.id !== 'G'}>
                 <Chip>
                   {`SGGS:${ang}`}
                 </Chip>
-              </Link>
+              </StyledLink>
             )
           }
         </ToolbarWrapper>
@@ -67,8 +69,9 @@ export default class ShabadView extends React.PureComponent {
     );
   }
   handleToggleBookmark () {
-    const { isBookmarked, id, source, ang } = this.state;
-    const title = `Shabad ${id} ${SOURCES[source.id]} Ang ${ang}`;
+    const { isBookmarked } = this.state;
+    const { id, source, ang, gurbani: lines } = this.props;
+    const title = findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] });
 
     toggleBookmark({ isBookmarked, title, key: 'shabad', value: id })
       .then(isBookmarked => this.setState({ isBookmarked }))
@@ -83,3 +86,9 @@ ShabadView.propTypes = {
   ang: PropTypes.number,
   source: PropTypes.object,
 };
+
+const propsToShabadTitle = ({ id, source, ang, gurbani: lines }) => (
+  findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] })
+);
+
+export default pageTitleEnchancer(propsToShabadTitle)(ShabadView);

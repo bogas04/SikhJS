@@ -2,9 +2,8 @@ import styled from 'emotion/react';
 
 export default styled.input`
   border-radius: 1px;
-  box-shadow: 2px 2px 3px 0px black;
   background-color: #fafafa;
-  border: none;
+  border: 1px solid darkgrey;
   padding: 10px;
   margin: 5px;
   width: ${({ size }) => size ? `${size}px` : '280px'};
@@ -14,5 +13,6 @@ export default styled.input`
   text-align: ${({ center }) => center ? 'center' : 'initial'};
   &:focus {
     outline: none;
+    border-color: teal;
   }
 `;

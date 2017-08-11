@@ -13,9 +13,7 @@ class SGGS extends Component {
   constructor (props) {
     super(props);
 
-    let { ang = parseInt(localStorage.getItem('sggs-ang')) || 1} = this.props.match.params || { };
-
-    ang = parseInt(ang, 10);
+    const ang = parseInt(this.props.match.params.ang || localStorage.getItem('sggs-ang') || 1);
 
     this.state = {
       error: false,
@@ -27,15 +25,6 @@ class SGGS extends Component {
       isBookmarked: false,
     };
 
-    this.updateLines();
-
-    isBookmarked({ key: 'sggs', value: this.state.ang })
-      .then(isBookmarked => this.setState({ isBookmarked }))
-      .catch(err => {
-        console.error(err);
-        this.setState({ error: true });
-      });
-
     this.setAng = this.setAng.bind(this);
     this.handleDecrementAng = this.handleDecrementAng.bind(this);
     this.handleIncrementAng = this.handleIncrementAng.bind(this);
@@ -45,6 +34,21 @@ class SGGS extends Component {
     this.handleToggleLarivaarAssist = this.handleToggleLarivaarAssist.bind(this);
     this.handleToggleTranslation = this.handleToggleTranslation.bind(this);
     this.handleToggleBookmark = this.handleToggleBookmark.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.match.params.ang) {
+      this.updateLines();
+
+      isBookmarked({ key: 'sggs', value: this.state.ang })
+        .then(isBookmarked => this.setState({ isBookmarked }))
+        .catch(err => {
+          console.error(err);
+          this.setState({ error: true });
+        });
+    } else {
+      this.props.history.push(`/sggs/${this.state.ang}`);
+    }
   }
 
   render () {
@@ -86,6 +90,7 @@ class SGGS extends Component {
 
   updateLines(ang = this.state.ang) {
     this.setState({ lines: [] });
+
     return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`)
       .then(r => r.json())
       .then(lines => this.setState({ lines, error: false, ang }))
@@ -98,17 +103,8 @@ class SGGS extends Component {
   setAng(ang) {
     console.log('SGGS received ' + ang);
     if (ang) {
-      this.props.history.push(`/sggs/${ang}`);
-      this.updateLines(ang);
-
-      isBookmarked({ key: 'sggs', value: ang })
-        .then(isBookmarked => this.setState({ isBookmarked }))
-        .catch(err => {
-          console.error(err);
-          this.setState({ error: true });
-        });
-
       localStorage.setItem('sggs-ang', ang);
+      this.props.history.push(`/sggs/${ang}`);
     }
   }
 
