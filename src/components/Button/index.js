@@ -3,10 +3,9 @@ import styled from 'emotion/react';
 export default styled.button`
   color: ${({ dark }) => dark ? `white` : `black`};
   background-color: ${({ naked }) => naked ? 'transparent' : 'white'};
-  border: none;
+  border: 1px solid darkgrey;
   outline: ${({ naked }) => naked ? 'none' : 'initial'};
   border-radius: '2px';
-  box-shadow: ${({ naked, noBorder }) => !naked && !noBorder ? '2px 2px 3px 0px black' : 'auto'};
   font-weight: 100;
   font-size: ${({ size = 16 }) => `${size}px`};
   margin: 2px 5px;

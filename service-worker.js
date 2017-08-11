@@ -1,5 +1,5 @@
-const VERSION = 'v8';
-const RUNTIME = 'runtime';
+const VERSION = 'v10';
+const RUNTIME = 'runtime_10';
 
 const currentCaches = [RUNTIME, VERSION];
 

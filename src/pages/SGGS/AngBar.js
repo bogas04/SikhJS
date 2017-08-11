@@ -3,6 +3,7 @@ import styled from 'emotion/react';
 import { Button, Switch, Toolbar, Textfield } from '../../components';
 import { Bookmark, Previous, Next, Random } from '../../components/Icons';
 import { slide } from '../../components/BlockQuote';
+import { enterPressed } from '../../utils';
 import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
 import Orange from './Orange';
 import constants from './constants';
@@ -40,9 +41,6 @@ const SwitchWrapper = styled.div`
   }
 `;
 
-const enterPressed = f => e => e.keyCode === 13 ? f(e) : null;
-
-
 function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
   const handleSetAng = ({ target: { value } }) => {
     if (value < MIN_ANG) {
@@ -70,7 +68,7 @@ function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showT
             size={60}
             placeholder={String(ang)}
             key={ang}
-            onKeyDown={handleSetAng}
+            onKeyDown={enterPressed(handleSetAng)}
             onBlur={handleSetAng}
             defaultValue={ang}
             type="number"
