@@ -9,19 +9,26 @@ import AngBar from './AngBar';
 import AngContent from './AngContent';
 import RaagAng from './RaagAng';
 
+const STORAGE_KEYS = {
+  ANG: 'sggs-ang',
+  LARIVAAR: 'sggs-larivaar',
+  LARIVAAR_ASSIST: 'sggs-larivaar-assist',
+  TRANSLATION: 'sggs-translation',
+};
+
 class SGGS extends Component {
   constructor (props) {
     super(props);
 
-    const ang = parseInt(this.props.match.params.ang || localStorage.getItem('sggs-ang') || 1);
+    const ang = parseInt(this.props.match.params.ang || localStorage.getItem(STORAGE_KEYS.ANG) || 1);
 
     this.state = {
       error: false,
       lines: [],
       ang,
-      larivaar: false,
-      larivaarAssist: false,
-      showTranslation: false,
+      larivaar: localStorage.getItem(STORAGE_KEYS.LARIVAAR) === 'true',
+      larivaarAssist: localStorage.getItem(STORAGE_KEYS.LARIVAAR_ASSIST) === 'true',
+      showTranslation: localStorage.getItem(STORAGE_KEYS.TRANSLATION) === 'true',
       isBookmarked: false,
     };
 
@@ -103,7 +110,7 @@ class SGGS extends Component {
   setAng(ang) {
     console.log('SGGS received ' + ang);
     if (ang) {
-      localStorage.setItem('sggs-ang', ang);
+      localStorage.setItem(STORAGE_KEYS.ANG, ang);
       this.props.history.push(`/sggs/${ang}`);
     }
   }
@@ -121,16 +128,19 @@ class SGGS extends Component {
   }
 
   handleToggleLarivaar() {
+    localStorage.setItem(STORAGE_KEYS.LARIVAAR, !this.state.larivaar);
     this.setState({
       larivaar: !this.state.larivaar,
     });
   }
 
   handleToggleLarivaarAssist() {
+    localStorage.setItem(STORAGE_KEYS.LARIVAAR_ASSIST, !this.state.larivaarAssist);
     this.setState({ larivaarAssist: !this.state.larivaarAssist });
   }
 
   handleToggleTranslation() {
+    localStorage.setItem(STORAGE_KEYS.TRANSLATION, !this.state.showTranslation);
     this.setState({ showTranslation: !this.state.showTranslation });
   }
 
