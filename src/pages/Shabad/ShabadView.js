@@ -5,7 +5,7 @@ import { SOURCES } from 'khajana';
 import { Link } from 'react-router-dom';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import { Chip, AuthorChip, Toolbar, LinkButton, Button } from '../../components/';
-import Bookmark from '../../components/Icons/Bookmark';
+import { Bookmark, Share } from '../../components/Icons';
 import { findShabadTitle } from '../../utils';
 import pageTitleEnchancer from '../pageTitleEnchancer';
 import Shabad from './Shabad';
@@ -23,8 +23,10 @@ const ToolbarWrapper = styled('div')`
   align-items: center;
 `;
 
+const shareEnabled = 'share' in navigator;
+
 class ShabadView extends React.PureComponent {
-  constructor (p) {
+  constructor(p) {
     super(p);
 
     this.state = { isBookmarked: false };
@@ -36,8 +38,9 @@ class ShabadView extends React.PureComponent {
       .catch(err => console.error(err));
 
     this.handleToggleBookmark = this.handleToggleBookmark.bind(this);
+    this.handleShareClick = this.handleShareClick.bind(this);
   }
-  render () {
+  render() {
     const { ang, author, gurbani, source } = this.props;
     const { isBookmarked } = this.state;
 
@@ -47,6 +50,11 @@ class ShabadView extends React.PureComponent {
           <Button title="Bookmark" onClick={this.handleToggleBookmark}>
             <Bookmark isBookmarked={isBookmarked} />
           </Button>
+          {
+            shareEnabled && <Button title="Share" onClick={this.handleShareClick}>
+              <Share />
+            </Button>
+          }
           {author && <AuthorChip style={{ display: 'block' }} {...author} />}
           {
             ang && (
@@ -68,7 +76,7 @@ class ShabadView extends React.PureComponent {
       </div>
     );
   }
-  handleToggleBookmark () {
+  handleToggleBookmark() {
     const { isBookmarked } = this.state;
     const { id, source, ang, gurbani: lines } = this.props;
     const title = findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] });
@@ -76,6 +84,22 @@ class ShabadView extends React.PureComponent {
     toggleBookmark({ isBookmarked, title, key: 'shabad', value: id })
       .then(isBookmarked => this.setState({ isBookmarked }))
       .catch(err => console.error(err));
+  }
+  handleShareClick(p) {
+    const { id, source, ang, gurbani: lines } = this.props;
+    const title = findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] });
+    const url = location.href;
+    const text = lines
+      .map(({ shabad }) => `${shabad.gurbani.unicode}\n  ${shabad.translation.english.ssk}\n`)
+      .join('\n');
+
+    if ('share' in navigator) {
+      navigator.share({
+        title,
+        url,
+        text,
+      });
+    }
   }
 }
 

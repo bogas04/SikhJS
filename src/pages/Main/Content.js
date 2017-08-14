@@ -37,7 +37,7 @@ const Content = () => (
         <Route path="/settings" component={pageTitleEnchancer('Settings')(Settings)} />
         <Route path="/bookmarks" component={pageTitleEnchancer('Bookmarks')(Bookmarks)} />
         <Route path="/authors" exact component={pageTitleEnchancer('Authors')(Authors)} />
-        <Route path="/authors/:id/:name" component={pageTitleEnchancer(propsToParamTitle('name'))(Author)} />
+        <Route path="/authors/:id/:name?" component={pageTitleEnchancer(propsToParamTitle('name'))(Author)} />
         <Route path="/raags" exact component={pageTitleEnchancer('Raags')(Raags)} />
         <Route path="/raags/:id/:name" component={pageTitleEnchancer(propsToParamTitle('name'))(Raag)} />
         <Route path="/nitnem" exact component={pageTitleEnchancer('Nitnem')(Nitnem)} />

@@ -8,6 +8,7 @@ import Next from './Next';
 import Previous from './Previous';
 import Random from './Random';
 import Bookmark from './Bookmark';
+import Share from './Share';
 
 export {
   Bug,
@@ -20,6 +21,7 @@ export {
   Previous,
   Random,
   Bookmark,
+  Share,
 };
 
 export default {
@@ -33,4 +35,5 @@ export default {
   Previous,
   Random,
   Bookmark,
+  Share,
 };

@@ -9,11 +9,12 @@ export const findNthLine = nth => lines => lines.find(line =>
   line.gurbani.unicode.includes(`॥${englishToUnicodeNumbers[nth]}॥`)
 );
 export const findFirstLine = findNthLine(1);
-export const findLastLine = lines => lines.slice(-1);
+export const findLastLine = lines => lines.slice(-1)[0];
 
 export const findShabadTitle = ({ lines, id, ang, sourceName }) => {
-  const rahao = findRahao(lines.map(e => e.shabad));
-  const lastLine = findLastLine(lines);
+  const shabadLines = lines.map(e => e.shabad);
+  const rahao = findRahao(shabadLines);
+  const lastLine = findLastLine(shabadLines);
 
   if (rahao) {
     return lineToTitle(rahao);
