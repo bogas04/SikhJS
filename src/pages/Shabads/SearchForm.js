@@ -17,7 +17,9 @@ export default function SearchForm ({ type, source, q, onSubmit, onUpdateQuery, 
     <Form onSubmit={onSubmit}>
       <GurbaniFont disabled={shouldDisplayEnglish}>
         <Textfield
-          defaultValue={q} placeholder={shouldDisplayEnglish ? 'Search' : 'Koj'}
+          autoFocus
+          defaultValue={q}
+          placeholder={shouldDisplayEnglish ? 'Search' : 'Koj'}
           autoCapitalize="off"
           onChange={onUpdateQuery}
         />
