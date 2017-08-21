@@ -58,11 +58,19 @@ class ShabadView extends React.PureComponent {
           {author && <AuthorChip style={{ display: 'block' }} {...author} />}
           {
             ang && (
-              <StyledLink to={`/SGGS/${ang}`} disabled={source.id !== 'G'}>
-                <Chip>
-                  {`SGGS:${ang}`}
-                </Chip>
-              </StyledLink>
+              source.id === 'G'
+                ? (
+                  <StyledLink to={`/SGGS/${ang}`}>
+                    <Chip>
+                      {`${SOURCES[source.id]}:${ang}`}
+                    </Chip>
+                  </StyledLink>
+                )
+                : (
+                  <Chip>
+                    {`${SOURCES[source.id]}:${ang}`}
+                  </Chip>
+                )
             )
           }
         </ToolbarWrapper>

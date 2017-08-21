@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { GurbaniFont, LinkButton, Card as CardView } from '../../components/';
 import styled from 'emotion/react';
+import { SOURCES } from 'khajana';
 
 const Capitalize = styled.span`
   text-transform: capitalize;
@@ -19,7 +20,7 @@ export default function SearchCard(props) {
           Open Shabad
         </LinkButton>,
         <LinkButton key={1} to={`/SGGS/${source.pageno}`} disabled={source.id !== 'G'}>
-          {`Open Ang ${source.pageno}`}
+          {`${SOURCES[source.id]} Ang ${source.pageno}`}
         </LinkButton>,
         <LinkButton key={2} to={`/SGGS/${source.pageno}`} disabled>
           Open Raag
