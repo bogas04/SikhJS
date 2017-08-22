@@ -33,7 +33,7 @@ const SearchCard = ({ data: { title, key, value }, onTitleChange }) => (
     </CardText>
 
     <CardActions>
-      {key === SHABAD && <StyledLink to={`/shabad/${value}`}>Open Shabad</StyledLink>}
+      {key === SHABAD && <StyledLink to={`/shabads/${value}`}>Open Shabad</StyledLink>}
       {key === SGGS && <StyledLink to={`/SGGS/${value}`}>Open Ang {value}</StyledLink>}
     </CardActions>
   </Card>
