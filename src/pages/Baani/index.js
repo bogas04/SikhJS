@@ -1,6 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { GurbaniFont, Markdown as FetchAndMarkdown } from '../../components';
+import styled from 'emotion/react';
+
+const Wrapper = styled.div`
+  line-height: 2em;
+  padding: 10px;
+  text-align: center;
+  @media(max-width: 700px) {
+    text-align: left;
+  }
+`;
 
 export default class Baani extends React.Component {
   componentDidMount() {
@@ -17,7 +27,9 @@ export default class Baani extends React.Component {
 
     return (
       <GurbaniFont style={{ textAlign: 'center' }}>
-        <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
+        <Wrapper>
+          <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
+        </Wrapper>
       </GurbaniFont>
     );
   }
