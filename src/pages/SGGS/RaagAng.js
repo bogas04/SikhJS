@@ -11,7 +11,7 @@ const enabledStyle = {
   ...defaultStyle,
   '& .line:nth-child(1)': {
     fontSize: '2em',
-    lineHeight: '1em',
+    lineHeight: '1.5',
     display: 'block',
     textAlign: 'center',
   },

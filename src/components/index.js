@@ -18,3 +18,4 @@ export { default as Switch } from './Switch';
 export { default as Textfield } from './Textfield';
 export { default as Toolbar } from './Toolbar';
 export { default as BlockQuote } from './BlockQuote';
+export { default as DisplayOnScroll } from './DisplayOnScroll';

@@ -9,7 +9,7 @@ import {
 } from '../';
 import pageTitleEnchancer from '../pageTitleEnchancer';
 import { Search } from '../../components/Icons';
-import FloatingIcon from '../../components/FloatingIcon';
+import { DisplayOnScroll, FloatingIcon } from '../../components';
 
 const mapStateToProps = ({ fontSize }) => ({ fontSize });
 
@@ -46,11 +46,13 @@ const Content = () => (
         <Route component={NotFound} />
       </Switch>
     </BaaniWrapper>
-    <Route path="/shabads" exact>{
-      ({ match }) => !match && <FloatingIcon to="/shabads">
-        <Search height="30px" width="30px" />
-      </FloatingIcon>
-    }</Route>
+    <Route path="/shabads" exact>{({ match }) => !match && (
+      <DisplayOnScroll hideAfterSeconds={5}>
+        <FloatingIcon to="/shabads">
+          <Search height="30px" width="30px" />
+        </FloatingIcon>
+      </DisplayOnScroll>
+    )}</Route>
   </div>
 );
 
