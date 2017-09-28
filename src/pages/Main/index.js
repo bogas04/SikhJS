@@ -5,7 +5,7 @@ import styled from 'emotion/react';
 import Header from './Header';
 import Content from './Content';
 import { Search } from '../../components/Icons';
-import FloatingIcon from '../../components/FloatingIcon';
+import { DisplayOnScroll } from '../../components';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -27,7 +27,9 @@ export default class Main extends React.PureComponent {
     return (
       <Router>
         <Wrapper>
-          <Header />
+          <DisplayOnScroll>
+            <Header />
+          </DisplayOnScroll>
           <Content />
         </Wrapper>
       </Router>

@@ -1,6 +1,17 @@
 import styled from 'emotion/react';
+import { keyframes } from 'emotion';
+
+const slideUp = keyframes`
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
 
 export default styled.nav`
+  animation: ${slideUp} ease-in-out .05s;
   user-select: none;
   position: fixed;
   z-index: 2;

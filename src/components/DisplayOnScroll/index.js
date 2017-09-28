@@ -7,28 +7,22 @@ export default class DisplayOnScroll extends React.PureComponent {
 		this.scrollListener = this.scrollListener.bind(this);
 	}
 	componentDidMount() {
-		window.addEventListener('scroll', this.scrollListener);
-		this.timer();
+		window.addEventListener('wheel', this.scrollListener);
 	}
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.scrollListener);
+		window.removeEventListener('wheel', this.scrollListener);
 	}
-	timer() {
-		const { hideAfterSeconds = 5 } = this.props;
-		return setTimeout(
-			() => this.setState({ shouldDisplay: false, timerId: null }),
-			hideAfterSeconds * 1000
-		);
-	}
-	scrollListener() {
-		this.setState(({ timerId }) => timerId === null
-			? { timerId: this.timer() }
-			: { shouldDisplay: true }
-		);
+	scrollListener(e) {
+		const threshold = 20;
+		if (e.deltaY < -threshold) { // up
+			this.setState({ shouldDisplay: true });
+		} else if (e.deltaY > threshold) { // down
+			this.setState({ shouldDisplay: false });
+		}
 	}
 	render() {
 		return this.state.shouldDisplay
-			? <div>{this.props.children}</div>
+			? this.props.children
 			: null
 	}
 }

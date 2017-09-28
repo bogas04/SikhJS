@@ -47,7 +47,7 @@ const Content = () => (
       </Switch>
     </BaaniWrapper>
     <Route path="/shabads" exact>{({ match }) => !match && (
-      <DisplayOnScroll hideAfterSeconds={5}>
+      <DisplayOnScroll>
         <FloatingIcon to="/shabads">
           <Search height="30px" width="30px" />
         </FloatingIcon>
