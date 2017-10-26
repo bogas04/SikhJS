@@ -48,10 +48,10 @@ const Header = ({ decreaseFontSize, increaseFontSize, toggleNightMode }) => (
     </NavItem>
     <NavItem title="Adjust font size" pointer onClick={decreaseFontSize}>
       a
-      </NavItem>
+    </NavItem>
     <NavItem title="Adjust font size" pointer onClick={increaseFontSize}>
       A
-      </NavItem>
+    </NavItem>
     <NavItem onClick={toggleNightMode}>
       <NightModeToggler />
     </NavItem>

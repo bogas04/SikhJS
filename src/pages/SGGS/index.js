@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled from 'emotion/react';
 import { withRouter } from 'react-router-dom';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
 import { Loader } from '../../components';
@@ -43,7 +42,7 @@ class SGGS extends Component {
     this.handleToggleBookmark = this.handleToggleBookmark.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount () {
     if (this.props.match.params.ang) {
       this.updateLines();
 
@@ -80,7 +79,7 @@ class SGGS extends Component {
           onToggleBookmark={this.handleToggleBookmark}
         />
 
-          {
+        {
           error
             ? <h2> Can't find the ang {ang} </h2>
             : (
@@ -95,7 +94,7 @@ class SGGS extends Component {
     );
   }
 
-  updateLines(ang = this.state.ang) {
+  updateLines (ang = this.state.ang) {
     this.setState({ lines: [] });
 
     return fetch(`assets/docs/json/SGGS/Ang ${ang}.json`)
@@ -107,7 +106,7 @@ class SGGS extends Component {
       });
   }
 
-  setAng(ang) {
+  setAng (ang) {
     console.log('SGGS received ' + ang);
     if (ang) {
       localStorage.setItem(STORAGE_KEYS.ANG, ang);
@@ -115,36 +114,36 @@ class SGGS extends Component {
     }
   }
 
-  handleRandomAng() {
+  handleRandomAng () {
     this.setAng(parseInt(1 + (Math.random() * 1430), 10));
   }
 
-  handleIncrementAng() {
+  handleIncrementAng () {
     this.setAng(parseInt(this.state.ang, 10) + 1);
   }
 
-  handleDecrementAng() {
+  handleDecrementAng () {
     this.setAng(parseInt(this.state.ang, 10) - 1);
   }
 
-  handleToggleLarivaar() {
+  handleToggleLarivaar () {
     localStorage.setItem(STORAGE_KEYS.LARIVAAR, !this.state.larivaar);
     this.setState({
       larivaar: !this.state.larivaar,
     });
   }
 
-  handleToggleLarivaarAssist() {
+  handleToggleLarivaarAssist () {
     localStorage.setItem(STORAGE_KEYS.LARIVAAR_ASSIST, !this.state.larivaarAssist);
     this.setState({ larivaarAssist: !this.state.larivaarAssist });
   }
 
-  handleToggleTranslation() {
+  handleToggleTranslation () {
     localStorage.setItem(STORAGE_KEYS.TRANSLATION, !this.state.showTranslation);
     this.setState({ showTranslation: !this.state.showTranslation });
   }
 
-  handleToggleBookmark() {
+  handleToggleBookmark () {
     const { isBookmarked, ang } = this.state;
     const title = `Sri Guru Granth Sahib ${ang}`;
 

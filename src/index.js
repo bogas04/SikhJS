@@ -1,3 +1,5 @@
+ /* eslint-disable import/no-unassigned-import */
+
 import React from 'react';
 import { render } from 'react-dom';
 import 'unfetch/polyfill';
@@ -5,7 +7,7 @@ import Root from './pages/Root';
 
 render(<Root />, document.getElementById('root'));
 
-// Service Worker Registeration 
+// Service Worker Registeration
 if ('serviceWorker' in navigator) {
   navigator
     .serviceWorker

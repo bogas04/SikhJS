@@ -68,7 +68,7 @@ export default () => {
       <Heading>
         ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ
         <br />
-        ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ 
+        ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ
       </Heading>
       <HomeWrapper>
         <HomeLink to="/hukamnama">Hukamnama</HomeLink>

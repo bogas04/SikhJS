@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ShabadView from './ShabadView';
 import { Khajana } from '../../components/';
+import ShabadView from './ShabadView';
 
 class ComposedShabad extends React.Component {
-  shouldComponentUpdate (nextProps, nextState) {
+  shouldComponentUpdate (nextProps) {
     const nextId = nextProps.id || nextProps.match.params.id;
     const currentId = this.props.id || this.props.match.params.id;
     console.log({ nextId, currentId });
     return nextId !== currentId;
   }
-  render() {
+  render () {
     const { props } = this;
     return (
       <Khajana options={{ id: props.id || props.match.params.id }} cache="force-cache">{

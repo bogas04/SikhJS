@@ -4,7 +4,7 @@ import { Json } from '../../components';
 import GurbaniFont, { English } from '../../components/GurbaniFont';
 
 export class HukamnamaView extends React.PureComponent {
-  render() {
+  render () {
     const { ang, english, punjabi, gurbani, date } = this.props;
     return (
       <div>
@@ -37,5 +37,6 @@ const loadingText = (
 export default () => (
   <Json url={`https://mukhwakh.herokuapp.com/api`} loadingText={loadingText}>{
     ({ data: { data } }) => <HukamnamaView {...data} />
-  }</Json>
+  }
+  </Json>
 );

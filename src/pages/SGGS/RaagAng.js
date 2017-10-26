@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'emotion/react';
 
 const defaultStyle = {
@@ -19,7 +18,7 @@ const enabledStyle = {
     display: 'block',
     textAlign: 'center',
     fontSize: '1.25em',
-  }
+  },
 };
 
 export default styled('div')(({ enabled }) => enabled ? enabledStyle : defaultStyle);

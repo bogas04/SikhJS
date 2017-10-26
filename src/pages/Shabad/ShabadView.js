@@ -4,7 +4,7 @@ import styled from 'emotion/react';
 import { SOURCES } from 'khajana';
 import { Link } from 'react-router-dom';
 import { isBookmarked, toggleBookmark } from '../../bookmarks';
-import { Chip, AuthorChip, Toolbar, LinkButton, Button } from '../../components/';
+import { Chip, AuthorChip, Toolbar, Button } from '../../components/';
 import { Bookmark, Share } from '../../components/Icons';
 import { findShabadTitle } from '../../utils';
 import pageTitleEnchancer from '../pageTitleEnchancer';
@@ -26,12 +26,12 @@ const ToolbarWrapper = styled('div')`
 const shareEnabled = 'share' in navigator;
 
 class ShabadView extends React.PureComponent {
-  constructor(p) {
+  constructor (p) {
     super(p);
 
     this.state = { isBookmarked: false };
 
-    const { id, ang, gurbani: lines, source } = this.props;
+    const { id } = this.props;
 
     isBookmarked({ key: 'shabad', value: id })
       .then(isBookmarked => this.setState({ isBookmarked }))
@@ -40,7 +40,7 @@ class ShabadView extends React.PureComponent {
     this.handleToggleBookmark = this.handleToggleBookmark.bind(this);
     this.handleShareClick = this.handleShareClick.bind(this);
   }
-  render() {
+  render () {
     const { ang, author, gurbani, source } = this.props;
     const { isBookmarked } = this.state;
 
@@ -51,9 +51,11 @@ class ShabadView extends React.PureComponent {
             <Bookmark isBookmarked={isBookmarked} />
           </Button>
           {
-            shareEnabled && <Button title="Share" onClick={this.handleShareClick}>
-              <Share />
-            </Button>
+            shareEnabled && (
+              <Button title="Share" onClick={this.handleShareClick}>
+                <Share />
+              </Button>
+            )
           }
           {author && <AuthorChip style={{ display: 'block' }} {...author} />}
           {
@@ -84,7 +86,7 @@ class ShabadView extends React.PureComponent {
       </div>
     );
   }
-  handleToggleBookmark() {
+  handleToggleBookmark () {
     const { isBookmarked } = this.state;
     const { id, source, ang, gurbani: lines } = this.props;
     const title = findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] });
@@ -93,7 +95,7 @@ class ShabadView extends React.PureComponent {
       .then(isBookmarked => this.setState({ isBookmarked }))
       .catch(err => console.error(err));
   }
-  handleShareClick(p) {
+  handleShareClick () {
     const { id, source, ang, gurbani: lines } = this.props;
     const title = findShabadTitle({ lines, id, ang, sourceName: SOURCES[source] });
     const url = location.href;

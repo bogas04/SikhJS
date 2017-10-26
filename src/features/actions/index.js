@@ -1,4 +1,4 @@
-// util function
+// Util function
 const createAction = type => payload => ({ type, payload });
 
 export const TOGGLE_NIGHT_MODE = 'TOGGLE_NIGHT_MODE';

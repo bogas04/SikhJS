@@ -1,7 +1,7 @@
 const VERSION = 'v18';
 const RUNTIME = 'runtime_18';
 
-const currentCaches = [RUNTIME, VERSION];
+const currentCaches = [ RUNTIME, VERSION ];
 
 const CACHE_URLS = [
   './',

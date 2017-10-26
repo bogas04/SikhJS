@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'emotion/react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { SOURCES } from 'khajana';
 import {
   Author, Raag, Raags, Authors, Home, Bookmarks, Hukamnama, Baani,
   SGGS, Nitnem, Calendar, Shabad, Shabads, NotFound, Settings,
@@ -52,7 +51,8 @@ const Content = () => (
           <Search height="30px" width="30px" />
         </FloatingIcon>
       </DisplayOnScroll>
-    )}</Route>
+    )}
+    </Route>
   </div>
 );
 

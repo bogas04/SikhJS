@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { GurbaniFont, Markdown as FetchAndMarkdown } from '../../components';
 import styled from 'emotion/react';
+import { GurbaniFont, Markdown as FetchAndMarkdown } from '../../components';
 
 const Wrapper = styled.div`
   line-height: 2em;
@@ -13,16 +13,16 @@ const Wrapper = styled.div`
 `;
 
 export default class Baani extends React.Component {
-  componentDidMount() {
+  componentDidMount () {
     window.scrollTo(0, 0);
   }
-  shouldComponentUpdate(nextProps) {
+  shouldComponentUpdate (nextProps) {
     const currentBaani = this.props.match.params.baani;
     const nextBaani = nextProps.match.params.baani;
 
     return nextBaani !== currentBaani;
   }
-  render() {
+  render () {
     const { match: { params: { baani } } } = this.props;
 
     return (

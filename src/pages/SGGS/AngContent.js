@@ -6,7 +6,7 @@ import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/s
 import Larivaared from './Larivaared';
 
 const Translation = styled.div`
-  display: ${({ showTranslation, larivaar }) => showTranslation
+  display: ${({ showTranslation }) => showTranslation
     ? 'block'
     : 'inline'
   };
@@ -18,15 +18,17 @@ const Translation = styled.div`
   }
 `;
 
-function AngContent({ larivaarAssist, showTranslation, larivaar, lines }) {
+function AngContent ({ larivaarAssist, showTranslation, larivaar, lines }) {
   return (
     <span>
       {
         lines.map(({ id, text, translation }) =>
-          <Translation className="line" key={id} showTranslation={showTranslation} larivaar={larivaar}>
-            <Larivaared larivaarAssist={larivaarAssist} enabled={larivaar}>{text}</Larivaared>
-            {showTranslation ? <English><BlockQuote>{translation.text}</BlockQuote></English> : ''}
-          </Translation>
+          (
+            <Translation key={id} className="line" showTranslation={showTranslation}>
+              <Larivaared larivaarAssist={larivaarAssist} enabled={larivaar}>{text}</Larivaared>
+              {showTranslation ? <English><BlockQuote>{translation.text}</BlockQuote></English> : ''}
+            </Translation>
+          )
         )
       }
     </span>
@@ -34,8 +36,8 @@ function AngContent({ larivaarAssist, showTranslation, larivaar, lines }) {
 }
 
 const shouldComponentUpdate = (c, n) => (
-  notEqualsSome(['larivaar', 'larivaarAssist', 'showTranslation'])(c, n) ||
-  c.lines.some((v, i) => v.text !== n.lines[i].text)
+  notEqualsSome([ 'larivaar', 'larivaarAssist', 'showTranslation' ])(c, n)
+  || c.lines.some((v, i) => v.text !== n.lines[i].text)
 );
 
 export default shouldComponentUpdateEnhancer(shouldComponentUpdate)(AngContent);

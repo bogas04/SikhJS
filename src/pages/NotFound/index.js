@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `;
 
 export default class NotFound extends React.PureComponent {
-  render() {
+  render () {
     const { pathname: url } = this.props.location;
 
     return (

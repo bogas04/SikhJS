@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Toolbar, Switch } from '../../components';
 import styled from 'emotion/react';
+import { Toolbar, Switch } from '../../components';
 import { SETTINGS } from '../../constants';
 import { resetSettings, updateSetting } from '../../features/actions';
 
-const { UNICODE, TRANSLATION, TRANSLITERATION, TRANSLITERATION_LANGUAGE } = SETTINGS;
+const { UNICODE, TRANSLATION, TRANSLITERATION } = SETTINGS;
 
 const SettingsGroup = styled.div`
   margin: 5px;
@@ -18,11 +18,11 @@ const HelpText = styled.div`
 `;
 
 class Settings extends React.PureComponent {
-  constructor(p) {
+  constructor (p) {
     super(p);
     this.handleSettings = this.handleSettings.bind(this);
   }
-  render() {
+  render () {
     return (
       <div>
         <Toolbar title="Settings" />
@@ -51,11 +51,11 @@ class Settings extends React.PureComponent {
           </Switch>
           <HelpText>
             This setting allows you to enable english transliteration in search results.
-        </HelpText>
+          </HelpText>
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch right disabled={true} id={'tl1'}>
+          <Switch right disabled id={'tl1'}>
             Translation Language
           </Switch>
           <HelpText>
@@ -64,7 +64,7 @@ class Settings extends React.PureComponent {
         </SettingsGroup>
 
         <SettingsGroup>
-          <Switch right disabled={true} id={'tl2'}>
+          <Switch right disabled id={'tl2'}>
             Transliteration Language
           </Switch>
           <HelpText>
@@ -75,8 +75,8 @@ class Settings extends React.PureComponent {
       </div >
     );
   }
-  handleSettings(key) {
-    return () => this.props.updateSetting([key, !this.props.settings[key]]);
+  handleSettings (key) {
+    return () => this.props.updateSetting([ key, !this.props.settings[key] ]);
   }
 }
 

@@ -19,7 +19,6 @@ const vendor = [
 
 const main = './src/index.js';
 
-
 const plugins = PRODUCTION
   ? [
     new webpack.DefinePlugin({
@@ -55,7 +54,7 @@ export default {
     rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        loaders: [ 'babel-loader' ],
       },
     ],
   },
@@ -64,8 +63,8 @@ export default {
     contentBase: path.join(__dirname),
     compress: true,
     watchOptions: {
-      ignored: /node_modules/
-    }
+      ignored: /node_modules/,
+    },
   },
 
   plugins,

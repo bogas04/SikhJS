@@ -62,16 +62,16 @@ const Label = styled('label')`
   }
 `;
 
-function Switch({ children, checked, right = false, ...props }) {
+function Switch ({ children, checked, right = false, ...props }) {
   const checkbox = (
     <div style={{ display: 'flex' }}>
-      <Checkbox type='checkbox' {...props} />
-      <Status className='status'>
-        <Dot className='dot' />
+      <Checkbox type="checkbox" {...props} />
+      <Status className="status">
+        <Dot className="dot"/>
       </Status>
     </div>
   );
-  
+
   return (
     <Label {...props} id={children}>
       {right ? children : checkbox}
@@ -82,7 +82,7 @@ function Switch({ children, checked, right = false, ...props }) {
 
 Switch.propTypes = {
   children: PropTypes.node,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 export default Switch;

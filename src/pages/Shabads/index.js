@@ -18,7 +18,7 @@ const ShabadResults = styled.div`
 const { TYPE: SEARCH_TYPE, SOURCE: SEARCH_SOURCE } = SEARCH_OPTIONS;
 
 class Shabads extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     const q = (this.props.match.params && this.props.match.params.q) || '';
@@ -36,11 +36,11 @@ class Shabads extends Component {
     this.handleUpdateSource = this.handleUpdateSource.bind(this);
   }
 
-  shouldComponentUpdate(props, state) {
+  shouldComponentUpdate (props, state) {
     return this.state.q !== state.q || this.state.type !== state.type || this.state.source !== state.source;
   }
 
-  render() {
+  render () {
     const { type, source, q } = this.state;
 
     return (
@@ -63,40 +63,44 @@ class Shabads extends Component {
 
               ? <h1 style={{ textAlign: 'center' }}>Enter your query</h1>
 
-              : <Khajana options={{ q, source, type }}>
-                {
-                  ({ data: { shabads = [] } }) => shabads.length === 0
-                    ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
-                    : <ShabadResults>
-                      {
-                        shabads
-                          .map(({ shabad }) => <SearchCard key={shabad.id} {...shabad} />)
-                      }
-                    </ShabadResults>
-                }
-              </Khajana>
+              : (
+                <Khajana options={{ q, source, type }}>
+                  {
+                    ({ data: { shabads = [] } }) => shabads.length === 0
+                      ? <h1 style={{ textAlign: 'center' }}> No Shabads Found </h1>
+                      : (
+                        <ShabadResults>
+                          {
+                            shabads
+                              .map(({ shabad }) => <SearchCard key={shabad.id} {...shabad} />)
+                          }
+                        </ShabadResults>
+                      )
+                  }
+                </Khajana>
+              )
           }
         </div>
       </div>
     );
   }
 
-  handleSearch(e) {
+  handleSearch (e) {
     this.setState({ q: this.state.keyword });
     this.props.history.push(`/shabads/${this.state.keyword}`);
     e.preventDefault();
   }
 
-  handleUpdateSearchQuery({ target: { value: keyword } }) {
+  handleUpdateSearchQuery ({ target: { value: keyword } }) {
     this.setState({ keyword });
   }
 
-  handleUpdateSearchType({ target: { value: type } }) {
+  handleUpdateSearchType ({ target: { value: type } }) {
     this.setState({ type });
     localStorage.setItem(SEARCH_TYPE, type);
   }
 
-  handleUpdateSource({ target: { value: source } }) {
+  handleUpdateSource ({ target: { value: source } }) {
     this.setState({ source });
     localStorage.setItem(SEARCH_SOURCE, source);
   }

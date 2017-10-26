@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { TYPES, SOURCES } from 'khajana';
 import styled from 'emotion/react';
 import { GurbaniFont, Textfield, Select } from '../../components';
@@ -27,7 +26,7 @@ export default function SearchForm ({ type, source, q, onSubmit, onUpdateQuery, 
 
       <Select label="Search Type" value={type} onChange={onUpdateType}>
         {
-          TYPES.map((v, i) => <option value={i} key={i}>{v}</option>)
+          TYPES.map((v, i) => <option key={i} value={i}>{v}</option>)
         }
       </Select>
 
@@ -35,7 +34,7 @@ export default function SearchForm ({ type, source, q, onSubmit, onUpdateQuery, 
         {
           Object
             .keys(SOURCES)
-            .map(key => <option value={key} key={key}>{SOURCES[key]}</option>)
+            .map(key => <option key={key} value={key}>{SOURCES[key]}</option>)
         }
       </Select>
     </Form>

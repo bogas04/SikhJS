@@ -12,13 +12,18 @@ Markdown.propTypes = {
 };
 
 export default function FetchAndMarkdown ({ style, className, ...props }) {
-  return (<Fetch {...props}>{
-    ({ data }) => {
-      return (<div style={{ padding: 10, ...style }} className={className}>
-        <Markdown text={data} dangerouslySetInnerHTML={{ __html: 's' }} />
-      </div>);
+  return (
+    <Fetch {...props}>{
+      ({ data }) => {
+        return (
+          <div style={{ padding: 10, ...style }} className={className}>
+            <Markdown text={data} dangerouslySetInnerHTML={{ __html: 's' }} />
+          </div>
+        );
+      }
     }
-  }</Fetch>);
+    </Fetch>
+  );
 }
 
 FetchAndMarkdown.propTypes = {

@@ -27,7 +27,8 @@ function AuthorChip ({ english, gurmukhi, id, ...otherProps }) {
             {loading ? 'Loading' : `${data.author} ${data.gurmukhi}`}
           </Chip>
         )
-      }</Json>
+      }
+      </Json>
     </StyledLink>
   );
 }

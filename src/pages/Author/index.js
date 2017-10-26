@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Toolbar, Markdown } from '../../components';
-import shouldComponentUpdateEnhancer, { notEqualsSome } from '../../components/shouldComponentUpdateEnhancer';
+import shouldComponentUpdateEnhancer from '../../components/shouldComponentUpdateEnhancer';
 
 function Author ({ match: { params: { id, name } } }) {
   return (

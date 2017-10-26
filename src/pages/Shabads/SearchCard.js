@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { GurbaniFont, LinkButton, Card as CardView } from '../../components/';
+import React from 'react';
 import styled from 'emotion/react';
 import { SOURCES } from 'khajana';
+import { GurbaniFont, LinkButton, Card as CardView } from '../../components/';
 
 const Capitalize = styled.span`
   text-transform: capitalize;
 `;
 
-export default function SearchCard(props) {
+export default function SearchCard (props) {
   const { transliteration, gurbani, shabadid, source } = props;
 
   return (
@@ -28,7 +28,7 @@ export default function SearchCard(props) {
       ]}
     />
   );
-};
+}
 
 SearchCard.propTypes = {
   transliteration: PropTypes.string,

@@ -41,14 +41,14 @@ const SwitchWrapper = styled.div`
   }
 `;
 
-function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
+function AngBar ({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showTranslation, ...events }) {
   const handleSetAng = ({ target: { value } }) => {
     if (value < MIN_ANG) {
       events.onSetAng(MIN_ANG);
     } else if (value > MAX_ANG) {
       events.onSetAng(MAX_ANG);
-    } else if (value != ang) {
-      events.onSetAng(parseInt(Number(value)))
+    } else if (value !== ang) {
+      events.onSetAng(parseInt(Number(value)));
     }
   };
 
@@ -63,11 +63,11 @@ function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showT
           </Button>
 
           <Textfield
+            key={ang}
             disabled={totalLines === 0}
             center
             size={60}
             placeholder={String(ang)}
-            key={ang}
             onKeyDown={enterPressed(handleSetAng)}
             onBlur={handleSetAng}
             defaultValue={ang}
@@ -107,8 +107,8 @@ function AngBar({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, showT
         </SwitchList>
       </Wrapper>
     </Toolbar>
-  )
-};
+  );
+}
 
 const shouldComponentUpdate = notEqualsSome([
   'totalLines', 'ang', 'isBookmarked', 'larivaar', 'larivaarAssist', 'showTranslation',

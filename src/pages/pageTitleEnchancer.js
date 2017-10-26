@@ -1,18 +1,18 @@
 import React from 'react';
 
 export default title => Component => class extends React.PureComponent {
-  componentDidMount() {
+  componentDidMount () {
     this.oldTitle = document.title;
     document.title = (typeof title === 'function' ? title(this.props) : title) + ' | SikhJS';
   }
-  componentDidUpdate() {
+  componentDidUpdate () {
     this.oldTitle = document.title;
     document.title = typeof title === 'function' ? title(this.props) : title;
   }
-  componentWillUnmount() {
+  componentWillUnmount () {
     document.title = this.oldTitle;
   }
-  render() {
-    return <Component {...this.props} />
+  render () {
+    return <Component {...this.props} />;
   }
 };

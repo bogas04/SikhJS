@@ -12,16 +12,16 @@ const getSettings = defaults => {
   const ls = localStorage.getItem('settings');
   try {
     return JSON.parse(ls) || defaults;
-  } catch (e) {
+  } catch (err) {
     return defaults;
   }
-}
+};
 
 const setSettings = (settings = defaultSettings) => {
   const ls = JSON.stringify(settings);
   localStorage.setItem('settings', ls);
   return settings;
-}
+};
 
 const initialState = getSettings(defaultSettings);
 
@@ -31,7 +31,7 @@ export default (state = initialState, action) => {
       return setSettings(defaultSettings);
     }
     case UPDATE_SETTING: {
-      const [key, value] = action.payload;
+      const [ key, value ] = action.payload;
       return setSettings({
         ...state,
         [key]: value,

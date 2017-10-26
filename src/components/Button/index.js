@@ -12,12 +12,12 @@ export default styled.button`
   padding: 5px 10px;
   transition: all 0.25s, color 0.125s;
   &:active {
-    color: ${({ naked }) => naked ? 'grey' : 'inherit' };
-    border-color: ${({ naked }) => naked ? 'inherit' : 'teal' };;
+    color: ${({ naked }) => naked ? 'grey' : 'inherit'};
+    border-color: ${({ naked }) => naked ? 'inherit' : 'teal'};;
   }
   &:hover {
     color: ${({ naked, dark }) => naked && !dark ? 'black' : 'white'};
-    background-color: ${({ naked }) => !naked ? 'teal' : 'inherit'};
-    border-color: ${({ naked }) => !naked ? 'teal' : 'inherit'};
+    background-color: ${({ naked }) => naked ? 'inherit' : 'teal'};
+    border-color: ${({ naked }) => naked ? 'inherit' : 'teal'};
   }
 `;

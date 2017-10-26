@@ -50,8 +50,8 @@ const SearchCards = ({ items, onTitleChange }) => (
       items
         .map(b => (
           <SearchCard
-            data={b}
             key={b.id}
+            data={b}
             onTitleChange={({ currentTarget: { value: title = b.title } }) => onTitleChange({ ...b, title })}
           />
         ))
@@ -84,7 +84,6 @@ export default class Bookmarks extends Component {
       bookmarks = bookmarks.filter(e => e.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
     }
 
-
     return (
       <div>
 
@@ -99,7 +98,8 @@ export default class Bookmarks extends Component {
           bookmarks.length === 0
             ? <h1 style={{ textAlign: 'center' }}>No Bookmarks Found</h1>
             : <SearchCards items={bookmarks} onTitleChange={this.handleUpdateBookmark} />
-        }</Loader>
+        }
+        </Loader>
       </div>
     );
   }
@@ -116,7 +116,7 @@ export default class Bookmarks extends Component {
       .catch(err => console.error(err));
   }
 
-  handleUpdateKeyword ({ currentTarget: { value: keyword }}) {
+  handleUpdateKeyword ({ currentTarget: { value: keyword } }) {
     this.setState({ keyword });
   }
 }
