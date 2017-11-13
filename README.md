@@ -35,7 +35,7 @@ You can contribute by
 
 Build
 ==
-The project is uses React, ES2015+, hence a bundler + transpiler is used in the build process.
+The project uses React, ES2015+, hence a bundler + transpiler is used in the build process.
 
 ## Instructions
 
