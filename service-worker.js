@@ -1,5 +1,5 @@
 const VERSION = 'v18';
-const RUNTIME = 'runtime_18';
+const RUNTIME = 'runtime_19';
 
 const currentCaches = [ RUNTIME, VERSION ];
 

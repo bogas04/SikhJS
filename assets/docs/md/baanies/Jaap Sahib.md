@@ -294,7 +294,7 @@ n ic\`qRY ] n im\`qRY ] pry hYN ] piv\`qRY ] 101 ]
 
 ipRQIsY ] AdIsY ] AidRsY ] Aik®sY ] 102 ]
 
-## BgvqI CMd ] qÍ prRwid kQqy ]
+## BgvqI CMd ] qÍ pRswid kQqy ]
 ik AwiC\`j dysY ] ik AwiB\`j BysY ] ik AwgMj krmY ] ik AwBMj BrmY ] 103 ]
 
 ik AwiBj lokY ] ik Awidq sokY ] ik AvDUq brnY ] ik ibBUq krnY ] 104 ]
