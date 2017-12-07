@@ -5,7 +5,7 @@ export default class DisplayOnScroll extends React.PureComponent {
     super(p);
     this.state = { shouldDisplay: true, timerId: null };
     this.scrollListener = this.scrollListener.bind(this);
-    this.touchListener = handleTouchMove(dir => this.setState(() => ({ shouldDisplay: dir < 0 })))
+    this.touchListener = handleTouchMove(dir => this.setState(() => ({ shouldDisplay: dir < 0 })));
   }
   componentDidMount () {
     window.addEventListener('wheel', this.scrollListener);
@@ -33,7 +33,7 @@ export default class DisplayOnScroll extends React.PureComponent {
 function handleTouchMove (cb) {
   let previousScreenY = 0;
   return e => {
-    cb(previousScreenY - e.changedTouches[0].screenY)
+    cb(previousScreenY - e.changedTouches[0].screenY);
     previousScreenY = e.changedTouches[0].screenY;
   };
 }

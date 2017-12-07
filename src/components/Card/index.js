@@ -15,7 +15,6 @@ export const Card = styled.div`
 `;
 
 export const CardTitle = styled.div`
-  font-size: 16px;
   padding: 2px 5px;
   color: #080808;
   margin: 5px;
@@ -25,7 +24,7 @@ export const CardTitle = styled.div`
 const Text = styled.div`
   margin: 5px;
   color: #232323;
-  paddgin: 5px;
+  padding: 5px;
 `;
 
 export const CardText = ({ enabled = true, ...props }) => {
