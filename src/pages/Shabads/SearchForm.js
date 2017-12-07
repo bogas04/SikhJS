@@ -3,6 +3,8 @@ import { TYPES, SOURCES } from 'khajana';
 import styled from 'emotion/react';
 import { GurbaniFont, Textfield, Select } from '../../components';
 
+console.log({ TYPES, SOURCES })
+
 const Form = styled.form`
   display: flex;
   justify-content: center;

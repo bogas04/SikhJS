@@ -21,6 +21,13 @@ const ToolbarWrapper = styled('div')`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  @media(max-width: 510px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  & a {
+    margin: 10px 0;
+  }
 `;
 
 const shareEnabled = 'share' in navigator;
