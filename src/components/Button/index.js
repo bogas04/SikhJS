@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 export default styled.button`
   color: ${({ dark }) => dark ? `white` : `black`};

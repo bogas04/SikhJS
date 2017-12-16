@@ -1,6 +1,6 @@
 import React from 'react';
 import { TYPES, SOURCES } from 'khajana';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { GurbaniFont, Textfield, Select } from '../../components';
 
 const Form = styled.form`

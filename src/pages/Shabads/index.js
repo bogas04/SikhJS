@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withRouter } from 'react-router-dom';
 import { SEARCH_OPTIONS } from '../../constants';
 import { Toolbar, Khajana } from '../../components/';

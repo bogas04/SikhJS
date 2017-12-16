@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { SOURCES } from 'khajana';
 import { GurbaniFont, LinkButton, Card as CardView } from '../../components/';
 
