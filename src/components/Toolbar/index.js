@@ -31,9 +31,9 @@ const Title = styled.h2`
   }
 `;
 
-export default function Toolbar ({ title = null, children }) {
+export default function Toolbar ({ title = null, children, ...props }) {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       {title && <Title>{title}</Title>}
       {children}
     </Wrapper>
