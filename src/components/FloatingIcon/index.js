@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { keyframes } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 const BubbleOut = keyframes`
   0% {

@@ -18,6 +18,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-emotion": "^8.0.12",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-emotion": "^8.0.12",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
     "babel-preset-env": "^1.6.1",
@@ -118,7 +120,7 @@
     ],
     "plugins": [
       [
-        "emotion/babel",
+        "emotion",
         {
           "inline": true
         }

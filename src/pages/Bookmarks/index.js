@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { BOOKMARK_TYPES } from '../../constants';
 import { clearAllBookmarks, getAllBookmarks, updateBookmarkTitle } from '../../bookmarks';
 import { Textfield, Button, Toolbar, Loader } from '../../components';

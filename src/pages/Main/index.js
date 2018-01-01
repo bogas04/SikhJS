@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import { injectGlobal } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { DisplayOnScroll } from '../../components';
 import Header from './Header';
 import Content from './Content';

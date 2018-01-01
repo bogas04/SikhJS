@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { keyframes } from 'emotion';
 
 export const slide = keyframes`

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { Button, Switch, Toolbar, Textfield } from '../../components';
 import { Bookmark, Previous, Next, Random } from '../../components/Icons';
 import { slide } from '../../components/BlockQuote';

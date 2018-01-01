@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { keyframes } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 const SplashIn = keyframes`
   from { transform: scale(3) perspective(500px); opacity: 0; }
