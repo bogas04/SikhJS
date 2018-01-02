@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { GurbaniFont, Button, AuthorChip, Toolbar } from '../../components';
 import { Card, CardActions, CardText, CardTitle } from '../../components/Card';
 import baanies from './constants';

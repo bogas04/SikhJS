@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { GurbaniFont, Markdown as FetchAndMarkdown } from '../../components';
 
 const Wrapper = styled.div`

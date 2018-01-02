@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { decreaseFontSize, increaseFontSize, toggleNightMode, toggleOnlineMode } from '../../features/actions';

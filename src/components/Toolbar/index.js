@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 const Wrapper = styled.div`
   z-index: 1;
