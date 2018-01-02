@@ -12,7 +12,7 @@ Markdown.propTypes = {
 };
 
 export default class FetchAndMarkdown extends React.PureComponent {
-  render() {
+  render () {
     const { style, className, ...props } = this.props;
     return (
       <Fetch {...props}>{

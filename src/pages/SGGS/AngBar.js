@@ -93,7 +93,7 @@ function AngBar ({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, show
             <SwitchWrapper>
               <Switch right defaultChecked={larivaar} checked={larivaar} onChange={events.onToggleLarivaar}>
                 Larivaar
-            </Switch>
+              </Switch>
             </SwitchWrapper>
 
             {larivaar && (
@@ -107,7 +107,7 @@ function AngBar ({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, show
             <SwitchWrapper>
               <Switch right defaultChecked={showTranslation} checked={showTranslation} onChange={events.onToggleTranslation}>
                 English Translation
-            </Switch>
+              </Switch>
             </SwitchWrapper>
           </SwitchList>
         </Wrapper>

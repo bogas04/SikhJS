@@ -22,13 +22,13 @@ const Wrapper = styled.div`
 `;
 
 class OnScroll extends React.PureComponent {
-  constructor(p) {
+  constructor (p) {
     super(p);
     this.state = { x: window.scrollX, y: window.scrollY, maxX: window.maxScrollX, maxY: window.maxScrollY };
     this.scrollListener = this.scrollListener.bind(this);
   }
 
-  scrollListener() {
+  scrollListener () {
     window.requestAnimationFrame(() =>
       this.setState({
         x: window.scrollX,
@@ -36,19 +36,19 @@ class OnScroll extends React.PureComponent {
         maxX: window.scrollMaxX,
         maxY: window.scrollMaxY,
       })
-    )
+    );
   }
 
-  componentDidMount() {
+  componentDidMount () {
     // TODO: Throttle or something
     window.addEventListener('scroll', this.scrollListener, { passive: true });
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     window.removeEventListener('scroll', this.scrollListener);
   }
 
-  render() {
+  render () {
     return this.props.children(this.state);
   }
 }
