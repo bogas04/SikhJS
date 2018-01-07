@@ -107,7 +107,6 @@ class SGGS extends Component {
   }
 
   setAng (ang) {
-    console.log('SGGS received ' + ang);
     if (ang) {
       localStorage.setItem(STORAGE_KEYS.ANG, ang);
       this.props.history.push(`/sggs/${ang}`);

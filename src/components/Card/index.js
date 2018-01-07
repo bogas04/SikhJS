@@ -45,6 +45,10 @@ export const CardActions = styled.div`
   justify-content: space-between;
   margin: 10px 5px;
   padding: 10px 5px 0px 5px;
+  @media(max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const ComposedCard = ({ title, text, actions = [] }) => (

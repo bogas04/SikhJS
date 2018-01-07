@@ -11,9 +11,11 @@ export const slide = keyframes`
 `;
 
 export default styled.blockquote`
-  margin: 5px 0;
+  margin: 0;
+  margin-bottom: 1em;
   padding: 0;
-  padding-left: 15px;
+  padding-left: 1em;
+  line-height: 1.6em;
   font-size: inherit;
   border-left: 3px solid grey;
   animation: ${slide} normal .25s;

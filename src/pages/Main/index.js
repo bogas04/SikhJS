@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-injectGlobal(`
+injectGlobal`
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
   }
@@ -19,7 +19,7 @@ injectGlobal(`
     background-color: orange !important;
     color: black !important;
   }
-`);
+`;
 
 export default class Main extends React.PureComponent {
   render () {

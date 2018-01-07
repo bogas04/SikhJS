@@ -19,11 +19,8 @@ export default function SearchCard (props) {
         <LinkButton key={0} to={`/shabads/${shabadid}`}>
           Open Shabad
         </LinkButton>,
-        <LinkButton key={1} to={`/SGGS/${source.pageno}`} disabled={source.id !== 'G'}>
+        <LinkButton key={2} to={`/SGGS/${source.pageno}`} disabled={source.id !== 'G'}>
           {`${SOURCES[source.id]} Ang ${source.pageno}`}
-        </LinkButton>,
-        <LinkButton key={2} to={`/SGGS/${source.pageno}`} disabled>
-          Open Raag
         </LinkButton>,
       ]}
     />

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { DisplayOnScroll, Button, Switch, Toolbar, Textfield } from '../../components';
+import { Button, Switch, Toolbar, Textfield } from '../../components';
 import { Bookmark, Previous, Next, Random } from '../../components/Icons';
 import { slide } from '../../components/BlockQuote';
 import { enterPressed } from '../../utils';
@@ -9,10 +9,6 @@ import Orange from './Orange';
 import constants from './constants';
 
 const { MIN_ANG, MAX_ANG } = constants;
-
-const StyledToolbar = styled(Toolbar)`
-  position: fixed;
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -57,62 +53,60 @@ function AngBar ({ totalLines, ang, isBookmarked, larivaar, larivaarAssist, show
   };
 
   return (
-    <DisplayOnScroll>
-      <StyledToolbar title={`Sri Guru Granth Sahib`}>
-        <Wrapper>
-          <ButtonList style={{ justifyContent: 'space-around' }}>
-            <Button title="Bookmark" onClick={events.onToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
+    <Toolbar title={`Sri Guru Granth Sahib`}>
+      <Wrapper>
+        <ButtonList style={{ justifyContent: 'space-around' }}>
+          <Button title="Bookmark" onClick={events.onToggleBookmark}><Bookmark isBookmarked={isBookmarked} /></Button>
 
-            <Button disabled={totalLines === 0 || ang === MIN_ANG} onClick={events.onDecrementAng} title="Previous" >
-              <Previous />
-            </Button>
+          <Button disabled={totalLines === 0 || ang === MIN_ANG} onClick={events.onDecrementAng} title="Previous" >
+            <Previous />
+          </Button>
 
-            <Textfield
-              key={ang}
-              disabled={totalLines === 0}
-              center
-              size={60}
-              placeholder={String(ang)}
-              onKeyDown={enterPressed(handleSetAng)}
-              onBlur={handleSetAng}
-              defaultValue={ang}
-              type="number"
-              min={MIN_ANG}
-              max={MAX_ANG}
-            />
+          <Textfield
+            key={ang}
+            disabled={totalLines === 0}
+            center
+            size={60}
+            placeholder={String(ang)}
+            onKeyDown={enterPressed(handleSetAng)}
+            onBlur={handleSetAng}
+            defaultValue={ang}
+            type="number"
+            min={MIN_ANG}
+            max={MAX_ANG}
+          />
 
-            <Button disabled={totalLines === 0 || ang === MAX_ANG} onClick={events.onIncrementAng} title="Next">
-              <Next />
-            </Button>
-            <Button size={13} title="Random Ang" onClick={events.onRandomAng}>
-              <Random />
-            </Button>
-          </ButtonList>
+          <Button disabled={totalLines === 0 || ang === MAX_ANG} onClick={events.onIncrementAng} title="Next">
+            <Next />
+          </Button>
+          <Button size={13} title="Random Ang" onClick={events.onRandomAng}>
+            <Random />
+          </Button>
+        </ButtonList>
 
-          <SwitchList>
+        <SwitchList>
+          <SwitchWrapper>
+            <Switch right defaultChecked={larivaar} checked={larivaar} onChange={events.onToggleLarivaar}>
+              Larivaar
+              </Switch>
+          </SwitchWrapper>
+
+          {larivaar && (
             <SwitchWrapper>
-              <Switch right defaultChecked={larivaar} checked={larivaar} onChange={events.onToggleLarivaar}>
-                Larivaar
+              <Switch right defaultChecked={larivaarAssist} checked={larivaarAssist} onChange={events.onToggleLarivaarAssist} disabled={!larivaar}>
+                <span>Larivaar<Orange>Assist</Orange></span>
               </Switch>
             </SwitchWrapper>
+          )}
 
-            {larivaar && (
-              <SwitchWrapper>
-                <Switch right defaultChecked={larivaarAssist} checked={larivaarAssist} onChange={events.onToggleLarivaarAssist} disabled={!larivaar}>
-                  <span>Larivaar<Orange>Assist</Orange></span>
-                </Switch>
-              </SwitchWrapper>
-            )}
-
-            <SwitchWrapper>
-              <Switch right defaultChecked={showTranslation} checked={showTranslation} onChange={events.onToggleTranslation}>
-                English Translation
+          <SwitchWrapper>
+            <Switch right defaultChecked={showTranslation} checked={showTranslation} onChange={events.onToggleTranslation}>
+              English Translation
               </Switch>
-            </SwitchWrapper>
-          </SwitchList>
-        </Wrapper>
-      </StyledToolbar>
-    </DisplayOnScroll>
+          </SwitchWrapper>
+        </SwitchList>
+      </Wrapper>
+    </Toolbar>
   );
 }
 

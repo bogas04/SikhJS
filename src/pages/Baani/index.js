@@ -13,8 +13,8 @@ const Wrapper = styled.div`
   ::before {
     height: 0.2rem;
     content: "";
-    background-color: teal;
-    width: ${({ scroll = 0 }) => `${scroll}vw`};
+    background-color: #ce177c;
+    width: ${({ scrollYPercentage = 0 }) => `${scrollYPercentage}vw`};
     position: fixed;
     top: 0px;
     left: 0;
@@ -33,8 +33,8 @@ class OnScroll extends React.PureComponent {
       this.setState({
         x: window.scrollX,
         y: window.scrollY,
-        maxX: window.scrollMaxX,
-        maxY: window.scrollMaxY,
+        maxX: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        maxY: document.documentElement.scrollHeight - document.documentElement.clientHeight,
       })
     );
   }
@@ -69,7 +69,7 @@ export default class Baani extends React.Component {
     return (
       <GurbaniFont style={{ textAlign: 'center' }}>
         <OnScroll>{({ y, maxY }) => (
-          <Wrapper scroll={(y / maxY) * 100}>
+          <Wrapper scrollYPercentage={(y / maxY) * 100}>
             <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
           </Wrapper>
         )}

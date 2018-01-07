@@ -13,6 +13,11 @@ const Wrapper = styled.div`
   }
 `;
 
+const Transliteration = styled.div`
+  color: grey;
+  font-style: italic;
+`
+
 class Shabad extends React.PureComponent {
   render () {
     const { gurbani, unicode, translation, transliteration } = this.props;
@@ -22,11 +27,25 @@ class Shabad extends React.PureComponent {
           gurbani
             .map(({ shabad }) => (
               <div key={shabad.id}>
-                { unicode ? shabad.gurbani.unicode : <GurbaniFont>{shabad.gurbani.gurmukhi}</GurbaniFont>}
-
-                {transliteration && (<div><i>{shabad.transliteration}</i></div>)}
-
-                {translation && <BlockQuote>{shabad.translation.english.ssk}</BlockQuote>}
+                {
+                  unicode
+                    ? shabad.gurbani.unicode
+                    : <GurbaniFont>{shabad.gurbani.gurmukhi}</GurbaniFont>
+                }
+                {
+                  transliteration && (
+                    <Transliteration>
+                      {shabad.transliteration}
+                    </Transliteration>
+                  )
+                }
+                {
+                  translation && (
+                    <BlockQuote style={{ color: '#bababa' }}>
+                      {shabad.translation.english.ssk}
+                    </BlockQuote>
+                  )
+                }
               </div>
             ))
         }

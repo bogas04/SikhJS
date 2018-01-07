@@ -7,7 +7,6 @@ class ComposedShabad extends React.Component {
   shouldComponentUpdate (nextProps) {
     const nextId = nextProps.id || nextProps.match.params.id;
     const currentId = this.props.id || this.props.match.params.id;
-    console.log({ nextId, currentId });
     return nextId !== currentId;
   }
   render () {
