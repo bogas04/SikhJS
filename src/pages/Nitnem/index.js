@@ -30,8 +30,8 @@ export class BaaniCard extends Component {
       <Card>
         <CardTitle>{title}</CardTitle>
         <CardActions>
-          <Link to={`/nitnem/${title}`}><Button ripple>Read</Button></Link>
-          <Button onClick={this.handleToggleShowMore} ripple>Info</Button>
+          <Link to={`/nitnem/${title}`}><Button ripple>Read Baani</Button></Link>
+          <Button onClick={this.handleToggleShowMore} ripple>Baani Description</Button>
         </CardActions>
         <CardText enabled={this.state.showMore}>
           <ShowMoreWrapper>

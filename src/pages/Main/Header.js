@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { decreaseFontSize, increaseFontSize, toggleNightMode } from '../../features/actions';
+import { decreaseFontSize, increaseFontSize, toggleNightMode, toggleOnlineMode } from '../../features/actions';
 import { Information, Bug, Prayer } from '../../components/Icons';
 import Nav, { NavItem } from '../../components/Nav';
 import NightModeToggler from './NightModeToggler';
@@ -39,8 +39,8 @@ const StyledAnchor = styled.a`
   }
 `;
 
-const Header = ({ decreaseFontSize, increaseFontSize, toggleNightMode }) => (
-  <Nav>
+const Header = ({ online, decreaseFontSize, increaseFontSize, toggleNightMode }) => (
+  <Nav online={online}>
     <NavItem>
       <StyledLink title="Home" to={`/`} >
         <Prayer />
@@ -79,6 +79,6 @@ const Header = ({ decreaseFontSize, increaseFontSize, toggleNightMode }) => (
   </Nav>
 );
 
-const mapDispatchToProps = { toggleNightMode, increaseFontSize, decreaseFontSize };
+const mapDispatchToProps = { toggleOnlineMode, toggleNightMode, increaseFontSize, decreaseFontSize };
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(({ onlineMode: online }) => ({ online }), mapDispatchToProps)(Header);

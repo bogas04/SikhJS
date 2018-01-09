@@ -4,6 +4,9 @@ const createAction = type => payload => ({ type, payload });
 export const TOGGLE_NIGHT_MODE = 'TOGGLE_NIGHT_MODE';
 export const toggleNightMode = createAction(TOGGLE_NIGHT_MODE);
 
+export const TOGGLE_ONLINE_MODE = 'TOGGLE_ONLINE_MODE';
+export const toggleOnlineMode = createAction(TOGGLE_ONLINE_MODE);
+
 export const INCREASE_FONT_SIZE = 'INCREASE_FONT_SIZE';
 export const increaseFontSize = createAction(INCREASE_FONT_SIZE);
 

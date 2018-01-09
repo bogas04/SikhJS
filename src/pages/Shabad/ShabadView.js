@@ -54,16 +54,18 @@ class ShabadView extends React.PureComponent {
     const toolbar = (
       <Toolbar>
         <ToolbarWrapper>
-          <Button title="Bookmark" onClick={this.handleToggleBookmark}>
-            <Bookmark isBookmarked={isBookmarked} />
-          </Button>
-          {
-            shareEnabled && (
-              <Button title="Share" onClick={this.handleShareClick}>
-                <Share />
-              </Button>
-            )
-          }
+          <div>
+            <Button title="Bookmark" onClick={this.handleToggleBookmark}>
+              <Bookmark isBookmarked={isBookmarked} />
+            </Button>
+            {
+              shareEnabled && (
+                <Button title="Share" onClick={this.handleShareClick}>
+                  <Share />
+                </Button>
+              )
+            }
+          </div>
           {author && <AuthorChip style={{ display: 'block' }} {...author} />}
           {
             ang && (

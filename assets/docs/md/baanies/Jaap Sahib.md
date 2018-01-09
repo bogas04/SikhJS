@@ -152,7 +152,7 @@ ACydI ABydI AnwmM AkwmM ] smsqo prwjI smsqsqu DwmM ] 61 ]
 
 ## qyrw joru ] cwcrI CMd ]
 
-jly hYN ] Qly hYN ] ABIq hYN ] ABy hYN ] ] 62 ]
+jly hYN ] Qly hYN ] ABIq hYN ] ABy hYN ] 62 ]
 
 pRBU hYN ] AjU hYN ] Adys hYN ] ABys hYN ] 63 ]
 

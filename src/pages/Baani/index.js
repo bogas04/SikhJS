@@ -10,7 +10,48 @@ const Wrapper = styled.div`
   @media(max-width: 700px) {
     text-align: left;
   }
+  ::before {
+    height: 0.2rem;
+    content: "";
+    background-color: #ce177c;
+    width: ${({ scrollYPercentage = 0 }) => `${scrollYPercentage}vw`};
+    position: fixed;
+    top: 0px;
+    left: 0;
+  }
 `;
+
+class OnScroll extends React.PureComponent {
+  constructor (p) {
+    super(p);
+    this.state = { x: window.scrollX, y: window.scrollY, maxX: window.maxScrollX, maxY: window.maxScrollY };
+    this.scrollListener = this.scrollListener.bind(this);
+  }
+
+  scrollListener () {
+    window.requestAnimationFrame(() =>
+      this.setState({
+        x: window.scrollX,
+        y: window.scrollY,
+        maxX: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        maxY: document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      })
+    );
+  }
+
+  componentDidMount () {
+    // TODO: Throttle or something
+    window.addEventListener('scroll', this.scrollListener, { passive: true });
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.scrollListener);
+  }
+
+  render () {
+    return this.props.children(this.state);
+  }
+}
 
 export default class Baani extends React.Component {
   componentDidMount () {
@@ -27,9 +68,12 @@ export default class Baani extends React.Component {
 
     return (
       <GurbaniFont style={{ textAlign: 'center' }}>
-        <Wrapper>
-          <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
-        </Wrapper>
+        <OnScroll>{({ y, maxY }) => (
+          <Wrapper scrollYPercentage={(y / maxY) * 100}>
+            <FetchAndMarkdown url={`assets/docs/md/baanies/${baani}.md`} />
+          </Wrapper>
+        )}
+        </OnScroll>
       </GurbaniFont>
     );
   }

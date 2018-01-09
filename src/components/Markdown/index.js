@@ -11,19 +11,22 @@ Markdown.propTypes = {
   text: PropTypes.string,
 };
 
-export default function FetchAndMarkdown ({ style, className, ...props }) {
-  return (
-    <Fetch {...props}>{
-      ({ data }) => {
-        return (
-          <div style={{ padding: 10, ...style }} className={className}>
-            <Markdown text={data} dangerouslySetInnerHTML={{ __html: 's' }} />
-          </div>
-        );
+export default class FetchAndMarkdown extends React.PureComponent {
+  render () {
+    const { style, className, ...props } = this.props;
+    return (
+      <Fetch {...props}>{
+        ({ data }) => {
+          return (
+            <div style={{ padding: 10, ...style }} className={className}>
+              <Markdown text={data} dangerouslySetInnerHTML={{ __html: 's' }} />
+            </div>
+          );
+        }
       }
-    }
-    </Fetch>
-  );
+      </Fetch>
+    );
+  }
 }
 
 FetchAndMarkdown.propTypes = {
