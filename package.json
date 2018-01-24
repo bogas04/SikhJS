@@ -7,7 +7,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "lint": "xo",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --host 0.0.0.0 --open",
     "test": "npm run lint"
   },
   "dependencies": {
@@ -44,22 +44,13 @@
   },
   "xo": {
     "extends": "xo-react",
-    "env": [
-      "browser"
-    ],
+    "env": ["browser"],
     "space": true,
     "semicolons": true,
-    "ignores": [
-      "assets/**/*.js"
-    ],
+    "ignores": ["assets/**/*.js"],
     "rules": {
-      "react/jsx-no-bind": [
-        "off"
-      ],
-      "react/jsx-closing-bracket-location": [
-        "error",
-        "tag-aligned"
-      ],
+      "react/jsx-no-bind": ["off"],
+      "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
       "react/forbid-component-props": 1,
       "react/jsx-handler-names": 1,
       "radix": 0,
@@ -81,29 +72,12 @@
           "capIsNew": false
         }
       ],
-      "operator-linebreak": [
-        "error",
-        "before"
-      ],
-      "space-before-function-paren": [
-        "error",
-        "always"
-      ],
-      "array-bracket-spacing": [
-        "error",
-        "always"
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "object-curly-spacing": [
-        "error",
-        "always"
-      ],
-      "import/no-extraneous-dependencies": [
-        "warn"
-      ]
+      "operator-linebreak": ["error", "before"],
+      "space-before-function-paren": ["error", "always"],
+      "array-bracket-spacing": ["error", "always"],
+      "comma-dangle": ["error", "always-multiline"],
+      "object-curly-spacing": ["error", "always"],
+      "import/no-extraneous-dependencies": ["warn"]
     }
   },
   "babel": {
