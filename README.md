@@ -2,7 +2,7 @@ SikhJS
 ==
 [![Release](https://img.shields.io/github/release/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/releases)
 [![Issues](https://img.shields.io/github/issues/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/issues)
-
+[![Slack](https://img.shields.io/badge/chat-slack-red.svg)](https://join.slack.com/t/sikhjs/shared_invite/enQtMzA1OTM5OTg3NjAzLTAyNTJkYTI0N2MzNzZhMGJlNzk0MmIzYmRiMzIxMzI0OWJlNTBiMTdkNWY2YzZlNjI0ODNjMWJiYzRiYTI2MTg)
 
 SikhJS aims to be a [Progressive Web App](https://developers.google.com/web/progressive-web-apps/) because we feel just like one slowly progresses in Sikhi by reading baani little by little, so should the storage of an application increase, while giving consistent experience everywhere.
 
