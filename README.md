@@ -1,3 +1,6 @@
+# NOT MAINTAINED.
+## PLEASE USE/CONTRIBUTE TO [SIKHITOTHEMAX](https://github.com/khalisfoundation/sttm-web) INSTEAD.
+
 SikhJS 
 ==
 [![Release](https://img.shields.io/github/release/bogas04/sikhjs.svg)](https://github.com/bogas04/SikhJS/releases)
