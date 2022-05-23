@@ -11,7 +11,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
-    "dexie": "^2.0.1",
+    "dexie": "^3.2.2",
     "emotion": "^8.0.0",
     "khajana": "^1.0.3",
     "markdown": "^0.5.0",
